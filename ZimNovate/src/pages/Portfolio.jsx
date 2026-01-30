@@ -29,6 +29,7 @@ const Portfolio = () => {
           )
         }
       } catch {
+        if (mounted) setProjects(portfolioProjects)
       }
     }
 
