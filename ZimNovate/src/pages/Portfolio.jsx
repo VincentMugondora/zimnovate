@@ -29,7 +29,6 @@ const Portfolio = () => {
           )
         }
       } catch {
-        // fallback to local placeholder data
       }
     }
 

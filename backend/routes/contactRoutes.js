@@ -3,6 +3,7 @@ import { body } from 'express-validator'
 import { createContact } from '../controllers/contactController.js'
 import { contactRateLimit } from '../middleware/securityMiddleware.js'
 import { validateRequest } from '../middleware/validateRequest.js'
+import { asyncHandler } from '../utils/asyncHandler.js'
 
 const router = express.Router()
 
@@ -19,7 +20,7 @@ router.post(
     body('message').trim().notEmpty().withMessage('Message is required').isLength({ max: 3000 }),
   ],
   validateRequest,
-  createContact,
+  asyncHandler(createContact),
 )
 
 export default router
