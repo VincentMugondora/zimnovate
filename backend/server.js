@@ -31,7 +31,6 @@ const port = process.env.PORT || 5000
 const start = async () => {
   await connectDb(process.env.MONGODB_URI)
   app.listen(port, () => {
-    // eslint-disable-next-line no-console
     console.log(`Zimnovate API listening on port ${port}`)
   })
 }
