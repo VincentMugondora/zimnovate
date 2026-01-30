@@ -7,10 +7,12 @@ const Footer = () => {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
         <div className="space-y-3">
           <div className="flex items-center gap-2">
-            <span className="grid h-10 w-10 place-items-center rounded-lg bg-[var(--zim-blue)] text-white">
-              Z
-            </span>
-            <span className="text-lg font-bold">Zimnovate</span>
+            <img
+              src="/logo.png"
+              alt="Zimnovate"
+              className="h-9 w-auto max-w-[200px] object-contain"
+              loading="lazy"
+            />
           </div>
           <p className="text-sm text-[var(--zim-fg)]/70">
             Smart, quick, and reliable full-stack digital solutions with a modern

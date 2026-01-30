@@ -39,10 +39,12 @@ const Header = () => {
           className="flex items-center gap-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--zim-blue)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--zim-bg)]"
           aria-label="Go to homepage"
         >
-          <span className="grid h-10 w-10 place-items-center rounded-lg bg-[var(--zim-blue)] text-white">
-            Z
-          </span>
-          <span className="text-lg font-bold tracking-tight">Zimnovate</span>
+          <img
+            src="/logo.png"
+            alt="Zimnovate"
+            className="h-9 w-auto max-w-[180px] object-contain"
+            loading="eager"
+          />
         </button>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
