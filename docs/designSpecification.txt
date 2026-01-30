@@ -1,0 +1,162 @@
+Perfect! Let’s create a **detailed design specification** for the Zimnovate website, covering **both Light and Dark modes**, so you (or a designer) can easily recreate high-fidelity mockups or implement the site.
+
+Here’s the comprehensive specification:
+
+---
+
+# **Zimnovate Website Design Specification (Light & Dark Mode)**
+
+## **1. Global Settings**
+
+| Property         | Light Mode        | Dark Mode            |
+| ---------------- | ----------------- | -------------------- |
+| Background       | #FFFFFF           | #0D0D0D              |
+| Primary Text     | #111111           | #FFFFFF              |
+| Secondary Text   | #555555           | #CCCCCC              |
+| Accent Color 1   | #1E90FF (Blue)    | #1E90FF (Blue)       |
+| Accent Color 2   | #32CD32 (Green)   | #24FF57 (Neon Green) |
+| Accent Color 3   | #FFA500 (Orange)  | #FFA500 (Orange)     |
+| Typography H1-H6 | Montserrat Bold   | Montserrat Bold      |
+| Typography Body  | Open Sans Regular | Open Sans Regular    |
+| Grid             | 12-column layout  | 12-column layout     |
+
+---
+
+## **2. Components**
+
+### **2.1 Header / Navbar**
+
+* **Position:** Sticky top
+* **Logo:** Zimnovate logo (icon left, text right)
+* **Navigation Links:** Home, About, Services, Portfolio, Contact
+* **CTA Button:** “Get a Consultation” (Primary Accent)
+* **Light Mode:** White background, blue CTA
+* **Dark Mode:** #111111 background, neon accent CTA
+
+---
+
+### **2.2 Hero Section**
+
+* **Headline:** “Innovating Zimbabwe’s Digital Future”
+* **Subtext:** “Smart, quick, and reliable full-stack digital solutions”
+* **CTA Buttons:** Primary (blue), Secondary (green/WhatsApp)
+* **Illustration:** African map with digital nodes (subtle pattern)
+* **Light Mode:** White background, blue/green highlights
+* **Dark Mode:** #0D0D0D background, glowing blue/green highlights
+
+---
+
+### **2.3 Services Section**
+
+* **Layout:** 3x2 grid (desktop), 1x3 column (mobile)
+* **Card Components:**
+
+  * Icon (line style)
+  * Title (Montserrat Bold)
+  * Description (Open Sans)
+  * Hover: slight shadow, scale-up effect
+* **Colors:** Cards background light gray (#F5F5F5) / Dark mode #1A1A1A
+
+---
+
+### **2.4 Portfolio Section**
+
+* **Grid:** Masonry layout, 3 columns desktop, 1 column mobile
+* **Card Hover Effect:** Dark overlay (light) / glow overlay (dark)
+* **Tags:** “Branding”, “Web App”, “Startup Launch”
+* **Click:** Opens modal or link to case study page
+
+---
+
+### **2.5 Testimonials Section**
+
+* **Layout:** Horizontal scroll for desktop, vertical stack on mobile
+* **Card:** Rounded, photo circle, text quote, client name, role
+* **Light Mode:** White card with subtle shadow
+* **Dark Mode:** Dark gray card with neon accent borders
+
+---
+
+### **2.6 Contact Section**
+
+* **Layout:** Split screen
+
+  * Left: Contact Form (fields: Name, Business, Email, Phone, Message)
+  * Right: Contact info + WhatsApp button + optional map
+* **Form Inputs:** Rounded corners, shadow, placeholder text light/dark
+* **CTA:** “Submit” (Primary Accent color)
+
+---
+
+### **2.7 Footer**
+
+* **Links:** Navigation, social media icons
+* **Text:** Copyright & disclaimer
+* **Light Mode:** White background, dark text
+* **Dark Mode:** #111111 background, neon accent icons
+
+---
+
+## **3. Spacing & Layout Guidelines**
+
+* Section padding: 80px top & bottom desktop, 40px mobile
+* Container width: 1200px max desktop
+* Gutters: 24px
+* Border radius: 8px for cards & buttons
+* Shadows: Subtle drop-shadow for depth (light) / soft glow (dark)
+
+---
+
+## **4. Responsive Design**
+
+* **Breakpoints:**
+
+  * Mobile: <768px
+  * Tablet: 768px–1024px
+  * Desktop: 1024px+
+* Elements stack vertically on smaller screens
+* Typography scales:
+
+  * H1: 48px → 36px (tablet) → 28px (mobile)
+  * Body: 18px → 16px → 14px
+
+---
+
+## **5. Interaction Guidelines**
+
+* Buttons: hover, active states
+* Links: underline on hover (light), glow in dark mode
+* Forms: focus state: border highlight (primary color)
+* Portfolio cards: hover overlay effect
+
+---
+
+## **6. Iconography & Imagery**
+
+* Modern line icons
+* Illustrations: subtle African digital motifs
+* Portfolio images: consistent aspect ratio, full-color
+* Light mode: colored illustrations
+* Dark mode: neon/glowing illustration effects
+
+---
+
+## **7. Design System Page**
+
+* Colors: primary, secondary, accent, neutral shades
+* Typography: H1-H6, body, captions
+* Buttons: primary, secondary, ghost
+* Cards: service, portfolio, testimonial
+* Forms: input, textarea, checkbox
+
+---
+
+## **8. Light & Dark Mode Summary**
+
+| Section       | Light Mode                   | Dark Mode                      |
+| ------------- | ---------------------------- | ------------------------------ |
+| Background    | White (#FFFFFF)              | Dark (#0D0D0D)                 |
+| Headings/Text | #111111 / #555555            | #FFFFFF / #CCCCCC              |
+| Buttons       | Blue / Green accents         | Neon Blue / Neon Green accents |
+| Cards         | #F5F5F5 / White              | #1A1A1A / Dark Gray            |
+| Illustrations | Flat colors, subtle patterns | Glowing neon, dark overlay     |

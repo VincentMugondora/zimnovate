@@ -1,0 +1,290 @@
+Here is a **professional, agency-grade PRD (Product Requirements Document)** for the **Zimnovate Website**.
+This is formatted exactly how design studios, dev teams, and startups write internal product documentation.
+
+---
+
+# **📘 Product Requirements Document (PRD)**
+
+## **Zimnovate Website v1.0**
+
+---
+
+## **1. Overview**
+
+### **1.1 Product Name**
+
+**Zimnovate Website**
+
+### **1.2 Purpose**
+
+To create a modern, professional, and high-performing digital presence for **Zimnovate**, a Zimbabwean digital agency offering full-stack tech and branding solutions.
+The website must communicate innovation, reliability, African identity, and Zimnovate’s mission of helping businesses grow through smart tech solutions.
+
+### **1.3 Target Users**
+
+* **Startups** looking for branding, websites, and digital strategy
+* **Small to Medium Enterprises (SMEs)**
+* **Corporate clients** exploring digital transformation
+* **Creatives & entrepreneurs** needing digital presence
+* **Local Zimbabwean businesses** expanding online
+
+---
+
+## **2. Goals & Objectives**
+
+### **Business Goals**
+
+* Establish a strong, trustworthy brand identity
+* Generate leads through clear CTAs and a professional online presence
+* Showcase services, portfolio, and capabilities
+* Build credibility with process explanations, testimonials, and case studies
+* Enable easy contact + conversion (WhatsApp + form)
+
+### **User Goals**
+
+* Quickly understand what Zimnovate offers
+* See proof of expertise (portfolio, case studies, design quality)
+* Connect with Zimnovate easily
+* Get inspired and confident in the brand
+
+---
+
+## **3. Brand Requirements**
+
+### **3.1 Visual Identity**
+
+* **Logo:** Icon + text version (icon on left)
+* **Colors:**
+
+  * Blue #1E90FF
+  * Green #32CD32
+  * Orange #FFA500
+  * Light Gray #F5F5F5
+  * Black #111111
+* **Typography:**
+
+  * Headings: **Montserrat**
+  * Body: **Open Sans**
+* **Design style:**
+
+  * Clean, modern, minimal
+  * African-tech aesthetic
+  * Subtle geometric patterns
+  * Strong whitespace
+
+---
+
+## **4. Site Architecture (Sitemap)**
+
+### **4.1 Pages**
+
+1. **Home**
+2. **About**
+3. **Services**
+4. **Portfolio / Case Studies**
+5. **Contact**
+6. (Optional Phase 2) Blog / Insights
+
+---
+
+## **5. Page-Level Requirements**
+
+---
+
+## **5.1 Home Page**
+
+### **Sections**
+
+1. **Hero Section**
+
+   * Big bold headline: “Innovating Zimbabwe’s Digital Future”
+   * Sub-headline: “Smart, quick, and reliable full-stack digital solutions.”
+   * Primary CTA: **Get a Free Consultation**
+   * Secondary CTA: WhatsApp button
+   * Hero illustration / mockup / abstract tech pattern
+
+2. **About Preview**
+
+   * Short intro about Zimnovate
+   * Link to full About page
+
+3. **Services Overview**
+
+   * Cards for each service
+   * Icons + short descriptions
+
+4. **Why Choose Us**
+
+   * Speed, reliability, innovation, Africa-first
+   * 3 or 4 value propositions
+
+5. **Portfolio Preview**
+
+   * Up to 3 sample works
+   * “View Full Portfolio” CTA
+
+6. **Testimonials**
+
+   * Quotes from real or placeholder clients
+
+7. **Call to Action**
+
+   * “Let’s build something great together.”
+   * CTA to Contact page
+
+---
+
+## **5.2 About Page**
+
+### **Content**
+
+* Zimnovate mission, story, values
+* Founder’s message (Vincent)
+* Brand philosophy
+* Process (Discover → Design → Build → Launch → Support)
+
+---
+
+## **5.3 Services Page**
+
+Break into categories:
+
+### 1. **Branding & Digital Identity**
+
+* Logos
+* Brand guides
+* Social media kits
+
+### 2. **Web Development**
+
+* Business websites
+* Startup websites
+* Custom dev
+
+### 3. **Full-Stack Solutions**
+
+* Web apps
+* Automation tools
+* Integrations
+
+### 4. **Mobile Development**
+
+* Cross-platform apps
+
+### 5. **Consulting**
+
+* Startup strategy
+* Digital transformation
+
+Each service includes:
+
+* Icon
+* Description
+* Benefits
+* “Request a Quote” CTA
+
+---
+
+## **5.4 Portfolio Page**
+
+### Requirements:
+
+* Grid or card view
+* Each project includes:
+
+  * Thumbnail
+  * Name
+  * Category
+  * Short description
+  * Tags (tech stack, type)
+* Optional case study detail page
+
+---
+
+## **5.5 Contact Page**
+
+### Form fields:
+
+* Full Name
+* Business Name (optional)
+* Email
+* Phone
+* Project Type (dropdown)
+* Budget Range
+* Message
+
+### Additional Contact Methods:
+
+* WhatsApp button
+* Email button
+* Physical location (optional)
+
+---
+
+# **6. Functional Requirements**
+
+### **6.1 Forms**
+
+* Form submission → email + database backup
+* Validation (required fields, email format)
+
+### **6.2 SEO**
+
+* Meta titles + descriptions
+* Open graph tags
+* Schema (Local Business)
+* Fast load speed
+
+### **6.3 Performance**
+
+* Lighthouse score target:
+
+  * Performance: 90+
+  * Accessibility: 95+
+  * SEO: 95+
+
+### **6.4 Responsiveness**
+
+* Must work perfectly on:
+
+  * Mobile
+  * Tablet
+  * Desktop
+  * Large screens
+
+### **6.5 CMS (optional, phase 2)**
+
+* Manage portfolio
+* Add blog posts
+* Update services
+
+---
+
+# **7. Technical Requirements**
+
+### **Recommended Tech Stack**
+
+* **Next.js + TailwindCSS**
+* Deployed on **Vercel**
+* Contact form → API route + email service (Resend, Sendgrid)
+* CMS optional: Sanity / Strapi (phase 2)
+
+---
+
+# **8. Non-Functional Requirements**
+
+* **Security:** basic API protection, HTTPS
+* **Reliability:** uptime > 99%
+* **Maintainability:** modular components
+* **Scalability:** support new pages and CMS in future
+
+---
+
+# **9. Phase 2 Features (Future)**
+
+* Blog / Insights
+* Projects dashboard
+* AI chatbot for onboarding leads
+* Online booking for consultations
+* Client portal
+

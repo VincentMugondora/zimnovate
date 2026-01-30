@@ -1,0 +1,49 @@
+You are tasked with generating a full-stack web application for a digital agency called "Zimnovate." The app should be professional, secure, and match the brand identity. Follow these detailed instructions:
+
+1. **Branding & Design**
+   - **Colors:** Primary Blue (#1E90FF), Green (#32CD32), Orange (#FFA500), Light Gray (#F5F5F5), Black (#111111)
+   - **Typography:** Headings: Montserrat Bold, Body: Open Sans
+   - **Design Style:** Tech professional + African modern, clean, modern, minimal, with subtle geometric patterns
+   - **UI:** Responsive (desktop, tablet, mobile), Light & Dark mode toggle
+   - **Pages & Components:**
+     - Home: Hero section, Services preview, Portfolio preview, Testimonials, CTA
+     - About: Mission, Founder spotlight, Values, Process timeline
+     - Services: Services cards, details
+     - Portfolio: Project cards, filters, modal for project details
+     - Contact: Contact form (Name, Email, Business, Phone, Message), contact info, WhatsApp CTA
+     - Header & Footer consistent across pages
+
+2. **Frontend (React + Tailwind CSS)**
+   - Clean, modular, reusable components
+   - Implement Dark & Light mode using Tailwind
+   - Accessibility best practices (ARIA roles, keyboard navigation)
+   - Basic animations with Framer Motion
+   - Forms validate inputs on frontend
+
+3. **Backend (Node.js + Express)**
+   - Secure REST API endpoints for:
+     - Contact form submissions
+     - Portfolio data
+   - Validate and sanitize inputs to prevent XSS, SQL/NoSQL injection, CSRF
+   - Add security headers using Helmet.js
+   - Rate limiting to prevent spam submissions
+   - Store sensitive credentials in environment variables
+   - Optional JWT authentication for admin panel
+
+4. **Database (MongoDB + Mongoose)**
+   - Collections:
+     - `contacts`: name, email, business, phone, message, timestamp
+     - `portfolio`: title, description, images, tags, date
+   - Use schema validation and indexing for performance
+
+5. **Project Setup & Best Practices**
+   - Modular folder structure (components, pages, api/routes, models)
+   - ESLint + Prettier setup for clean code
+   - README with installation, dev workflow, deployment instructions
+   - Deployment ready: Vercel for frontend, Node server hosted (Heroku/Render/other)
+   - Ensure all pages follow design spec: colors, typography, spacing, responsiveness
+
+6. **Extra**
+   - Provide fully working code ready to run locally
+   - Include placeholders for images, icons, and portfolio items
+   - Maintain clean, readable, maintainable code

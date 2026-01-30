@@ -1,0 +1,37 @@
+Generate a full-stack web application for a digital agency called "Zimnovate" using React for the frontend, Node.js/Express for the backend, and MongoDB for the database. Follow these requirements:
+
+1. **Frontend (React)**
+   - Clean, modular code with reusable components.
+   - Responsive design (desktop, tablet, mobile).
+   - Light and Dark mode support.
+   - Pages: Home, About, Services, Portfolio, Contact.
+   - Components: Header, Footer, Hero section, Services Cards, Portfolio Grid, Testimonials, Contact Form.
+   - Styling: Tailwind CSS.
+   - Include accessibility best practices (ARIA roles, keyboard navigation).
+   - Implement basic animations using Framer Motion.
+
+2. **Backend (Node.js / Express)**
+   - Secure RESTful API endpoints for contact form submission and portfolio data.
+   - Validate and sanitize all user input to prevent XSS, injection, and CSRF attacks.
+   - Implement rate limiting and basic security headers (Helmet.js).
+   - Connect securely to MongoDB.
+   - Include JWT-based authentication system (optional for admin dashboard or future CMS).
+   - Use environment variables for all sensitive configuration (DB URIs, API keys).
+
+3. **Database (MongoDB)**
+   - Store contact form submissions securely.
+   - Store portfolio projects with title, description, images, and tags.
+   - Follow proper schema design using Mongoose.
+
+4. **Deployment & Best Practices**
+   - Clean, modular project structure.
+   - Include ESLint + Prettier for code quality.
+   - Include instructions for local development and production.
+   - Prepare for deployment on Vercel (frontend) and Heroku / Render / Node server hosting (backend).
+
+5. **Extra**
+   - Include README with project overview, installation instructions, and technology stack.
+   - Ensure full security best practices throughout.
+   - Write the code in clean, readable, and maintainable style.
+
+Output the **full codebase** ready to run locally.
