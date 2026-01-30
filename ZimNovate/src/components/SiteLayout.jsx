@@ -5,6 +5,7 @@ import Footer from './Footer.jsx'
 
 const SiteLayout = () => {
   const location = useLocation()
+  const isHome = location.pathname === '/'
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
@@ -18,7 +19,7 @@ const SiteLayout = () => {
       >
         Skip to content
       </a>
-      <Header />
+      {isHome ? null : <Header />}
       <main id="main" className="min-h-[70vh]">
         <Outlet />
       </main>
