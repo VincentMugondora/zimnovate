@@ -7,9 +7,9 @@ const MotionDiv = motion.div
 
 const Hero = () => {
   return (
-    <section className="bg-[var(--zim-bg)] px-4 pb-10 pt-20 md:pt-24">
+    <section className="bg-[#0b1220] px-4 py-10 md:py-14">
       <div
-        className="relative mx-auto max-w-6xl overflow-hidden rounded-[32px] border-4 border-white shadow-[0_28px_80px_rgba(0,0,0,0.35)]"
+        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] border-4 border-white/95 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
         style={{
           backgroundImage:
             'linear-gradient(135deg,rgba(17,24,39,0.86),rgba(17,17,17,0.86)), radial-gradient(circle at 20% 10%, rgba(30,144,255,0.20), transparent 55%), url(/hero.jpg)',
@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="absolute inset-0 opacity-22 [background-image:radial-gradient(rgba(255,255,255,0.22)_1px,transparent_1px)] [background-size:22px_22px]" />
 
         <div className="relative">
-          <div className="flex items-center justify-between gap-4 px-6 pb-0 pt-6 text-white md:px-10">
+          <div className="flex items-center justify-between gap-4 px-6 pb-2 pt-6 text-white md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
               <img
                 src="/logo.png"
@@ -65,50 +65,50 @@ const Hero = () => {
           </div>
 
           <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
-          <MotionDiv
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl"
-          >
-            <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
-              WE BUILD AND SCALE
-              <br />
-              DIGITAL PRODUCTS
-            </h1>
+            <MotionDiv
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="mx-auto max-w-4xl"
+            >
+              <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl md:leading-[0.95]">
+                WE BUILD AND SCALE
+                <br />
+                DIGITAL PRODUCTS
+              </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
-              Founding successful companies by combining ideas with business
-              expertise, capital and technical execution.
-            </p>
+              <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
+                Founding successful companies by combining ideas with business
+                expertise, capital and technical execution.
+              </p>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/about"
-                className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
-              >
-                How it work
-              </Link>
-            </div>
+              <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                >
+                  Get Started
+                </Link>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                >
+                  How it work
+                </Link>
+              </div>
 
-            <div className="mt-10 flex justify-center">
-              <a
-                href="https://wa.me/263000000000"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/80 hover:text-white"
-              >
-                WhatsApp <MessageCircle size={18} />
-              </a>
-            </div>
-          </MotionDiv>
-        </div>
+              <div className="mt-10 flex justify-center">
+                <a
+                  href="https://wa.me/263000000000"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/80 hover:text-white"
+                >
+                  WhatsApp <MessageCircle size={18} />
+                </a>
+              </div>
+            </MotionDiv>
+          </div>
         </div>
       </div>
     </section>
