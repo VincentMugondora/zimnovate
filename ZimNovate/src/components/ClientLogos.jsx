@@ -5,11 +5,12 @@ const MotionDiv = motion.div
 
 const ClientLogos = () => {
   const clients = [
-    { id: 'hustlr', name: 'Hustlr', logo: null },
-    { id: 'mps', name: 'MugoPlumbingSolutions', logo: null },
-    { id: 'uncommon', name: 'uncommon', logo: null },
-    { id: 'econet', name: 'econet', logo: null },
-    { id: 'netone', name: 'netone', logo: null },
+    { id: 'hustlr', name: 'Hustlr', url: 'https://hustlr.chat', logo: null },
+    { id: 'mps', name: 'MugoPlumbingSolutions', url: 'https://mugoplumbingsolutions.co.zw', logo: null },
+    { id: 'uncommon', name: 'uncommon', url: 'https://uncommon.org', logo: null },
+    { id: 'econet', name: 'econet', url: 'https://www.econet.co.zw', logo: null },
+    { id: 'netone', name: 'netone', url: 'https://www.netone.co.zw', logo: null },
+    { id: 'telone', name: 'TelOne', url: 'https://www.telone.co.zw', logo: null },
   ]
 
   return (
@@ -23,19 +24,27 @@ const ClientLogos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="flex items-center gap-2 grayscale opacity-70 contrast-75"
+              className="grayscale contrast-75"
             >
-              {client.logo && (
-                <img
-                  src={client.logo}
-                  alt={client.name}
-                  className="h-6 w-auto align-middle object-contain md:h-8"
-                  loading="lazy"
-                />
-              )}
-              <span className="inline-block align-middle text-base font-semibold tracking-wide text-[var(--zim-fg)]/60 leading-none md:text-lg">
-                {client.name}
-              </span>
+              <a
+                href={client.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={client.name}
+                className="flex items-center gap-2 opacity-70 transition-opacity hover:opacity-100"
+              >
+                {client.logo && (
+                  <img
+                    src={client.logo}
+                    alt={client.name}
+                    className="h-6 w-auto align-middle object-contain md:h-8"
+                    loading="lazy"
+                  />
+                )}
+                <span className="inline-block align-middle text-base font-semibold tracking-wide text-[var(--zim-fg)]/60 leading-none md:text-lg">
+                  {client.name}
+                </span>
+              </a>
             </MotionDiv>
           ))}
         </div>
