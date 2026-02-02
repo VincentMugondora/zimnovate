@@ -90,14 +90,14 @@ const Home = () => {
 
                 <Link
                   to="/portfolio"
-                  className="absolute right-5 bottom-5 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  className="absolute -right-4 -bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
                 </Link>
 
                 <div className="mt-3">
-                  <div className="text-lg font-semibold text-[var(--zim-black)] md:text-xl">
+                  <div className="text-xl font-semibold text-[var(--zim-black)] md:text-2xl">
                     {p.title}
                   </div>
                   <div className="text-sm text-[var(--zim-fg)]/60">
