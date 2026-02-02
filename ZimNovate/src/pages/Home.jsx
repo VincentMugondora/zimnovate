@@ -112,49 +112,57 @@ const Home = () => {
 
       <section className="bg-[var(--zim-gray)]/40">
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+          <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
+            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR SERVICES
+            </div>
+            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+              This is part of our service that can give you satisfaction.
             </div>
             <Link
               to="/services"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View all <ArrowUpRight size={16} />
+              View more
             </Link>
           </div>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-start">
-            <div className="relative overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="/imgs/agency.jpg"
-                  alt="Service highlight"
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
+          <div className="mt-6 border-t border-[var(--zim-border)]" />
+
+          <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
+            <div className="relative isolate min-h-[360px] md:min-h-[460px]">
+              <div className="absolute -left-10 top-3 hidden h-[220px] w-[160px] -rotate-6 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5 md:block">
+                <img src="/imgs/agency.jpg" alt="collage-1" className="h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="absolute bottom-4 left-4 rounded-xl bg-white/80 px-4 py-3 text-xs font-semibold text-[var(--zim-black)]">
-                Find Your Place
+              <div className="absolute -left-4 bottom-4 hidden h-[180px] w-[140px] rotate-6 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black/5 md:block">
+                <img src="/imgs/agency.jpg" alt="collage-2" className="h-full w-full object-cover" loading="lazy" />
+              </div>
+              <div className="relative overflow-visible">
+                <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
+                  <img src="/imgs/agency.jpg" alt="Service highlight" className="h-full w-full object-cover" loading="lazy" />
+                </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-4">
-              <div className="grid divide-y divide-[var(--zim-border)]">
-                {serviceList.map((s) => (
-                  <div key={s.id} className="flex items-center gap-4 py-4">
-                    <div className="min-w-0">
-                      <div className="text-sm font-bold text-[var(--zim-black)]">
+            <div className="rounded-2xl bg-[var(--zim-bg)]">
+              <div className="divide-y divide-[var(--zim-border)]">
+                {serviceList.map((s, idx) => (
+                  <div key={s.id} className="grid grid-cols-[auto_1fr_auto] items-start gap-4 py-5">
+                    <div className="text-xs font-semibold text-[var(--zim-fg)]/50">
+                      {(idx + 1).toString().padStart(2, '0')}
+                    </div>
+                    <div>
+                      <div className={idx === 1 ? 'text-2xl font-extrabold text-[var(--zim-black)] md:text-3xl' : 'text-2xl font-semibold text-[var(--zim-fg)]/80 md:text-3xl'}>
                         {s.title}
                       </div>
-                      <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
+                      <div className="mt-1 text-sm text-[var(--zim-fg)]/70">
                         {s.description}
                       </div>
                     </div>
-                    <div className="ml-auto">
-                      <div className="grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]">
-                        <ArrowUpRight size={16} />
-                      </div>
+                    <div>
+                      <Link to="/services" aria-label={`Open ${s.title}`} className={idx === 1 ? 'grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]' : ''}>
+                        <ArrowUpRight size={18} className={idx === 1 ? '' : 'text-[var(--zim-fg)]/60'} />
+                      </Link>
                     </div>
                   </div>
                 ))}
