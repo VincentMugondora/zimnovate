@@ -77,8 +77,8 @@ const Home = () => {
                 transition={{ duration: 0.45, delay: idx * 0.05 }}
                 className="group relative"
               >
-                <div className="relative rounded-[30px] bg-neutral-100 p-4 shadow-[0_28px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
-                  <div className="aspect-[16/10] overflow-hidden rounded-[22px] bg-white">
+                <div className="relative rounded-[32px] bg-neutral-100 p-5 shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
+                  <div className="aspect-[4/3] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/5">
                     <img
                       src={(Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
@@ -96,11 +96,11 @@ const Home = () => {
                   <ArrowUpRight size={18} />
                 </Link>
 
-                <div className="mt-3">
+                <div className="mt-4">
                   <div className="text-xl font-semibold text-[var(--zim-black)] md:text-2xl">
                     {p.title}
                   </div>
-                  <div className="text-sm text-[var(--zim-fg)]/60">
+                  <div className="mt-1 text-sm text-[var(--zim-fg)]/60">
                     {p.location || bestLocations[idx] || ''}
                   </div>
                 </div>
