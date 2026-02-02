@@ -234,7 +234,7 @@ const Home = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+        <div className="mx-auto w-full px-3 py-16 md:px-4 md:py-20 lg:px-4">
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
               OUR BEST DESIGNERS
