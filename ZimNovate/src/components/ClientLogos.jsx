@@ -56,7 +56,7 @@ const ClientLogos = () => {
           className="mt-16 text-left"
         >
           <div className="mx-auto max-w-2xl">
-            <div className="mb-4 flex justify-center">
+            <div className="mb-4 flex justify-start">
               <div className="h-16 w-16 overflow-hidden rounded-full bg-[var(--zim-gray)]">
                 <img
                   src="/imgs/testimonial-avatar.jpg"
