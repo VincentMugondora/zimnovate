@@ -19,11 +19,11 @@
   }
 
   .dark {
-    --zim-bg: #0d0d0d;
-    --zim-fg: #ffffff;
-    --zim-muted: #cccccc;
-    --zim-card: #1a1a1a;
-    --zim-border: rgba(255, 255, 255, 0.12);
+    --zim-bg: #ffffff;
+    --zim-fg: #111111;
+    --zim-muted: #555555;
+    --zim-card: #f5f5f5;
+    --zim-border: rgba(17, 17, 17, 0.12);
   }
 
   html {

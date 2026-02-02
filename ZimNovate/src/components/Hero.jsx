@@ -7,7 +7,7 @@ const MotionDiv = motion.div
 
 const Hero = () => {
   return (
-    <section className="bg-[#0b1220] px-3 py-10 md:px-4 md:py-14 lg:px-4">
+    <section className="bg-[#0b1220] p-5">
       <div
         className="relative mx-auto w-full overflow-hidden rounded-[28px] border-4 border-white/95 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
         style={{
@@ -74,7 +74,7 @@ const Hero = () => {
               <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl md:leading-[0.95]">
                 WE BUILD AND SCALE
                 <br />
-                DIGITAL PRODUCTS
+                DIGITAL PRODUCT
               </h1>
 
               <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
