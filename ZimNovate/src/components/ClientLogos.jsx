@@ -16,7 +16,7 @@ const ClientLogos = () => {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-        <div className="mt-6 flex w-full flex-nowrap items-center justify-start gap-16 overflow-x-auto whitespace-nowrap">
+        <div className="mt-6 flex w-full flex-nowrap items-center justify-center gap-16 overflow-x-auto whitespace-nowrap">
           {clients.map((client, idx) => (
             <MotionDiv
               key={client.id}
