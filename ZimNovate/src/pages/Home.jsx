@@ -52,7 +52,7 @@ const Home = () => {
       <ClientLogos />
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto w-full px-3 py-8 md:px-4 md:py-10 lg:px-4">
+        <div className="mx-auto w-full px-3 py-16 md:px-4 md:py-20 lg:px-4">
           <div className="grid grid-cols-2 gap-4 text-[var(--zim-fg)]/80 sm:grid-cols-3 md:grid-cols-6">
             {[
               { Icon: LayoutGrid, label: 'UI/UX' },
@@ -89,7 +89,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+        <div className="mx-auto w-full px-3 py-16 md:px-4 md:py-20 lg:px-4">
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
               BEST PROJECT
@@ -134,7 +134,7 @@ const Home = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+        <div className="mx-auto w-full px-3 py-16 md:px-4 md:py-20 lg:px-4">
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
               OUR SERVICES
@@ -188,7 +188,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+        <div className="mx-auto w-full px-3 py-16 md:px-4 md:py-20 lg:px-4">
           <div className="flex items-center justify-between gap-4">
             <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
               LATEST INSIGHT
@@ -276,7 +276,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[#0b1220] px-3 py-12 md:px-4 md:py-16 lg:px-4">
+      <section className="bg-[#0b1220] px-3 py-16 md:px-4 md:py-20 lg:px-4">
         <div className="mx-auto w-full">
           <div className="relative overflow-hidden rounded-3xl bg-[#0f172a] p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.45)] md:p-10">
             <div className="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]">

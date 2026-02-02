@@ -14,7 +14,7 @@ const ClientLogos = () => {
   ]
 
   return (
-    <section className="bg-white px-3 py-12 md:px-4 md:py-16 lg:px-4">
+    <section className="bg-white px-3 py-16 md:px-4 md:py-20 lg:px-4">
       <div className="mx-auto w-full">
         <MotionDiv
           initial={{ opacity: 0, y: 10 }}
