@@ -12,6 +12,11 @@ const MotionDiv = motion.div
 const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services.slice(0, 4)
+  const bestLocations = [
+    'Jakarta, Indonesia',
+    'Kuala Lumpur, Malaysia',
+    'Sydney, Australia',
+  ]
 
   const designers = [
     { id: 'a', name: 'James Ahar', role: 'UI Designer' },
@@ -62,7 +67,7 @@ const Home = () => {
 
           <div className="mt-6 border-t border-[var(--zim-border)]" />
 
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
+          <div className="mt-8 grid gap-10 md:grid-cols-3">
             {bestProjects.map((p, idx) => (
               <MotionDiv
                 key={p.id}
@@ -72,8 +77,8 @@ const Home = () => {
                 transition={{ duration: 0.45, delay: idx * 0.05 }}
                 className="group relative"
               >
-                <div className="relative overflow-hidden rounded-[24px] border border-[var(--zim-border)] bg-white shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
-                  <div className="aspect-[16/10] overflow-hidden">
+                <div className="relative rounded-[28px] bg-[var(--zim-bg)] p-3 shadow-[0_28px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+                  <div className="aspect-[16/10] overflow-hidden rounded-[20px] bg-white">
                     <img
                       src="/imgs/agency.jpg"
                       alt={p.title}
@@ -85,7 +90,7 @@ const Home = () => {
 
                 <Link
                   to="/portfolio"
-                  className="absolute -right-3 -bottom-3 grid h-10 w-10 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  className="absolute -right-4 -bottom-4 grid h-11 w-11 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
@@ -95,7 +100,9 @@ const Home = () => {
                   <div className="text-base font-semibold text-[var(--zim-black)] md:text-lg">
                     {p.title}
                   </div>
-                  <div className="text-xs text-[var(--zim-fg)]/60">{p.category}</div>
+                  <div className="text-xs text-[var(--zim-fg)]/60">
+                    {p.location || bestLocations[idx] || ''}
+                  </div>
                 </div>
               </MotionDiv>
             ))}
