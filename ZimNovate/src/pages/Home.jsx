@@ -1,15 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import {
-  ArrowUpRight,
-  Brush,
-  Code2,
-  LayoutGrid,
-  MessageCircle,
-  Megaphone,
-  Smartphone,
-} from 'lucide-react'
+import { ArrowUpRight, MessageCircle } from 'lucide-react'
 import Hero from '../components/Hero.jsx'
 import ClientLogos from '../components/ClientLogos.jsx'
 import { services } from '../data/services.js'
@@ -51,58 +43,26 @@ const Home = () => {
       <Hero />
       <ClientLogos />
 
-      <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="grid grid-cols-2 gap-4 text-[var(--zim-fg)]/80 sm:grid-cols-3 md:grid-cols-6">
-            {[
-              { Icon: LayoutGrid, label: 'UI/UX' },
-              { Icon: Brush, label: 'Design' },
-              { Icon: Code2, label: 'Dev' },
-              { Icon: Smartphone, label: 'Mobile' },
-              { Icon: Megaphone, label: 'Brand' },
-              { Icon: LayoutGrid, label: 'Strategy' },
-            ].map((item) => {
-              const IconComponent = item.Icon
-              return (
-                <div
-                  key={item.label}
-                  className="flex items-center gap-2 rounded-xl bg-[var(--zim-bg)] px-3 py-3"
-                >
-                  <div className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--zim-card)]">
-                    <IconComponent size={18} />
-                  </div>
-                  <div className="text-sm font-semibold">{item.label}</div>
-                </div>
-              )
-            })}
-          </div>
-
-          <div className="mt-8 rounded-2xl bg-[var(--zim-bg)] p-6 md:p-8">
-            <p className="text-sm leading-relaxed text-[var(--zim-fg)]/75 md:text-base">
-              “People build websites, develop brands and build a strong
-              <span className="font-semibold text-[var(--zim-fg)]"> social </span>
-              presence. But to progress, one needs a team that can work based on
-              a real client’s view then others.”
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+          <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
+            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
+            </div>
+            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+              Explore more of our best projects.
             </div>
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--zim-green)] px-5 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View all <ArrowUpRight size={16} />
+              View more <ArrowUpRight size={16} />
             </Link>
           </div>
 
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 border-t border-[var(--zim-border)]" />
+
+          <div className="mt-8 grid gap-8 md:grid-cols-3">
             {bestProjects.map((p, idx) => (
               <MotionDiv
                 key={p.id}
@@ -110,22 +70,32 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.45, delay: idx * 0.05 }}
-                className="overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]"
+                className="group relative"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src="/imgs/agency.jpg"
-                    alt={p.title}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/15" />
-                </div>
-                <div className="p-4">
-                  <div className="text-sm font-bold">{p.title}</div>
-                  <div className="mt-1 text-xs text-[var(--zim-fg)]/65">
-                    {p.category}
+                <div className="relative overflow-hidden rounded-[24px] border border-[var(--zim-border)] bg-white shadow-[0_16px_40px_rgba(0,0,0,0.08)]">
+                  <div className="aspect-[16/10] overflow-hidden">
+                    <img
+                      src="/imgs/agency.jpg"
+                      alt={p.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
+                </div>
+
+                <Link
+                  to="/portfolio"
+                  className="absolute -right-3 -bottom-3 grid h-10 w-10 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  aria-label={`Open ${p.title}`}
+                >
+                  <ArrowUpRight size={18} />
+                </Link>
+
+                <div className="mt-3">
+                  <div className="text-base font-semibold text-[var(--zim-black)] md:text-lg">
+                    {p.title}
+                  </div>
+                  <div className="text-xs text-[var(--zim-fg)]/60">{p.category}</div>
                 </div>
               </MotionDiv>
             ))}
