@@ -14,7 +14,7 @@ const ClientLogos = () => {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-7xl px-3 py-16 md:px-4 md:py-20 lg:px-4">
+      <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
         <div className="mt-6 grid grid-cols-2 place-items-start gap-x-10 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-14 md:gap-y-10">
           {clients.map((client, idx) => (
             <MotionDiv
