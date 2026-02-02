@@ -15,7 +15,7 @@ const ClientLogos = () => {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-3 py-16 md:px-4 md:py-20 lg:px-4">
-        <div className="mt-6 grid grid-cols-2 place-items-center gap-x-10 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-14 md:gap-y-10">
+        <div className="mt-6 grid grid-cols-2 place-items-start gap-x-10 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-14 md:gap-y-10">
           {clients.map((client, idx) => (
             <MotionDiv
               key={client.id}
@@ -23,20 +23,19 @@ const ClientLogos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="grayscale opacity-70 contrast-75"
+              className="flex items-center gap-2 grayscale opacity-70 contrast-75"
             >
-              {client.logo ? (
+              {client.logo && (
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-6 w-auto object-contain md:h-8"
+                  className="h-6 w-auto align-middle object-contain md:h-8"
                   loading="lazy"
                 />
-              ) : (
-                <span className="text-lg font-semibold tracking-wide text-[var(--zim-fg)]/60 md:text-xl">
-                  {client.name}
-                </span>
               )}
+              <span className="inline-block align-middle text-base font-semibold tracking-wide text-[var(--zim-fg)]/60 leading-none md:text-lg">
+                {client.name}
+              </span>
             </MotionDiv>
           ))}
         </div>
