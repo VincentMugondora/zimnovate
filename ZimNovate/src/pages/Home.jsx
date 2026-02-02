@@ -11,6 +11,7 @@ import {
   Smartphone,
 } from 'lucide-react'
 import Hero from '../components/Hero.jsx'
+import ClientLogos from '../components/ClientLogos.jsx'
 import { services } from '../data/services.js'
 import { portfolioProjects } from '../data/portfolio.js'
 
@@ -48,6 +49,7 @@ const Home = () => {
   return (
     <div className="bg-[var(--zim-bg)]">
       <Hero />
+      <ClientLogos />
 
       <section className="bg-[var(--zim-gray)]/40">
         <div className="mx-auto w-full px-3 py-8 md:px-4 md:py-10 lg:px-4">
