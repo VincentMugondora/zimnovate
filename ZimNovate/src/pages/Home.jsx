@@ -78,7 +78,7 @@ const Home = () => {
                 className="group relative"
               >
                 <div className="relative rounded-[32px] bg-neutral-100 p-5 shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
-                  <div className="aspect-[6/5] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/5">
+                  <div className="aspect-[10/9] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/5">
                     <img
                       src={(Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
