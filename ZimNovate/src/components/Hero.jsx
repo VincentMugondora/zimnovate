@@ -25,7 +25,7 @@ const Hero = () => {
               <img
                 src="/logo.png"
                 alt="Zimnovate"
-                className="h-16 w-auto max-w-[180px] object-contain"
+                className="h-20 w-auto max-w-[180px] object-contain"
                 loading="eager"
               />
             </Link>
