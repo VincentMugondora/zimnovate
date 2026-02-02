@@ -59,15 +59,15 @@ const Home = () => {
             </div>
             <Link
               to="/portfolio"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--zim-green)] px-5 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View more <ArrowUpRight size={16} />
+              View more
             </Link>
           </div>
 
           <div className="mt-6 border-t border-[var(--zim-border)]" />
 
-          <div className="mt-8 grid gap-10 md:grid-cols-3">
+          <div className="mt-8 grid gap-12 md:grid-cols-3">
             {bestProjects.map((p, idx) => (
               <MotionDiv
                 key={p.id}
@@ -77,10 +77,10 @@ const Home = () => {
                 transition={{ duration: 0.45, delay: idx * 0.05 }}
                 className="group relative"
               >
-                <div className="relative rounded-[28px] bg-[var(--zim-bg)] p-3 shadow-[0_28px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
-                  <div className="aspect-[16/10] overflow-hidden rounded-[20px] bg-white">
+                <div className="relative rounded-[30px] bg-neutral-100 p-4 shadow-[0_28px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5">
+                  <div className="aspect-[16/10] overflow-hidden rounded-[22px] bg-white">
                     <img
-                      src="/imgs/agency.jpg"
+                      src={(Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
                       className="h-full w-full object-cover"
                       loading="lazy"
@@ -90,17 +90,17 @@ const Home = () => {
 
                 <Link
                   to="/portfolio"
-                  className="absolute -right-4 -bottom-4 grid h-11 w-11 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  className="absolute right-5 bottom-5 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
                 </Link>
 
                 <div className="mt-3">
-                  <div className="text-base font-semibold text-[var(--zim-black)] md:text-lg">
+                  <div className="text-lg font-semibold text-[var(--zim-black)] md:text-xl">
                     {p.title}
                   </div>
-                  <div className="text-xs text-[var(--zim-fg)]/60">
+                  <div className="text-sm text-[var(--zim-fg)]/60">
                     {p.location || bestLocations[idx] || ''}
                   </div>
                 </div>
