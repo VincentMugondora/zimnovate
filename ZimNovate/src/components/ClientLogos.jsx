@@ -16,7 +16,7 @@ const ClientLogos = () => {
   return (
     <section className="bg-white">
       <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-        <div className="mt-6 grid grid-cols-2 place-items-start gap-x-10 gap-y-8 sm:grid-cols-3 md:grid-cols-5 md:gap-x-14 md:gap-y-10">
+        <div className="mt-6 flex flex-nowrap items-center gap-10 overflow-x-auto whitespace-nowrap md:gap-14 lg:gap-16 md:overflow-visible md:whitespace-normal">
           {clients.map((client, idx) => (
             <MotionDiv
               key={client.id}
@@ -24,7 +24,7 @@ const ClientLogos = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="grayscale contrast-75"
+              className="shrink-0 grayscale contrast-75"
             >
               <a
                 href={client.url}
