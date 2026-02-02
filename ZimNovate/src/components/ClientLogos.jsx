@@ -5,12 +5,11 @@ const MotionDiv = motion.div
 
 const ClientLogos = () => {
   const clients = [
-    { id: 'c1', name: 'Client A', logo: '/imgs/client-a.png' },
-    { id: 'c2', name: 'Client B', logo: '/imgs/client-b.png' },
-    { id: 'c3', name: 'Client C', logo: '/imgs/client-c.png' },
-    { id: 'c4', name: 'Client D', logo: '/imgs/client-d.png' },
-    { id: 'c5', name: 'Client E', logo: '/imgs/client-e.png' },
-    { id: 'c6', name: 'Client F', logo: '/imgs/client-f.png' },
+    { id: 'hustlr', name: 'Hustlr', logo: null },
+    { id: 'mps', name: 'MugoPlumbingSolutions', logo: null },
+    { id: 'uncommon', name: 'uncommon', logo: null },
+    { id: 'econet', name: 'econet', logo: null },
+    { id: 'netone', name: 'netone', logo: null },
   ]
 
   return (
@@ -26,12 +25,18 @@ const ClientLogos = () => {
               transition={{ duration: 0.4, delay: idx * 0.05 }}
               className="grayscale opacity-70 contrast-75"
             >
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="h-6 w-auto object-contain md:h-8"
-                loading="lazy"
-              />
+              {client.logo ? (
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  className="h-6 w-auto object-contain md:h-8"
+                  loading="lazy"
+                />
+              ) : (
+                <span className="text-lg font-semibold tracking-wide text-[var(--zim-fg)]/60 md:text-xl">
+                  {client.name}
+                </span>
+              )}
             </MotionDiv>
           ))}
         </div>
