@@ -131,13 +131,22 @@ const Home = () => {
 
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
             <div className="relative isolate min-h-[360px] md:min-h-[460px]">
-              <div className="absolute -left-10 top-3 hidden h-[220px] w-[160px] -rotate-6 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5 md:block">
+              <div
+                className="absolute -left-24 -top-10 z-0 hidden h-[620px] w-[420px] rounded-[48px] bg-[radial-gradient(ellipse_at_40%_30%,rgba(30,144,255,0.12),transparent_60%)] md:block"
+                aria-hidden="true"
+              />
+              <div
+                className="absolute -left-12 top-0 z-0 hidden h-[540px] w-[380px] bg-white shadow-[0_40px_80px_rgba(0,0,0,0.12)] ring-1 ring-black/5 md:block"
+                style={{ clipPath: 'path("M16,84C32,24,96,0,160,0h180c48,0,80,32,80,84v216c0,88-64,144-160,160H116C52,460,16,416,16,352Z")', WebkitClipPath: 'path("M16,84C32,24,96,0,160,0h180c48,0,80,32,80,84v216c0,88-64,144-160,160H116C52,460,16,416,16,352Z")' }}
+                aria-hidden="true"
+              />
+              <div className="absolute -left-10 top-3 z-10 hidden h-[220px] w-[160px] -rotate-6 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5 md:block">
                 <img src="/imgs/agency.jpg" alt="collage-1" className="h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="absolute -left-4 bottom-4 hidden h-[180px] w-[140px] rotate-6 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black/5 md:block">
+              <div className="absolute -left-4 bottom-4 z-10 hidden h-[180px] w-[140px] rotate-6 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black/5 md:block">
                 <img src="/imgs/agency.jpg" alt="collage-2" className="h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="relative overflow-visible">
+              <div className="relative z-20 overflow-visible">
                 <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
                   <img src="/imgs/agency.jpg" alt="Service highlight" className="h-full w-full object-cover" loading="lazy" />
                 </div>
