@@ -56,10 +56,9 @@ const ClientLogos = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-16 md:mt-24 text-left"
         >
-          <blockquote className="max-w-5xl text-2xl font-normal leading-snug text-[var(--zim-black)] md:text-4xl">
-            “People build websites, develop brands, and build shops selling stuff. a better
-            internet, for people, one site at a time. we work better and more efficiently than
-            others.”
+          <blockquote className="max-w-5xl text-2xl font-normal leading-snug text-[var(--zim-black)] md:text-3xl">
+            “We help businesses grow with digital experiences that are fast, reliable, and built with care.
+Every website, brand, or system we craft is designed to make the internet better — one project at a time.”
           </blockquote>
         </MotionDiv>
       </div>
