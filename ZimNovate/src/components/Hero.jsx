@@ -7,12 +7,12 @@ const MotionDiv = motion.div
 
 const Hero = () => {
   return (
-    <section className="bg-[#0b1220] px-4 py-10 md:py-14">
+    <section className="bg-[#0b1220] px-3 py-10 md:px-4 md:py-14 lg:px-4">
       <div
-        className="relative mx-auto max-w-6xl overflow-hidden rounded-[28px] border-4 border-white/95 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
+        className="relative mx-auto w-full overflow-hidden rounded-[28px] border-4 border-white/95 shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
         style={{
           backgroundImage:
-            'linear-gradient(135deg,rgba(17,24,39,0.86),rgba(17,17,17,0.86)), radial-gradient(circle at 20% 10%, rgba(30,144,255,0.20), transparent 55%), url(/hero.jpg)',
+            'linear-gradient(135deg,rgba(17,24,39,0.86),rgba(17,17,17,0.86)), radial-gradient(circle at 20% 10%, rgba(30,144,255,0.20), transparent 55%), url(/imgs/agency.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

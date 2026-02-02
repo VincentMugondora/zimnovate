@@ -1,161 +1,331 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import {
+  ArrowUpRight,
+  Brush,
+  Code2,
+  LayoutGrid,
+  MessageCircle,
+  Megaphone,
+  Smartphone,
+} from 'lucide-react'
 import Hero from '../components/Hero.jsx'
-import SectionHeading from '../components/SectionHeading.jsx'
-import ServiceCard from '../components/ServiceCard.jsx'
-import TestimonialCard from '../components/TestimonialCard.jsx'
 import { services } from '../data/services.js'
 import { portfolioProjects } from '../data/portfolio.js'
-import { testimonials } from '../data/testimonials.js'
 
 const MotionDiv = motion.div
 
 const Home = () => {
-  const topServices = services.slice(0, 3)
-  const topProjects = portfolioProjects.slice(0, 3)
+  const bestProjects = portfolioProjects.slice(0, 3)
+  const serviceList = services.slice(0, 4)
+
+  const designers = [
+    { id: 'a', name: 'James Ahar', role: 'UI Designer' },
+    { id: 'b', name: 'Frazal Harben', role: 'Brand Designer' },
+    { id: 'c', name: 'Afroed Jack', role: 'UX Research' },
+    { id: 'd', name: 'Jarre Van', role: 'Graphic Designer' },
+  ]
+
+  const insights = [
+    {
+      id: 'i1',
+      title: 'Why a website matters',
+      excerpt: 'A quick guide to credibility, trust, and conversions for modern brands.',
+    },
+    {
+      id: 'i2',
+      title: 'UI/UX that converts',
+      excerpt: 'Simple design choices that improve clarity and user confidence.',
+    },
+    {
+      id: 'i3',
+      title: 'Speed wins',
+      excerpt: 'Performance-first UI that feels premium on every device.',
+    },
+  ]
 
   return (
-    <div>
+    <div className="bg-[var(--zim-bg)]">
       <Hero />
 
-      <section className="relative">
-        <div className="absolute inset-0 -z-10 opacity-50 [background-image:radial-gradient(rgba(17,17,17,0.06)_1px,transparent_1px)] [background-size:18px_18px]" />
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 md:items-center md:py-20">
-          <div className="space-y-4">
-            <div className="text-xl font-bold">About Zimnovate</div>
-            <p className="text-sm text-[var(--zim-fg)]/75 md:text-base">
-              Zimnovate is a forward-thinking digital agency based in Zimbabwe,
-              dedicated to helping businesses grow and thrive in the digital age
-              through innovative tech solutions.
+      <section className="bg-[var(--zim-gray)]/40">
+        <div className="mx-auto w-full px-3 py-8 md:px-4 md:py-10 lg:px-4">
+          <div className="grid grid-cols-2 gap-4 text-[var(--zim-fg)]/80 sm:grid-cols-3 md:grid-cols-6">
+            {[
+              { Icon: LayoutGrid, label: 'UI/UX' },
+              { Icon: Brush, label: 'Design' },
+              { Icon: Code2, label: 'Dev' },
+              { Icon: Smartphone, label: 'Mobile' },
+              { Icon: Megaphone, label: 'Brand' },
+              { Icon: LayoutGrid, label: 'Strategy' },
+            ].map((item) => {
+              const IconComponent = item.Icon
+              return (
+                <div
+                  key={item.label}
+                  className="flex items-center gap-2 rounded-xl bg-[var(--zim-bg)] px-3 py-3"
+                >
+                  <div className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--zim-card)]">
+                    <IconComponent size={18} />
+                  </div>
+                  <div className="text-sm font-semibold">{item.label}</div>
+                </div>
+              )
+            })}
+          </div>
+
+          <div className="mt-8 rounded-2xl bg-[var(--zim-bg)] p-6 md:p-8">
+            <p className="text-sm leading-relaxed text-[var(--zim-fg)]/75 md:text-base">
+              “People build websites, develop brands and build a strong
+              <span className="font-semibold text-[var(--zim-fg)]"> social </span>
+              presence. But to progress, one needs a team that can work based on
+              a real client’s view then others.”
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+              BEST PROJECT
+            </div>
             <Link
-              to="/about"
-              className="inline-flex w-fit items-center justify-center rounded-md bg-[var(--zim-green)] px-5 py-2.5 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+              to="/portfolio"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              Learn More
+              View all <ArrowUpRight size={16} />
             </Link>
           </div>
 
-          <div className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-3 shadow-sm">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl bg-[linear-gradient(135deg,rgba(30,144,255,0.25),rgba(50,205,50,0.18))]">
-              <div className="absolute inset-0 opacity-60 [background-image:linear-gradient(to_right,rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.35)_1px,transparent_1px)] [background-size:28px_28px]" />
-              <div className="absolute bottom-4 left-4 rounded-lg bg-white/80 px-3 py-2 text-xs font-semibold text-[var(--zim-black)]">
-                Image placeholder
-              </div>
-            </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {bestProjects.map((p, idx) => (
+              <MotionDiv
+                key={p.id}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.45, delay: idx * 0.05 }}
+                className="overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/imgs/agency.jpg"
+                    alt={p.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-black/15" />
+                </div>
+                <div className="p-4">
+                  <div className="text-sm font-bold">{p.title}</div>
+                  <div className="mt-1 text-xs text-[var(--zim-fg)]/65">
+                    {p.category}
+                  </div>
+                </div>
+              </MotionDiv>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-          <div className="text-xl font-bold">Our Services</div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {topServices.map((s) => (
-              <ServiceCard key={s.id} service={s} variant="compact" />
-            ))}
-          </div>
-          <div className="mt-8 flex justify-center">
+        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+              OUR SERVICES
+            </div>
             <Link
               to="/services"
-              className="inline-flex items-center justify-center rounded-md border border-[var(--zim-border)] bg-[var(--zim-bg)] px-5 py-2.5 text-sm font-semibold text-[var(--zim-blue)] hover:border-[var(--zim-blue)]"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View All Services
+              View all <ArrowUpRight size={16} />
             </Link>
+          </div>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-2 md:items-start">
+            <div className="relative overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src="/imgs/agency.jpg"
+                  alt="Service highlight"
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute bottom-4 left-4 rounded-xl bg-white/80 px-4 py-3 text-xs font-semibold text-[var(--zim-black)]">
+                Find Your Place
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-4">
+              <div className="grid divide-y divide-[var(--zim-border)]">
+                {serviceList.map((s) => (
+                  <div key={s.id} className="flex items-center gap-4 py-4">
+                    <div className="min-w-0">
+                      <div className="text-sm font-bold text-[var(--zim-black)]">
+                        {s.title}
+                      </div>
+                      <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
+                        {s.description}
+                      </div>
+                    </div>
+                    <div className="ml-auto">
+                      <div className="grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]">
+                        <ArrowUpRight size={16} />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        <div className="text-center">
-          <div className="text-2xl font-bold md:text-3xl">Why Choose Zimnovate?</div>
-        </div>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {topProjects.map((p, idx) => (
-            <MotionDiv
-              key={p.id}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.25 }}
-              transition={{ duration: 0.5, delay: idx * 0.05 }}
-              className="overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] shadow-sm"
+      <section>
+        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+              LATEST INSIGHT
+            </div>
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              <div className="aspect-[16/9] bg-[linear-gradient(135deg,rgba(30,144,255,0.25),rgba(255,165,0,0.2))]" />
-              <div className="p-5">
-                <div className="text-sm font-bold">{p.title}</div>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  {p.tags.slice(0, 2).map((t) => (
-                    <span
-                      key={t}
-                      className="rounded-md bg-[var(--zim-gray)] px-2 py-1 text-xs font-semibold text-[var(--zim-black)]"
-                    >
-                      {t}
-                    </span>
-                  ))}
+              View all <ArrowUpRight size={16} />
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-4 md:grid-cols-3">
+            {insights.map((i, idx) => (
+              <MotionDiv
+                key={i.id}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.45, delay: idx * 0.04 }}
+                className="overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/imgs/agency.jpg"
+                    alt={i.title}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
-                <div className="mt-3 flex items-center gap-1 text-xs text-[var(--zim-orange)]">
-                  <span>★★★★★</span>
-                  <span className="ml-auto text-[var(--zim-fg)]/60">5.0</span>
+                <div className="p-4">
+                  <div className="text-sm font-bold text-[var(--zim-black)]">
+                    {i.title}
+                  </div>
+                  <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
+                    {i.excerpt}
+                  </div>
                 </div>
-              </div>
-            </MotionDiv>
-          ))}
-        </div>
-
-        <div className="mt-8 flex justify-center">
-          <Link
-            to="/portfolio"
-            className="inline-flex items-center justify-center rounded-md bg-[var(--zim-blue)] px-5 py-2.5 text-sm font-semibold text-white hover:brightness-110"
-          >
-            View Full Portfolio
-          </Link>
-        </div>
-      </section>
-
-      <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-          <SectionHeading
-            eyebrow="Testimonials"
-            title="Trusted by teams who value quality"
-            subtitle="Client feedback and placeholder quotes until you add real testimonials."
-          />
-
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.id} testimonial={t} />
+              </MotionDiv>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(135deg,#111827_0%,#0b1220_45%,#111111_100%)]">
-        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:28px_28px]" />
-        <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
-          <div className="text-center text-white">
-            <div className="text-2xl font-bold md:text-3xl">
-              Let’s Build Something Great Together.
+      <section className="bg-[var(--zim-gray)]/40">
+        <div className="mx-auto w-full px-3 py-10 md:px-4 md:py-14 lg:px-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+              OUR BEST DESIGNERS
             </div>
-            <div className="mt-3 text-sm text-white/80 md:text-base">
-              Ready to elevate your business with innovative digital solutions?
+            <Link
+              to="/about"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+            >
+              View all <ArrowUpRight size={16} />
+            </Link>
+          </div>
+
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+            {designers.map((d) => (
+              <div
+                key={d.id}
+                className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-4"
+              >
+                <div className="grid place-items-center">
+                  <div className="grid h-20 w-20 place-items-center rounded-full bg-[linear-gradient(135deg,rgba(30,144,255,0.22),rgba(50,205,50,0.18))] text-xl font-extrabold text-[var(--zim-black)]">
+                    {d.name
+                      .split(' ')
+                      .slice(0, 2)
+                      .map((w) => w[0])
+                      .join('')}
+                  </div>
+                </div>
+                <div className="mt-4 text-center">
+                  <div className="text-sm font-bold text-[var(--zim-black)]">
+                    {d.name}
+                  </div>
+                  <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
+                    {d.role}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#0b1220] px-3 py-12 md:px-4 md:py-16 lg:px-4">
+        <div className="mx-auto w-full">
+          <div className="relative overflow-hidden rounded-3xl bg-[#0f172a] p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.45)] md:p-10">
+            <div className="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]">
+              <MessageCircle size={20} />
             </div>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-md bg-[var(--zim-blue)] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
-              >
-                Get a Free Consultation
-              </Link>
-              <a
-                href="https://wa.me/263000000000"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-md border border-white/25 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15"
-              >
-                WhatsApp
-              </a>
+            <div className="max-w-2xl">
+              <div className="text-2xl font-extrabold md:text-3xl">
+                READY TO WORK WITH US?
+              </div>
+              <div className="mt-2 text-sm text-white/75 md:text-base">
+                Let’s talk about your idea and turn it into a real product.
+              </div>
+            </div>
+
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
+              <div className="space-y-2 text-sm text-white/80">
+                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
+                  CONTACT
+                </div>
+                <div>hello@zimnovate.co.zw</div>
+                <div>+263 00 000 0000</div>
+                <div>Harare, Zimbabwe</div>
+              </div>
+
+              <div className="space-y-2 text-sm text-white/80">
+                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
+                  NAVIGATE
+                </div>
+                <Link className="block hover:text-white" to="/about">
+                  About
+                </Link>
+                <Link className="block hover:text-white" to="/services">
+                  Services
+                </Link>
+                <Link className="block hover:text-white" to="/portfolio">
+                  Portfolio
+                </Link>
+              </div>
+
+              <div className="space-y-3">
+                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
+                  START A PROJECT
+                </div>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
           </div>
         </div>

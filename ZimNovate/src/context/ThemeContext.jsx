@@ -1,35 +1,23 @@
-import React, { useEffect, useMemo, useState } from 'react'
-import { ThemeContext } from './theme'
+import { createContext, useState, useEffect } from "react";
 
-const getInitialTheme = () => {
-  if (typeof window === 'undefined') return 'light'
-
-  const stored = window.localStorage.getItem('zimnovate_theme')
-  if (stored === 'light' || stored === 'dark') return stored
-
-  const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)')?.matches
-  return prefersDark ? 'dark' : 'light'
-}
+export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(getInitialTheme)
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const root = document.documentElement
-    if (theme === 'dark') root.classList.add('dark')
-    else root.classList.remove('dark')
+    if(darkMode){
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
-    window.localStorage.setItem('zimnovate_theme', theme)
-  }, [theme])
+  const toggleTheme = () => setDarkMode(!darkMode);
 
-  const value = useMemo(
-    () => ({
-      theme,
-      setTheme,
-      toggleTheme: () => setTheme((t) => (t === 'dark' ? 'light' : 'dark')),
-    }),
-    [theme],
-  )
-
-  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-}
+  return (
+    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
