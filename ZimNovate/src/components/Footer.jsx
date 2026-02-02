@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className="border-t border-[var(--zim-border)] bg-[var(--zim-bg)]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-12 py-12 md:grid-cols-3 md:px-16 lg:px-20">
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <img
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-[var(--zim-border)]">
-        <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-3 px-4 py-6 text-sm text-[var(--zim-fg)]/60 md:flex-row md:items-center">
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-3 px-12 py-6 text-sm text-[var(--zim-fg)]/60 md:flex-row md:items-center md:px-16 lg:px-20">
           <div>© {new Date().getFullYear()} Zimnovate. All rights reserved.</div>
           <div>Built for performance, accessibility, and modern web standards.</div>
         </div>

@@ -42,7 +42,7 @@ const Portfolio = () => {
 
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="Portfolio"
           title="Case studies & project highlights"

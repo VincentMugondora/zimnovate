@@ -7,7 +7,7 @@ const MotionDiv = motion.div
 const About = () => {
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="About"
           title="We build digital products with speed and intent"
@@ -46,7 +46,7 @@ const About = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             <SectionHeading
               eyebrow="Founder"
@@ -86,7 +86,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="Values"
           title="How we work"
@@ -128,7 +128,7 @@ const About = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <SectionHeading
             eyebrow="Process"
             title="A simple timeline that keeps delivery predictable"

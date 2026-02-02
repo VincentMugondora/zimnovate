@@ -14,7 +14,7 @@ const Services = () => {
 
   return (
     <div>
-      <section className="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading
             eyebrow="Services"
