@@ -97,35 +97,65 @@ const About = () => {
 
       {/* Our Story */}
       <section id="our-story" className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-        <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-center">
-          <div className="space-y-4">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Story</div>
-            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
-              Founded in Zimbabwe. Built for the world.
-            </h3>
-            <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
-              Founded in Zimbabwe, Zimnovate was built from the belief that African talent can build world-class digital solutions. What started as a one-person vision is now a growing team of developers, designers, and strategists creating meaningful digital experiences.
-            </p>
-            <div className="grid gap-2 text-sm text-[#1A1A1A]/80">
-              {['We listen.', 'We plan.', 'We create.', 'We innovate.'].map((line) => (
-                <div key={line} className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[#F4D47C]" /> {line}
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="text-center space-y-4 mb-12">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Story</div>
+          <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+            Founded in Zimbabwe. Built for the world.
+          </h3>
+        </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-8">
-            <div className="absolute inset-0 opacity-5">
-              <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='1'%3E%3Cpath d='M20 2v36M2 20h36M6 6l28 28M6 28l28-28'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
-            </div>
-            <div className="relative h-48 rounded-2xl bg-gradient-to-br from-[#F4D47C]/20 to-[#F4D47C]/5 flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-[#0F172A]">Z</div>
-                <div className="text-sm text-[#1A1A1A]/60">Zimnovate</div>
+        <div className="space-y-12">
+          {[
+            {
+              year: '2020',
+              title: 'The Beginning',
+              description: 'Started as a one-person vision in Harare, Zimbabwe with a mission to bring world-class digital solutions to African businesses.',
+              image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              position: 'left'
+            },
+            {
+              year: '2021',
+              title: 'First Major Client',
+              description: 'Landed our first enterprise project, proving that African talent can compete on the global stage.',
+              image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              position: 'right'
+            },
+            {
+              year: '2023',
+              title: 'Team Expansion',
+              description: 'Grew from a solo founder to a diverse team of developers, designers, and strategists across multiple disciplines.',
+              image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              position: 'left'
+            },
+            {
+              year: '2024',
+              title: 'Global Impact',
+              description: 'Now serving clients across multiple continents while maintaining our African roots and innovative spirit.',
+              image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              position: 'right'
+            }
+          ].map((milestone) => (
+            <div key={milestone.year} className={`grid gap-8 md:grid-cols-2 md:items-center ${milestone.position === 'right' ? 'md:grid-cols-[1.1fr_0.9fr]' : 'md:grid-cols-[0.9fr_1.1fr]'}`}>
+              <div className={`space-y-4 ${milestone.position === 'right' ? 'md:order-1' : ''}`}>
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl font-bold text-[#F4D47C]">{milestone.year}</span>
+                  <div className="h-px flex-1 bg-[#F4D47C]/20" />
+                </div>
+                <h4 className="text-2xl font-bold text-[#0F172A]">{milestone.title}</h4>
+                <p className="text-sm leading-relaxed text-[#1A1A1A]/80">{milestone.description}</p>
+              </div>
+              <div className={`relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 ${milestone.position === 'right' ? 'md:order-0' : ''}`}>
+                <div className="relative h-64 overflow-hidden rounded-2xl">
+                  <img 
+                    src={milestone.image} 
+                    alt={milestone.title}
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/30 to-transparent" />
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
