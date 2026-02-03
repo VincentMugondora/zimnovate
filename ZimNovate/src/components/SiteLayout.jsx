@@ -19,7 +19,7 @@ const SiteLayout = () => {
       >
         Skip to content
       </a>
-      {isHome ? null : <Header />}
+      <Header />
       <main id="main" className="min-h-[70vh]">
         <Outlet />
       </main>
