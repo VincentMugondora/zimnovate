@@ -12,6 +12,11 @@ const MotionDiv = motion.div
 const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services.slice(0, 4)
+  const bestProjectImages = [
+    'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+  ]
   const bestLocations = [
     'Jakarta, Indonesia',
     'Kuala Lumpur, Malaysia',
@@ -100,7 +105,7 @@ const Home = () => {
                 <div className="relative rounded-[34px] bg-gradient-to-b from-[#f5f5f5] to-[#fafafa] p-5 shadow-[0_26px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
                   <div className="aspect-[10/9] overflow-hidden rounded-[26px] bg-white ring-1 ring-black/5 shadow-[0_10px_24px_rgba(0,0,0,0.06)]">
                     <img
-                      src={(Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
+                      src={bestProjectImages[idx] || (Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
                       className="h-full w-full object-cover"
                       loading="lazy"
