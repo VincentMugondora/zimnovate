@@ -71,7 +71,7 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl md:leading-[0.95]">
+              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[0.95]">
                 INNOVATE AND GROW
                 <br />
                 WITH ZIMNOVATE
