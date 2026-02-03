@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 const MotionDiv = motion.div
 
@@ -34,15 +34,19 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 { to: '/', label: 'Home' },
                 { to: '/about', label: 'About' },
                 { to: '/services', label: 'Services' },
-                { to: '/portfolio', label: 'Advisor' },
+                { to: '/portfolio', label: 'Portfolio' },
               ].map((item) => (
-                <Link
+                <NavLink
                   key={item.to}
                   to={item.to}
-                  className="hover:text-white text-white/80"
+                  className={({ isActive }) =>
+                    `hover:text-white ${
+                      isActive ? 'text-white' : 'text-white/80'
+                    }`
+                  }
                 >
                   {item.label}
-                </Link>
+                </NavLink>
               ))}
             </nav>
 
