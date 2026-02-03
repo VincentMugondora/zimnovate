@@ -19,7 +19,6 @@ const SiteLayout = () => {
       >
         Skip to content
       </a>
-      <Header />
       <main id="main" className="min-h-[70vh]">
         <Outlet />
       </main>

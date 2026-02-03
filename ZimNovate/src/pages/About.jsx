@@ -1,12 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import SectionHeading from '../components/SectionHeading.jsx'
+import PageHero from '../components/PageHero.jsx'
 
 const MotionDiv = motion.div
 
 const About = () => {
   return (
     <div>
+      <PageHero 
+        title="ABOUT ZIMNOVATE"
+        subtitle="Building Zimbabwe's digital future with clean design and reliable engineering."
+        height="min-h-[45vh]"
+      />
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="About"

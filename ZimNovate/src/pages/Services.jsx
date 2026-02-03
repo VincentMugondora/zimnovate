@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import SectionHeading from '../components/SectionHeading.jsx'
 import ServiceCard from '../components/ServiceCard.jsx'
+import PageHero from '../components/PageHero.jsx'
 import { serviceCategories, services } from '../data/services.js'
 
 const Services = () => {
@@ -14,6 +15,11 @@ const Services = () => {
 
   return (
     <div>
+      <PageHero 
+        title="OUR SERVICES"
+        subtitle="Branding, websites, and full-stack systems designed to help you ship faster and scale."
+        height="min-h-[45vh]"
+      />
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import SectionHeading from '../components/SectionHeading.jsx'
 import PortfolioGrid from '../components/PortfolioGrid.jsx'
+import PageHero from '../components/PageHero.jsx'
 import { portfolioProjects } from '../data/portfolio.js'
 
 const Portfolio = () => {
@@ -42,6 +43,11 @@ const Portfolio = () => {
 
   return (
     <div>
+      <PageHero 
+        title="PORTFOLIO"
+        subtitle="Case studies & project highlights showcasing our best work."
+        height="min-h-[45vh]"
+      />
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="Portfolio"

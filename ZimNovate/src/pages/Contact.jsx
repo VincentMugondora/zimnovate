@@ -2,10 +2,16 @@ import React from 'react'
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import ContactForm from '../components/ContactForm.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
+import PageHero from '../components/PageHero.jsx'
 
 const Contact = () => {
   return (
     <div>
+      <PageHero 
+        title="CONTACT US"
+        subtitle="Let's talk about your next project. We'll respond within 24 hours."
+        height="min-h-[45vh]"
+      />
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <SectionHeading
           eyebrow="Contact"
