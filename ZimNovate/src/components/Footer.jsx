@@ -48,10 +48,11 @@ const Footer = () => {
 
           <div className="mt-8 border-t border-white/10" />
 
-          <div className="mt-10 flex gap-10 w-full justify-between">
-            <div className="space-y-4">
+          <div className="mt-10 flex flex-col gap-10 md:flex-row md:justify-between">
+            {/* Brand section */}
+            <div className="space-y-4 md:max-w-xs">
               <div className="text-sm font-semibold uppercase tracking-wide">DIGIMON</div>
-              <p className="text-sm text-white/70 leading-relaxed max-w-xs">
+              <p className="text-sm text-white/70 leading-relaxed">
                 We know how important customer experience is for a business and therefore, we strive
               </p>
               <div className="flex items-center gap-3 text-white/80">
@@ -69,37 +70,38 @@ const Footer = () => {
               <div className="text-xs text-white/60">DIGIMON, Inc.</div>
             </div>
 
-            <div className='flex w-1/2 justify-between'>
+            {/* Links section */}
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:flex md:w-1/2 md:justify-between md:gap-0">
               <div className="space-y-3">
-              <div className="text-sm font-semibold text-white">Data Science</div>
-              <nav className="grid gap-2 text-sm text-white/70" aria-label="Data Science">
-                <Link to="#" className="hover:text-white">Business Use-Case</Link>
-                <Link to="#" className="hover:text-white">Data Roles</Link>
-                <Link to="#" className="hover:text-white">Blog</Link>
-                <Link to="#" className="hover:text-white">Management</Link>
-                <Link to="#" className="hover:text-white">Privacy Policy</Link>
-              </nav>
-            </div>
+                <div className="text-sm font-semibold text-white">Data Science</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Data Science">
+                  <Link to="#" className="hover:text-white">Business Use-Case</Link>
+                  <Link to="#" className="hover:text-white">Data Roles</Link>
+                  <Link to="#" className="hover:text-white">Blog</Link>
+                  <Link to="#" className="hover:text-white">Management</Link>
+                  <Link to="#" className="hover:text-white">Privacy Policy</Link>
+                </nav>
+              </div>
 
-            <div className="space-y-3">
-              <div className="text-sm font-semibold text-white">About</div>
-              <nav className="grid gap-2 text-sm text-white/70" aria-label="About">
-                <Link to="/contact" className="hover:text-white">Contact Us</Link>
-                <Link to="/services" className="hover:text-white">Support Us</Link>
-                <Link to="/about" className="hover:text-white">Community</Link>
-                <Link to="/about" className="hover:text-white">FAQ</Link>
-              </nav>
-            </div>
+              <div className="space-y-3">
+                <div className="text-sm font-semibold text-white">About</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="About">
+                  <Link to="/contact" className="hover:text-white">Contact Us</Link>
+                  <Link to="/services" className="hover:text-white">Support Us</Link>
+                  <Link to="/about" className="hover:text-white">Community</Link>
+                  <Link to="/about" className="hover:text-white">FAQ</Link>
+                </nav>
+              </div>
 
-            <div className="space-y-3">
-              <div className="text-sm font-semibold text-white">Programs</div>
-              <nav className="grid gap-2 text-sm text-white/70" aria-label="Programs">
-                <Link to="#" className="hover:text-white">Learning Modules</Link>
-                <Link to="#" className="hover:text-white">Partnership</Link>
-                <Link to="#" className="hover:text-white">Events</Link>
-                <Link to="#" className="hover:text-white">Data Analyst</Link>
-              </nav>
-            </div>
+              <div className="space-y-3 col-span-2 sm:col-span-1">
+                <div className="text-sm font-semibold text-white">Programs</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Programs">
+                  <Link to="#" className="hover:text-white">Learning Modules</Link>
+                  <Link to="#" className="hover:text-white">Partnership</Link>
+                  <Link to="#" className="hover:text-white">Events</Link>
+                  <Link to="#" className="hover:text-white">Data Analyst</Link>
+                </nav>
+              </div>
             </div>
           </div>
 
