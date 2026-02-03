@@ -18,7 +18,6 @@ import PageHero from '../components/PageHero.jsx'
 const MotionDiv = motion.div
 
 const About = () => {
-  const processIcons = [Search, PenTool, Code, RocketLaunch]
 
   return (
     <div>
@@ -159,39 +158,74 @@ const About = () => {
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
-            <div className="space-y-3">
-              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--zim-blue)]">Founder</div>
-              <h3 className="text-3xl font-bold tracking-tight text-[var(--zim-fg)] md:text-4xl">Meet the Founder — Vincent Mugondora</h3>
-              <p className="text-sm leading-relaxed text-[var(--zim-fg)]/80 md:text-base">
-                Vincent is a passionate software developer and digital innovator based in Zimbabwe. With a strong background in full-stack engineering and a mission to uplift businesses through technology, he leads Zimnovate with curiosity, craftsmanship, and a commitment to building digital experiences that create real impact.
-              </p>
-            </div>
+      {/* Meet the Team */}
+      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="text-center space-y-4 mb-12">
+          <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Team</div>
+          <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+            Meet the people behind the magic
+          </h3>
+        </div>
 
-            <div className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-6">
-              <div className="flex items-start gap-4">
-                <div className="grid h-14 w-14 place-items-center rounded-xl bg-[var(--zim-blue)] text-white text-lg font-bold">
-                  V
-                </div>
-                <div>
-                  <div className="text-lg font-bold">Vincent Mugondora</div>
-                  <div className="text-sm text-[var(--zim-fg)]/70">Founder & Full-Stack Builder</div>
-                </div>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: 'Vincent Mugondora',
+              role: 'Founder & Lead Developer',
+              image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'Full-stack developer with 8+ years building scalable web solutions.'
+            },
+            {
+              name: 'Sarah Chen',
+              role: 'UX/UI Designer',
+              image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'Creating intuitive digital experiences that users love.'
+            },
+            {
+              name: 'Michael Johnson',
+              role: 'Mobile Developer',
+              image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'iOS and Android expert with a passion for mobile innovation.'
+            },
+            {
+              name: 'Amina Patel',
+              role: 'Digital Strategist',
+              image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'Data-driven strategies that accelerate business growth.'
+            },
+            {
+              name: 'David Kim',
+              role: 'Backend Engineer',
+              image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'Building robust APIs and cloud infrastructure.'
+            },
+            {
+              name: 'Lisa Thompson',
+              role: 'Project Manager',
+              image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face&auto=format',
+              bio: 'Ensuring smooth delivery and exceptional client experiences.'
+            }
+          ].map((member) => (
+            <div
+              key={member.name}
+              className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent" />
+                <div className="absolute inset-0 bg-[#F4D47C]/10 mix-blend-multiply" />
               </div>
-
-              <p className="mt-4 text-sm text-[var(--zim-fg)]/80">
-                “I started Zimnovate to help African teams ship digital products that feel premium, secure, and modern — without sacrificing speed.”
-              </p>
-
-              <div className="mt-5 grid gap-3 text-sm text-[var(--zim-fg)]/80">
-                <div className="rounded-xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-4">Strength: clean systems and clear delivery.</div>
-                <div className="rounded-xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-4">Focus: performance, accessibility, and scalable architecture.</div>
+              <div className="relative p-6">
+                <h4 className="text-lg font-bold text-[#0F172A] mb-1">{member.name}</h4>
+                <p className="text-sm font-semibold text-[#F4D47C] mb-2">{member.role}</p>
+                <p className="text-sm text-[#1A1A1A]/70">{member.bio}</p>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -208,76 +242,97 @@ const About = () => {
             {[
               {
                 title: 'Innovation with Purpose',
-                desc: 'We design with meaning, not just aesthetics. Every solution serves a real business need.',
-                image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                desc: 'We design with meaning, not just aesthetics.',
+                icon: Lightbulb,
               },
               {
                 title: 'Transparency & Trust',
-                desc: 'Everything we do is honest, clear, and collaborative. No surprises, just results.',
-                image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                desc: 'Everything we do is honest, clear, and collaborative.',
+                icon: ShieldCheck,
               },
               {
                 title: 'Excellence in Execution',
-                desc: 'Quality is not an act — it\'s our culture. We deliver pixel-perfect solutions.',
-                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                desc: 'Quality is not an act — it\'s our culture.',
+                icon: Gem,
               },
-            ].map((value) => (
-              <div
-                key={value.title}
-                className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={value.image} 
-                    alt={value.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
-                  <div className="absolute inset-0 bg-[#F4D47C]/10 mix-blend-multiply" />
+            ].map((value) => {
+              const Icon = value.icon
+              return (
+                <div
+                  key={value.title}
+                  className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
+                >
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='1'%3E%3Cpath d='M15 2v26M2 15h26M6 6l18 18M6 18l18-18'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
+                  </div>
+                  <div className="relative">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F4D47C]/10 text-[#F4D47C] mb-4">
+                      <Icon size={20} />
+                    </div>
+                    <h4 className="text-lg font-bold text-[#0F172A] mb-2">{value.title}</h4>
+                    <p className="text-sm text-[#1A1A1A]/70">{value.desc}</p>
+                  </div>
                 </div>
-                <div className="relative p-6">
-                  <h4 className="text-lg font-bold text-[#0F172A] mb-2">{value.title}</h4>
-                  <p className="text-sm text-[#1A1A1A]/70">{value.desc}</p>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* Process */}
-      <section className="bg-[var(--zim-gray)]/40">
+      <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <SectionHeading
-            eyebrow="Process"
-            title="How we work"
-            subtitle="Discover → Design → Develop → Launch & Grow"
-          />
+          <div className="text-center space-y-4 mb-12">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Process</div>
+            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+              How we bring your vision to life
+            </h3>
+          </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { k: 'Discover', d: 'We understand your goals.', c: 'var(--zim-blue)' },
-              { k: 'Design', d: 'UI/UX that converts and inspires.', c: 'var(--zim-orange)' },
-              { k: 'Develop', d: 'Scalable, secure engineering.', c: 'var(--zim-green)' },
-              { k: 'Launch & Grow', d: 'Support beyond the project.', c: 'var(--zim-blue)' },
-            ].map((s, idx) => {
-              const Icon = processIcons[idx]
-              return (
-                <div
-                  key={s.k}
-                  className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-5"
-                >
-                  <div
-                    className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg text-sm font-bold text-white"
-                    style={{ background: s.c }}
-                  >
-                    <Icon size={16} />
+              {
+                title: 'Discovery',
+                description: 'We dive deep to understand your goals, users, and challenges through research and collaboration.',
+                image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy&auto=format'
+              },
+              {
+                title: 'Strategy & Design',
+                description: 'Creating intuitive interfaces and experiences that delight users and drive business results.',
+                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format'
+              },
+              {
+                title: 'Development',
+                description: 'Building robust, scalable solutions with clean code and modern technologies.',
+                image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format'
+              },
+              {
+                title: 'Launch & Grow',
+                description: 'Deploying your solution and providing ongoing support to ensure continued success.',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format'
+              }
+            ].map((step, index) => (
+              <div
+                key={step.title}
+                className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
+                  <div className="absolute top-4 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-[#F4D47C] text-[#0F172A] font-bold text-sm">
+                    {index + 1}
                   </div>
-                  <div className="text-sm font-bold">{s.k}</div>
-                  <div className="mt-1 text-sm text-[var(--zim-fg)]/75">{s.d}</div>
                 </div>
-              )
-            })}
+                <div className="relative p-4">
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-2">{step.title}</h4>
+                  <p className="text-sm text-[#1A1A1A]/70">{step.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -313,29 +368,41 @@ const About = () => {
           <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F4D47C] p-10 text-[#0F172A] shadow-[0_28px_80px_rgba(0,0,0,0.15)]">
             <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
             <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/10 blur-3xl" />
-            <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div className="space-y-3">
-                <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0F172A]/70">Let's build</div>
-                <h3 className="text-3xl font-bold leading-tight md:text-4xl">
-                  Let's build something extraordinary, together.
-                </h3>
-                <p className="text-sm text-[#0F172A]/80">
-                  Start a project with Zimnovate or book a call to plan your next move.
-                </p>
+            
+            <div className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+              <div className="space-y-6">
+                <div className="space-y-3">
+                  <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0F172A]/70">Let's build</div>
+                  <h3 className="text-3xl font-bold leading-tight md:text-4xl">
+                    Let's build something extraordinary, together.
+                  </h3>
+                  <p className="text-sm text-[#0F172A]/80">
+                    Start a project with Zimnovate or book a call to plan your next move.
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
+                  >
+                    Start Your Project
+                  </a>
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center justify-center rounded-full border border-[#0F172A]/20 bg-white/10 px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-white/20"
+                  >
+                    Book a Call
+                  </a>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3">
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
-                >
-                  Start Your Project
-                </a>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-[#0F172A]/20 bg-white/10 px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-white/20"
-                >
-                  Book a Call
-                </a>
+              
+              <div className="relative overflow-hidden rounded-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=400&fit=crop&crop=entropy&auto=format" 
+                  alt="Zimnovate team collaborating"
+                  className="h-64 w-full object-cover lg:h-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#F4D47C]/20 to-transparent" />
               </div>
             </div>
           </div>
