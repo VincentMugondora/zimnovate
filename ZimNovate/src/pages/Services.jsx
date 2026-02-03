@@ -21,6 +21,12 @@ const Services = () => {
       'Web Applications': '/services/web-development',
       'CMS Solutions': '/services/web-development',
       'Website Maintenance': '/services/web-development',
+      'Mobile Apps': '/services/mobile-app-development',
+      'Native App Development': '/services/mobile-app-development',
+      'Cross-Platform Apps': '/services/mobile-app-development',
+      'UI/UX App Design': '/services/mobile-app-development',
+      'Backend & API Development': '/services/mobile-app-development',
+      'App Maintenance & Updates': '/services/mobile-app-development',
     }
     return serviceLinks[serviceTitle] || '/contact'
   }
@@ -54,9 +60,9 @@ const Services = () => {
                 <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
                   {g.category}
                 </div>
-                {g.category === 'Web Development' && (
+                {(g.category === 'Web Development' || g.category === 'Mobile Apps') && (
                   <Link
-                    to="/services/web-development"
+                    to={g.category === 'Web Development' ? '/services/web-development' : '/services/mobile-app-development'}
                     className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
                   >
                     View Details →
@@ -86,6 +92,21 @@ const Services = () => {
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
                       Explore Web Development
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'Mobile Apps' ? (
+                  <>
+                    <Link
+                      to="/services/mobile-app-development"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore Mobile Apps
                     </Link>
                     <Link
                       to="/contact"
