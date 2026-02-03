@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link, NavLink } from 'react-router-dom'
 
 const MotionDiv = motion.div
 
 const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const serviceLinks = [
+    { label: 'Web Development', to: '/services#web' },
+    { label: 'Mobile Apps', to: '/services#mobile' },
+    { label: 'Branding & Design', to: '/services#branding' },
+    { label: 'Digital Strategy', to: '/services#strategy' },
+    { label: 'AI & Automation', to: '/services#ai' },
+    { label: 'E-commerce Solutions', to: '/services#ecommerce' },
+  ]
+
   return (
     <section className="bg-white p-[10px]">
       <div
@@ -30,25 +40,137 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             </Link>
 
             <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
-              {[
-                { to: '/', label: 'Home' },
-                { to: '/services', label: 'Services' },
-                { to: '/portfolio', label: 'Portfolio' },
-                { to: '/about', label: 'About' },
-                { to: '/contact', label: 'Contact' },
-              ].map((item) => (
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Home
+              </NavLink>
+
+              <div className="relative group">
                 <NavLink
-                  key={item.to}
-                  to={item.to}
+                  to="/services"
                   className={({ isActive }) =>
-                    `hover:text-white ${
+                    `flex items-center gap-1 hover:text-white ${
                       isActive ? 'text-white' : 'text-white/80'
                     }`
                   }
                 >
-                  {item.label}
+                  Services
                 </NavLink>
-              ))}
+                <div className="absolute left-0 top-full mt-2 hidden min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/90 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out group-hover:block">
+                  <div className="grid gap-2">
+                    {serviceLinks.map((link) => (
+                      <NavLink
+                        key={link.to}
+                        to={link.to}
+                        className={({ isActive }) =>
+                          `rounded-lg px-3 py-2 transition hover:bg-white/10 ${
+                            isActive ? 'text-white' : 'text-white/80'
+                          }`
+                        }
+                      >
+                        {link.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Portfolio
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Contact
+              </NavLink>
+            </nav>
+
+            {/* Mobile nav */}
+            <nav className="flex items-center gap-3 text-sm font-semibold text-white/85 md:hidden" aria-label="Hero mobile">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Home
+              </NavLink>
+              <div className="relative">
+                <button
+                  type="button"
+                  onClick={() => setServicesOpen((prev) => !prev)}
+                  className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white hover:bg-white/10"
+                >
+                  Services
+                  <span className="text-xs">▾</span>
+                </button>
+                <div
+                  className={`absolute left-0 top-full mt-2 min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/95 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out ${
+                    servicesOpen ? 'block' : 'hidden'
+                  }`}
+                >
+                  <div className="grid gap-2">
+                    {serviceLinks.map((link) => (
+                      <NavLink
+                        key={link.to}
+                        to={link.to}
+                        onClick={() => setServicesOpen(false)}
+                        className={({ isActive }) =>
+                          `rounded-lg px-3 py-2 transition hover:bg-white/10 ${
+                            isActive ? 'text-white' : 'text-white/80'
+                          }`
+                        }
+                      >
+                        {link.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <NavLink
+                to="/portfolio"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Portfolio
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                About
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Contact
+              </NavLink>
             </nav>
 
             <div className="flex items-center gap-3">
