@@ -27,6 +27,13 @@ const Services = () => {
       'UI/UX App Design': '/services/mobile-app-development',
       'Backend & API Development': '/services/mobile-app-development',
       'App Maintenance & Updates': '/services/mobile-app-development',
+      'Digital Strategy': '/services/digital-strategy',
+      'Digital Growth Strategy': '/services/digital-strategy',
+      'SEO & Content Strategy': '/services/digital-strategy',
+      'Social Media Strategy': '/services/digital-strategy',
+      'Brand Positioning': '/services/digital-strategy',
+      'Data & Analytics': '/services/digital-strategy',
+      'Consulting & Advisory': '/services/digital-strategy',
     }
     return serviceLinks[serviceTitle] || '/contact'
   }
@@ -60,9 +67,15 @@ const Services = () => {
                 <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
                   {g.category}
                 </div>
-                {(g.category === 'Web Development' || g.category === 'Mobile Apps') && (
+                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy') && (
                   <Link
-                    to={g.category === 'Web Development' ? '/services/web-development' : '/services/mobile-app-development'}
+                    to={
+                      g.category === 'Web Development'
+                        ? '/services/web-development'
+                        : g.category === 'Mobile Apps'
+                        ? '/services/mobile-app-development'
+                        : '/services/digital-strategy'
+                    }
                     className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
                   >
                     View Details →
@@ -107,6 +120,21 @@ const Services = () => {
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
                       Explore Mobile Apps
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'Digital Strategy' ? (
+                  <>
+                    <Link
+                      to="/services/digital-strategy"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore Digital Strategy
                     </Link>
                     <Link
                       to="/contact"
