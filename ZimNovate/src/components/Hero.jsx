@@ -30,7 +30,7 @@ const Hero = () => {
     { label: 'Branding & Design', to: '/services/branding' },
     { label: 'Digital Strategy', to: '/services/digital-strategy' },
     { label: 'Digital Marketing', to: '/services/digital-marketing' },
-    { label: 'AI & Automation', to: '/services#ai' },
+    { label: 'AI & Automation', to: '/services/ai-automation' },
     { label: 'E-commerce Solutions', to: '/services#ecommerce' },
   ]
 
