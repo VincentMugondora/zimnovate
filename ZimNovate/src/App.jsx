@@ -10,6 +10,7 @@ import Branding from './pages/Branding.jsx'
 import DigitalStrategy from './pages/DigitalStrategy.jsx'
 import DigitalMarketing from './pages/DigitalMarketing.jsx'
 import AIAutomation from './pages/AIAutomation.jsx'
+import ECommerceSolutions from './pages/ECommerceSolutions.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/services/digital-strategy" element={<DigitalStrategy />} />
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/services/ai-automation" element={<AIAutomation />} />
+        <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
