@@ -25,7 +25,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
   }, [])
   const serviceLinks = [
     { label: 'Web Development', to: '/services/web-development' },
-    { label: 'Mobile Apps', to: '/services#mobile' },
+    { label: 'Mobile Apps', to: '/services/mobile-app-development' },
     { label: 'Branding & Design', to: '/services#branding' },
     { label: 'Digital Strategy', to: '/services#strategy' },
     { label: 'AI & Automation', to: '/services#ai' },
