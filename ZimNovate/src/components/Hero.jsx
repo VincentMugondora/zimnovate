@@ -7,7 +7,7 @@ const MotionDiv = motion.div
 
 const Hero = () => {
   return (
-    <section className="bg-white p-5">
+    <section className="bg-white p-[10px]">
       <div
         className="relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]"
         style={{
@@ -19,7 +19,7 @@ const Hero = () => {
       >
         <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
 
-        <div className="relative">
+        <div className="w-full p-[10px]">
           <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
               <img
