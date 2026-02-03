@@ -41,6 +41,13 @@ const Services = () => {
       'Computer Vision': '/services/ai-automation',
       'Document Automation': '/services/ai-automation',
       'AI Consulting': '/services/ai-automation',
+      'E-commerce Solutions': '/services/e-commerce',
+      'Custom E-Commerce': '/services/e-commerce',
+      'Payment Integration': '/services/e-commerce',
+      'E-Commerce Automation': '/services/e-commerce',
+      'Marketplace Setup': '/services/e-commerce',
+      'Mobile Commerce': '/services/e-commerce',
+      'E-Commerce SEO': '/services/e-commerce',
     }
     return serviceLinks[serviceTitle] || '/contact'
   }
@@ -74,7 +81,7 @@ const Services = () => {
                 <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
                   {g.category}
                 </div>
-                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation') && (
+                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation' || g.category === 'E-commerce Solutions') && (
                   <Link
                     to={
                       g.category === 'Web Development'
@@ -83,7 +90,9 @@ const Services = () => {
                         ? '/services/mobile-app-development'
                         : g.category === 'Digital Strategy'
                         ? '/services/digital-strategy'
-                        : '/services/ai-automation'
+                        : g.category === 'AI & Automation'
+                        ? '/services/ai-automation'
+                        : '/services/e-commerce'
                     }
                     className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
                   >
@@ -159,6 +168,21 @@ const Services = () => {
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
                       Explore AI & Automation
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'E-commerce Solutions' ? (
+                  <>
+                    <Link
+                      to="/services/e-commerce"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore E-Commerce
                     </Link>
                     <Link
                       to="/contact"
