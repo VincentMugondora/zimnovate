@@ -34,6 +34,13 @@ const Services = () => {
       'Brand Positioning': '/services/digital-strategy',
       'Data & Analytics': '/services/digital-strategy',
       'Consulting & Advisory': '/services/digital-strategy',
+      'AI & Automation': '/services/ai-automation',
+      'AI Chatbots': '/services/ai-automation',
+      'Business Process Automation': '/services/ai-automation',
+      'Predictive Analytics': '/services/ai-automation',
+      'Computer Vision': '/services/ai-automation',
+      'Document Automation': '/services/ai-automation',
+      'AI Consulting': '/services/ai-automation',
     }
     return serviceLinks[serviceTitle] || '/contact'
   }
@@ -67,14 +74,16 @@ const Services = () => {
                 <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
                   {g.category}
                 </div>
-                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy') && (
+                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation') && (
                   <Link
                     to={
                       g.category === 'Web Development'
                         ? '/services/web-development'
                         : g.category === 'Mobile Apps'
                         ? '/services/mobile-app-development'
-                        : '/services/digital-strategy'
+                        : g.category === 'Digital Strategy'
+                        ? '/services/digital-strategy'
+                        : '/services/ai-automation'
                     }
                     className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
                   >
@@ -135,6 +144,21 @@ const Services = () => {
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
                       Explore Digital Strategy
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'AI & Automation' ? (
+                  <>
+                    <Link
+                      to="/services/ai-automation"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore AI & Automation
                     </Link>
                     <Link
                       to="/contact"
