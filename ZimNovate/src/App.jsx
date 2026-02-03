@@ -7,6 +7,7 @@ import Services from './pages/Services.jsx'
 import WebDevelopment from './pages/WebDevelopment.jsx'
 import MobileAppDevelopment from './pages/MobileAppDevelopment.jsx'
 import Branding from './pages/Branding.jsx'
+import DigitalStrategy from './pages/DigitalStrategy.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Contact from './pages/Contact.jsx'
 import NotFound from './pages/NotFound.jsx'
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/services/web-development" element={<WebDevelopment />} />
         <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
         <Route path="/services/branding" element={<Branding />} />
+        <Route path="/services/digital-strategy" element={<DigitalStrategy />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
