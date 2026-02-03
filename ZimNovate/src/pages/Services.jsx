@@ -13,6 +13,18 @@ const Services = () => {
     }))
   }, [])
 
+  const getServiceLink = (serviceTitle) => {
+    const serviceLinks = {
+      'Web Development': '/services/web-development',
+      'Custom Websites': '/services/web-development',
+      'E-Commerce Development': '/services/web-development',
+      'Web Applications': '/services/web-development',
+      'CMS Solutions': '/services/web-development',
+      'Website Maintenance': '/services/web-development',
+    }
+    return serviceLinks[serviceTitle] || '/contact'
+  }
+
   return (
     <div>
       <PageHero 
@@ -38,21 +50,58 @@ const Services = () => {
         <div className="mt-10 space-y-12">
           {grouped.map((g) => (
             <div key={g.category} className="space-y-6">
-              <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
-                {g.category}
+              <div className="flex items-center justify-between">
+                <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
+                  {g.category}
+                </div>
+                {g.category === 'Web Development' && (
+                  <Link
+                    to="/services/web-development"
+                    className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
+                  >
+                    View Details →
+                  </Link>
+                )}
               </div>
               <div className="grid gap-4 md:grid-cols-3">
                 {g.items.map((s) => (
-                  <ServiceCard key={s.id} service={s} />
+                  <div key={s.id}>
+                    <ServiceCard service={s} />
+                    <div className="mt-3">
+                      <Link
+                        to={getServiceLink(s.title)}
+                        className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[#F4D47C] hover:bg-[#F4D47C]/5 transition-colors"
+                      >
+                        Learn More
+                      </Link>
+                    </div>
+                  </div>
                 ))}
               </div>
-              <div className="flex">
-                <Link
-                  to="/contact"
-                  className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)]"
-                >
-                  Request a Quote
-                </Link>
+              <div className="flex gap-3">
+                {g.category === 'Web Development' ? (
+                  <>
+                    <Link
+                      to="/services/web-development"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore Web Development
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : (
+                  <Link
+                    to="/contact"
+                    className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                  >
+                    Request a Quote
+                  </Link>
+                )}
               </div>
             </div>
           ))}
