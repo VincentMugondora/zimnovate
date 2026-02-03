@@ -32,13 +32,13 @@ const About = () => {
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="space-y-4">
-            <div className="inline-flex rounded-full bg-[var(--zim-blue)]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--zim-blue)]">
+            <div className="inline-flex rounded-full bg-[#F4D47C]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0F172A]">
               Who We Are
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-[var(--zim-fg)] md:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
               Where vision meets smart technology
             </h2>
-            <p className="text-sm leading-relaxed text-[var(--zim-fg)]/80 md:text-base">
+            <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
               We transform ideas into powerful digital experiences. From strategy to launch, our teams deliver web, mobile, and brand systems built for speed, reliability, and measurable growth.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -57,31 +57,14 @@ const About = () => {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-3xl border border-[var(--zim-border)] bg-gradient-to-br from-[#0a1a2f] via-[#11263c] to-[#33e1ff]/40 p-8 text-white shadow-[0_24px_70px_rgba(0,0,0,0.25)]">
-            <div className="absolute -right-14 -top-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-            <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-[#33e1ff]/20 blur-3xl" />
-            <div className="relative space-y-4">
-              <p className="text-sm uppercase tracking-[0.35em] text-white/70">Zimnovate</p>
-              <h3 className="text-2xl font-bold leading-tight md:text-3xl">
-                Built in Zimbabwe. Designed for the future.
-              </h3>
-              <p className="text-sm text-white/80">
-                African businesses deserve digital solutions that match global standards. We craft products that feel premium, secure, and ready to scale.
-              </p>
-              <div className="grid gap-2 text-sm text-white/85">
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--zim-green)]" /> Innovation that matters
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--zim-green)]" /> Technology that empowers
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--zim-green)]" /> Solutions built for growth
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--zim-green)]" /> Crafted in Zimbabwe, built for the world
-                </div>
-              </div>
+          <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-1">
+            <div className="relative h-80 overflow-hidden rounded-3xl">
+              <img 
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=entropy&auto=format" 
+                alt="Team working in modern office"
+                className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/20 to-transparent" />
             </div>
           </div>
         </div>
