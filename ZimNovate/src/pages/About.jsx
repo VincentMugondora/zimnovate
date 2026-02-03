@@ -208,39 +208,39 @@ const About = () => {
             {[
               {
                 title: 'Innovation with Purpose',
-                desc: 'We design with meaning, not just aesthetics.',
-                icon: Lightbulb,
+                desc: 'We design with meaning, not just aesthetics. Every solution serves a real business need.',
+                image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop&crop=entropy&auto=format',
               },
               {
                 title: 'Transparency & Trust',
-                desc: 'Everything we do is honest, clear, and collaborative.',
-                icon: ShieldCheck,
+                desc: 'Everything we do is honest, clear, and collaborative. No surprises, just results.',
+                image: 'https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&h=400&fit=crop&crop=entropy&auto=format',
               },
               {
                 title: 'Excellence in Execution',
-                desc: 'Quality is not an act — it\'s our culture.',
-                icon: Gem,
+                desc: 'Quality is not an act — it\'s our culture. We deliver pixel-perfect solutions.',
+                image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop&crop=entropy&auto=format',
               },
-            ].map((value) => {
-              const Icon = value.icon
-              return (
-                <div
-                  key={value.title}
-                  className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
-                >
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='1'%3E%3Cpath d='M15 2v26M2 15h26M6 6l18 18M6 18l18-18'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
-                  </div>
-                  <div className="relative">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F4D47C]/10 text-[#F4D47C] mb-4">
-                      <Icon size={20} />
-                    </div>
-                    <h4 className="text-lg font-bold text-[#0F172A] mb-2">{value.title}</h4>
-                    <p className="text-sm text-[#1A1A1A]/70">{value.desc}</p>
-                  </div>
+            ].map((value) => (
+              <div
+                key={value.title}
+                className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img 
+                    src={value.image} 
+                    alt={value.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-[#F4D47C]/10 mix-blend-multiply" />
                 </div>
-              )
-            })}
+                <div className="relative p-6">
+                  <h4 className="text-lg font-bold text-[#0F172A] mb-2">{value.title}</h4>
+                  <p className="text-sm text-[#1A1A1A]/70">{value.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
