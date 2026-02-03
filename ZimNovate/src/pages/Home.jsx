@@ -19,10 +19,30 @@ const Home = () => {
   ]
 
   const designers = [
-    { id: 'd1', name: 'Jordan Abigail', role: 'Senior UI/UX Designer', photo: null },
-    { id: 'd2', name: 'Marcus Horizon', role: 'Senior UI/UX Designer', photo: null },
-    { id: 'd3', name: 'Ahmad Jalaludin', role: 'Illustration Designer', photo: null },
-    { id: 'd4', name: 'Jimmy Sullivan', role: 'Animation Designer', photo: null },
+    {
+      id: 'd1',
+      name: 'Jordan Abigail',
+      role: 'Senior UI/UX Designer',
+      photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80',
+    },
+    {
+      id: 'd2',
+      name: 'Marcus Horizon',
+      role: 'Senior UI/UX Designer',
+      photo: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=640&q=80',
+    },
+    {
+      id: 'd3',
+      name: 'Ahmad Jalaludin',
+      role: 'Illustration Designer',
+      photo: 'https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=640&q=80',
+    },
+    {
+      id: 'd4',
+      name: 'Jimmy Sullivan',
+      role: 'Animation Designer',
+      photo: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=640&q=80',
+    },
   ]
 
   const insights = [
