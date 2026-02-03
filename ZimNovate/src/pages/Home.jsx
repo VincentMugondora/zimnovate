@@ -155,41 +155,24 @@ const Home = () => {
           <div className="mt-6 border-t border-[var(--zim-border)]" />
 
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
-            <div className="relative isolate min-h-[360px] md:min-h-[460px]">
-              <div
-                className="absolute -left-24 -top-10 z-0 hidden h-[620px] w-[420px] rounded-[48px] bg-[radial-gradient(ellipse_at_40%_30%,rgba(30,144,255,0.12),transparent_60%)] md:block"
-                aria-hidden="true"
-              />
-              <div
-                className="absolute -left-12 top-0 z-0 hidden h-[540px] w-[380px] bg-white shadow-[0_40px_80px_rgba(0,0,0,0.12)] ring-1 ring-black/5 md:block"
-                style={{ clipPath: 'path("M16,84C32,24,96,0,160,0h180c48,0,80,32,80,84v216c0,88-64,144-160,160H116C52,460,16,416,16,352Z")', WebkitClipPath: 'path("M16,84C32,24,96,0,160,0h180c48,0,80,32,80,84v216c0,88-64,144-160,160H116C52,460,16,416,16,352Z")' }}
-                aria-hidden="true"
-              />
-              <div className="absolute -left-10 top-3 z-10 hidden h-[220px] w-[160px] -rotate-6 overflow-hidden rounded-3xl bg-white shadow-xl ring-1 ring-black/5 md:block">
-                <img src="/imgs/agency.jpg" alt="collage-1" className="h-full w-full object-cover" loading="lazy" />
-              </div>
-              <div className="absolute -left-4 bottom-4 z-10 hidden h-[180px] w-[140px] rotate-6 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black/5 md:block">
-                <img src="/imgs/agency.jpg" alt="collage-2" className="h-full w-full object-cover" loading="lazy" />
-              </div>
-              <div className="relative z-20 mx-auto h-[440px] w-full max-w-[260px] rotate-[-8deg] md:h-[560px] md:w-[380px] md:max-w-none">
-                <svg width="100%" height="100%" viewBox="0 0 424 480" className="block">
-                  <defs>
-                    <clipPath id="svcClip" clipPathUnits="userSpaceOnUse">
-                      <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" />
-                    </clipPath>
-                  </defs>
-                  <g>
-                    <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" fill="#fff" />
-                    <image
-                      href="/imgs/agency.jpg"
-                      width="424"
-                      height="480"
-                      preserveAspectRatio="xMidYMid slice"
-                      clipPath="url(#svcClip)"
-                    />
-                    <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
-                  </g>
-                </svg>
+            <div className="relative isolate min-h-[360px] md:min-h-[460px] grid place-items-center">
+              {/* subtle stacked hint behind */}
+              <div className="absolute -left-6 -top-8 z-0 hidden h-[440px] w-[300px] -rotate-[8deg] rounded-[32px] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5 md:block" aria-hidden="true" />
+              <div className="absolute left-0 top-4 z-0 hidden h-[420px] w-[280px] rotate-[6deg] rounded-[32px] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5 md:block" aria-hidden="true" />
+
+              {/* main clipped card */}
+              <div className="relative z-10 h-[420px] w-[260px] rotate-[-6deg] overflow-hidden shadow-[0_28px_70px_rgba(0,0,0,0.16)] ring-1 ring-black/5 sm:h-[500px] sm:w-[320px] md:h-[540px] md:w-[360px]">
+                <div
+                  className="absolute inset-0 bg-white"
+                  style={{ clipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")', WebkitClipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")' }}
+                />
+                <img
+                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
+                  alt="Find your place"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  style={{ clipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")', WebkitClipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")' }}
+                  loading="lazy"
+                />
               </div>
             </div>
 
