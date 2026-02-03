@@ -6,10 +6,7 @@ import {
   Sparkles,
   Globe2,
   Lightbulb,
-  Handshake,
   Gem,
-  Timer,
-  Users,
   Search,
   PenTool,
   Code,
@@ -21,7 +18,6 @@ import PageHero from '../components/PageHero.jsx'
 const MotionDiv = motion.div
 
 const About = () => {
-  const valueIcons = [Lightbulb, ShieldCheck, Gem, Timer, Users]
   const processIcons = [Search, PenTool, Code, RocketLaunch]
 
   return (
@@ -48,15 +44,15 @@ const About = () => {
             <div className="flex flex-wrap gap-3">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                className="inline-flex items-center justify-center rounded-full bg-[#F4D47C] px-5 py-3 text-sm font-semibold text-[#0F172A] hover:brightness-110"
               >
-                Start a Project
+                Work With Us
               </a>
               <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--zim-border)] bg-[var(--zim-card)] px-5 py-3 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)]"
+                href="#our-story"
+                className="inline-flex items-center justify-center rounded-full border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-5 py-3 text-sm font-semibold text-[#0F172A] hover:bg-[#F4D47C]/10"
               >
-                Book a Call
+                Our Story
               </a>
             </div>
           </div>
@@ -91,79 +87,61 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="bg-[var(--zim-gray)]/40">
+      {/* Our Mission */}
+      <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <div className="grid gap-6 md:grid-cols-2">
-            {[{
-              title: 'Mission',
-              text: 'To help African businesses grow through smart, reliable, and innovative digital solutions.',
-              color: 'from-[#33e1ff]/30 to-[#0a1a2f]/60',
-            }, {
-              title: 'Vision',
-              text: 'A continent where every business can compete globally through modern technology.',
-              color: 'from-[#9cff5f]/25 to-[#0a1a2f]/60',
-            }].map((card) => (
-              <div
-                key={card.title}
-                className={`relative overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-8`}
-              >
-                <div className={`absolute inset-0 bg-gradient-to-br ${card.color} opacity-70`} />
-                <div className="relative space-y-3">
-                  <div className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">
-                    {card.title}
-                  </div>
-                  <div className="text-lg font-bold text-white">{card.text}</div>
-                </div>
+          <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+            <div className="space-y-4">
+              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Mission</div>
+              <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+                Our mission is simple: empower businesses to grow with technology that's built to last.
+              </h3>
+              <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
+                We combine modern engineering, human-centered design, and Africa's spirit of innovation to create digital experiences that truly move people.
+              </p>
+            </div>
+            <div className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 p-8">
+              <div className="absolute inset-0 opacity-10">
+                <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='2'%3E%3Cpath d='M30 5v50M5 30h50M10 10l40 40M10 40l40-40'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
               </div>
-            ))}
+              <div className="relative flex h-32 items-center justify-center">
+                <div className="h-20 w-20 rounded-full border-4 border-[#F4D47C]" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Our Story */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section id="our-story" className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 md:grid-cols-[1fr_1.1fr] md:items-center">
           <div className="space-y-4">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--zim-blue)]">Our Story</div>
-            <h3 className="text-3xl font-bold tracking-tight text-[var(--zim-fg)] md:text-4xl">
-              Built in Zimbabwe. Designed for the future.
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Story</div>
+            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+              Founded in Zimbabwe. Built for the world.
             </h3>
-            <p className="text-sm leading-relaxed text-[var(--zim-fg)]/80 md:text-base">
-              Zimnovate was founded with a simple belief: African businesses deserve digital solutions that match global standards. What started as a small development studio has grown into a multidisciplinary digital agency serving startups, SMEs, creatives, and corporate teams.
+            <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
+              Founded in Zimbabwe, Zimnovate was built from the belief that African talent can build world-class digital solutions. What started as a one-person vision is now a growing team of developers, designers, and strategists creating meaningful digital experiences.
             </p>
-            <p className="text-sm leading-relaxed text-[var(--zim-fg)]/80 md:text-base">
-              We don’t just build products — we become partners in your growth.
-            </p>
-            <div className="grid gap-2 text-sm text-[var(--zim-fg)]/80">
+            <div className="grid gap-2 text-sm text-[#1A1A1A]/80">
               {['We listen.', 'We plan.', 'We create.', 'We innovate.'].map((line) => (
                 <div key={line} className="flex items-center gap-2">
-                  <span className="h-2 w-2 rounded-full bg-[var(--zim-green)]" /> {line}
+                  <span className="h-2 w-2 rounded-full bg-[#F4D47C]" /> {line}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              { title: 'Smart + Fast Development', desc: 'React, Node, MongoDB — secure, performant, and scalable.' , Icon: Rocket},
-              { title: 'Reliable Delivery', desc: 'Clear communication, transparent timelines, predictable outcomes.', Icon: ShieldCheck},
-              { title: 'Innovation at Heart', desc: 'We experiment, refine, and push what’s possible.', Icon: Sparkles},
-              { title: 'African Context, Global Quality', desc: 'Local insight with world-class standards.', Icon: Globe2},
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="flex gap-3 rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-4"
-              >
-                <div className="mt-1 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--zim-blue)]/10 text-[var(--zim-blue)]">
-                  <item.Icon size={18} />
-                </div>
-                <div className="space-y-1">
-                  <div className="text-sm font-semibold text-[var(--zim-fg)]">{item.title}</div>
-                  <div className="text-sm text-[var(--zim-fg)]/75">{item.desc}</div>
-                </div>
+          <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-8">
+            <div className="absolute inset-0 opacity-5">
+              <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='1'%3E%3Cpath d='M20 2v36M2 20h36M6 6l28 28M6 28l28-28'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
+            </div>
+            <div className="relative h-48 rounded-2xl bg-gradient-to-br from-[#F4D47C]/20 to-[#F4D47C]/5 flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-[#0F172A]">Z</div>
+                <div className="text-sm text-[#1A1A1A]/60">Zimnovate</div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -204,42 +182,53 @@ const About = () => {
         </div>
       </section>
 
-      {/* Values */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-        <SectionHeading
-          eyebrow="Values"
-          title="Principles that guide every build"
-          subtitle="Innovation, trust, quality, efficiency, and partnership."
-        />
-
-        <div className="mt-10 grid gap-4 md:grid-cols-5">
-          {[
-            { t: 'Innovation', d: 'Always exploring, always improving.' },
-            { t: 'Trust', d: 'Transparent communication & dependable delivery.' },
-            { t: 'Quality', d: 'Pixel-perfect design. Clean, secure code.' },
-            { t: 'Efficiency', d: 'Faster, smarter, better workflows.' },
-            { t: 'Partnership', d: 'We grow with our clients.' },
-          ].map((v, idx) => {
-            const Icon = valueIcons[idx]
-            return (
-              <MotionDiv
-                key={v.t}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-5"
-              >
-                <div className="flex items-center gap-2 text-sm font-bold">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[var(--zim-blue)]/10 text-[var(--zim-blue)]">
-                    <Icon size={16} />
-                  </span>
-                  {v.t}
+      {/* Core Values */}
+      <section className="bg-[#F9F5EF]">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+          <div className="text-center space-y-4">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Core Values</div>
+            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+              What guides everything we do
+            </h3>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: 'Innovation with Purpose',
+                desc: 'We design with meaning, not just aesthetics.',
+                icon: Lightbulb,
+              },
+              {
+                title: 'Transparency & Trust',
+                desc: 'Everything we do is honest, clear, and collaborative.',
+                icon: ShieldCheck,
+              },
+              {
+                title: 'Excellence in Execution',
+                desc: 'Quality is not an act — it\'s our culture.',
+                icon: Gem,
+              },
+            ].map((value) => {
+              const Icon = value.icon
+              return (
+                <div
+                  key={value.title}
+                  className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
+                >
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="h-full w-full" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23F4D47C' stroke-width='1'%3E%3Cpath d='M15 2v26M2 15h26M6 6l18 18M6 18l18-18'/%3E%3C/g%3E%3C/svg%3E")`, backgroundRepeat: 'repeat' }} />
+                  </div>
+                  <div className="relative">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#F4D47C]/10 text-[#F4D47C] mb-4">
+                      <Icon size={20} />
+                    </div>
+                    <h4 className="text-lg font-bold text-[#0F172A] mb-2">{value.title}</h4>
+                    <p className="text-sm text-[#1A1A1A]/70">{value.desc}</p>
+                  </div>
                 </div>
-                <div className="mt-2 text-sm text-[var(--zim-fg)]/75">{v.d}</div>
-              </MotionDiv>
-            )
-          })}
+              )
+            })}
+          </div>
         </div>
       </section>
 
@@ -280,49 +269,57 @@ const About = () => {
         </div>
       </section>
 
-      {/* Trusted by */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-        <div className="rounded-3xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-8 md:p-10">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-            <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--zim-blue)]">Trusted by</div>
-              <h3 className="mt-2 text-2xl font-bold text-[var(--zim-fg)] md:text-3xl">
-                Entrepreneurs, startups, and businesses across Africa.
-              </h3>
-            </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-              {['/imgs/logo1.svg', '/imgs/logo2.svg', '/imgs/logo3.svg', '/imgs/logo4.svg'].map((src, idx) => (
-                <div key={idx} className="flex h-14 items-center justify-center rounded-xl bg-white/40 p-3 text-xs font-semibold text-[var(--zim-fg)]/70">
-                  Placeholder
-                </div>
-              ))}
-            </div>
+      {/* Why Choose Us */}
+      <section className="bg-[#0F172A] text-white">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+          <div className="text-center space-y-4">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Why Choose Us</div>
+            <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
+              Numbers that speak for themselves
+            </h3>
+          </div>
+          <div className="mt-10 grid gap-8 md:grid-cols-4">
+            {[
+              { number: '30+', label: 'Projects delivered' },
+              { number: '15+', label: 'Industries served' },
+              { number: '95%', label: 'Satisfaction rate' },
+              { number: '100%', label: 'Transparency' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="text-4xl font-bold text-[#F4D47C] md:text-5xl">{stat.number}</div>
+                <div className="mt-2 text-sm text-white/80">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="bg-[var(--zim-gray)]/40">
+      <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <div className="relative overflow-hidden rounded-3xl border border-[var(--zim-border)] bg-gradient-to-br from-[#0a1a2f] via-[#10233a] to-[#33e1ff]/40 p-10 text-white shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
-            <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-white/10 blur-3xl" />
-            <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-[#33e1ff]/20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F4D47C] p-10 text-[#0F172A] shadow-[0_28px_80px_rgba(0,0,0,0.15)]">
+            <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
+            <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/10 blur-3xl" />
             <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="space-y-3">
-                <div className="text-xs font-semibold uppercase tracking-[0.35em] text-white/70">Let’s build</div>
-                <h3 className="text-3xl font-bold leading-tight md:text-4xl">Ready to build something great?</h3>
-                <p className="text-sm text-white/80">Start a project with Zimnovate or book a call to plan your next move.</p>
+                <div className="text-xs font-semibold uppercase tracking-[0.35em] text-[#0F172A]/70">Let's build</div>
+                <h3 className="text-3xl font-bold leading-tight md:text-4xl">
+                  Let's build something extraordinary, together.
+                </h3>
+                <p className="text-sm text-[#0F172A]/80">
+                  Start a project with Zimnovate or book a call to plan your next move.
+                </p>
               </div>
               <div className="flex flex-wrap gap-3">
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                  className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
                 >
-                  Start a Project
+                  Start Your Project
                 </a>
                 <a
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full border border-[#0F172A]/20 bg-white/10 px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-white/20"
                 >
                   Book a Call
                 </a>
