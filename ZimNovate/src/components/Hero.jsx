@@ -33,9 +33,10 @@ const Hero = () => {
             <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
               {[
                 { to: '/', label: 'Home' },
-                { to: '/about', label: 'About' },
                 { to: '/services', label: 'Services' },
                 { to: '/portfolio', label: 'Portfolio' },
+                { to: '/about', label: 'About' },
+                { to: '/contact', label: 'Contact' },
               ].map((item) => (
                 <NavLink
                   key={item.to}
