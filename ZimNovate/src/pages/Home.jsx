@@ -54,7 +54,7 @@ const Home = () => {
             <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
             </div>
-            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+            <div className="text-center text-sm text-[var(--zim-fg)]/70 md:block">
               Explore more of our best projects.
             </div>
             <Link
@@ -65,7 +65,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="mt-6 border-t border-[var(--zim-border)]" />
+          <div className="mt-5 border-t border-[var(--zim-border)]" />
 
           <div className="mt-8 grid gap-12 md:grid-cols-3">
             {bestProjects.map((p, idx) => (
@@ -77,8 +77,8 @@ const Home = () => {
                 transition={{ duration: 0.45, delay: idx * 0.05 }}
                 className="group relative"
               >
-                <div className="relative rounded-[32px] bg-neutral-100 p-5 shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
-                  <div className="aspect-[10/9] overflow-hidden rounded-[24px] bg-white ring-1 ring-black/5">
+                <div className="relative rounded-[34px] bg-gradient-to-b from-[#f5f5f5] to-[#fafafa] p-5 shadow-[0_26px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
+                  <div className="aspect-[10/9] overflow-hidden rounded-[26px] bg-white ring-1 ring-black/5 shadow-[0_10px_24px_rgba(0,0,0,0.06)]">
                     <img
                       src={(Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
@@ -90,7 +90,7 @@ const Home = () => {
 
                 <Link
                   to="/portfolio"
-                  className="absolute right-3 bottom-3 md:-right-4 md:-bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  className="absolute right-4 bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-[0_14px_30px_rgba(124,255,95,0.35)] transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5 md:right-5 md:bottom-5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
