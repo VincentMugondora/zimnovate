@@ -16,9 +16,9 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
+        <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
 
-        <div className="w-full p-[10px]">
+        <div className="relative z-10 w-full p-[10px]">
           <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
               <img
@@ -32,9 +32,10 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
               {[
                 { to: '/', label: 'Home' },
-                { to: '/about', label: 'About' },
                 { to: '/services', label: 'Services' },
                 { to: '/portfolio', label: 'Portfolio' },
+                { to: '/about', label: 'About' },
+                { to: '/contact', label: 'Contact' },
               ].map((item) => (
                 <NavLink
                   key={item.to}
@@ -51,14 +52,11 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             </nav>
 
             <div className="flex items-center gap-3">
-              <Link to="/contact" className="hidden text-sm font-semibold text-white/80 hover:text-white md:inline-flex">
-                Sign In
-              </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
               >
-                Sign Up
+                Start a Project
               </Link>
             </div>
           </div>
