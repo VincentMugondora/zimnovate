@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -6,6 +6,23 @@ const MotionDiv = motion.div
 
 const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
   const [servicesOpen, setServicesOpen] = useState(false)
+  const closeTimer = useRef(null)
+
+  const openServices = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setServicesOpen(true)
+  }
+
+  const closeServicesDelayed = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    closeTimer.current = setTimeout(() => setServicesOpen(false), 220)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current)
+    }
+  }, [])
   const serviceLinks = [
     { label: 'Web Development', to: '/services#web' },
     { label: 'Mobile Apps', to: '/services#mobile' },
@@ -49,7 +66,11 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 Home
               </NavLink>
 
-              <div className="relative group">
+              <div
+                className="relative"
+                onMouseEnter={openServices}
+                onMouseLeave={closeServicesDelayed}
+              >
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
@@ -60,7 +81,13 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 >
                   Services
                 </NavLink>
-                <div className="absolute left-0 top-full mt-2 hidden min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/90 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out group-hover:block">
+                <div
+                  className={`absolute left-0 top-full mt-2 min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/90 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out ${
+                    servicesOpen ? 'block' : 'hidden'
+                  }`}
+                  onMouseEnter={openServices}
+                  onMouseLeave={closeServicesDelayed}
+                >
                   <div className="grid gap-2">
                     {serviceLinks.map((link) => (
                       <NavLink
