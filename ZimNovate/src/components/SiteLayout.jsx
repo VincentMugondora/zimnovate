@@ -12,7 +12,7 @@ const SiteLayout = () => {
   }, [location.pathname])
 
   return (
-    <div className="min-h-screen bg-[var(--zim-bg)] text-[var(--zim-fg)]">
+    <div className="min-h-screen bg-[var(--zim-bg)] text-[var(--zim-fg)] overflow-x-hidden">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-md bg-[var(--zim-blue)] px-3 py-2 text-sm font-semibold text-white"

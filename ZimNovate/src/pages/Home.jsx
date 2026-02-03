@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { ArrowUpRight, MessageCircle } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import Hero from '../components/Hero.jsx'
 import ClientLogos from '../components/ClientLogos.jsx'
 import { services } from '../data/services.js'
@@ -19,10 +19,10 @@ const Home = () => {
   ]
 
   const designers = [
-    { id: 'a', name: 'James Ahar', role: 'UI Designer' },
-    { id: 'b', name: 'Frazal Harben', role: 'Brand Designer' },
-    { id: 'c', name: 'Afroed Jack', role: 'UX Research' },
-    { id: 'd', name: 'Jarre Van', role: 'Graphic Designer' },
+    { id: 'd1', name: 'Jordan Abigail', role: 'Senior UI/UX Designer', photo: null },
+    { id: 'd2', name: 'Marcus Horizon', role: 'Senior UI/UX Designer', photo: null },
+    { id: 'd3', name: 'Ahmad Jalaludin', role: 'Illustration Designer', photo: null },
+    { id: 'd4', name: 'Jimmy Sullivan', role: 'Animation Designer', photo: null },
   ]
 
   const insights = [
@@ -44,12 +44,12 @@ const Home = () => {
   ]
 
   return (
-    <div className="bg-[var(--zim-bg)]">
+    <div className="bg-[var(--zim-bg)] overflow-x-hidden">
       <Hero />
       <ClientLogos />
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
@@ -90,7 +90,7 @@ const Home = () => {
 
                 <Link
                   to="/portfolio"
-                  className="absolute -right-4 -bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
+                  className="absolute right-3 bottom-3 md:-right-4 md:-bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
@@ -146,10 +146,25 @@ const Home = () => {
               <div className="absolute -left-4 bottom-4 z-10 hidden h-[180px] w-[140px] rotate-6 overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-black/5 md:block">
                 <img src="/imgs/agency.jpg" alt="collage-2" className="h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="relative z-20 overflow-visible">
-                <div className="overflow-hidden rounded-[32px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5">
-                  <img src="/imgs/agency.jpg" alt="Service highlight" className="h-full w-full object-cover" loading="lazy" />
-                </div>
+              <div className="relative z-20 mx-auto h-[440px] w-full max-w-[260px] rotate-[-8deg] md:h-[560px] md:w-[380px] md:max-w-none">
+                <svg width="100%" height="100%" viewBox="0 0 424 480" className="block">
+                  <defs>
+                    <clipPath id="svcClip" clipPathUnits="userSpaceOnUse">
+                      <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" />
+                    </clipPath>
+                  </defs>
+                  <g>
+                    <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" fill="#fff" />
+                    <image
+                      href="/imgs/agency.jpg"
+                      width="424"
+                      height="480"
+                      preserveAspectRatio="xMidYMid slice"
+                      clipPath="url(#svcClip)"
+                    />
+                    <path d="M32 84C48 28 106 8 168 8h188c46 0 76 30 76 76v112c0 24 14 38 32 44-18 6-32 20-32 44v90c0 52-44 96-98 96H140c-64 0-108-34-108-92v-76c0-22-18-36-36-38 18-4 36-18 36-40z" fill="none" stroke="rgba(0,0,0,0.06)" strokeWidth="1" />
+                  </g>
+                </svg>
               </div>
             </div>
 
@@ -183,19 +198,24 @@ const Home = () => {
 
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+          <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
+            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               LATEST INSIGHT
+            </div>
+            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+              Update the latest news from day to day.
             </div>
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View all <ArrowUpRight size={16} />
+              View more
             </Link>
           </div>
 
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 border-t border-[var(--zim-border)]" />
+
+          <div className="mt-8 grid gap-10 md:grid-cols-3">
             {insights.map((i, idx) => (
               <MotionDiv
                 key={i.id}
@@ -203,22 +223,32 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.25 }}
                 transition={{ duration: 0.45, delay: idx * 0.04 }}
-                className="overflow-hidden rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)]"
+                className="group relative"
               >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src="/imgs/agency.jpg"
-                    alt={i.title}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="text-sm font-bold text-[var(--zim-black)]">
-                    {i.title}
+                <div className="relative overflow-hidden rounded-[22px] ring-1 ring-black/5 shadow-[0_22px_40px_rgba(0,0,0,0.10)]">
+                  <div className="aspect-[10/9] overflow-hidden">
+                    <img
+                      src="/imgs/agency.jpg"
+                      alt={i.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
-                  <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
-                    {i.excerpt}
+                </div>
+
+                {idx === 0 && (
+                  <Link
+                    to="/about"
+                    aria-label={`Open ${i.title}`}
+                    className="absolute right-3 bottom-3 md:-right-4 md:-bottom-4 grid h-10 w-10 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg hover:brightness-110"
+                  >
+                    <ArrowUpRight size={16} />
+                  </Link>
+                )}
+
+                <div className="mt-3">
+                  <div className="text-base font-semibold text-[var(--zim-black)] md:text-lg">
+                    {i.title}
                   </div>
                 </div>
               </MotionDiv>
@@ -227,40 +257,41 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[var(--zim-gray)]/40">
+      <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="flex items-center justify-between gap-4">
-            <div className="text-sm font-extrabold tracking-wide text-[var(--zim-black)]">
+          <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
+            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR BEST DESIGNERS
             </div>
+            <div className="hidden md:block" />
             <Link
               to="/about"
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-4 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View all <ArrowUpRight size={16} />
+              View more
             </Link>
           </div>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
+          <div className="mt-6 border-t border-[var(--zim-border)]" />
+
+          <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {designers.map((d) => (
-              <div
-                key={d.id}
-                className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-bg)] p-4"
-              >
-                <div className="grid place-items-center">
-                  <div className="grid h-20 w-20 place-items-center rounded-full bg-[linear-gradient(135deg,rgba(30,144,255,0.22),rgba(50,205,50,0.18))] text-xl font-extrabold text-[var(--zim-black)]">
-                    {d.name
-                      .split(' ')
-                      .slice(0, 2)
-                      .map((w) => w[0])
-                      .join('')}
+              <div key={d.id} className="group">
+                <div className="overflow-hidden rounded-[28px] bg-neutral-100 ring-1 ring-black/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                  <div className="aspect-[4/5] w-full">
+                    <img
+                      src={d.photo || '/imgs/agency.jpg'}
+                      alt={d.name}
+                      className="h-full w-full object-contain p-6"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
                 <div className="mt-4 text-center">
-                  <div className="text-sm font-bold text-[var(--zim-black)]">
+                  <div className="text-lg font-semibold text-[var(--zim-black)]">
                     {d.name}
                   </div>
-                  <div className="mt-1 text-xs text-[var(--zim-fg)]/70">
+                  <div className="mt-1 text-sm text-[var(--zim-fg)]/70">
                     {d.role}
                   </div>
                 </div>
@@ -270,62 +301,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="bg-[#0b1220] px-12 py-16 md:px-16 md:py-20 lg:px-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="relative overflow-hidden rounded-3xl bg-[#0f172a] p-6 text-white shadow-[0_28px_80px_rgba(0,0,0,0.45)] md:p-10">
-            <div className="absolute right-6 top-6 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]">
-              <MessageCircle size={20} />
-            </div>
-
-            <div className="max-w-2xl">
-              <div className="text-2xl font-extrabold md:text-3xl">
-                READY TO WORK WITH US?
-              </div>
-              <div className="mt-2 text-sm text-white/75 md:text-base">
-                Let’s talk about your idea and turn it into a real product.
-              </div>
-            </div>
-
-            <div className="mt-10 grid gap-8 md:grid-cols-3">
-              <div className="space-y-2 text-sm text-white/80">
-                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
-                  CONTACT
-                </div>
-                <div>hello@zimnovate.co.zw</div>
-                <div>+263 00 000 0000</div>
-                <div>Harare, Zimbabwe</div>
-              </div>
-
-              <div className="space-y-2 text-sm text-white/80">
-                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
-                  NAVIGATE
-                </div>
-                <Link className="block hover:text-white" to="/about">
-                  About
-                </Link>
-                <Link className="block hover:text-white" to="/services">
-                  Services
-                </Link>
-                <Link className="block hover:text-white" to="/portfolio">
-                  Portfolio
-                </Link>
-              </div>
-
-              <div className="space-y-3">
-                <div className="text-xs font-semibold tracking-[0.25em] text-white/60">
-                  START A PROJECT
-                </div>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
