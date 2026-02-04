@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle, X } from 'lucide-react'
+import { MessageCircle, X, ChevronDown } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const MotionDiv = motion.div
@@ -8,6 +8,7 @@ const MotionDiv = motion.div
 const Hero = () => {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const closeTimer = useRef(null)
   const location = useLocation()
 
@@ -243,13 +244,13 @@ const Hero = () => {
                   </div>
                   <nav className="flex flex-col p-4" aria-label="Mobile">
                     {[
-                      { to: '/', label: 'Home' },
-                      { to: '/services', label: 'Services' },
-                      { to: '/portfolio', label: 'Portfolio' },
-                      { to: '/blog', label: 'Blog' },
-                      { to: '/careers', label: 'Careers' },
-                      { to: '/about', label: 'About' },
-                      { to: '/contact', label: 'Contact' },
+                      { to: '/', label: 'Home', hasSubmenu: false },
+                      { to: '/services', label: 'Services', hasSubmenu: true },
+                      { to: '/portfolio', label: 'Portfolio', hasSubmenu: false },
+                      { to: '/blog', label: 'Blog', hasSubmenu: false },
+                      { to: '/careers', label: 'Careers', hasSubmenu: false },
+                      { to: '/about', label: 'About', hasSubmenu: false },
+                      { to: '/contact', label: 'Contact', hasSubmenu: false },
                     ].map((item, index) => (
                       <motion.div
                         key={item.to}
@@ -262,27 +263,99 @@ const Hero = () => {
                           stiffness: 150
                         }}
                       >
-                        <NavLink
-                          to={item.to}
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={({ isActive }) =>
-                            `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
-                              isActive ? 'text-white' : 'text-white/80 hover:text-white'
-                            }`
-                          }
-                        >
-                          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
-                          <span className="relative flex items-center gap-3">
-                            <span className={
-                              `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                                location.pathname === item.to 
-                                  ? 'bg-[var(--zim-green)] scale-125' 
-                                  : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                        {item.hasSubmenu ? (
+                          <>
+                            <button
+                              type="button"
+                              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                              className={`group relative flex w-full items-center justify-between overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                                location.pathname.startsWith('/services') ? 'text-white' : 'text-white/80 hover:text-white'
+                              }`}
+                            >
+                              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
+                              <span className="relative flex items-center gap-3">
+                                <span className={
+                                  `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                    location.pathname.startsWith('/services')
+                                      ? 'bg-[var(--zim-green)] scale-125'
+                                      : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                  }`
+                                } />
+                                {item.label}
+                              </span>
+                              <ChevronDown
+                                size={18}
+                                className={`relative transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}
+                              />
+                            </button>
+                            <AnimatePresence mode="wait">
+                              {mobileServicesOpen && (
+                                <motion.div
+                                  initial={{ opacity: 0, height: 0, x: -20 }}
+                                  animate={{ opacity: 1, height: 'auto', x: 0 }}
+                                  exit={{ opacity: 0, height: 0, x: -30, scale: 0.95 }}
+                                  transition={{
+                                    opacity: { duration: 0.2 },
+                                    height: { duration: 0.3, ease: [0.4, 0, 0.2, 1] },
+                                    x: { type: 'spring', damping: 20, stiffness: 100 },
+                                    scale: { duration: 0.2 }
+                                  }}
+                                  className="overflow-hidden"
+                                >
+                                  <div className="ml-4 border-l border-white/20 pl-4 py-2 space-y-1">
+                                    {serviceLinks.map((link, idx) => (
+                                      <motion.div
+                                        key={link.to}
+                                        initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                                        animate={{ opacity: 1, x: 0, scale: 1 }}
+                                        exit={{ opacity: 0, x: -15, scale: 0.9 }}
+                                        transition={{
+                                          delay: idx * 0.05,
+                                          duration: 0.25,
+                                          exit: { delay: (serviceLinks.length - idx - 1) * 0.03, duration: 0.15 }
+                                        }}
+                                      >
+                                        <NavLink
+                                          to={link.to}
+                                          onClick={() => setMobileMenuOpen(false)}
+                                          className={({ isActive }) =>
+                                            `block rounded-lg px-3 py-2 text-sm transition-all duration-200 ${
+                                              isActive ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
+                                            }`
+                                          }
+                                        >
+                                          {link.label}
+                                        </NavLink>
+                                      </motion.div>
+                                    ))}
+                                  </div>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </>
+                        ) : (
+                          <NavLink
+                            to={item.to}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className={({ isActive }) =>
+                              `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                                isActive ? 'text-white' : 'text-white/80 hover:text-white'
                               }`
-                            } />
-                            {item.label}
-                          </span>
-                        </NavLink>
+                            }
+                          >
+                            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
+                            <span className="relative flex items-center gap-3">
+                              <span className={
+                                `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                  location.pathname === item.to
+                                    ? 'bg-[var(--zim-green)] scale-125'
+                                    : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                }`
+                              } />
+                              {item.label}
+                            </span>
+                          </NavLink>
+                        )}
                       </motion.div>
                     ))}
                     <motion.div 
