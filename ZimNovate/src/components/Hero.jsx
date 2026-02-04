@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, Menu, X } from 'lucide-react'
 import { Link, NavLink } from 'react-router-dom'
 
 const MotionDiv = motion.div
 
 const Hero = () => {
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeTimer = useRef(null)
 
   const openServices = () => {
