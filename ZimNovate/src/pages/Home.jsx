@@ -17,6 +17,17 @@ const Home = () => {
     'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80',
     'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
   ]
+  const bestProjectLinks = [
+    '/portfolio/zimfresh',
+    '/portfolio/swiftpay',
+    '/portfolio/royal-home-care',
+  ]
+  const serviceLinks = {
+    branding: '/services/branding',
+    websites: '/services/web-development',
+    webapps: '/services/web-development',
+    automation: '/services/ai-automation',
+  }
   const bestLocations = [
     'Jakarta, Indonesia',
     'Kuala Lumpur, Malaysia',
@@ -114,7 +125,7 @@ const Home = () => {
                 </div>
 
                 <Link
-                  to="/portfolio"
+                  to={bestProjectLinks[idx] || '/portfolio'}
                   className="absolute right-4 bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-[0_14px_30px_rgba(124,255,95,0.35)] transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5 md:right-5 md:bottom-5"
                   aria-label={`Open ${p.title}`}
                 >
@@ -192,7 +203,7 @@ const Home = () => {
                       </div>
                     </div>
                     <div>
-                      <Link to="/services" aria-label={`Open ${s.title}`} className={idx === 1 ? 'grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]' : ''}>
+                      <Link to={serviceLinks[s.id] || '/services'} aria-label={`Open ${s.title}`} className={idx === 1 ? 'grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]' : 'grid h-9 w-9 place-items-center rounded-full hover:bg-white/10'}>
                         <ArrowUpRight size={18} className={idx === 1 ? '' : 'text-[var(--zim-fg)]/60'} />
                       </Link>
                     </div>
