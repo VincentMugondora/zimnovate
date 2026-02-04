@@ -19,6 +19,8 @@ const Header = () => {
           <Link to="/about" className="hover:text-green-500">About</Link>
           <Link to="/services" className="hover:text-green-500">Services</Link>
           <Link to="/portfolio" className="hover:text-green-500">Portfolio</Link>
+          <Link to="/blog" className="hover:text-green-500">Blog</Link>
+          <Link to="/careers" className="hover:text-green-500">Careers</Link>
           <Link to="/contact" className="hover:text-green-500">Contact</Link>
           <button
             onClick={toggleTheme}
@@ -49,6 +51,8 @@ const Header = () => {
               <Link onClick={() => setOpen(false)} to="/about" className="py-1 hover:text-green-500">About</Link>
               <Link onClick={() => setOpen(false)} to="/services" className="py-1 hover:text-green-500">Services</Link>
               <Link onClick={() => setOpen(false)} to="/portfolio" className="py-1 hover:text-green-500">Portfolio</Link>
+              <Link onClick={() => setOpen(false)} to="/blog" className="py-1 hover:text-green-500">Blog</Link>
+              <Link onClick={() => setOpen(false)} to="/careers" className="py-1 hover:text-green-500">Careers</Link>
               <Link onClick={() => setOpen(false)} to="/contact" className="py-1 hover:text-green-500">Contact</Link>
               <button
                 onClick={() => { toggleTheme(); setOpen(false); }}
