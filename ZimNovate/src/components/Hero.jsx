@@ -117,6 +117,22 @@ const Hero = () => {
                 Portfolio
               </NavLink>
               <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/careers"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Careers
+              </NavLink>
+              <NavLink
                 to="/about"
                 className={({ isActive }) =>
                   `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
@@ -183,6 +199,22 @@ const Hero = () => {
                 }
               >
                 Portfolio
+              </NavLink>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                to="/careers"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Careers
               </NavLink>
               <NavLink
                 to="/about"
