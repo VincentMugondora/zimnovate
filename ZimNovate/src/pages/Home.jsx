@@ -214,7 +214,7 @@ const Home = () => {
               Update the latest news from day to day.
             </div>
             <Link
-              to="/about"
+              to="/blog"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
               View more
@@ -246,7 +246,7 @@ const Home = () => {
 
                 {idx === 0 && (
                   <Link
-                    to="/about"
+                    to="/blog"
                     aria-label={`Open ${i.title}`}
                     className="absolute right-3 bottom-3 md:-right-4 md:-bottom-4 grid h-10 w-10 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-lg hover:brightness-110"
                   >
