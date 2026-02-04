@@ -20,6 +20,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['Multi-vendor store', 'Vendor dashboards', 'Mobile-first checkout', 'Real-time inventory'],
       tags: ['E-Commerce', 'Web App'],
+      to: '/portfolio/zimfresh',
     },
     {
       title: 'SwiftPay',
@@ -28,6 +29,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['Biometric login', 'QR payments', 'Balance & statements', 'Notifications & security'],
       tags: ['Mobile App', 'Fintech'],
+      to: '/portfolio/swiftpay',
     },
     {
       title: 'Royal Home Care',
@@ -36,6 +38,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1587613991231-7b42a2a1341b?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['Logo design', 'Color system', 'Typography', 'Brand guidelines'],
       tags: ['Branding', 'Design'],
+      to: '/portfolio/royal-home-care',
     },
     {
       title: 'AfricaRise',
@@ -44,6 +47,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['SEO strategy', 'Social media ads', 'Funnel optimization', 'Analytics tracking'],
       tags: ['Digital Marketing'],
+      to: '/portfolio/africarise',
     },
     {
       title: 'AutoDocs',
@@ -52,6 +56,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['OCR automation', 'AI classification', 'Smart dashboards', 'API integrations'],
       tags: ['AI & Automation'],
+      to: '/portfolio/autodocs',
     },
     {
       title: 'ZimFarms',
@@ -60,6 +65,7 @@ const Portfolio = () => {
       image: 'https://images.unsplash.com/photo-1581092334643-8550c1b36f1f?w=800&h=600&fit=crop&crop=entropy&auto=format',
       highlights: ['Custom store', 'Delivery tracking', 'Order management', 'Supplier dashboards'],
       tags: ['E-Commerce'],
+      to: '/portfolio/zimfarms',
     },
   ]
 
@@ -136,8 +142,9 @@ const Portfolio = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div
+            <Link
               key={project.title}
+              to={project.to}
               className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
             >
               <div className="relative h-56 overflow-hidden">
@@ -175,7 +182,7 @@ const Portfolio = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
