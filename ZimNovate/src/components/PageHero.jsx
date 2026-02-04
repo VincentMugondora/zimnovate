@@ -1,12 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Link, NavLink } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { X } from 'lucide-react'
 
 const MotionDiv = motion.div
 
 const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
   const [servicesOpen, setServicesOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeTimer = useRef(null)
+  const location = useLocation()
 
   const openServices = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current)
