@@ -13,6 +13,12 @@ import AIAutomation from './pages/AIAutomation.jsx'
 import ECommerceSolutions from './pages/ECommerceSolutions.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Contact from './pages/Contact.jsx'
+import ZimFreshCaseStudy from './pages/ZimFreshCaseStudy.jsx'
+import SwiftPayCaseStudy from './pages/SwiftPayCaseStudy.jsx'
+import RoyalHomeCareCaseStudy from './pages/RoyalHomeCareCaseStudy.jsx'
+import AfricaRiseCaseStudy from './pages/AfricaRiseCaseStudy.jsx'
+import AutoDocsCaseStudy from './pages/AutoDocsCaseStudy.jsx'
+import ZimFarmsCaseStudy from './pages/ZimFarmsCaseStudy.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 const App = () => {
@@ -31,6 +37,12 @@ const App = () => {
         <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio/zimfresh" element={<ZimFreshCaseStudy />} />
+        <Route path="/portfolio/swiftpay" element={<SwiftPayCaseStudy />} />
+        <Route path="/portfolio/royal-home-care" element={<RoyalHomeCareCaseStudy />} />
+        <Route path="/portfolio/africarise" element={<AfricaRiseCaseStudy />} />
+        <Route path="/portfolio/autodocs" element={<AutoDocsCaseStudy />} />
+        <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
