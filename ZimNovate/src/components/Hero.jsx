@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import { MessageCircle, Menu, X } from 'lucide-react'
-import { Link, NavLink } from 'react-router-dom'
+import { motion, AnimatePresence } from 'framer-motion'
+import { MessageCircle, X } from 'lucide-react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 
 const MotionDiv = motion.div
 
@@ -193,131 +193,123 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Mobile menu drawer */}
-          <div
-            className={`fixed inset-0 z-50 transition-opacity duration-300 md:hidden ${
-              mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-            }`}
-          >
-            {/* Backdrop */}
-            <div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
-              onClick={() => setMobileMenuOpen(false)}
-            />
-            {/* Drawer */}
-            <div
-              className={`absolute right-0 top-0 h-full w-[280px] max-w-[85vw] transform bg-[#0b0b0b] shadow-2xl transition-transform duration-300 ${
-                mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-              }`}
-            >
-              <div className="flex items-center justify-between border-b border-white/10 p-4">
-                <span className="text-lg font-bold text-white">Menu</span>
-                <button
-                  type="button"
+          {/* Mobile menu drawer with Framer Motion */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <>
+                {/* Backdrop */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="inline-flex items-center justify-center rounded-full p-2 text-white/70 hover:bg-white/10 hover:text-white"
-                  aria-label="Close menu"
+                />
+                {/* Drawer */}
+                <motion.div
+                  initial={{ x: '100%', opacity: 0.8 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0.8 }}
+                  transition={{ 
+                    type: 'spring', 
+                    damping: 25, 
+                    stiffness: 200,
+                    opacity: { duration: 0.2 }
+                  }}
+                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl md:hidden"
                 >
-                  <X size={20} />
-                </button>
-              </div>
-              <nav className="flex flex-col p-4" aria-label="Mobile">
-                <NavLink
-                  to="/"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Services
-                </NavLink>
-                <NavLink
-                  to="/portfolio"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Portfolio
-                </NavLink>
-                <NavLink
-                  to="/blog"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Blog
-                </NavLink>
-                <NavLink
-                  to="/careers"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Careers
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={({ isActive }) =>
-                    `rounded-lg px-4 py-3 text-base font-semibold transition hover:bg-white/10 ${
-                      isActive ? 'bg-white/10 text-white' : 'text-white/80'
-                    }`
-                  }
-                >
-                  Contact
-                </NavLink>
-                <div className="mt-6 border-t border-white/10 pt-6">
-                  <Link
-                    to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
-                  >
-                    Sign Up
-                  </Link>
-                  <Link
-                    to="/contact"
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block w-full rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-white/10"
-                  >
-                    Sign In
-                  </Link>
-                </div>
-              </nav>
-            </div>
-          </div>
+                  <div className="flex items-center justify-between border-b border-white/10 p-4">
+                    <motion.span 
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1, duration: 0.3 }}
+                      className="text-lg font-bold text-white"
+                    >
+                      Menu
+                    </motion.span>
+                    <motion.button
+                      initial={{ opacity: 0, rotate: -90 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      transition={{ delay: 0.15, duration: 0.3 }}
+                      type="button"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="inline-flex items-center justify-center rounded-full p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
+                      aria-label="Close menu"
+                    >
+                      <X size={20} />
+                    </motion.button>
+                  </div>
+                  <nav className="flex flex-col p-4" aria-label="Mobile">
+                    {[
+                      { to: '/', label: 'Home' },
+                      { to: '/services', label: 'Services' },
+                      { to: '/portfolio', label: 'Portfolio' },
+                      { to: '/blog', label: 'Blog' },
+                      { to: '/careers', label: 'Careers' },
+                      { to: '/about', label: 'About' },
+                      { to: '/contact', label: 'Contact' },
+                    ].map((item, index) => (
+                      <motion.div
+                        key={item.to}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                          delay: 0.1 + index * 0.08,
+                          type: 'spring',
+                          damping: 20,
+                          stiffness: 150
+                        }}
+                      >
+                        <NavLink
+                          to={item.to}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={({ isActive }) =>
+                            `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                              isActive ? 'text-white' : 'text-white/80 hover:text-white'
+                            }`
+                          }
+                        >
+                          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
+                          <span className="relative flex items-center gap-3">
+                            <span className={
+                              `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                location.pathname === item.to 
+                                  ? 'bg-[var(--zim-green)] scale-125' 
+                                  : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                              }`
+                            } />
+                            {item.label}
+                          </span>
+                        </NavLink>
+                      </motion.div>
+                    ))}
+                    <motion.div 
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
+                      className="mt-6 border-t border-white/10 pt-6"
+                    >
+                      <Link
+                        to="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
+                      >
+                        Sign Up
+                      </Link>
+                      <Link
+                        to="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block w-full rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
+                      >
+                        Sign In
+                      </Link>
+                    </motion.div>
+                  </nav>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
 
           <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
             <MotionDiv
