@@ -9,6 +9,7 @@ const Hero = () => {
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeTimer = useRef(null)
+  const location = useLocation()
 
   const openServices = () => {
     if (closeTimer.current) clearTimeout(closeTimer.current)
