@@ -62,11 +62,28 @@ const Hero = () => {
             {/* Mobile hamburger button */}
             <button
               type="button"
-              onClick={() => setMobileMenuOpen(true)}
-              className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 p-2 text-white hover:bg-white/20 md:hidden"
-              aria-label="Open menu"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
             >
-              <Menu size={20} />
+              <div className="relative flex h-4 w-5 flex-col items-center justify-center">
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
+                  }`}
+                />
+              </div>
             </button>
 
             {/* Desktop nav */}
