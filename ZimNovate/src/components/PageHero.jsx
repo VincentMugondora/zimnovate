@@ -152,91 +152,35 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               </NavLink>
             </nav>
 
-            {/* Mobile nav */}
-            <nav className="flex items-center gap-3 text-sm font-semibold text-white/85 md:hidden" aria-label="Hero mobile">
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                Home
-              </NavLink>
-              <div className="relative">
-                <button
-                  type="button"
-                  onClick={() => setServicesOpen((prev) => !prev)}
-                  className="inline-flex items-center gap-1 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-white hover:bg-white/10"
-                >
-                  Services
-                  <span className="text-xs">▾</span>
-                </button>
-                <div
-                  className={`absolute left-0 top-full mt-2 min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/95 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out ${
-                    servicesOpen ? 'block' : 'hidden'
+            {/* Mobile hamburger button */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <div className="relative flex h-4 w-5 flex-col items-center justify-center">
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
                   }`}
-                >
-                  <div className="grid gap-2">
-                    {serviceLinks.map((link) => (
-                      <NavLink
-                        key={link.to}
-                        to={link.to}
-                        onClick={() => setServicesOpen(false)}
-                        className={({ isActive }) =>
-                          `rounded-lg px-3 py-2 transition hover:bg-white/10 ${
-                            isActive ? 'text-white' : 'text-white/80'
-                          }`
-                        }
-                      >
-                        {link.label}
-                      </NavLink>
-                    ))}
-                  </div>
-                </div>
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
+                  }`}
+                />
               </div>
-              <NavLink
-                to="/portfolio"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                Portfolio
-              </NavLink>
-              <NavLink
-                to="/blog"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                Blog
-              </NavLink>
-              <NavLink
-                to="/careers"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                Careers
-              </NavLink>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                About
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
-                }
-              >
-                Contact
-              </NavLink>
-            </nav>
+            </button>
 
-            <div className="flex items-center gap-3">
+            {/* Desktop CTA */}
+            <div className="hidden items-center gap-3 md:flex">
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
@@ -245,6 +189,117 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               </Link>
             </div>
           </div>
+
+          {/* Mobile menu drawer with Framer Motion */}
+          <AnimatePresence>
+            {mobileMenuOpen && (
+              <>
+                {/* Backdrop */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden"
+                  onClick={() => setMobileMenuOpen(false)}
+                />
+                {/* Drawer */}
+                <motion.div
+                  initial={{ x: '100%', opacity: 0.8 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: '100%', opacity: 0.8 }}
+                  transition={{
+                    type: 'spring',
+                    damping: 25,
+                    stiffness: 200,
+                    opacity: { duration: 0.2 }
+                  }}
+                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl md:hidden"
+                >
+                  <div className="flex items-center justify-between border-b border-white/10 p-4">
+                    <motion.span
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1, duration: 0.3 }}
+                      className="text-lg font-bold text-white"
+                    >
+                      Menu
+                    </motion.span>
+                    <motion.button
+                      initial={{ opacity: 0, rotate: -90 }}
+                      animate={{ opacity: 1, rotate: 0 }}
+                      transition={{ delay: 0.15, duration: 0.3 }}
+                      type="button"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="inline-flex items-center justify-center rounded-full p-2 text-white/70 transition hover:bg-white/10 hover:text-white"
+                      aria-label="Close menu"
+                    >
+                      <X size={20} />
+                    </motion.button>
+                  </div>
+                  <nav className="flex flex-col p-4" aria-label="Mobile">
+                    {[
+                      { to: '/', label: 'Home' },
+                      { to: '/services', label: 'Services' },
+                      { to: '/portfolio', label: 'Portfolio' },
+                      { to: '/blog', label: 'Blog' },
+                      { to: '/careers', label: 'Careers' },
+                      { to: '/about', label: 'About' },
+                      { to: '/contact', label: 'Contact' },
+                    ].map((item, index) => (
+                      <motion.div
+                        key={item.to}
+                        initial={{ opacity: 0, x: 50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{
+                          delay: 0.1 + index * 0.08,
+                          type: 'spring',
+                          damping: 20,
+                          stiffness: 150
+                        }}
+                      >
+                        <NavLink
+                          to={item.to}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={({ isActive }) =>
+                            `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                              isActive ? 'text-white' : 'text-white/80 hover:text-white'
+                            }`
+                          }
+                        >
+                          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
+                          <span className="relative flex items-center gap-3">
+                            <span className={
+                              `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                location.pathname === item.to
+                                  ? 'bg-[var(--zim-green)] scale-125'
+                                  : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                              }`
+                            } />
+                            {item.label}
+                          </span>
+                        </NavLink>
+                      </motion.div>
+                    ))}
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
+                      className="mt-6 border-t border-white/10 pt-6"
+                    >
+                      <Link
+                        to="/contact"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
+                      >
+                        Start a Project
+                      </Link>
+                    </motion.div>
+                  </nav>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
 
           <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
             <MotionDiv
