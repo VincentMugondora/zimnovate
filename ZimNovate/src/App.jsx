@@ -20,6 +20,12 @@ import AfricaRiseCaseStudy from './pages/AfricaRiseCaseStudy.jsx'
 import AutoDocsCaseStudy from './pages/AutoDocsCaseStudy.jsx'
 import ZimFarmsCaseStudy from './pages/ZimFarmsCaseStudy.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Careers from './pages/Careers.jsx'
+import Blog from './pages/Blog.jsx'
+import Testimonials from './pages/Testimonials.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import Terms from './pages/Terms.jsx'
+import CookiePolicy from './pages/CookiePolicy.jsx'
 
 const App = () => {
   return (
@@ -43,6 +49,12 @@ const App = () => {
         <Route path="/portfolio/africarise" element={<AfricaRiseCaseStudy />} />
         <Route path="/portfolio/autodocs" element={<AutoDocsCaseStudy />} />
         <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
