@@ -1,5 +1,6 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import SiteLayout from './components/SiteLayout.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
@@ -29,7 +30,8 @@ import CookiePolicy from './pages/CookiePolicy.jsx'
 
 const App = () => {
   return (
-    <Routes>
+    <HelmetProvider>
+      <Routes>
       <Route element={<SiteLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -55,10 +57,10 @@ const App = () => {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<CookiePolicy />} />
-        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
-    </Routes>
+      </Routes>
+    </HelmetProvider>
   )
 }
 

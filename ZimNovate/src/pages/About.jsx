@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import {
   Rocket,
@@ -20,6 +21,17 @@ const MotionDiv = motion.div
 const About = () => {
 
   return (
+    <>
+      <Helmet>
+        <title>About Zimnovate – Zimbabwe's Modern Digital Agency</title>
+        <meta name="description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions for African businesses." />
+        <meta name="keywords" content="about zimnovate, zimbabwe digital agency, web development team zimbabwe, african tech company" />
+        <link rel="canonical" href="https://zimnovate.com/about" />
+        <meta property="og:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
+        <meta property="og:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.com/about" />
+      </Helmet>
     <div>
       <PageHero
         title="Who We Are: A Zimbabwe-Born Digital Agency Shaping the Future of Business"
@@ -408,7 +420,7 @@ const About = () => {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
 

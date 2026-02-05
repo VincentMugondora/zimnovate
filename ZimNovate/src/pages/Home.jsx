@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
@@ -82,7 +83,18 @@ const Home = () => {
   ]
 
   return (
-    <div className="bg-[var(--zim-bg)] overflow-x-hidden">
+    <>
+      <Helmet>
+        <title>Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding</title>
+        <meta name="description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy. Smart tech for African businesses." />
+        <meta name="keywords" content="digital agency zimbabwe, web design harare, app development zimbabwe, branding agency, SEO zimbabwe" />
+        <link rel="canonical" href="https://zimnovate.com/" />
+        <meta property="og:title" content="Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding" />
+        <meta property="og:description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.com/" />
+      </Helmet>
+      <div className="bg-[var(--zim-bg)] overflow-x-hidden">
       <Hero />
       <ClientLogos />
 
@@ -411,7 +423,7 @@ const Home = () => {
         </div>
       </section>
 
-    </div>
+    </>
   )
 }
 
