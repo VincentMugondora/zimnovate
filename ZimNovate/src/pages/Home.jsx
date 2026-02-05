@@ -371,7 +371,7 @@ const Home = () => {
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
-              OUR BEST DESIGNERS
+              MEET THE TEAM
             </div>
             <div className="hidden md:block" />
             <Link
