@@ -22,8 +22,8 @@ const About = () => {
   return (
     <div>
       <PageHero
-        title="Built in Africa. Designed for the world."
-        subtitle="We are a Zimbabwe-born digital agency shaping the future of business through technology, creativity, and strategic thinking."
+        title="Who We Are: A Zimbabwe-Born Digital Agency Shaping the Future of Business"
+        subtitle="Zimnovate is committed to helping African businesses grow through innovation, creativity, and powerful technology."
         height="min-h-[45vh]"
       />
 

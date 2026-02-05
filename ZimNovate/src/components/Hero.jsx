@@ -392,15 +392,14 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[0.95]">
-                INNOVATE AND GROW
+              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[1.1]">
+                Empowering African Businesses
                 <br />
-                WITH ZIMNOVATE
+                With Smart Digital Solutions
               </h1>
 
-              <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
-                Building Zimbabwe’s future by combining bold ideas, local expertise,
-                and world-class digital execution.
+              <p className="mx-auto mt-6 max-w-2xl text-sm text-white/80 md:text-base">
+                Zimnovate is a full-stack digital agency in Zimbabwe helping startups, SMEs, and brands grow through modern technology, clean design, and data-driven strategies.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -418,7 +417,11 @@ const Hero = () => {
                 </Link>
               </div>
 
-              <div className="mt-10 flex justify-center">
+              <p className="mx-auto mt-8 max-w-xl text-xs text-white/60 md:text-sm">
+                Built in Africa. Designed for the world. We create fast, secure, and scalable digital products — from websites and mobile apps to branding, e-commerce, and digital strategy.
+              </p>
+
+              <div className="mt-6 flex justify-center">
                 <a
                   href="https://wa.me/263000000000"
                   target="_blank"
