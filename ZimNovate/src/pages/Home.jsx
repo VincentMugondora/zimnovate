@@ -46,13 +46,13 @@ const Home = () => {
     {
       id: 'd2',
       name: 'Kayden Mamu',
-      role: 'Senior UI/UX Designer',
+      role: 'Senior Product Designer',
       photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=640&q=80',
     },
     {
       id: 'd3',
-      name: 'Roy Makanjira',
-      role: 'Senior Digital Marketing Specialist',
+      name: 'Wesley Makanjira',
+      role: 'Digital Marketer and Graphic Designer',
       photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=640&q=80',
     },
     {
