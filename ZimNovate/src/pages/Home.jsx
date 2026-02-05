@@ -387,21 +387,21 @@ const Home = () => {
           <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {designers.map((d) => (
               <div key={d.id} className="group">
-                <div className="overflow-hidden rounded-[28px] bg-neutral-100 ring-1 ring-black/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+                <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                   <div className="aspect-[4/5] w-full">
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
                       alt={d.name}
-                      className="h-full w-full object-contain p-6"
+                      className="h-full w-full object-cover"
                       loading="lazy"
                     />
                   </div>
                 </div>
-                <div className="mt-4 text-center">
-                  <div className="text-lg font-semibold text-[var(--zim-black)]">
-                    {d.name}
+                <div className="mt-5">
+                  <div className="text-xl font-bold text-[var(--zim-black)] lowercase">
+                    {d.name.toLowerCase()}
                   </div>
-                  <div className="mt-1 text-sm text-[var(--zim-fg)]/70">
+                  <div className="mt-1 text-base text-[var(--zim-fg)]/60">
                     {d.role}
                   </div>
                 </div>
