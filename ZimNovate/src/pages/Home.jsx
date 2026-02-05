@@ -11,7 +11,7 @@ const MotionDiv = motion.div
 
 const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
-  const serviceList = services.slice(0, 4)
+  const serviceList = services
   const bestProjectImages = [
     'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80',
     'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80',
@@ -27,6 +27,8 @@ const Home = () => {
     websites: '/services/web-development',
     webapps: '/services/web-development',
     automation: '/services/ai-automation',
+    mobile: '/services/mobile-app-development',
+    consulting: '/services/digital-strategy',
   }
   const bestLocations = [
     'Jakarta, Indonesia',
@@ -37,27 +39,27 @@ const Home = () => {
   const designers = [
     {
       id: 'd1',
-      name: 'Jordan Abigail',
-      role: 'Senior UI/UX Designer',
-      photo: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=640&q=80',
+      name: 'Vincent Mugondora',
+      role: 'Founder & Software Engineer',
+      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=640&q=80',
     },
     {
       id: 'd2',
-      name: 'Marcus Horizon',
+      name: 'Kayden Mamu',
       role: 'Senior UI/UX Designer',
-      photo: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=640&q=80',
+      photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=640&q=80',
     },
     {
       id: 'd3',
-      name: 'Ahmad Jalaludin',
-      role: 'Illustration Designer',
-      photo: 'https://images.unsplash.com/photo-1524502397800-2eeaad7c3fe5?auto=format&fit=crop&w=640&q=80',
+      name: 'Roy Makanjira',
+      role: 'Senior Digital Marketing Specialist',
+      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=640&q=80',
     },
     {
       id: 'd4',
-      name: 'Jimmy Sullivan',
-      role: 'Animation Designer',
-      photo: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=640&q=80',
+      name: 'Tawanda Muchenu',
+      role: 'Data Analyst',
+      photo: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=640&q=80',
     },
   ]
 
@@ -166,45 +168,134 @@ const Home = () => {
           <div className="mt-6 border-t border-[var(--zim-border)]" />
 
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
-            <div className="relative isolate min-h-[360px] md:min-h-[460px] grid place-items-center">
-              {/* subtle stacked hint behind */}
-              <div className="absolute -left-6 -top-8 z-0 hidden h-[440px] w-[300px] -rotate-[8deg] rounded-[32px] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.12)] ring-1 ring-black/5 md:block" aria-hidden="true" />
-              <div className="absolute left-0 top-4 z-0 hidden h-[420px] w-[280px] rotate-[6deg] rounded-[32px] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.10)] ring-1 ring-black/5 md:block" aria-hidden="true" />
+            {/* Left Side - Horizontal Scroll Images */}
+            <div className="relative">
+              <MotionDiv
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="flex gap-4 overflow-x-auto pb-4 pt-2 scrollbar-hide snap-x snap-mandatory"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {/* Card 1 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=80"
+                      alt="Brand Identity"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    Branding
+                  </div>
+                </div>
 
-              {/* main clipped card */}
-              <div className="relative z-10 h-[420px] w-[260px] rotate-[-6deg] overflow-hidden shadow-[0_28px_70px_rgba(0,0,0,0.16)] ring-1 ring-black/5 sm:h-[500px] sm:w-[320px] md:h-[540px] md:w-[360px]">
-                <div
-                  className="absolute inset-0 bg-white"
-                  style={{ clipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")', WebkitClipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")' }}
-                />
-                <img
-                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80"
-                  alt="Find your place"
-                  className="absolute inset-0 h-full w-full object-cover"
-                  style={{ clipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")', WebkitClipPath: 'path("M32 60C48 12 92 0 150 0h180c50 0 86 26 86 74v98c0 26 12 42 32 48-18 6-32 22-32 48v96c0 56-44 96-102 96H132c-62 0-108-32-108-90v-70c0-24-14-38-32-44 18-6 32-20 32-44Z")' }}
-                  loading="lazy"
-                />
+                {/* Card 2 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+                      alt="Web Development"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    Web Dev
+                  </div>
+                </div>
+
+                {/* Card 3 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=80"
+                      alt="UI/UX Design"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    UI/UX
+                  </div>
+                </div>
+
+                {/* Card 4 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=80"
+                      alt="Automation"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    Automation
+                  </div>
+                </div>
+
+                {/* Card 5 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=80"
+                      alt="Strategy"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    Strategy
+                  </div>
+                </div>
+
+                {/* Card 6 */}
+                <div className="relative shrink-0 snap-center">
+                  <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
+                    <img
+                      src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=80"
+                      alt="E-Commerce"
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute bottom-3 left-3 rounded-full bg-black/60 px-3 py-1 text-[10px] font-medium text-white backdrop-blur-sm">
+                    E-Commerce
+                  </div>
+                </div>
+              </MotionDiv>
+
+              {/* Scroll indicator */}
+              <div className="mt-2 flex items-center justify-center gap-1">
+                <div className="h-1 w-8 rounded-full bg-[var(--zim-green)]" />
+                <div className="h-1 w-1.5 rounded-full bg-[var(--zim-fg)]/20" />
+                <div className="h-1 w-1.5 rounded-full bg-[var(--zim-fg)]/20" />
+                <span className="ml-2 text-[10px] text-[var(--zim-fg)]/40">Scroll</span>
               </div>
             </div>
 
             <div className="rounded-2xl bg-[var(--zim-bg)]">
               <div className="divide-y divide-[var(--zim-border)]">
                 {serviceList.map((s, idx) => (
-                  <div key={s.id} className="grid grid-cols-[auto_1fr_auto] items-start gap-4 py-5">
-                    <div className="text-xs font-semibold text-[var(--zim-fg)]/50">
+                  <div key={s.id} className="grid grid-cols-[auto_1fr_auto] items-start gap-3 py-4">
+                    <div className="text-[10px] font-semibold text-[var(--zim-fg)]/50">
                       {(idx + 1).toString().padStart(2, '0')}
                     </div>
                     <div>
-                      <div className={idx === 1 ? 'text-2xl font-extrabold text-[var(--zim-black)] md:text-3xl' : 'text-2xl font-semibold text-[var(--zim-fg)]/80 md:text-3xl'}>
+                      <div className={idx === 1 ? 'text-base font-extrabold text-[var(--zim-black)] md:text-lg' : 'text-base font-semibold text-[var(--zim-fg)]/80 md:text-lg'}>
                         {s.title}
                       </div>
-                      <div className="mt-1 text-sm text-[var(--zim-fg)]/70">
+                      <div className="mt-0.5 text-xs text-[var(--zim-fg)]/70">
                         {s.description}
                       </div>
                     </div>
                     <div>
-                      <Link to={serviceLinks[s.id] || '/services'} aria-label={`Open ${s.title}`} className={idx === 1 ? 'grid h-9 w-9 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]' : 'grid h-9 w-9 place-items-center rounded-full hover:bg-white/10'}>
-                        <ArrowUpRight size={18} className={idx === 1 ? '' : 'text-[var(--zim-fg)]/60'} />
+                      <Link to={serviceLinks[s.id] || '/services'} aria-label={`Open ${s.title}`} className={idx === 1 ? 'grid h-7 w-7 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)]' : 'grid h-7 w-7 place-items-center rounded-full hover:bg-white/10'}>
+                        <ArrowUpRight size={14} className={idx === 1 ? '' : 'text-[var(--zim-fg)]/60'} />
                       </Link>
                     </div>
                   </div>
