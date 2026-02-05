@@ -73,8 +73,8 @@ const Portfolio = () => {
     <div>
       {/* Hero Section */}
       <PageHero
-        title="Our Work. Our Impact."
-        subtitle="A curated selection of the digital experiences, brands, and products we've built for ambitious companies."
+        title="Projects That Show What's Possible With Smart Digital Solutions"
+        subtitle="Explore real work delivered for startups, entrepreneurs, and growing brands across Zimbabwe and Africa."
         height="min-h-[50vh]"
       />
 

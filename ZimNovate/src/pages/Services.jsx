@@ -55,16 +55,16 @@ const Services = () => {
   return (
     <div>
       <PageHero 
-        title="OUR SERVICES"
-        subtitle="Branding, websites, and full-stack systems designed to help you ship faster and scale."
+        title="Full-Stack Digital Services Designed to Help African Businesses Grow"
+        subtitle="Professional web design, mobile apps, branding, digital marketing, and e-commerce solutions tailored for Zimbabwean businesses."
         height="min-h-[45vh]"
       />
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <SectionHeading
             eyebrow="Services"
-            title="Branding, websites, and full-stack systems"
-            subtitle="Each service is designed to help you ship faster, look more credible, and scale operations."
+            title="Digital Solutions Built for African Markets"
+            subtitle="From web design and mobile apps to branding and digital marketing — we deliver modern, scalable solutions that drive growth."
           />
           <Link
             to="/contact"

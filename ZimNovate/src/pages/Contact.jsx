@@ -35,8 +35,8 @@ const Contact = () => {
     <div>
       {/* Hero Section */}
       <PageHero
-        title="Let's Build Something Amazing Together"
-        subtitle="Have a project in mind? Need expert guidance? We're here to help you bring your ideas to life."
+        title="Let's Build Something Great Together"
+        subtitle="We're here to help you grow with smart, modern digital solutions. Get in touch and we'll get back to you within 24 hours."
         height="min-h-[50vh]"
       />
 
@@ -45,14 +45,20 @@ const Contact = () => {
         <div className="grid gap-10 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div className="space-y-6">
             <div className="inline-flex rounded-full bg-[#F4D47C]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0F172A]">
-              Get In Touch
+              Start Your Project
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
-              Ready to start your project?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
-              Fill out the form and we'll get back to you within 24 hours. Let's discuss how we can help transform your business.
+              Zimnovate is a full-stack digital agency in Zimbabwe offering web design, app development, branding, digital marketing, and e-commerce solutions for African businesses. Fill out the form and we'll get back to you within 24 hours.
             </p>
+            <div className="space-y-2 text-sm text-[#1A1A1A]/80">
+              <p><strong>Email:</strong> hello@zimnovate.com</p>
+              <p><strong>Phone:</strong> +263 ___</p>
+              <p><strong>Location:</strong> Harare, Zimbabwe</p>
+              <p><strong>Hours:</strong> Monday–Friday, 8am–5pm</p>
+            </div>
           </div>
 
           <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-1">
@@ -72,8 +78,9 @@ const Contact = () => {
       <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Send Us a Message</div>
-            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Get In Touch</h3>
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Contact Us</div>
+            <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Start Your Project</h3>
+            <p className="text-sm text-[#1A1A1A]/70 max-w-lg mx-auto">We'll get back to you within 24 hours to discuss your digital transformation needs.</p>
           </div>
 
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
