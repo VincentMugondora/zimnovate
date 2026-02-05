@@ -43,6 +43,10 @@ const Contact = () => {
         <meta property="og:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.com/contact" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Zimnovate – Start Your Digital Project Today" />
+        <meta name="twitter:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
+        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

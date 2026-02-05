@@ -93,6 +93,10 @@ const Home = () => {
         <meta property="og:description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.com/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding" />
+        <meta name="twitter:description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy." />
+        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
       </Helmet>
       <div className="bg-[var(--zim-bg)] overflow-x-hidden">
       <Hero />

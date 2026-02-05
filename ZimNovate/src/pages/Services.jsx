@@ -64,6 +64,10 @@ const Services = () => {
         <meta property="og:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.com/services" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
+        <meta name="twitter:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
+        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
       </Helmet>
     <div>
       <PageHero 

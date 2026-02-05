@@ -81,6 +81,10 @@ const Portfolio = () => {
         <meta property="og:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.com/portfolio" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
+        <meta name="twitter:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
+        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

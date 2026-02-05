@@ -31,6 +31,10 @@ const About = () => {
         <meta property="og:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.com/about" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
+        <meta name="twitter:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
+        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
       </Helmet>
     <div>
       <PageHero
