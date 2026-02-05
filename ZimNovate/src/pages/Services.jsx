@@ -1,4 +1,5 @@
 import React, { useMemo } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import SectionHeading from '../components/SectionHeading.jsx'
 import ServiceCard from '../components/ServiceCard.jsx'
@@ -53,6 +54,17 @@ const Services = () => {
   }
 
   return (
+    <>
+      <Helmet>
+        <title>Digital Services Zimbabwe – Web, Apps, Branding & Marketing</title>
+        <meta name="description" content="Explore Zimnovate's full-stack digital services: web design, app development, branding, SEO, digital marketing, e-commerce, and automation solutions." />
+        <meta name="keywords" content="digital services zimbabwe, web design harare, app development, branding agency, SEO services, digital marketing" />
+        <link rel="canonical" href="https://zimnovate.com/services" />
+        <meta property="og:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
+        <meta property="og:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.com/services" />
+      </Helmet>
     <div>
       <PageHero 
         title="Full-Stack Digital Services Designed to Help African Businesses Grow"
