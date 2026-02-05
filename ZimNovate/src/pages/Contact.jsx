@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
 
@@ -32,6 +33,17 @@ const Contact = () => {
   ]
 
   return (
+    <>
+      <Helmet>
+        <title>Contact Zimnovate – Start Your Digital Project Today</title>
+        <meta name="description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions tailored for Zimbabwean businesses." />
+        <meta name="keywords" content="contact zimnovate, digital agency zimbabwe, web design quote, hire developer zimbabwe" />
+        <link rel="canonical" href="https://zimnovate.com/contact" />
+        <meta property="og:title" content="Contact Zimnovate – Start Your Digital Project Today" />
+        <meta property="og:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.com/contact" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -374,6 +386,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

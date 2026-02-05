@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
 
@@ -70,6 +71,17 @@ const Portfolio = () => {
   ]
 
   return (
+    <>
+      <Helmet>
+        <title>Zimnovate Portfolio – Web, Branding & App Projects</title>
+        <meta name="description" content="See digital products we've built for businesses in Zimbabwe and across Africa: websites, apps, branding, marketing, and more." />
+        <meta name="keywords" content="zimnovate portfolio, web projects zimbabwe, app development portfolio, branding projects africa" />
+        <link rel="canonical" href="https://zimnovate.com/portfolio" />
+        <meta property="og:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
+        <meta property="og:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.com/portfolio" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -215,6 +227,7 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
