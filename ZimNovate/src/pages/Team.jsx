@@ -9,31 +9,25 @@ const TeamCard = ({ member }) => {
   return (
     <Link
       to={`/team/${member.id}`}
-      className="group rounded-2xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-2 hover:ring-[#0EAFFF]/30"
+      className="group block"
     >
-      <div className="mb-4 flex items-center gap-4">
-        <div className="h-16 w-16 overflow-hidden rounded-xl bg-gradient-to-br from-[#0EAFFF] to-[#E50695]">
+      <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+        <div className="aspect-[4/5] w-full">
           <img
-            src={member.image}
+            src={member.image || member.photo}
             alt={member.name}
             className="h-full w-full object-cover"
-            onError={(e) => {
-              e.target.style.display = 'none'
-              e.target.parentElement.classList.add('flex', 'items-center', 'justify-center')
-              e.target.parentElement.innerHTML = '<span class="text-white font-bold text-xl">' + member.name.charAt(0) + '</span>'
-            }}
+            loading="lazy"
           />
         </div>
-        <div>
-          <h3 className="text-lg font-bold text-[#1A1A1A]">{member.name}</h3>
-          <p className="text-sm text-[#0EAFFF] font-medium">{member.role}</p>
-        </div>
       </div>
-      <p className="mb-4 text-sm text-[#1A1A1A]/70 leading-relaxed">
-        {member.tagline}
-      </p>
-      <div className="flex items-center gap-1 text-sm font-semibold text-[#0EAFFF] group-hover:gap-2 transition-all">
-        View Profile <ArrowUpRight className="h-4 w-4" />
+      <div className="mt-5">
+        <div className="text-xl font-bold text-[#1A1A1A] lowercase">
+          {member.name.toLowerCase()}
+        </div>
+        <div className="mt-1 text-base text-[#1A1A1A]/60">
+          {member.role}
+        </div>
       </div>
     </Link>
   )
@@ -101,7 +95,7 @@ const Team = () => {
               Click on any team member to learn more about their expertise and the projects they&apos;ve contributed to.
             </p>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {teamMembers.map((member) => (
               <TeamCard key={member.id} member={member} />
             ))}
