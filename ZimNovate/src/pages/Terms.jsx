@@ -13,7 +13,7 @@ const Terms = () => {
       <section className="mx-auto max-w-4xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="prose prose-sm max-w-none">
           <p className="text-sm text-[#1A1A1A]/70 mb-8">
-            Last updated: January 1, 2026
+            Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
           </p>
 
           <div className="space-y-8">

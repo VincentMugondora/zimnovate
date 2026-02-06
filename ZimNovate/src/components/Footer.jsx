@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="mt-10 flex flex-col gap-10 md:flex-row md:justify-between">
             {/* Brand section */}
             <div className="space-y-4 md:max-w-xs">
-              <div className="text-sm font-semibold uppercase tracking-wide">DIGIMON</div>
+              <div className="text-sm font-semibold uppercase tracking-wide">Zimnovate</div>
               <p className="text-sm text-white/70 leading-relaxed">
                 We know how important customer experience is for a business and therefore, we strive
               </p>
@@ -67,7 +67,7 @@ const Footer = () => {
                   </a>
                 ))}
               </div>
-              <div className="text-xs text-white/60">DIGIMON, Inc.</div>
+              <div className="text-xs text-white/60">Zimnovate</div>
             </div>
 
             {/* Links section */}
@@ -106,7 +106,7 @@ const Footer = () => {
           </div>
 
           <div className="mt-10 flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-            <div>Copyright © {new Date().getFullYear()} DIGIMON</div>
+            <div>Copyright © {new Date().getFullYear()} Zimnovate</div>
             <div className="text-white/50">All rights reserved.</div>
           </div>
         </div>
