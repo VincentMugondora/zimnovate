@@ -48,7 +48,7 @@ const TeamProfile = () => {
             <div className="grid gap-8 md:grid-cols-[280px_1fr] items-start">
               {/* Profile Image */}
               <div className="mx-auto md:mx-0">
-                <div className="h-64 w-64 overflow-hidden rounded-2xl bg-gradient-to-br from-[#0EAFFF] to-[#E50695]">
+                <div className="h-64 w-64 overflow-hidden rounded-2xl bg-[#f3f3f3]">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -56,7 +56,7 @@ const TeamProfile = () => {
                     onError={(e) => {
                       e.target.style.display = 'none'
                       e.target.parentElement.classList.add('flex', 'items-center', 'justify-center')
-                      e.target.parentElement.innerHTML = '<span class="text-white font-bold text-6xl">' + member.name.charAt(0) + '</span>'
+                      e.target.parentElement.innerHTML = '<span class="text-[#1A1A1A] font-bold text-6xl">' + member.name.charAt(0) + '</span>'
                     }}
                   />
                 </div>
@@ -136,7 +136,7 @@ const TeamProfile = () => {
                 {member.skills.technical.map((skill, index) => (
                   <span
                     key={index}
-                    className="rounded-full bg-gradient-to-r from-[#0EAFFF]/10 to-[#E50695]/10 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
+                    className="rounded-full bg-[#0EAFFF]/10 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
                   >
                     {skill}
                   </span>
@@ -211,7 +211,7 @@ const TeamProfile = () => {
                     to={`/team/${otherMember.id}`}
                     className="group flex items-center gap-4 rounded-2xl border border-[#E5E5E5] p-4 hover:border-[#0EAFFF] hover:shadow-md transition-all"
                   >
-                    <div className="h-16 w-16 overflow-hidden rounded-xl bg-gradient-to-br from-[#0EAFFF] to-[#E50695] flex-shrink-0">
+                    <div className="h-16 w-16 overflow-hidden rounded-xl bg-[#f3f3f3] flex-shrink-0">
                       <img
                         src={otherMember.image}
                         alt={otherMember.name}
@@ -219,7 +219,7 @@ const TeamProfile = () => {
                         onError={(e) => {
                           e.target.style.display = 'none'
                           e.target.parentElement.classList.add('flex', 'items-center', 'justify-center')
-                          e.target.parentElement.innerHTML = '<span class="text-white font-bold text-lg">' + otherMember.name.charAt(0) + '</span>'
+                          e.target.parentElement.innerHTML = '<span class="text-[#1A1A1A] font-bold text-lg">' + otherMember.name.charAt(0) + '</span>'
                         }}
                       />
                     </div>
@@ -239,7 +239,7 @@ const TeamProfile = () => {
 
         {/* CTA Section */}
         <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
-          <div className="rounded-3xl bg-gradient-to-br from-[#0EAFFF] to-[#E50695] px-8 py-12 text-center">
+          <div className="rounded-3xl bg-[#0EAFFF] px-8 py-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Want to Work With {member.name.split(' ')[0]} and the Zimnovate Team?
             </h2>
