@@ -52,9 +52,9 @@ const Home = () => {
     },
     {
       id: 'd3',
-      name: 'Wesley Makanjira',
+      name: 'Roy Makanjira',
       role: 'Digital Marketer and Graphic Designer',
-      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=640&q=80',
+      photo: '/team/Roy-makanjira.jpeg',
     },
     {
       id: 'd4',
