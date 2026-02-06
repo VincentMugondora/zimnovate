@@ -417,9 +417,9 @@ const Hero = () => {
                 </Link>
               </div>
 
-              <p className="mx-auto mt-8 max-w-xl text-xs text-white/60 md:text-sm">
+              {/* <p className="mx-auto mt-8 max-w-xl text-xs text-white/60 md:text-sm">
                 Built in Africa. Designed for the world. We create fast, secure, and scalable digital products — from websites and mobile apps to branding, e-commerce, and digital strategy.
-              </p>
+              </p> */}
 
               <div className="mt-6 flex justify-center">
                 <a
