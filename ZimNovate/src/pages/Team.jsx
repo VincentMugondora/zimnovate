@@ -9,9 +9,9 @@ const TeamCard = ({ member }) => {
   return (
     <Link
       to={`/team/${member.id}`}
-      className="group block"
+      className="group block rounded-[32px] bg-[#f3f3f3] p-4 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
     >
-      <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+      <div className="overflow-hidden rounded-[24px]">
         <div className="aspect-[4/5] w-full">
           <img
             src={member.image || member.photo}
@@ -21,7 +21,7 @@ const TeamCard = ({ member }) => {
           />
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-4 px-1">
         <div className="text-xl font-bold text-[#1A1A1A] lowercase">
           {member.name.toLowerCase()}
         </div>
