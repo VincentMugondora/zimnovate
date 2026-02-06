@@ -1,10 +1,11 @@
 export const teamMembers = [
   {
-    id: 'vincent-mugondora',
+    id: 'd1',
     name: 'Vincent Mugondora',
-    role: 'Founder & Lead Developer',
+    role: 'Founder & Software Engineer',
     tagline: 'Turning ideas into powerful digital products.',
-    image: '/team/vincent.jpg',
+    image: '/team/vincent-mugondora.png',
+    photo: '/team/vincent-mugondora.png',
     social: {
       linkedin: 'https://linkedin.com/in/vincentmugondora',
       twitter: 'https://twitter.com/vincentmugondora',
@@ -43,25 +44,26 @@ Outside of work, Vincent enjoys mentoring young developers, contributing to open
     ]
   },
   {
-    id: 'tanya-moyo',
-    name: 'Tanya Moyo',
-    role: 'UI/UX Designer',
-    tagline: 'Designing clean, modern and user-focused experiences.',
-    image: '/team/tanya.jpg',
+    id: 'd2',
+    name: 'Kayden Mamu',
+    role: 'Senior Product Designer',
+    tagline: 'Crafting beautiful product experiences from concept to launch.',
+    image: '/team/kayden-mamu.png',
+    photo: '/team/kayden-mamu.png',
     social: {
-      linkedin: 'https://linkedin.com/in/tanyamoyo',
-      twitter: 'https://twitter.com/tanyamoyo',
-      portfolio: 'https://tanyamoyo.design'
+      linkedin: 'https://linkedin.com/in/kaydenmamu',
+      twitter: 'https://twitter.com/kaydenmamu',
+      portfolio: 'https://kaydenmamu.design'
     },
-    bio: `Tanya Moyo is a creative UI/UX Designer with a keen eye for aesthetics and a deep understanding of user psychology. With over 5 years of experience in digital design, Tanya has crafted intuitive interfaces for web applications, mobile apps, and enterprise software.
+    bio: `Kayden Mamu is a Senior Product Designer with a passion for creating intuitive and visually stunning digital experiences. With over 6 years of experience in product design, Kayden has led design efforts for multiple successful product launches.
 
-At Zimnovate, Tanya leads the design team, ensuring every product not only looks beautiful but delivers exceptional user experiences. She believes that great design is invisible—it simply works.
+At Zimnovate, Kayden specializes in transforming complex requirements into elegant, user-friendly interfaces. He believes that great design is about understanding user needs and delivering solutions that exceed expectations.
 
-Tanya's approach combines research-driven insights with creative innovation. She conducts user research, creates wireframes and prototypes, and collaborates closely with developers to bring designs to life.
+Kayden's design philosophy combines aesthetics with functionality. He conducts user research, creates wireframes and prototypes, and collaborates closely with developers to ensure designs are implemented perfectly.
 
-Before joining Zimnovate, Tanya worked with design agencies in Harare and Johannesburg, where she developed her signature style of clean, functional design that puts users first.
+Before joining Zimnovate, Kayden worked with startups and established companies, developing his expertise in design systems, user experience, and product strategy.
 
-When not designing, Tanya enjoys photography, exploring local art scenes, and staying up-to-date with the latest design trends and tools.`,
+When not designing, Kayden enjoys photography, exploring art galleries, and staying current with design trends.`,
     skills: {
       technical: ['Figma', 'Adobe Creative Suite', 'Sketch', 'Prototyping', 'User Research', 'Wireframing', 'Design Systems', 'Responsive Design', 'Accessibility', 'Motion Design'],
       soft: ['Creativity', 'Communication', 'Empathy', 'Attention to Detail', 'Collaboration', 'Problem Solving']
@@ -69,8 +71,8 @@ When not designing, Tanya enjoys photography, exploring local art scenes, and st
     projects: [
       {
         name: 'SwiftPay Mobile App',
-        role: 'Lead UI/UX Designer',
-        description: 'Created intuitive mobile banking interface with 98% user satisfaction.',
+        role: 'Lead Product Designer',
+        description: 'Designed intuitive mobile banking interface with 98% user satisfaction.',
         link: '/portfolio/swiftpay'
       },
       {
@@ -88,92 +90,94 @@ When not designing, Tanya enjoys photography, exploring local art scenes, and st
     ]
   },
   {
-    id: 'brian-ncube',
-    name: 'Brian Ncube',
-    role: 'Backend Engineer',
-    tagline: 'Building secure, scalable systems for growth.',
-    image: '/team/brian.jpg',
+    id: 'd3',
+    name: 'Roy Makanjira',
+    role: 'Digital Marketer and Graphic Designer',
+    tagline: 'Creating compelling brand stories that resonate with audiences.',
+    image: '/team/Roy-makanjira.jpeg',
+    photo: '/team/Roy-makanjira.jpeg',
     social: {
-      linkedin: 'https://linkedin.com/in/brianncube',
-      twitter: 'https://twitter.com/brianncube',
-      portfolio: 'https://brianncube.dev'
-    },
-    bio: `Brian Ncube is a Backend Engineer specializing in building robust, scalable server-side systems. With a background in computer science and 6 years of professional experience, Brian ensures that Zimnovate's applications run smoothly under any load.
-
-Brian's expertise lies in database design, API development, and cloud infrastructure. He has a deep understanding of system architecture and is passionate about writing clean, efficient code that stands the test of time.
-
-At Zimnovate, Brian architects the backbone of our applications, implementing security best practices, optimizing database queries, and ensuring high availability. He works closely with frontend developers to create seamless integrations between client and server.
-
-Brian is particularly skilled in distributed systems and has experience with microservices architecture, enabling Zimnovate to build applications that scale effortlessly.
-
-Outside of coding, Brian is an avid gamer, enjoys hiking in Zimbabwe's beautiful landscapes, and contributes to backend development communities.`,
-    skills: {
-      technical: ['Node.js', 'Python', 'Go', 'PostgreSQL', 'MongoDB', 'Redis', 'GraphQL', 'REST APIs', 'Docker', 'Kubernetes', 'AWS/GCP', 'Microservices', 'System Architecture'],
-      soft: ['Analytical Thinking', 'Problem Solving', 'Communication', 'Collaboration', 'Continuous Learning']
-    },
-    projects: [
-      {
-        name: 'SwiftPay Mobile App',
-        role: 'Backend Lead',
-        description: 'Built secure payment processing APIs with fraud detection.',
-        link: '/portfolio/swiftpay'
-      },
-      {
-        name: 'ZimFarms Management System',
-        role: 'System Architect',
-        description: 'Designed distributed system for real-time farm monitoring.',
-        link: '/portfolio/zimfarms'
-      },
-      {
-        name: 'AutoDocs System',
-        role: 'Backend Developer',
-        description: 'Implemented document processing pipeline handling millions of files.',
-        link: '/portfolio/autodocs'
-      }
-    ]
-  },
-  {
-    id: 'lisa-dube',
-    name: 'Lisa Dube',
-    role: 'Digital Strategist',
-    tagline: 'Helping businesses win online through smart strategy.',
-    image: '/team/lisa.jpg',
-    social: {
-      linkedin: 'https://linkedin.com/in/lisadube',
-      twitter: 'https://twitter.com/lisadube',
+      linkedin: 'https://linkedin.com/in/roymakanjira',
+      twitter: 'https://twitter.com/roymakanjira',
       portfolio: null
     },
-    bio: `Lisa Dube is a results-driven Digital Strategist who combines marketing expertise with data analytics to help businesses achieve measurable growth. With 7 years of experience in digital marketing and strategy, Lisa has helped numerous brands establish and expand their online presence.
+    bio: `Roy Makanjira is a talented Digital Marketer and Graphic Designer who brings creativity and strategic thinking to every project. With 5 years of experience in digital marketing and visual design, Roy has helped numerous brands establish strong online presences.
 
-At Zimnovate, Lisa leads strategy development for clients, ensuring every digital product is aligned with business objectives and market opportunities. She conducts market research, competitive analysis, and develops go-to-market strategies that drive results.
+At Zimnovate, Roy manages marketing campaigns, creates stunning visual assets, and ensures brand consistency across all touchpoints. He combines data-driven insights with creative excellence to deliver measurable results.
 
-Lisa's approach is data-informed and customer-centric. She leverages analytics to understand user behavior, optimize marketing campaigns, and maximize ROI for clients. Her expertise spans SEO, content strategy, social media marketing, and conversion optimization.
+Roy's expertise spans social media marketing, content creation, brand identity design, and campaign management. He stays ahead of digital trends to keep clients competitive in their markets.
 
-Before Zimnovate, Lisa worked with marketing agencies in South Africa and the UK, managing campaigns for brands across various industries including fintech, e-commerce, and healthcare.
+Before Zimnovate, Roy worked with marketing agencies and as a freelance designer, building a diverse portfolio across various industries.
 
-Lisa is passionate about digital literacy and regularly conducts workshops on digital marketing for small businesses. She enjoys reading business strategy books and exploring new marketing technologies.`,
+Roy is passionate about African creativity and regularly collaborates with local artists and creators.`,
     skills: {
-      technical: ['SEO/SEM', 'Google Analytics', 'Data Analysis', 'Content Strategy', 'Social Media Marketing', 'Email Marketing', 'Conversion Rate Optimization', 'A/B Testing', 'Marketing Automation', 'CRM Systems'],
-      soft: ['Strategic Thinking', 'Communication', 'Analytical Skills', 'Creativity', 'Project Management', 'Client Relations']
+      technical: ['Adobe Photoshop', 'Illustrator', 'InDesign', 'Social Media Marketing', 'Content Strategy', 'Email Marketing', 'Brand Identity', 'SEO/SEM', 'Google Analytics', 'Marketing Automation'],
+      soft: ['Creativity', 'Communication', 'Strategic Thinking', 'Time Management', 'Client Relations', 'Adaptability']
     },
     projects: [
       {
         name: 'ZimFresh E-Commerce Platform',
-        role: 'Digital Strategy Lead',
-        description: 'Developed growth strategy increasing organic traffic by 300%.',
+        role: 'Digital Marketing Lead',
+        description: 'Developed marketing strategy increasing organic traffic by 300%.',
         link: '/portfolio/zimfresh'
       },
       {
         name: 'AfricaRise Platform',
-        role: 'Marketing Strategist',
-        description: 'Created go-to-market strategy reaching 50,000+ users in first quarter.',
+        role: 'Brand Designer',
+        description: 'Created complete brand identity and marketing materials.',
         link: '/portfolio/africarise'
       },
       {
-        name: 'Royal Home Care Platform',
-        role: 'Growth Strategist',
-        description: 'Implemented referral program generating 40% of new client acquisitions.',
-        link: '/portfolio/royal-home-care'
+        name: 'ZimFarms Management System',
+        role: 'Graphic Designer',
+        description: 'Designed UI elements and marketing graphics for agricultural platform.',
+        link: '/portfolio/zimfarms'
+      }
+    ]
+  },
+  {
+    id: 'd4',
+    name: 'Tawanda Muchenu',
+    role: 'Data Analyst',
+    tagline: 'Turning data into actionable business insights.',
+    image: '/team/tawanda-muchenu.png',
+    photo: '/team/tawanda-muchenu.png',
+    social: {
+      linkedin: 'https://linkedin.com/in/tawandamuchenu',
+      twitter: 'https://twitter.com/tawandamuchenu',
+      portfolio: null
+    },
+    bio: `Tawanda Muchenu is a Data Analyst who specializes in transforming raw data into meaningful insights that drive business decisions. With a background in statistics and 4 years of professional experience, Tawanda helps clients understand their data and optimize their operations.
+
+At Zimnovate, Tawanda analyzes user behavior, market trends, and business metrics to inform product strategy and marketing decisions. He creates dashboards, reports, and visualizations that make complex data accessible to stakeholders.
+
+Tawanda's analytical skills combined with business acumen enable him to identify opportunities for growth and efficiency improvements. He is proficient in various analytics tools and programming languages for data manipulation.
+
+Before joining Zimnovate, Tawanda worked in finance and consulting, where he developed his expertise in data modeling, statistical analysis, and business intelligence.
+
+Outside of work, Tawanda enjoys reading about economics, playing chess, and exploring data visualization techniques.`,
+    skills: {
+      technical: ['Python', 'R', 'SQL', 'Excel', 'Tableau', 'Power BI', 'Google Analytics', 'Statistical Analysis', 'Data Visualization', 'Machine Learning Basics'],
+      soft: ['Analytical Thinking', 'Problem Solving', 'Communication', 'Attention to Detail', 'Critical Thinking', 'Time Management']
+    },
+    projects: [
+      {
+        name: 'SwiftPay Mobile App',
+        role: 'Data Analyst',
+        description: 'Analyzed user behavior to optimize app features and increase engagement by 45%.',
+        link: '/portfolio/swiftpay'
+      },
+      {
+        name: 'AfricaRise Platform',
+        role: 'Business Intelligence Lead',
+        description: 'Built analytics dashboard providing real-time business insights.',
+        link: '/portfolio/africarise'
+      },
+      {
+        name: 'ZimFresh E-Commerce Platform',
+        role: 'Data Analyst',
+        description: 'Optimized pricing strategy through market analysis, increasing revenue by 25%.',
+        link: '/portfolio/zimfresh'
       }
     ]
   }
