@@ -36,7 +36,7 @@ const TeamProfile = () => {
         <div className="mx-auto max-w-7xl px-12 pt-8 md:px-16 lg:px-20">
           <Link
             to="/team"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A]/70 hover:text-[#0EAFFF] transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A]/70 hover:text-[#0A5C8B] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" /> Back to Team
           </Link>
@@ -67,7 +67,7 @@ const TeamProfile = () => {
                 <h1 className="mb-2 text-3xl md:text-4xl font-bold text-[#1A1A1A]">
                   {member.name}
                 </h1>
-                <p className="mb-4 text-lg text-[#0EAFFF] font-medium">
+                <p className="mb-4 text-lg text-[#0A5C8B] font-medium">
                   {member.role}
                 </p>
                 <p className="mb-6 text-[#1A1A1A]/70 text-lg">
@@ -81,7 +81,7 @@ const TeamProfile = () => {
                       href={member.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#0EAFFF]/10 px-4 py-2 text-sm font-medium text-[#0EAFFF] hover:bg-[#0EAFFF]/20 transition-colors"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
                     >
                       <Linkedin className="h-4 w-4" /> LinkedIn
                     </a>
@@ -91,7 +91,7 @@ const TeamProfile = () => {
                       href={member.social.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#0EAFFF]/10 px-4 py-2 text-sm font-medium text-[#0EAFFF] hover:bg-[#0EAFFF]/20 transition-colors"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
                     >
                       <Twitter className="h-4 w-4" /> Twitter
                     </a>
@@ -101,7 +101,7 @@ const TeamProfile = () => {
                       href={member.social.portfolio}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#0EAFFF]/10 px-4 py-2 text-sm font-medium text-[#0EAFFF] hover:bg-[#0EAFFF]/20 transition-colors"
+                      className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
                     >
                       <Globe className="h-4 w-4" /> Portfolio
                     </a>
@@ -136,7 +136,7 @@ const TeamProfile = () => {
                 {member.skills.technical.map((skill, index) => (
                   <span
                     key={index}
-                    className="rounded-full bg-[#0EAFFF]/10 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
+                    className="rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
                   >
                     {skill}
                   </span>
@@ -174,21 +174,21 @@ const TeamProfile = () => {
                 <Link
                   key={index}
                   to={project.link}
-                  className="group rounded-2xl border border-[#E5E5E5] p-6 hover:border-[#0EAFFF] hover:shadow-md transition-all"
+                  className="group rounded-2xl border border-[#E5E5E5] p-6 hover:border-[#0A5C8B] hover:shadow-md transition-all"
                 >
                   <div className="mb-3 flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-[#C8FA50]"></span>
-                    <h3 className="font-bold text-[#1A1A1A] group-hover:text-[#0EAFFF] transition-colors">
+                    <span className="h-2 w-2 rounded-full bg-[#0A5C8B]"></span>
+                    <h3 className="font-bold text-[#1A1A1A] group-hover:text-[#0A5C8B] transition-colors">
                       {project.name}
                     </h3>
                   </div>
-                  <p className="mb-2 text-sm font-medium text-[#0EAFFF]">
+                  <p className="mb-2 text-sm font-medium text-[#0A5C8B]">
                     Role: {project.role}
                   </p>
                   <p className="mb-4 text-sm text-[#1A1A1A]/70">
                     {project.description}
                   </p>
-                  <div className="flex items-center gap-1 text-sm font-medium text-[#0EAFFF]">
+                  <div className="flex items-center gap-1 text-sm font-medium text-[#0A5C8B]">
                     View Case Study <ExternalLink className="h-3 w-3" />
                   </div>
                 </Link>
@@ -224,12 +224,12 @@ const TeamProfile = () => {
                       />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-[#1A1A1A] group-hover:text-[#0EAFFF] transition-colors">
+                      <h3 className="font-bold text-[#1A1A1A] group-hover:text-[#0A5C8B] transition-colors">
                         {otherMember.name}
                       </h3>
                       <p className="text-sm text-[#1A1A1A]/70">{otherMember.role}</p>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-[#0EAFFF]" />
+                    <ArrowRight className="h-5 w-5 text-[#0A5C8B]" />
                   </Link>
                 ))}
               </div>
@@ -239,7 +239,7 @@ const TeamProfile = () => {
 
         {/* CTA Section */}
         <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
-          <div className="rounded-3xl bg-[#0EAFFF] px-8 py-12 text-center">
+          <div className="rounded-3xl bg-[#0A5C8B] px-8 py-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Want to Work With {member.name.split(' ')[0]} and the Zimnovate Team?
             </h2>
