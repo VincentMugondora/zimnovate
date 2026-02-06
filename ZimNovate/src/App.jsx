@@ -32,6 +32,8 @@ import UseCases from './pages/UseCases.jsx'
 import Events from './pages/Events.jsx'
 import Partners from './pages/Partners.jsx'
 import Resources from './pages/Resources.jsx'
+import Team from './pages/Team.jsx'
+import TeamProfile from './pages/TeamProfile.jsx'
 
 const App = () => {
   return (
@@ -67,6 +69,8 @@ const App = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/team/:slug" element={<TeamProfile />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       </Routes>
