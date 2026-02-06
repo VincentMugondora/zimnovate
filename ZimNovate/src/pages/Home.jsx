@@ -391,10 +391,10 @@ const Home = () => {
             </div>
             <div className="hidden md:block" />
             <Link
-              to="/about"
+              to="/team"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
             >
-              View more
+              View all
             </Link>
           </div>
 
@@ -402,8 +402,8 @@ const Home = () => {
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {designers.map((d) => (
-              <div key={d.id} className="group">
-                <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
+              <Link key={d.id} to={`/team/${d.id}`} className="group block">
+                <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                   <div className="aspect-[4/5] w-full">
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
@@ -421,7 +421,7 @@ const Home = () => {
                     {d.role}
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

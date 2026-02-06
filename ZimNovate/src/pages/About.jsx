@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
   Rocket,
@@ -181,50 +182,63 @@ const About = () => {
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
             Meet the people behind the magic
           </h3>
+          <Link
+            to="/team"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#F4D47C]/10 px-6 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#F4D47C]/20 transition-colors mt-4"
+          >
+            View All Team Members →
+          </Link>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {[
             {
+              id: 'vincent-mugondora',
               name: 'Vincent Mugondora',
               role: 'Founder & Lead Developer',
               image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format',
               bio: 'Full-stack developer with 8+ years building scalable web solutions.'
             },
             {
-              name: 'Sarah Chen',
-              role: 'UX/UI Designer',
+              id: 'tanya-moyo',
+              name: 'Tanya Moyo',
+              role: 'UI/UX Designer',
               image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face&auto=format',
               bio: 'Creating intuitive digital experiences that users love.'
             },
             {
-              name: 'Michael Johnson',
-              role: 'Mobile Developer',
+              id: 'brian-ncube',
+              name: 'Brian Ncube',
+              role: 'Backend Engineer',
               image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format',
-              bio: 'iOS and Android expert with a passion for mobile innovation.'
+              bio: 'Building secure, scalable systems and robust APIs.'
             },
             {
-              name: 'Amina Patel',
+              id: 'lisa-dube',
+              name: 'Lisa Dube',
               role: 'Digital Strategist',
               image: 'https://images.unsplash.com/photo-1557862921-37829c790f19?w=400&h=400&fit=crop&crop=face&auto=format',
               bio: 'Data-driven strategies that accelerate business growth.'
             },
             {
-              name: 'David Kim',
-              role: 'Backend Engineer',
+              id: 'kayden-mamu',
+              name: 'Kayden Mamu',
+              role: 'Senior Product Designer',
               image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face&auto=format',
-              bio: 'Building robust APIs and cloud infrastructure.'
+              bio: 'Crafting beautiful product experiences from concept to launch.'
             },
             {
-              name: 'Lisa Thompson',
-              role: 'Project Manager',
+              id: 'roy-makanjira',
+              name: 'Roy Makanjira',
+              role: 'Digital Marketer & Graphic Designer',
               image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face&auto=format',
-              bio: 'Ensuring smooth delivery and exceptional client experiences.'
+              bio: 'Creating compelling brand stories that resonate with audiences.'
             }
           ].map((member) => (
-            <div
+            <Link
               key={member.name}
-              className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+              to={`/team/${member.id}`}
+              className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
               <div className="relative h-64 overflow-hidden">
                 <img 
@@ -240,7 +254,7 @@ const About = () => {
                 <p className="text-sm font-semibold text-[#F4D47C] mb-2">{member.role}</p>
                 <p className="text-sm text-[#1A1A1A]/70">{member.bio}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
