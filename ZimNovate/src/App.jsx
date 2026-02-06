@@ -27,6 +27,11 @@ import Testimonials from './pages/Testimonials.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import Terms from './pages/Terms.jsx'
 import CookiePolicy from './pages/CookiePolicy.jsx'
+import FAQ from './pages/FAQ.jsx'
+import UseCases from './pages/UseCases.jsx'
+import Events from './pages/Events.jsx'
+import Partners from './pages/Partners.jsx'
+import Resources from './pages/Resources.jsx'
 
 const App = () => {
   return (
@@ -57,6 +62,11 @@ const App = () => {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/cookies" element={<CookiePolicy />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/use-cases" element={<UseCases />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="*" element={<NotFound />} />
       </Route>
       </Routes>

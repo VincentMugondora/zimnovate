@@ -73,33 +73,33 @@ const Footer = () => {
             {/* Links section */}
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:flex md:w-1/2 md:justify-between md:gap-0">
               <div className="space-y-3">
-                <div className="text-sm font-semibold text-white">Data Science</div>
-                <nav className="grid gap-2 text-sm text-white/70" aria-label="Data Science">
-                  <Link to="#" className="hover:text-white">Business Use-Case</Link>
-                  <Link to="#" className="hover:text-white">Data Roles</Link>
-                  <Link to="#" className="hover:text-white">Blog</Link>
-                  <Link to="#" className="hover:text-white">Management</Link>
-                  <Link to="#" className="hover:text-white">Privacy Policy</Link>
+                <div className="text-sm font-semibold text-white">Solutions</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Solutions">
+                  <Link to="/use-cases" className="hover:text-white">Business Use Cases</Link>
+                  <Link to="/careers" className="hover:text-white">Careers</Link>
+                  <Link to="/blog" className="hover:text-white">Blog</Link>
+                  <Link to="/about" className="hover:text-white">Our Team</Link>
+                  <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
                 </nav>
               </div>
 
               <div className="space-y-3">
-                <div className="text-sm font-semibold text-white">About</div>
-                <nav className="grid gap-2 text-sm text-white/70" aria-label="About">
+                <div className="text-sm font-semibold text-white">Company</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Company">
                   <Link to="/contact" className="hover:text-white">Contact Us</Link>
-                  <Link to="/services" className="hover:text-white">Support Us</Link>
-                  <Link to="/about" className="hover:text-white">Community</Link>
-                  <Link to="/about" className="hover:text-white">FAQ</Link>
+                  <Link to="/services" className="hover:text-white">Services</Link>
+                  <Link to="/about" className="hover:text-white">About Us</Link>
+                  <Link to="/faq" className="hover:text-white">FAQ</Link>
                 </nav>
               </div>
 
               <div className="space-y-3 col-span-2 sm:col-span-1">
-                <div className="text-sm font-semibold text-white">Programs</div>
-                <nav className="grid gap-2 text-sm text-white/70" aria-label="Programs">
-                  <Link to="#" className="hover:text-white">Learning Modules</Link>
-                  <Link to="#" className="hover:text-white">Partnership</Link>
-                  <Link to="#" className="hover:text-white">Events</Link>
-                  <Link to="#" className="hover:text-white">Data Analyst</Link>
+                <div className="text-sm font-semibold text-white">Resources</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Resources">
+                  <Link to="/resources" className="hover:text-white">Learning Modules</Link>
+                  <Link to="/partners" className="hover:text-white">Partnership</Link>
+                  <Link to="/events" className="hover:text-white">Events</Link>
+                  <Link to="/services/digital-marketing" className="hover:text-white">Data Analytics</Link>
                 </nav>
               </div>
             </div>
