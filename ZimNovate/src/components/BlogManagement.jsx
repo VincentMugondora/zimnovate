@@ -491,14 +491,17 @@ const BlogManagement = () => {
               </div>
 
               <div>
-                <label className="mb-2 block text-sm font-medium text-[var(--zim-black)]">Content *</label>
+                <label className="mb-2 block text-sm font-medium text-[var(--zim-black)]">
+                  Content *
+                  <span className="text-xs font-normal text-[var(--zim-fg)] ml-2">(Markdown supported)</span>
+                </label>
                 <textarea
-                  rows={8}
+                  rows={12}
                   required
                   value={formData.content}
                   onChange={(e) => setFormData({ ...formData, content: e.target.value })}
-                  className="w-full rounded-lg border border-[var(--zim-border)] bg-white px-4 py-2 text-sm text-[var(--zim-black)] focus:border-[var(--zim-green)] focus:outline-none resize-none"
-                  placeholder="Write your blog content here..."
+                  className="w-full rounded-lg border border-[var(--zim-border)] bg-white px-4 py-2 text-sm text-[var(--zim-black)] focus:border-[var(--zim-green)] focus:outline-none resize-none font-mono"
+                  placeholder="# Heading\n\nWrite your blog content here...\n\n## Formatting Tips:\n- **bold** for emphasis\n- *italic* for style\n- [links](url)\n- Lists with - or 1.\n\nUse # for headings, ** for bold, etc."
                 />
               </div>
 

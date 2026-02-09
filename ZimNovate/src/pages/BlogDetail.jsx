@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { supabase } from '../lib/supabase.js'
-import { ArrowLeft, Calendar, Clock, User, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
+import { ArrowLeft, Calendar, Clock, User, Facebook, Twitter, Linkedin } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const BlogDetail = () => {
   const { slug } = useParams()
@@ -168,10 +170,10 @@ const BlogDetail = () => {
           )}
 
           {/* Content */}
-          <div className="prose prose-lg max-w-none">
-            <div className="text-lg text-[#1A1A1A]/80 leading-relaxed whitespace-pre-wrap">
+          <div className="prose prose-lg max-w-none prose-headings:text-[#0F172A] prose-p:text-[#1A1A1A]/80 prose-a:text-[#F4D47C] prose-strong:text-[#0F172A] prose-ul:text-[#1A1A1A]/80 prose-ol:text-[#1A1A1A]/80">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {blog.content}
-            </div>
+            </ReactMarkdown>
           </div>
 
           {/* Share */}
