@@ -272,17 +272,17 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-[#0F172A]">Our Location</h3>
             </div>
             <div className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-[#F9F5EF]">
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src="https://images.unsplash.com/photo-1502920873989-acf4ee4b6d9e?w=800&h=500&fit=crop&crop=entropy&auto=format"
-                  alt="Map location"
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 bg-[#0F172A]/10" />
-                <div className="absolute bottom-4 left-4 bg-white rounded-lg px-4 py-2 shadow-lg">
-                  <p className="text-sm font-semibold text-[#0F172A]">Harare, Zimbabwe</p>
-                </div>
-              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242989.74582326763!2d30.89251205!3d-17.8251676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4ee1e29f2a7%3A0xa1dc57ed9771c9eb!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2s!4v1707216000000!5m2!1sen!2s"
+                width="100%"
+                height="256"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Zimnovate Location - Harare, Zimbabwe"
+                className="grayscale-[20%] hover:grayscale-0 transition-all duration-300"
+              />
             </div>
           </div>
 
