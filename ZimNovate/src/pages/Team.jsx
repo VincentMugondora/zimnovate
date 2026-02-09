@@ -14,7 +14,7 @@ const TeamCard = ({ member }) => {
       <div className="overflow-hidden rounded-[24px]">
         <div className="aspect-[4/5] w-full">
           <img
-            src={member.image || member.photo}
+            src={member.image_url || member.image || member.photo}
             alt={member.name}
             className="h-full w-full object-cover"
             loading="lazy"
@@ -99,7 +99,7 @@ const Team = () => {
         />
 
         <section className="mx-auto max-w-7xl px-12 pb-8 md:px-16 md:pb-12 lg:px-20">
-          <div className="text-center max-w-3xl mx-auto -mt-8">
+          <div className="text-center max-w-3xl mx-auto">
             <p className="text-lg text-[#1A1A1A]/70 mb-8">
               A passionate group of creators, developers, strategists and innovators building world-class digital experiences for Africa and beyond.
             </p>
