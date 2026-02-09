@@ -1,60 +1,57 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { FileText, AlertCircle, RefreshCw } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
+import { supabase } from '../lib/supabase.js'
 
 const Blog = () => {
-  const articles = [
-    {
-      title: 'The Future of E-Commerce in Zimbabwe',
-      excerpt: 'How digital payments and mobile commerce are transforming the retail landscape in Zimbabwe.',
-      category: 'E-Commerce',
-      date: 'Jan 15, 2026',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      readTime: '5 min read',
-    },
-    {
-      title: 'Why Your Business Needs a Mobile App in 2026',
-      excerpt: 'The mobile-first reality and why businesses can no longer afford to ignore mobile applications.',
-      category: 'Mobile Apps',
-      date: 'Jan 10, 2026',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop',
-      readTime: '4 min read',
-    },
-    {
-      title: 'AI Automation: Transforming Business Operations',
-      excerpt: 'How artificial intelligence is revolutionizing document processing and workflow automation.',
-      category: 'AI & Automation',
-      date: 'Jan 5, 2026',
-      image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop',
-      readTime: '6 min read',
-    },
-    {
-      title: 'Building a Strong Brand Identity',
-      excerpt: 'The essential elements of creating a memorable and impactful brand for your business.',
-      category: 'Branding',
-      date: 'Dec 28, 2025',
-      image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop',
-      readTime: '5 min read',
-    },
-    {
-      title: 'SEO Strategies for African Markets',
-      excerpt: 'Tailored SEO approaches that work specifically for businesses targeting African audiences.',
-      category: 'Digital Marketing',
-      date: 'Dec 20, 2025',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-      readTime: '7 min read',
-    },
-    {
-      title: 'The Importance of UX Design',
-      excerpt: 'Why user experience design should be at the center of your digital product strategy.',
-      category: 'Design',
-      date: 'Dec 15, 2025',
-      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop',
-      readTime: '4 min read',
-    },
-  ]
+  const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [selectedCategory, setSelectedCategory] = useState('All')
 
-  const categories = ['All', 'E-Commerce', 'Mobile Apps', 'AI & Automation', 'Branding', 'Digital Marketing', 'Design']
+  const categories = ['All', 'E-Commerce', 'Mobile Apps', 'AI & Automation', 'Branding', 'Digital Marketing', 'Design', 'Technology']
+
+  useEffect(() => {
+    fetchBlogs()
+  }, [])
+
+  const fetchBlogs = async () => {
+    setLoading(true)
+    setError(null)
+    
+    try {
+      const { data, error } = await supabase
+        .from('blogs')
+        .select(`
+          *,
+          author:team_members(name)
+        `)
+        .eq('published', true)
+        .order('created_at', { ascending: false })
+      
+      if (error) throw error
+      setArticles(data || [])
+    } catch (err) {
+      setError(err.message)
+      console.error('Blog fetch error:', err)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const formatDate = (dateString) => {
+    if (!dateString) return ''
+    return new Date(dateString).toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    })
+  }
+
+  const filteredArticles = selectedCategory === 'All' 
+    ? articles 
+    : articles.filter(article => article.category === selectedCategory)
 
   return (
     <div>
@@ -71,7 +68,12 @@ const Blog = () => {
             {categories.map((category) => (
               <button
                 key={category}
-                className="inline-flex rounded-full border border-[#F4D47C]/20 bg-white px-4 py-2 text-sm font-semibold text-[#0F172A] hover:bg-[#F4D47C]/10 transition-colors"
+                onClick={() => setSelectedCategory(category)}
+                className={`inline-flex rounded-full border px-4 py-2 text-sm font-semibold transition-colors ${
+                  selectedCategory === category
+                    ? 'border-[#F4D47C] bg-[#F4D47C] text-[#0F172A]'
+                    : 'border-[#F4D47C]/20 bg-white text-[#0F172A] hover:bg-[#F4D47C]/10'
+                }`}
               >
                 {category}
               </button>
@@ -82,41 +84,77 @@ const Blog = () => {
 
       {/* Articles Grid */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {articles.map((article) => (
-            <article
-              key={article.title}
-              className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+        {loading ? (
+          <div className="flex items-center justify-center py-20">
+            <div className="flex items-center gap-3 text-[#1A1A1A]/60">
+              <RefreshCw className="h-5 w-5 animate-spin" />
+              <span>Loading articles...</span>
+            </div>
+          </div>
+        ) : error ? (
+          <div className="rounded-lg border border-red-200 bg-red-50 p-6 text-center">
+            <AlertCircle className="mx-auto mb-3 h-10 w-10 text-red-500" />
+            <p className="text-red-600">Error loading articles: {error}</p>
+            <button
+              onClick={fetchBlogs}
+              className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110"
             >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="inline-flex rounded-full bg-[#F4D47C] px-3 py-1 text-xs font-semibold text-[#0F172A]">
-                    {article.category}
-                  </span>
+              <RefreshCw className="h-4 w-4" />
+              Try Again
+            </button>
+          </div>
+        ) : filteredArticles.length === 0 ? (
+          <div className="rounded-lg border border-dashed border-[#F4D47C]/20 p-12 text-center">
+            <FileText className="mx-auto mb-4 h-12 w-12 text-[#1A1A1A]/40" />
+            <p className="text-lg font-medium text-[#0F172A]">No articles found</p>
+            <p className="mt-2 text-sm text-[#1A1A1A]/60">
+              {articles.length === 0 
+                ? "No blog posts published yet. Check back soon!" 
+                : "No articles in this category. Try a different filter."}
+            </p>
+          </div>
+        ) : (
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {filteredArticles.map((article) => (
+              <article
+                key={article.id}
+                className="group relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white shadow-sm transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.image_url || 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop'}
+                    alt={article.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="inline-flex rounded-full bg-[#F4D47C] px-3 py-1 text-xs font-semibold text-[#0F172A]">
+                      {article.category}
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-xs text-[#1A1A1A]/60 mb-3">
-                  <span>{article.date}</span>
-                  <span>•</span>
-                  <span>{article.readTime}</span>
+                <div className="p-6">
+                  <div className="flex items-center gap-3 text-xs text-[#1A1A1A]/60 mb-3">
+                    <span>{formatDate(article.created_at)}</span>
+                    <span>•</span>
+                    <span>{article.read_time || '5 min read'}</span>
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0F172A] mb-2 group-hover:text-[#F4D47C] transition-colors">
+                    {article.title}
+                  </h3>
+                  <p className="text-sm text-[#1A1A1A]/70 mb-4 line-clamp-2">
+                    {article.excerpt || article.content?.slice(0, 150) + '...'}
+                  </p>
+                  <Link 
+                    to={`/blog/${article.slug}`}
+                    className="inline-flex items-center text-sm font-semibold text-[#F4D47C] hover:underline"
+                  >
+                    Read More →
+                  </Link>
                 </div>
-                <h3 className="text-lg font-bold text-[#0F172A] mb-2 group-hover:text-[#F4D47C] transition-colors">
-                  {article.title}
-                </h3>
-                <p className="text-sm text-[#1A1A1A]/70 mb-4">{article.excerpt}</p>
-                <span className="inline-flex items-center text-sm font-semibold text-[#F4D47C]">
-                  Read More →
-                </span>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Newsletter */}

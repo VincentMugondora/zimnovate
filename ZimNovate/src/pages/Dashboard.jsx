@@ -14,10 +14,12 @@ import {
   ExternalLink,
   RefreshCw,
   AlertCircle,
-  LogOut
+  LogOut,
+  FileText
 } from 'lucide-react'
 import { supabase } from '../lib/supabase.js'
 import { useNavigate } from 'react-router-dom'
+import BlogManagement from '../components/BlogManagement.jsx'
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -28,11 +30,13 @@ const Dashboard = () => {
     teamMembers: 0,
     contactSubmissions: 0,
     partnershipRequests: 0,
-    totalViews: 0
+    totalViews: 0,
+    blogs: 0
   })
   const [contactSubmissions, setContactSubmissions] = useState([])
   const [partnershipRequests, setPartnershipRequests] = useState([])
   const [teamMembers, setTeamMembers] = useState([])
+  const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
     fetchDashboardData()
@@ -68,15 +72,25 @@ const Dashboard = () => {
         .limit(50)
       
       if (partnerError) throw partnerError
+
+      // Fetch blogs
+      const { data: blogsData, error: blogsError } = await supabase
+        .from('blogs')
+        .select('*')
+        .order('created_at', { ascending: false })
+      
+      if (blogsError) throw blogsError
       
       setTeamMembers(teamData || [])
       setContactSubmissions(contactData || [])
       setPartnershipRequests(partnerData || [])
+      setBlogs(blogsData || [])
       setStats({
         teamMembers: teamData?.length || 0,
         contactSubmissions: contactData?.length || 0,
         partnershipRequests: partnerData?.length || 0,
-        totalViews: 1247 // Placeholder - would come from analytics
+        totalViews: 1247, // Placeholder - would come from analytics
+        blogs: blogsData?.length || 0
       })
     } catch (err) {
       setError(err.message)
@@ -196,7 +210,7 @@ const Dashboard = () => {
 
           {/* Stats Grid */}
           {activeTab === 'overview' && (
-            <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mb-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               <StatCard
                 icon={Users}
                 label="Team Members"
@@ -216,6 +230,12 @@ const Dashboard = () => {
                 color="bg-purple-500"
               />
               <StatCard
+                icon={FileText}
+                label="Blog Posts"
+                value={stats.blogs}
+                color="bg-pink-500"
+              />
+              <StatCard
                 icon={Eye}
                 label="Total Views"
                 value={stats.totalViews}
@@ -229,6 +249,7 @@ const Dashboard = () => {
             <TabButton id="overview" label="Overview" icon={LayoutDashboard} />
             <TabButton id="contacts" label="Contacts" icon={Mail} count={contactSubmissions.length} />
             <TabButton id="partnerships" label="Partnerships" icon={Handshake} count={partnershipRequests.length} />
+            <TabButton id="blogs" label="Blogs" icon={FileText} count={blogs.length} />
             <TabButton id="team" label="Team" icon={Users} count={teamMembers.length} />
           </div>
 
@@ -439,6 +460,11 @@ const Dashboard = () => {
                   </div>
                 )}
               </div>
+            )}
+
+            {/* Blogs Tab */}
+            {activeTab === 'blogs' && (
+              <BlogManagement />
             )}
           </div>
         </div>

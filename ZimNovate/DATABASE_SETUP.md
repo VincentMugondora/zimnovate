@@ -140,6 +140,7 @@ ALTER TABLE projects ENABLE ROW LEVEL SECURITY;
 ALTER TABLE team_member_projects ENABLE ROW LEVEL SECURITY;
 ALTER TABLE contact_submissions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE partnership_requests ENABLE ROW LEVEL SECURITY;
+ALTER TABLE blogs ENABLE ROW LEVEL SECURITY;
 
 -- Public read policies
 CREATE POLICY "Public can read team members" ON team_members FOR SELECT USING (true);
@@ -147,6 +148,7 @@ CREATE POLICY "Public can read skills" ON skills FOR SELECT USING (true);
 CREATE POLICY "Public can read projects" ON projects FOR SELECT USING (true);
 CREATE POLICY "Public can read team member skills" ON team_member_skills FOR SELECT USING (true);
 CREATE POLICY "Public can read team member projects" ON team_member_projects FOR SELECT USING (true);
+CREATE POLICY "Public can read published blogs" ON blogs FOR SELECT USING (published = true);
 
 -- Insert policies for contact forms
 CREATE POLICY "Anyone can submit contact form" ON contact_submissions FOR INSERT WITH CHECK (true);
