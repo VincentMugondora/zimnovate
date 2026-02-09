@@ -5,21 +5,12 @@ export async function getTeamMembers() {
   try {
     const { data, error } = await supabase
       .from('team_members')
-      .select(`
-        *,
-        team_member_skills (
-          skills (*)
-        ),
-        team_member_projects (
-          projects (*),
-          role,
-          contribution_description
-        )
-      `)
+      .select('*')
       .order('created_at', { ascending: false })
     
     if (error) throw error
-    return data
+    console.log('Fetched team members:', data)
+    return data || []
   } catch (error) {
     console.error('Error fetching team members:', error)
     return []
