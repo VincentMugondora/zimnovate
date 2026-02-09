@@ -109,6 +109,24 @@ CREATE TABLE partnership_requests (
 );
 ```
 
+### Blogs Table
+```sql
+CREATE TABLE blogs (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  slug VARCHAR(255) UNIQUE NOT NULL,
+  title VARCHAR(255) NOT NULL,
+  excerpt TEXT,
+  content TEXT NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  image_url TEXT,
+  read_time VARCHAR(50),
+  published BOOLEAN DEFAULT false,
+  author_id UUID REFERENCES team_members(id),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+```
+
 ## Row Level Security (RLS)
 
 Enable RLS on all tables and create policies:
