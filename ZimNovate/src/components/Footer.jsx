@@ -90,6 +90,7 @@ const Footer = () => {
                   <Link to="/services" className="hover:text-white">Services</Link>
                   <Link to="/about" className="hover:text-white">About Us</Link>
                   <Link to="/faq" className="hover:text-white">FAQ</Link>
+                  <Link to="/dashboard" className="hover:text-white">Dashboard</Link>
                 </nav>
               </div>
 
