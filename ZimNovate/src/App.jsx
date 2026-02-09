@@ -34,7 +34,7 @@ import Events from './pages/Events.jsx'
 import Partners from './pages/Partners.jsx'
 import Resources from './pages/Resources.jsx'
 import Team from './pages/Team.jsx'
-import TeamProfile from './pages/TeamProfile.jsx'
+import GetStarted from './pages/GetStarted.jsx'
 import Dashboard from './pages/Dashboard.jsx'
 import Login from './pages/Login.jsx'
 import ProtectedRoute from './components/ProtectedRoute.jsx'
@@ -57,6 +57,7 @@ const App = () => {
           <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/get-started" element={<GetStarted />} />
           <Route path="/portfolio/zimfresh" element={<ZimFreshCaseStudy />} />
           <Route path="/portfolio/swiftpay" element={<SwiftPayCaseStudy />} />
           <Route path="/portfolio/royal-home-care" element={<RoyalHomeCareCaseStudy />} />
