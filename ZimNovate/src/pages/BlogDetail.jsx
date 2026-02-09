@@ -170,7 +170,7 @@ const BlogDetail = () => {
           )}
 
           {/* Content */}
-          <div className="prose prose-zinc prose-lg lg:prose-xl max-w-none">
+          <div className="prose prose-zinc prose-base max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>
               {blog.content}
             </ReactMarkdown>
