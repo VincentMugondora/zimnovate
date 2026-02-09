@@ -20,6 +20,7 @@ import {
 import { supabase } from '../lib/supabase.js'
 import { useNavigate } from 'react-router-dom'
 import BlogManagement from '../components/BlogManagement.jsx'
+import TeamManagement from '../components/TeamManagement.jsx'
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -410,62 +411,10 @@ const Dashboard = () => {
             )}
 
             {/* Team Tab */}
-            {activeTab === 'team' && (
-              <div className="p-6">
-                <h2 className="mb-4 text-lg font-semibold text-[var(--zim-black)]">Team Members</h2>
-                
-                {teamMembers.length === 0 ? (
-                  <div className="rounded-lg border border-dashed border-[var(--zim-border)] p-8 text-center">
-                    <Users className="mx-auto mb-3 h-10 w-10 text-[var(--zim-fg)]" />
-                    <p className="text-[var(--zim-fg)]">No team members found.</p>
-                  </div>
-                ) : (
-                  <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {teamMembers.map((member) => (
-                      <div key={member.id} className="rounded-lg border border-[var(--zim-border)] p-4">
-                        <div className="flex items-center gap-3">
-                          <div className="h-12 w-12 rounded-full bg-[var(--zim-card)] overflow-hidden">
-                            {member.image_url ? (
-                              <img 
-                                src={member.image_url} 
-                                alt={member.name}
-                                className="h-full w-full object-cover"
-                              />
-                            ) : (
-                              <div className="flex h-full w-full items-center justify-center bg-[var(--zim-green)]/20">
-                                <Users className="h-6 w-6 text-[var(--zim-green)]" />
-                              </div>
-                            )}
-                          </div>
-                          <div>
-                            <h3 className="font-semibold text-[var(--zim-black)]">{member.name}</h3>
-                            <p className="text-sm text-[var(--zim-fg)]">{member.role}</p>
-                          </div>
-                        </div>
-                        
-                        <div className="mt-3 flex gap-2">
-                          {member.linkedin_url && (
-                            <a 
-                              href={member.linkedin_url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="rounded-lg bg-[var(--zim-card)] p-2 hover:bg-[var(--zim-green)]/20 transition-colors"
-                            >
-                              <ExternalLink className="h-4 w-4 text-[var(--zim-fg)]" />
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            )}
+            {activeTab === 'team' && <TeamManagement />}
 
             {/* Blogs Tab */}
-            {activeTab === 'blogs' && (
-              <BlogManagement />
-            )}
+            {activeTab === 'blogs' && <BlogManagement />}
           </div>
         </div>
       </div>
