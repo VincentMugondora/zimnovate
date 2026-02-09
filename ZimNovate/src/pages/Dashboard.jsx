@@ -13,11 +13,14 @@ import {
   Calendar,
   ExternalLink,
   RefreshCw,
-  AlertCircle
+  AlertCircle,
+  LogOut
 } from 'lucide-react'
 import { supabase } from '../lib/supabase.js'
+import { useNavigate } from 'react-router-dom'
 
 const Dashboard = () => {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('overview')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -83,7 +86,10 @@ const Dashboard = () => {
     }
   }
 
-  const formatDate = (dateString) => {
+  const handleLogout = async () => {
+    await supabase.auth.signOut()
+    navigate('/login')
+  }
     if (!dateString) return 'N/A'
     const date = new Date(dateString)
     return date.toLocaleDateString('en-US', {
@@ -166,11 +172,11 @@ const Dashboard = () => {
                 </div>
               </div>
               <button
-                onClick={fetchDashboardData}
-                className="flex items-center gap-2 rounded-lg border border-[var(--zim-border)] bg-white px-4 py-2 text-sm font-medium text-[var(--zim-black)] hover:bg-[var(--zim-card)] transition-colors"
+                onClick={handleLogout}
+                className="flex items-center gap-2 rounded-lg border border-[var(--zim-border)] bg-white px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 transition-colors"
               >
-                <RefreshCw className="h-4 w-4" />
-                Refresh
+                <LogOut className="h-4 w-4" />
+                Logout
               </button>
             </div>
           </div>

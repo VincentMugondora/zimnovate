@@ -35,46 +35,58 @@ import Resources from './pages/Resources.jsx'
 import Team from './pages/Team.jsx'
 import TeamProfile from './pages/TeamProfile.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import Login from './pages/Login.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 const App = () => {
   return (
     <HelmetProvider>
       <Routes>
-      <Route element={<SiteLayout />}>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/web-development" element={<WebDevelopment />} />
-        <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
-        <Route path="/services/branding" element={<Branding />} />
-        <Route path="/services/digital-strategy" element={<DigitalStrategy />} />
-        <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-        <Route path="/services/ai-automation" element={<AIAutomation />} />
-        <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio/zimfresh" element={<ZimFreshCaseStudy />} />
-        <Route path="/portfolio/swiftpay" element={<SwiftPayCaseStudy />} />
-        <Route path="/portfolio/royal-home-care" element={<RoyalHomeCareCaseStudy />} />
-        <Route path="/portfolio/africarise" element={<AfricaRiseCaseStudy />} />
-        <Route path="/portfolio/autodocs" element={<AutoDocsCaseStudy />} />
-        <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-        <Route path="/terms" element={<Terms />} />
-        <Route path="/cookies" element={<CookiePolicy />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/use-cases" element={<UseCases />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/partners" element={<Partners />} />
-        <Route path="/resources" element={<Resources />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/team/:slug" element={<TeamProfile />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="*" element={<NotFound />} />
-      </Route>
+        {/* Public routes with SiteLayout */}
+        <Route element={<SiteLayout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/web-development" element={<WebDevelopment />} />
+          <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
+          <Route path="/services/branding" element={<Branding />} />
+          <Route path="/services/digital-strategy" element={<DigitalStrategy />} />
+          <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/services/ai-automation" element={<AIAutomation />} />
+          <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/portfolio/zimfresh" element={<ZimFreshCaseStudy />} />
+          <Route path="/portfolio/swiftpay" element={<SwiftPayCaseStudy />} />
+          <Route path="/portfolio/royal-home-care" element={<RoyalHomeCareCaseStudy />} />
+          <Route path="/portfolio/africarise" element={<AfricaRiseCaseStudy />} />
+          <Route path="/portfolio/autodocs" element={<AutoDocsCaseStudy />} />
+          <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/use-cases" element={<UseCases />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/team/:slug" element={<TeamProfile />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+
+        {/* Protected Dashboard - no SiteLayout */}
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+
+        {/* Login - no SiteLayout */}
+        <Route path="/login" element={<Login />} />
       </Routes>
     </HelmetProvider>
   )
