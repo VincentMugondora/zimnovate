@@ -273,14 +273,14 @@ const Contact = () => {
             </div>
             <div className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-[#F9F5EF]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242989.74582326763!2d30.89251205!3d-17.8251676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4ee1e29f2a7%3A0xa1dc57ed9771c9eb!2sHarare%2C%20Zimbabwe!5e0!3m2!1sen!2s!4v1707216000000!5m2!1sen!2s"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1986.6157610505977!2d30.9833333!3d-17.8569444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4ee1e29f2a7%3A0xa1dc57ed9771c9eb!2sGwinyiro%20Primary%20School%2C%20Mufakose%2C%20Harare%2C%20Zimbabwe!5e0!3m2!1sen!2s!4v1707216000000!5m2!1sen!2s"
                 width="100%"
                 height="256"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Zimnovate Location - Harare, Zimbabwe"
+                title="Zimnovate Location - Gwinyiro Primary School, Mufakose, Harare, Zimbabwe"
                 className="grayscale-[20%] hover:grayscale-0 transition-all duration-300"
               />
             </div>
