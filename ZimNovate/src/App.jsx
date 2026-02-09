@@ -23,6 +23,7 @@ import ZimFarmsCaseStudy from './pages/ZimFarmsCaseStudy.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Careers from './pages/Careers.jsx'
 import Blog from './pages/Blog.jsx'
+import BlogDetail from './pages/BlogDetail.jsx'
 import Testimonials from './pages/Testimonials.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import Terms from './pages/Terms.jsx'
@@ -64,6 +65,7 @@ const App = () => {
           <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
