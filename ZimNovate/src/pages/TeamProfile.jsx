@@ -96,7 +96,7 @@ const TeamProfile = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${member.name} – ${member.role} | Zimnovate Team`} />
         <meta name="twitter:description" content={member.tagline} />
-        <meta name="twitter:image" content={`https://zimnovate.com${member.image}`} />
+        <meta name="twitter:image" content={`https://zimnovate.com${member.image_url || member.image}`} />
       </Helmet>
 
       <div className="min-h-screen bg-[#F9F5EF]">
@@ -118,7 +118,7 @@ const TeamProfile = () => {
               <div className="mx-auto md:mx-0">
                 <div className="h-64 w-64 overflow-hidden rounded-2xl bg-[#f3f3f3]">
                   <img
-                    src={member.image}
+                    src={member.image_url || member.image || member.photo}
                     alt={member.name}
                     className="h-full w-full object-cover"
                     onError={(e) => {

@@ -8,7 +8,7 @@ import { getTeamMembers } from '../services/database.js'
 const TeamCard = ({ member }) => {
   return (
     <Link
-      to={`/team/${member.id}`}
+      to={`/team/${member.slug}`}
       className="group block rounded-[32px] bg-[#f3f3f3] p-4 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
     >
       <div className="overflow-hidden rounded-[24px]">

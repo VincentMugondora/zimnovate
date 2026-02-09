@@ -22,6 +22,7 @@ const BlogManagement = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const [showModal, setShowModal] = useState(false)
   const [editingBlog, setEditingBlog] = useState(null)
+  const [teamMembers, setTeamMembers] = useState([])
   const [formData, setFormData] = useState({
     title: '',
     slug: '',
@@ -30,14 +31,31 @@ const BlogManagement = () => {
     category: 'E-Commerce',
     image_url: '',
     read_time: '5 min read',
-    published: false
+    published: false,
+    author_id: ''
   })
 
   const categories = ['E-Commerce', 'Mobile Apps', 'AI & Automation', 'Branding', 'Digital Marketing', 'Design', 'Technology']
 
   useEffect(() => {
     fetchBlogs()
+    fetchTeamMembers()
   }, [])
+
+  const fetchTeamMembers = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('team_members')
+        .select('id, name, role')
+        .order('name', { ascending: true })
+      
+      if (error) throw error
+      console.log('Fetched team members:', data)
+      setTeamMembers(data || [])
+    } catch (err) {
+      console.error('Error fetching team members:', err)
+    }
+  }
 
   const fetchBlogs = async () => {
     setLoading(true)
@@ -79,37 +97,54 @@ const BlogManagement = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setError(null)
 
     try {
-      // Get current user
-      const { data: { user } } = await supabase.auth.getUser()
-      
-      const blogData = {
-        ...formData,
-        author_id: user?.id || null
+      // Explicitly construct payload with selected author_id
+      const blogPayload = {
+        title: formData.title,
+        slug: formData.slug,
+        excerpt: formData.excerpt,
+        content: formData.content,
+        category: formData.category,
+        image_url: formData.image_url,
+        read_time: formData.read_time,
+        published: formData.published,
+        author_id: formData.author_id || null
       }
+      
+      console.log('Sending blog payload:', blogPayload)
 
       if (editingBlog) {
-        // Update
         const { error } = await supabase
           .from('blogs')
-          .update(blogData)
+          .update(blogPayload)
           .eq('id', editingBlog.id)
         
-        if (error) throw error
+        if (error) {
+          console.error('Update error:', error)
+          throw error
+        }
       } else {
-        // Create
         const { error } = await supabase
           .from('blogs')
-          .insert([blogData])
+          .insert([blogPayload])
         
-        if (error) throw error
+        if (error) {
+          console.error('Insert error:', error)
+          throw error
+        }
       }
 
       await fetchBlogs()
       closeModal()
     } catch (err) {
-      setError(err.message)
+      console.error('Submit error:', err)
+      if (err.code === '23505' || err.message?.includes('duplicate') || err.message?.includes('conflict')) {
+        setError('A blog post with this slug already exists. Please use a unique slug.')
+      } else {
+        setError(err.message || 'Failed to save blog post')
+      }
     } finally {
       setLoading(false)
     }
@@ -155,7 +190,8 @@ const BlogManagement = () => {
       category: 'E-Commerce',
       image_url: '',
       read_time: '5 min read',
-      published: false
+      published: false,
+      author_id: ''
     })
     setShowModal(true)
   }
@@ -170,7 +206,8 @@ const BlogManagement = () => {
       category: blog.category,
       image_url: blog.image_url || '',
       read_time: blog.read_time || '5 min read',
-      published: blog.published
+      published: blog.published,
+      author_id: blog.author_id || ''
     })
     setShowModal(true)
   }
@@ -413,6 +450,22 @@ const BlogManagement = () => {
                     placeholder="5 min read"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-[var(--zim-black)]">Author</label>
+                <select
+                  value={formData.author_id}
+                  onChange={(e) => setFormData({ ...formData, author_id: e.target.value })}
+                  className="w-full rounded-lg border border-[var(--zim-border)] bg-white px-4 py-2 text-sm text-[var(--zim-black)] focus:border-[var(--zim-green)] focus:outline-none"
+                >
+                  <option value="">Select an author (optional)</option>
+                  {teamMembers.map(member => (
+                    <option key={member.id} value={member.id}>
+                      {member.name} - {member.role}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <div>
