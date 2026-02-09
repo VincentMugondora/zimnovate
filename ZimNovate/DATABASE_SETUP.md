@@ -153,6 +153,16 @@ CREATE POLICY "Public can read published blogs" ON blogs FOR SELECT USING (publi
 -- Insert policies for contact forms
 CREATE POLICY "Anyone can submit contact form" ON contact_submissions FOR INSERT WITH CHECK (true);
 CREATE POLICY "Anyone can submit partnership request" ON partnership_requests FOR INSERT WITH CHECK (true);
+
+-- Admin policies for team management (requires authentication)
+CREATE POLICY "Authenticated users can insert team members" ON team_members FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "Authenticated users can update team members" ON team_members FOR UPDATE USING (auth.role() = 'authenticated');
+CREATE POLICY "Authenticated users can delete team members" ON team_members FOR DELETE USING (auth.role() = 'authenticated');
+
+-- Admin policies for blog management
+CREATE POLICY "Authenticated users can insert blogs" ON blogs FOR INSERT WITH CHECK (auth.role() = 'authenticated');
+CREATE POLICY "Authenticated users can update blogs" ON blogs FOR UPDATE USING (auth.role() = 'authenticated');
+CREATE POLICY "Authenticated users can delete blogs" ON blogs FOR DELETE USING (auth.role() = 'authenticated');
 ```
 
 ## Usage Examples
