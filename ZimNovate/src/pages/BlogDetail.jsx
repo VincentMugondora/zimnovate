@@ -26,6 +26,7 @@ const BlogDetail = () => {
           .eq('slug', slug)
           .eq('published', true)
           .single()
+          .abortSignal(new AbortController().signal)
 
         if (error) throw error
         if (!data) {
@@ -41,6 +42,11 @@ const BlogDetail = () => {
     }
     
     fetchBlog()
+    
+    // Refresh when window regains focus (user returns from dashboard)
+    const handleFocus = () => fetchBlog()
+    window.addEventListener('focus', handleFocus)
+    return () => window.removeEventListener('focus', handleFocus)
   }, [slug])
 
   const formatDate = (dateString) => {
