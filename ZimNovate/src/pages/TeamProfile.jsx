@@ -1,18 +1,86 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link, useParams, Navigate } from 'react-router-dom'
 import { Linkedin, Twitter, Globe, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
-import { getTeamMemberBySlug, teamMembers } from '../data/teamData.js'
+import { getTeamMemberBySlug, getTeamMembers } from '../services/database.js'
 
 const TeamProfile = () => {
   const { slug } = useParams()
-  const member = getTeamMemberBySlug(slug)
+  const [member, setMember] = useState(null)
+  const [otherMembers, setOtherMembers] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true)
+        
+        // Fetch member and other members in parallel
+        const [memberData, allMembers] = await Promise.all([
+          getTeamMemberBySlug(slug),
+          getTeamMembers()
+        ])
+        
+        if (!memberData) {
+          setError('Member not found')
+          return
+        }
+        
+        setMember(memberData)
+        
+        // Filter out current member and get 2 others
+        const others = allMembers
+          .filter(m => m.id !== memberData.id)
+          .slice(0, 2)
+        setOtherMembers(others)
+      } catch (err) {
+        setError('Failed to load team member')
+        console.error(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchData()
+  }, [slug])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-[#F9F5EF] flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 text-[#1A1A1A]/60">
+            <div className="h-8 w-8 animate-spin rounded-full border-3 border-[#0A5C8B] border-t-transparent" />
+            Loading...
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error === 'Member not found') {
+    return <Navigate to="/team" replace />
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-[#F9F5EF] flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-red-600">{error}</p>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="mt-4 px-6 py-2 bg-[#0A5C8B] text-white rounded-full hover:bg-[#0A5C8B]/90"
+          >
+            Try again
+          </button>
+        </div>
+      </div>
+    )
+  }
 
   if (!member) {
     return <Navigate to="/team" replace />
   }
-
-  const otherMembers = teamMembers.filter(m => m.id !== member.id).slice(0, 2)
 
   return (
     <>
@@ -75,10 +143,10 @@ const TeamProfile = () => {
                 </p>
 
                 {/* Social Links */}
-                <div className="flex gap-4">
-                  {member.social.linkedin && (
+                <div className="flex gap-4 flex-wrap">
+                  {member.linkedin_url && (
                     <a
-                      href={member.social.linkedin}
+                      href={member.linkedin_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
@@ -86,9 +154,9 @@ const TeamProfile = () => {
                       <Linkedin className="h-4 w-4" /> LinkedIn
                     </a>
                   )}
-                  {member.social.twitter && (
+                  {member.twitter_url && (
                     <a
-                      href={member.social.twitter}
+                      href={member.twitter_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
@@ -96,9 +164,9 @@ const TeamProfile = () => {
                       <Twitter className="h-4 w-4" /> Twitter
                     </a>
                   )}
-                  {member.social.portfolio && (
+                  {member.portfolio_url && (
                     <a
-                      href={member.social.portfolio}
+                      href={member.portfolio_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#0A5C8B] hover:bg-[#0A5C8B]/20 transition-colors"
@@ -133,12 +201,12 @@ const TeamProfile = () => {
                 Technical Skills
               </h2>
               <div className="flex flex-wrap gap-2">
-                {member.skills.technical.map((skill, index) => (
+                {member.team_member_skills?.filter(s => s.skills?.type === 'technical').map((skillData, index) => (
                   <span
                     key={index}
                     className="rounded-full bg-[#0A5C8B]/10 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
                   >
-                    {skill}
+                    {skillData.skills.name}
                   </span>
                 ))}
               </div>
@@ -150,12 +218,12 @@ const TeamProfile = () => {
                 Soft Skills
               </h2>
               <div className="flex flex-wrap gap-2">
-                {member.skills.soft.map((skill, index) => (
+                {member.team_member_skills?.filter(s => s.skills?.type === 'soft').map((skillData, index) => (
                   <span
                     key={index}
                     className="rounded-full bg-[#C8FA50]/20 px-4 py-2 text-sm font-medium text-[#1A1A1A]"
                   >
-                    {skill}
+                    {skillData.skills.name}
                   </span>
                 ))}
               </div>
@@ -170,23 +238,23 @@ const TeamProfile = () => {
               Projects {member.name.split(' ')[0]} Has Contributed To
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {member.projects.map((project, index) => (
+              {member.team_member_projects?.map((projectData, index) => (
                 <Link
                   key={index}
-                  to={project.link}
+                  to={projectData.projects?.link || '#'}
                   className="group rounded-2xl border border-[#E5E5E5] p-6 hover:border-[#0A5C8B] hover:shadow-md transition-all"
                 >
                   <div className="mb-3 flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-[#0A5C8B]"></span>
                     <h3 className="font-bold text-[#1A1A1A] group-hover:text-[#0A5C8B] transition-colors">
-                      {project.name}
+                      {projectData.projects?.name}
                     </h3>
                   </div>
                   <p className="mb-2 text-sm font-medium text-[#0A5C8B]">
-                    Role: {project.role}
+                    Role: {projectData.role}
                   </p>
                   <p className="mb-4 text-sm text-[#1A1A1A]/70">
-                    {project.description}
+                    {projectData.contribution_description || projectData.projects?.description}
                   </p>
                   <div className="flex items-center gap-1 text-sm font-medium text-[#0A5C8B]">
                     View Case Study <ExternalLink className="h-3 w-3" />
@@ -213,7 +281,7 @@ const TeamProfile = () => {
                   >
                     <div className="h-16 w-16 overflow-hidden rounded-xl bg-[#f3f3f3] flex-shrink-0">
                       <img
-                        src={otherMember.image}
+                        src={otherMember.image_url || otherMember.image}
                         alt={otherMember.name}
                         className="h-full w-full object-cover"
                         onError={(e) => {

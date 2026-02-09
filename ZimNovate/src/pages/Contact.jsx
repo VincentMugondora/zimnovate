@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import PageHero from '../components/PageHero.jsx'
+import { submitContactForm } from '../services/database.js'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,15 +13,49 @@ const Contact = () => {
     projectType: '',
     message: ''
   })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(null)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
+    setError(null)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+    setSubmitting(true)
+    setError(null)
+    
+    try {
+      const result = await submitContactForm({
+        name: formData.fullName,
+        email: formData.email,
+        phone: formData.phone || null,
+        company: formData.company || null,
+        message: formData.message,
+        submission_type: formData.projectType || 'general'
+      })
+      
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          company: '',
+          projectType: '',
+          message: ''
+        })
+      } else {
+        setError(result.error || 'Failed to send message. Please try again.')
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again later.')
+      console.error(err)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const projectTypes = [
@@ -102,8 +137,30 @@ const Contact = () => {
           <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
             {/* Form */}
             <div className="rounded-2xl border border-[#F4D47C]/20 bg-white p-6 md:p-8 shadow-sm">
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="grid gap-5 md:grid-cols-2">
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+                    <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0F172A] mb-2">Message Sent!</h3>
+                  <p className="text-sm text-[#1A1A1A]/70 mb-4">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="inline-flex items-center justify-center rounded-full bg-[#F4D47C] px-6 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  {error && (
+                    <div className="rounded-lg bg-red-50 border border-red-200 p-4">
+                      <p className="text-sm text-red-600">{error}</p>
+                    </div>
+                  )}
+                  <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label htmlFor="fullName" className="mb-2 block text-sm font-semibold text-[#0F172A]">
                       Full Name *
@@ -205,11 +262,20 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="inline-flex w-full items-center justify-center rounded-full bg-[#F4D47C] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors md:w-auto"
+                  disabled={submitting}
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[#F4D47C] px-6 py-3 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors md:w-auto disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {submitting ? (
+                    <>
+                      <div className="h-4 w-4 mr-2 animate-spin rounded-full border-2 border-[#0F172A] border-t-transparent" />
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
+              )}
             </div>
 
             {/* Contact Details */}

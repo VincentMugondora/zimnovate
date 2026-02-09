@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Rocket, Shield, Palette, Handshake, Zap, Search, Code2, TrendingUp, Users, CheckCircle, Clock, ChevronDown, ArrowRight, Building2, Briefcase, Sparkles, Globe, Award } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
+import { submitPartnershipRequest } from '../services/database.js'
 
 const Partners = () => {
   const [formData, setFormData] = useState({
@@ -12,10 +13,44 @@ const Partners = () => {
     partnershipType: '',
     message: ''
   })
+  const [submitting, setSubmitting] = useState(false)
+  const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(null)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    alert('Thank you for your partnership request! We will get back to you within 24 hours.')
+    setSubmitting(true)
+    setError(null)
+    
+    try {
+      const result = await submitPartnershipRequest({
+        contactName: formData.name,
+        companyName: formData.businessName,
+        email: formData.email,
+        phone: formData.phone || null,
+        partnershipType: formData.partnershipType,
+        projectDescription: formData.message
+      })
+      
+      if (result.success) {
+        setSubmitted(true)
+        setFormData({
+          name: '',
+          businessName: '',
+          email: '',
+          phone: '',
+          partnershipType: '',
+          message: ''
+        })
+      } else {
+        setError(result.error || 'Failed to submit request. Please try again.')
+      }
+    } catch (err) {
+      setError('Something went wrong. Please try again later.')
+      console.error(err)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const valueCards = [
@@ -283,7 +318,27 @@ const Partners = () => {
             </p>
           </div>
           
+          {submitted ? (
+            <div className="rounded-3xl border border-green-200 bg-green-50 p-8 text-center">
+              <div className="inline-flex items-center justify-center h-16 w-16 rounded-full bg-green-100 mb-4">
+                <CheckCircle className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-[var(--zim-black)] mb-2">Request Submitted!</h3>
+              <p className="text-[var(--zim-fg)] mb-4">Thank you for your partnership request. We'll get back to you within 24 hours.</p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110 transition-colors"
+              >
+                Submit Another Request
+              </button>
+            </div>
+          ) : (
           <form onSubmit={handleSubmit} className="rounded-3xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-8">
+            {error && (
+              <div className="mb-6 rounded-lg bg-red-50 border border-red-200 p-4">
+                <p className="text-sm text-red-600">{error}</p>
+              </div>
+            )}
             <div className="space-y-6">
               <div>
                 <label htmlFor="name" className="mb-2 block text-sm font-medium text-[var(--zim-black)]">
@@ -386,12 +441,23 @@ const Partners = () => {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[var(--zim-green)] px-8 py-4 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110 transition-colors"
+                disabled={submitting}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-[var(--zim-green)] px-8 py-4 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Submit Partnership Request <ArrowRight className="h-4 w-4" />
+                {submitting ? (
+                  <>
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-[var(--zim-black)] border-t-transparent" />
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    Submit Partnership Request <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
               </button>
             </div>
           </form>
+          )}
         </div>
       </section>
     </div>

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Rocket, Users, Shield, ArrowUpRight } from 'lucide-react'
+import { ArrowRight, Rocket, Users, Shield } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
-import { teamMembers } from '../data/teamData.js'
+import { getTeamMembers } from '../services/database.js'
 
 const TeamCard = ({ member }) => {
   return (
@@ -34,6 +34,10 @@ const TeamCard = ({ member }) => {
 }
 
 const Team = () => {
+  const [members, setMembers] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
   const cultureValues = [
     {
       icon: Rocket,
@@ -51,6 +55,23 @@ const Team = () => {
       description: 'We communicate clearly and honestly. Trust is the foundation of every relationship.'
     }
   ]
+
+  useEffect(() => {
+    const fetchMembers = async () => {
+      try {
+        setLoading(true)
+        const data = await getTeamMembers()
+        setMembers(data)
+      } catch (err) {
+        setError('Failed to load team members')
+        console.error(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchMembers()
+  }, [])
 
   return (
     <>
@@ -95,11 +116,35 @@ const Team = () => {
               Click on any team member to learn more about their expertise and the projects they&apos;ve contributed to.
             </p>
           </div>
-          <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
-            {teamMembers.map((member) => (
-              <TeamCard key={member.id} member={member} />
-            ))}
-          </div>
+          
+          {loading && (
+            <div className="text-center py-12">
+              <div className="inline-flex items-center gap-2 text-[#1A1A1A]/60">
+                <div className="h-5 w-5 animate-spin rounded-full border-2 border-[#0A5C8B] border-t-transparent" />
+                Loading team members...
+              </div>
+            </div>
+          )}
+          
+          {error && (
+            <div className="text-center py-12">
+              <p className="text-red-600">{error}</p>
+              <button 
+                onClick={() => window.location.reload()} 
+                className="mt-4 text-[#0A5C8B] hover:underline"
+              >
+                Try again
+              </button>
+            </div>
+          )}
+          
+          {!loading && !error && (
+            <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
+              {members.map((member) => (
+                <TeamCard key={member.id} member={member} />
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Company Culture */}
@@ -113,8 +158,8 @@ const Team = () => {
             <div className="grid gap-6 md:grid-cols-3">
               {cultureValues.map((value, index) => (
                 <div key={index} className="rounded-2xl bg-white p-8 text-center">
-                  <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-[#0EAFFF]/10 to-[#E50695]/10">
-                    <value.icon className="h-7 w-7 text-[#0EAFFF]" />
+                  <div className="mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#0A5C8B]/10">
+                    <value.icon className="h-7 w-7 text-[#0A5C8B]" />
                   </div>
                   <h3 className="mb-2 text-lg font-bold text-[#1A1A1A]">
                     {value.title}
