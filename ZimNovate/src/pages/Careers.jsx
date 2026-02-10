@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const Careers = () => {
@@ -44,8 +45,13 @@ const Careers = () => {
   ]
 
   return (
-    <div>
-      <PageHero
+    <>
+      <Helmet>
+        <title>Careers | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/careers" />
+      </Helmet>
+      <div>
+        <PageHero
         title="Join Zimnovate"
         subtitle="Build your career while building the future of African tech"
         height="min-h-[50vh]"
@@ -186,6 +192,7 @@ const Careers = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const Branding = () => {
   return (
+    <>
+      <Helmet>
+        <title>Branding & Design Services | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/services/branding" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -445,6 +451,7 @@ const Branding = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

@@ -1,8 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const Terms = () => {
   return (
+    <>
+      <Helmet>
+        <title>Terms & Conditions | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/terms" />
+      </Helmet>
     <div>
       <PageHero
         title="Terms & Conditions"
@@ -93,6 +99,7 @@ const Terms = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const MobileAppDevelopment = () => {
   return (
+    <>
+      <Helmet>
+        <title>Mobile App Development | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/services/mobile-app-development" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero 
@@ -158,6 +164,7 @@ const MobileAppDevelopment = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

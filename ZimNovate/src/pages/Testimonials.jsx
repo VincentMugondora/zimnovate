@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const Testimonials = () => {
@@ -56,26 +57,31 @@ const Testimonials = () => {
   ]
 
   return (
-    <div>
-      <PageHero
-        title="Client Testimonials"
-        subtitle="Don't just take our word for it - hear from the businesses we've helped grow"
-        height="min-h-[45vh]"
-      />
+    <>
+      <Helmet>
+        <title>Client Testimonials | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/testimonials" />
+      </Helmet>
+      <div>
+        <PageHero
+          title="Client Testimonials"
+          subtitle="Don't just take our word for it - hear from the businesses we've helped grow"
+          height="min-h-[45vh]"
+        />
 
-      {/* Stats */}
-      <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-10 md:px-16 lg:px-20">
-          <div className="grid gap-8 md:grid-cols-4 text-center">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl font-bold text-[#F4D47C] mb-1">{stat.value}</div>
-                <div className="text-sm text-[#1A1A1A]/70">{stat.label}</div>
-              </div>
-            ))}
+        {/* Stats */}
+        <section className="bg-[#F9F5EF]">
+          <div className="mx-auto max-w-7xl px-12 py-10 md:px-16 lg:px-20">
+            <div className="grid gap-8 md:grid-cols-4 text-center">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <div className="text-3xl font-bold text-[#F4D47C] mb-1">{stat.value}</div>
+                  <div className="text-sm text-[#1A1A1A]/70">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Testimonials Grid */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
@@ -163,6 +169,7 @@ const Testimonials = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

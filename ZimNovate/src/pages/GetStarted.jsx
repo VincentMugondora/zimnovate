@@ -181,6 +181,7 @@ const GetStarted = () => {
     <>
       <Helmet>
         <title>Get Started | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/get-started" />
         <meta name="description" content="Start your project with ZimNovate. Tell us what you need and we'll help you take the next step with smart, efficient digital solutions." />
       </Helmet>
 

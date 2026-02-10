@@ -89,6 +89,7 @@ const BlogDetail = () => {
     <>
       <Helmet>
         <title>{blog.title} | ZimNovate Blog</title>
+        <link rel="canonical" href={`https://zimnovate.co.zw/blog/${blog.slug}`} />
         <meta name="description" content={blog.excerpt || blog.content?.slice(0, 160)} />
         <meta property="og:title" content={blog.title} />
         <meta property="og:description" content={blog.excerpt || blog.content?.slice(0, 160)} />

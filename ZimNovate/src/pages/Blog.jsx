@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import { FileText, AlertCircle, RefreshCw } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
 import { supabase } from '../lib/supabase.js'
@@ -54,6 +55,11 @@ const Blog = () => {
     : articles.filter(article => article.category === selectedCategory)
 
   return (
+    <>
+      <Helmet>
+        <title>Blog | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/blog" />
+      </Helmet>
     <div>
       <PageHero
         title="Insights & Ideas"
@@ -179,6 +185,7 @@ const Blog = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
