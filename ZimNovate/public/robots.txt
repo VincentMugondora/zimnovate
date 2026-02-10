@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://zimnovate.com/sitemap.xml
+Sitemap: https://zimnovate.co.zw/sitemap.xml
