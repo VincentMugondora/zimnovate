@@ -12,12 +12,12 @@ const LazyMotionFeatures = {
   domMax: lazy(() => import('framer-motion').then(mod => ({ default: mod.LazyMotion }))),
 };
 
-// Feature presets for different animation needs
+// Feature presets for different animation needs (framer-motion v12+ compatible)
 export const MOTION_FEATURES = {
   // Minimal features for simple animations (smallest bundle)
-  domAnimation: () => import('framer-motion/features/dom').then(res => res.default),
+  domAnimation: () => import('framer-motion/dom').then(res => res.domAnimation),
   // Full features for complex animations
-  domMax: () => import('framer-motion/features/domMax').then(res => res.default),
+  domMax: () => import('framer-motion/dom').then(res => res.domMax),
 };
 
 /**
