@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const ECommerceSolutions = () => {
   return (
+    <>
+      <Helmet>
+        <title>E-Commerce Solutions | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/services/ecommerce" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -64,37 +70,49 @@ const ECommerceSolutions = () => {
               {
                 title: 'Custom E-Commerce Development',
                 description: 'Create online stores tailored to your business goals and aligned with global UX best practices.',
-                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Custom UI/UX Design', 'Product Catalog Setup', 'Shopping Cart & Checkout', 'Wishlist & Reviews', 'Secure Payments']
               },
               {
                 title: 'Payment Gateways & POS Integration',
                 description: 'Let customers pay their way with seamless, secure payment options.',
-                image: 'https://images.unsplash.com/photo-1581091215367-59ab6c3a1d2a?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1581091215367-59ab6c3a1d2a?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['PayPal & Stripe', 'Visa/Mastercard', 'POS Syncing', 'Recurring Subscriptions', 'Multi-Currency']
               },
               {
                 title: 'E-Commerce Automation',
                 description: 'Automate the work you should not do manually.',
-                image: 'https://images.unsplash.com/photo-1580894908361-967195033d61?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1580894908361-967195033d61?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Order Notifications', 'Inventory Updates', 'Abandoned Cart Emails', 'Sales Analytics', 'Customer Tracking']
               },
               {
                 title: 'Marketplace & Multi-Vendor Stores',
                 description: 'Scale your business by allowing multiple vendors to sell on one platform.',
-                image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Vendor Dashboards', 'Commission Management', 'Product Control', 'Vendor Payouts', 'Rating System']
               },
               {
                 title: 'Mobile Commerce (M-Commerce)',
                 description: 'Turn your store into a mobile-first experience.',
-                image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Mobile-First Design', 'Mobile Checkout', 'Push Notifications', 'Apple/Google Pay', 'App Integration']
               },
               {
                 title: 'E-Commerce SEO & Marketing Setup',
                 description: 'Optimize your store to get traffic and convert visitors into buyers.',
-                image: 'https://images.unsplash.com/photo-1508830524289-0adcbe822b40?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1508830524289-0adcbe822b40?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Product SEO', 'Google Shopping', 'Social Shop Integration', 'Tracking Pixels', 'Analytics Setup']
               }
             ].map((service) => (
@@ -106,6 +124,9 @@ const ECommerceSolutions = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
@@ -209,6 +230,7 @@ const ECommerceSolutions = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
