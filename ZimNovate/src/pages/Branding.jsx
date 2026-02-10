@@ -76,37 +76,49 @@ const Branding = () => {
               {
                 title: 'Logo Design',
                 description: 'Unique, memorable, and scalable logos crafted for every medium.',
-                image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Concepts & Refinement', 'Scalable Formats', 'Brand Marks']
               },
               {
                 title: 'Brand Identity',
                 description: 'Complete visual systems — colors, typography, tone, and usage rules.',
-                image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Color & Type', 'Voice & Tone', 'Usage Guidelines']
               },
               {
                 title: 'Graphic Design',
                 description: 'Marketing assets that tell your story across print and digital.',
-                image: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Posters & Flyers', 'Pitch Decks', 'Social Creatives']
               },
               {
                 title: 'UI/UX Design',
                 description: 'Modern interfaces that feel intuitive on web and mobile.',
-                image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Wireframes', 'High-Fidelity UI', 'Design Systems']
               },
               {
                 title: 'Packaging Design',
                 description: 'Shelf-ready packaging that grabs attention and communicates value.',
-                image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['3D Mockups', 'Print-Ready Files', 'Material Guidance']
               },
               {
                 title: 'Social Media Branding',
                 description: 'Consistent visuals and templates that keep your feeds on-brand.',
-                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Template Kits', 'Profile & Cover Art', 'Content Guidelines']
               }
             ].map((service) => (
@@ -118,6 +130,9 @@ const Branding = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
@@ -441,8 +456,11 @@ const Branding = () => {
 
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1522199710521-72d69614c702?w=800&h=600&fit=crop&crop=entropy&auto=format"
+                src="https://images.unsplash.com/photo-1522199710521-72d69614c702?w=800&h=600&fit=crop&crop=entropy&auto=format&fm=webp"
                 alt="Branding workspace"
+                width={800}
+                height={600}
+                loading="lazy"
                 className="h-64 w-full object-cover lg:h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#F4D47C]/20 to-transparent" />
