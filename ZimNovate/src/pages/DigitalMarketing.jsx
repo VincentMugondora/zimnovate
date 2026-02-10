@@ -76,32 +76,44 @@ const DigitalMarketing = () => {
               {
                 title: 'Social Media Marketing',
                 description: 'Grow your audience with creative content, strategy, and targeted campaigns.',
-                image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
               {
                 title: 'Search Engine Optimization (SEO)',
                 description: 'Rank higher and gain sustainable organic traffic with research-led SEO.',
-                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
               {
                 title: 'Paid Advertising (Google & Meta Ads)',
                 description: 'ROI-focused campaigns built to generate leads and sales.',
-                image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
               {
                 title: 'Content Marketing',
                 description: 'High-quality articles, visuals, and campaigns that build authority.',
-                image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
               {
                 title: 'Email Marketing & Automation',
                 description: 'Automate engagement with targeted journeys and segmentation.',
-                image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
               {
                 title: 'Web & Landing Page Optimization',
                 description: 'Improve conversions with UX-focused landing page design and testing.',
-                image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
               },
             ].map((service) => (
               <div
@@ -112,6 +124,9 @@ const DigitalMarketing = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
@@ -142,35 +157,45 @@ const DigitalMarketing = () => {
               step: '01',
               title: 'Audit & Research',
               description: 'Analyze your brand, market, competitors, and customers to find high-impact opportunities.',
-              image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&h=600&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&h=600&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 900,
+              height: 600,
               position: 'left'
             },
             {
               step: '02',
               title: 'Strategy Development',
               description: 'Create a tailored digital marketing roadmap aligned to your goals and budget.',
-              image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&h=600&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=900&h=600&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 900,
+              height: 600,
               position: 'right'
             },
             {
               step: '03',
               title: 'Campaign Execution',
               description: 'Launch creative content, targeted ads, and engagement programs across channels.',
-              image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&h=600&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&h=600&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 900,
+              height: 600,
               position: 'left'
             },
             {
               step: '04',
               title: 'Monitoring & Optimization',
               description: 'Track KPIs, run experiments, and optimize for CTR, conversions, and ROAS.',
-              image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&h=600&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 900,
+              height: 600,
               position: 'right'
             },
             {
               step: '05',
               title: 'Reporting & Scaling',
               description: 'Transparent reporting, learnings, and scaling the winners for growth.',
-              image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=900&h=600&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=900&h=600&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 900,
+              height: 600,
               position: 'left'
             }
           ].map((phase) => (
@@ -191,6 +216,9 @@ const DigitalMarketing = () => {
                   <img
                     src={phase.image}
                     alt={phase.title}
+                    width={phase.width}
+                    height={phase.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/30 to-transparent" />
@@ -214,22 +242,30 @@ const DigitalMarketing = () => {
               {
                 title: 'Results-Focused',
                 description: 'We prioritize outcomes and ROI, not vanity metrics.',
-                image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=500&h=350&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=500&h=350&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 500,
+                height: 350
               },
               {
                 title: 'Creative Content Production',
                 description: 'Original creatives that capture attention and convert.',
-                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=350&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=500&h=350&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 500,
+                height: 350
               },
               {
                 title: 'Transparent Reporting',
                 description: 'Clear dashboards and honest insights every sprint.',
-                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=500&h=350&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=500&h=350&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 500,
+                height: 350
               },
               {
                 title: 'Partner, Not a Vendor',
                 description: 'Collaborative, responsive, and invested in your success.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&h=350&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=500&h=350&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 500,
+                height: 350
               }
             ].map((reason) => (
               <div
@@ -240,6 +276,9 @@ const DigitalMarketing = () => {
                   <img
                     src={reason.image}
                     alt={reason.title}
+                    width={reason.width}
+                    height={reason.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 to-transparent" />
@@ -269,19 +308,25 @@ const DigitalMarketing = () => {
             {
               title: 'Social Growth Sprint',
               description: 'Campaign type: Social Strategy — +400% reach, +70% engagement.',
-              image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=700&h=500&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 700,
+              height: 500,
               tags: ['Social', 'Content', 'Paid Boost']
             },
             {
               title: 'Paid Ads ROAS Lift',
               description: 'Campaign type: Paid Ads — +3.8x ROAS, scaled budget 2.5x.',
-              image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=700&h=500&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 700,
+              height: 500,
               tags: ['Google Ads', 'Meta Ads', 'CRO']
             },
             {
               title: 'SEO Content Engine',
               description: 'Campaign type: SEO/Content — +180% organic traffic, +120% leads.',
-              image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 700,
+              height: 500,
               tags: ['SEO', 'Content', 'Analytics']
             }
           ].map((project) => (
@@ -293,6 +338,9 @@ const DigitalMarketing = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  width={project.width}
+                  height={project.height}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent" />
@@ -407,8 +455,11 @@ const DigitalMarketing = () => {
 
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=entropy&auto=format"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&crop=entropy&auto=format&fm=webp"
                 alt="Marketing team collaboration"
+                width={800}
+                height={600}
+                loading="lazy"
                 className="h-64 w-full object-cover lg:h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#F4D47C]/20 to-transparent" />
