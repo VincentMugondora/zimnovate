@@ -459,13 +459,6 @@ const Home = () => {
                 <Link to="/contact" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Contact Us</Link>
               </div>
             </div>
-            <div className="space-y-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Legal</h3>
-              <div className="space-y-2">
-                <Link to="/terms" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Terms of Service</Link>
-                <Link to="/privacy" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Privacy Policy</Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
