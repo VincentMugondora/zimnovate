@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const DigitalStrategy = () => {
   return (
+    <>
+      <Helmet>
+        <title>Digital Strategy Services | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/services/digital-strategy" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -70,37 +76,49 @@ const DigitalStrategy = () => {
               {
                 title: 'Digital Growth Strategy',
                 description: 'Tailored plans to drive traffic, conversions, and engagement across channels.',
-                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Acquisition Funnels', 'Conversion Optimization', 'Channel Mix']
               },
               {
                 title: 'SEO & Content Strategy',
                 description: 'Research-led content and search visibility to grow organically and sustainably.',
-                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Keyword Research', 'Content Playbooks', 'On-Page & Tech SEO']
               },
               {
                 title: 'Social Media Strategy',
                 description: 'Platform-specific growth plans with content calendars and engagement tactics.',
-                image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Channel Playbooks', 'Content Calendars', 'Engagement Tactics']
               },
               {
                 title: 'Brand Positioning',
                 description: 'Define your unique market position, messaging, and differentiation.',
-                image: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1522199710521-72d69614c702?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Audience Insights', 'Messaging Frameworks', 'Value Proposition']
               },
               {
                 title: 'Data & Analytics',
                 description: 'Dashboards and reporting that reveal what works and what to improve.',
-                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['KPI Definition', 'Dashboard Setup', 'Performance Reviews']
               },
               {
                 title: 'Consulting & Advisory',
                 description: 'Ongoing expert guidance to keep your digital programs on track.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&h=500&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=700&h=500&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 700,
+                height: 500,
                 features: ['Quarterly Reviews', 'Workshops', 'Executive Advisory']
               }
             ].map((service) => (
@@ -112,6 +130,9 @@ const DigitalStrategy = () => {
                   <img
                     src={service.image}
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
@@ -415,8 +436,11 @@ const DigitalStrategy = () => {
 
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&crop=entropy&auto=format"
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&crop=entropy&auto=format&fm=webp"
                 alt="Team planning digital strategy"
+                width={800}
+                height={600}
+                loading="lazy"
                 className="h-64 w-full object-cover lg:h-full"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#F4D47C]/20 to-transparent" />
@@ -425,6 +449,7 @@ const DigitalStrategy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
