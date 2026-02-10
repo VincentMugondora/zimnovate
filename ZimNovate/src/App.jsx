@@ -1,7 +1,14 @@
 import React, { Suspense, lazy } from 'react'
-import { Navigate, Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import SiteLayout from './components/SiteLayout.jsx'
+import { usePageViews } from './hooks/usePageViews.js'
+
+// Page View Tracker Component - tracks views on route change
+const PageViewTracker = () => {
+  usePageViews()
+  return null
+}
 
 // Eager load critical pages (Home and common pages)
 import Home from './pages/Home.jsx'
@@ -54,6 +61,7 @@ const PageLoader = () => (
 const App = () => {
   return (
     <HelmetProvider>
+      <PageViewTracker />
       <Routes>
         {/* Public routes with SiteLayout */}
         <Route element={<SiteLayout />}>

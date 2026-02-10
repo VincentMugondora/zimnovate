@@ -21,6 +21,7 @@ import { supabase } from '../lib/supabase.js'
 import { useNavigate } from 'react-router-dom'
 import BlogManagement from '../components/BlogManagement.jsx'
 import TeamManagement from '../components/TeamManagement.jsx'
+import { fetchTotalViews } from '../hooks/usePageViews.js'
 
 const Dashboard = () => {
   const navigate = useNavigate()
@@ -82,6 +83,9 @@ const Dashboard = () => {
       
       if (blogsError) throw blogsError
       
+      // Fetch total views
+      const totalViews = await fetchTotalViews()
+      
       setTeamMembers(teamData || [])
       setContactSubmissions(contactData || [])
       setPartnershipRequests(partnerData || [])
@@ -90,7 +94,7 @@ const Dashboard = () => {
         teamMembers: teamData?.length || 0,
         contactSubmissions: contactData?.length || 0,
         partnershipRequests: partnerData?.length || 0,
-        totalViews: 1247, // Placeholder - would come from analytics
+        totalViews: totalViews,
         blogs: blogsData?.length || 0
       })
     } catch (err) {
