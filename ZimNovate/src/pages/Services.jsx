@@ -49,6 +49,19 @@ const Services = () => {
       'Marketplace Setup': '/services/e-commerce',
       'Mobile Commerce': '/services/e-commerce',
       'E-Commerce SEO': '/services/e-commerce',
+      'Digital Marketing': '/services/digital-marketing',
+      'Social Media Marketing': '/services/digital-marketing',
+      'SEO & Content Marketing': '/services/digital-marketing',
+      'Paid Advertising': '/services/digital-marketing',
+      'Content Marketing': '/services/digital-marketing',
+      'Email Marketing': '/services/digital-marketing',
+      'Branding': '/services/branding',
+      'Logo Design': '/services/branding',
+      'Brand Identity': '/services/branding',
+      'Graphic Design': '/services/branding',
+      'UI/UX Design': '/services/branding',
+      'Packaging Design': '/services/branding',
+      'Social Media Branding': '/services/branding',
     }
     return serviceLinks[serviceTitle] || '/contact'
   }
@@ -97,7 +110,7 @@ const Services = () => {
                 <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
                   {g.category}
                 </div>
-                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation' || g.category === 'E-commerce Solutions') && (
+                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation' || g.category === 'E-commerce Solutions' || g.category === 'Digital Marketing' || g.category === 'Branding') && (
                   <Link
                     to={
                       g.category === 'Web Development'
@@ -108,7 +121,11 @@ const Services = () => {
                         ? '/services/digital-strategy'
                         : g.category === 'AI & Automation'
                         ? '/services/ai-automation'
-                        : '/services/e-commerce'
+                        : g.category === 'E-commerce Solutions'
+                        ? '/services/e-commerce'
+                        : g.category === 'Digital Marketing'
+                        ? '/services/digital-marketing'
+                        : '/services/branding'
                     }
                     className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
                   >
@@ -199,6 +216,36 @@ const Services = () => {
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
                       Explore E-Commerce
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'Digital Marketing' ? (
+                  <>
+                    <Link
+                      to="/services/digital-marketing"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore Digital Marketing
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                    >
+                      Request a Quote
+                    </Link>
+                  </>
+                ) : g.category === 'Branding' ? (
+                  <>
+                    <Link
+                      to="/services/branding"
+                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
+                    >
+                      Explore Branding
                     </Link>
                     <Link
                       to="/contact"

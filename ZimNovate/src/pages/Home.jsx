@@ -427,6 +427,49 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Quick Links Section for Internal Linking */}
+      <section className="bg-[var(--zim-gray)]/30">
+        <div className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</h3>
+              <div className="space-y-2">
+                <Link to="/services/web-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Web Development</Link>
+                <Link to="/services/mobile-app-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Mobile Apps</Link>
+                <Link to="/services/branding" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Branding</Link>
+                <Link to="/services/digital-marketing" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Digital Marketing</Link>
+                <Link to="/services" className="block text-sm text-[#F4D47C] hover:text-[#F4D47C]/80">View All Services →</Link>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Company</h3>
+              <div className="space-y-2">
+                <Link to="/about" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">About Us</Link>
+                <Link to="/team" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Our Team</Link>
+                <Link to="/careers" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Careers</Link>
+                <Link to="/blog" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Blog</Link>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Resources</h3>
+              <div className="space-y-2">
+                <Link to="/portfolio" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Portfolio</Link>
+                <Link to="/testimonials" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Testimonials</Link>
+                <Link to="/get-started" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Get Started</Link>
+                <Link to="/contact" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Contact Us</Link>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Legal</h3>
+              <div className="space-y-2">
+                <Link to="/terms" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Terms of Service</Link>
+                <Link to="/privacy" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Privacy Policy</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
     </>
   )
