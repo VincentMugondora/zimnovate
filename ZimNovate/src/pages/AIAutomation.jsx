@@ -7,8 +7,18 @@ const AIAutomation = () => {
   return (
     <>
       <Helmet>
-        <title>AI & Automation Services | ZimNovate</title>
+        <title>AI & Automation Zimbabwe — Business Automation & AI Solutions | Zimnovate</title>
+        <meta name="description" content="AI and automation solutions for Zimbabwean businesses. Chatbots, process automation, predictive analytics, and custom AI solutions to increase efficiency and reduce costs in Harare and across Zimbabwe." />
+        <meta name="keywords" content="AI Zimbabwe, automation Zimbabwe, chatbot Zimbabwe, business process automation Zimbabwe, AI solutions Zimbabwe, machine learning Zimbabwe, predictive analytics Zimbabwe, AI consulting Zimbabwe, automation services Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/services/ai-automation" />
+        <meta property="og:title" content="AI & Automation Zimbabwe — Business Automation & AI Solutions | Zimnovate" />
+        <meta property="og:description" content="AI and automation solutions for Zimbabwean businesses. Chatbots, process automation, predictive analytics, and custom AI solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/ai-automation" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI & Automation Zimbabwe — Business Automation & AI Solutions | Zimnovate" />
+        <meta name="twitter:description" content="AI and automation solutions for Zimbabwean businesses. Chatbots, process automation, predictive analytics, and custom AI solutions." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

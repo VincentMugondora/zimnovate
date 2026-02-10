@@ -7,8 +7,18 @@ const DigitalMarketing = () => {
   return (
     <>
       <Helmet>
-        <title>Digital Marketing Services | ZimNovate</title>
+        <title>Digital Marketing Zimbabwe — SEO, Social Media & PPC Services | Zimnovate</title>
+        <meta name="description" content="Results-driven digital marketing services in Zimbabwe. SEO, social media marketing, PPC advertising, content marketing, and growth strategies for businesses in Harare and across Zimbabwe." />
+        <meta name="keywords" content="digital marketing Zimbabwe, SEO Zimbabwe, social media marketing Zimbabwe, PPC advertising Zimbabwe, content marketing Zimbabwe, online marketing Harare, digital marketing agency Zimbabwe, search engine optimization Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/services/digital-marketing" />
+        <meta property="og:title" content="Digital Marketing Zimbabwe — SEO, Social Media & PPC Services | Zimnovate" />
+        <meta property="og:description" content="Results-driven digital marketing services in Zimbabwe. SEO, social media marketing, PPC advertising, content marketing, and growth strategies for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/digital-marketing" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Digital Marketing Zimbabwe — SEO, Social Media & PPC Services | Zimnovate" />
+        <meta name="twitter:description" content="Results-driven digital marketing services in Zimbabwe. SEO, social media marketing, PPC advertising, content marketing, and growth strategies." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

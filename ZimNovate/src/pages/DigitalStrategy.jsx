@@ -7,8 +7,19 @@ const DigitalStrategy = () => {
   return (
     <>
       <Helmet>
-        <title>Digital Strategy Services | ZimNovate</title>
-        <link rel="canonical" href="https://zimnovate.co.zw/services/digital-strategy" />
+        <title>E-Commerce Website Development Zimbabwe — Online Store Solutions | Zimnovate</title>
+        <meta name="description" content="E-commerce website development services in Zimbabwe. Custom online stores, secure payment integration, and scalable e-commerce solutions for businesses in Harare and across Zimbabwe." />
+        <meta name="keywords" content="e-commerce website Zimbabwe, online store development Zimbabwe, e-commerce development Harare, Shopify Zimbabwe, WooCommerce Zimbabwe, e-commerce solutions Zimbabwe, online shop Zimbabwe, e-commerce website design Zimbabwe, payment gateway integration Zimbabwe" />
+        <link rel="canonical" href="https://zimnovate.co.zw/services/ecommerce" />
+        <meta property="og:title" content="E-Commerce Website Development Zimbabwe — Online Store Solutions | Zimnovate" />
+        <meta property="og:description" content="E-commerce website development services in Zimbabwe. Custom online stores, secure payment integration, and scalable e-commerce solutions for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/ecommerce" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="E-Commerce Website Development Zimbabwe — Online Store Solutions | Zimnovate" />
+        <meta name="twitter:description" content="E-commerce website development services in Zimbabwe. Custom online stores, secure payment integration, and scalable e-commerce solutions." />
+        <meta name="twitter:description" content="Digital strategy consulting services in Zimbabwe. Technology roadmaps, digital transformation, and business growth strategies." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}
