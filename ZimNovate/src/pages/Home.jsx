@@ -460,7 +460,7 @@ const Home = () => {
         <div className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</h3>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</p>
               <div className="space-y-2">
                 <Link to="/services/web-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Web Development</Link>
                 <Link to="/services/mobile-app-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Mobile Apps</Link>
@@ -470,7 +470,7 @@ const Home = () => {
               </div>
             </div>
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Company</h3>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Company</p>
               <div className="space-y-2">
                 <Link to="/about" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">About Us</Link>
                 <Link to="/team" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Our Team</Link>
@@ -479,7 +479,7 @@ const Home = () => {
               </div>
             </div>
             <div className="space-y-3">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Resources</h3>
+              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Resources</p>
               <div className="space-y-2">
                 <Link to="/portfolio" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Portfolio</Link>
                 <Link to="/testimonials" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Testimonials</Link>
