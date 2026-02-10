@@ -85,17 +85,17 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding</title>
-        <meta name="description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy. Smart tech for African businesses." />
-        <meta name="keywords" content="digital agency zimbabwe, web design harare, app development zimbabwe, branding agency, SEO zimbabwe" />
+        <title>Zimnovate — Web Development & Digital Solutions in Zimbabwe</title>
+        <meta name="description" content="Zimnovate is a Zimbabwean digital agency specializing in website development, e-commerce, mobile apps, branding, and custom software solutions that help businesses grow in Harare and across Zimbabwe." />
+        <meta name="keywords" content="web development Zimbabwe, digital agency Zimbabwe, website design Harare, e-commerce website Zimbabwe, custom software development Zimbabwe, affordable website design Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/" />
-        <meta property="og:title" content="Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding" />
-        <meta property="og:description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy." />
+        <meta property="og:title" content="Zimnovate — Web Development & Digital Solutions in Zimbabwe" />
+        <meta property="og:description" content="Zimnovate is a Zimbabwean digital agency specializing in website development, e-commerce, mobile apps, branding, and custom software solutions that help businesses grow." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zimnovate – Digital Agency in Zimbabwe | Web, Apps & Branding" />
-        <meta name="twitter:description" content="Zimnovate helps Zimbabwean businesses grow with modern web design, app development, branding, SEO, and digital strategy." />
+        <meta name="twitter:title" content="Zimnovate — Web Development & Digital Solutions in Zimbabwe" />
+        <meta name="twitter:description" content="Zimnovate is a Zimbabwean digital agency specializing in website development, e-commerce, mobile apps, branding, and custom software solutions." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
       <div className="bg-[var(--zim-bg)] overflow-x-hidden">
