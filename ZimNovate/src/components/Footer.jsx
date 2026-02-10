@@ -73,16 +73,6 @@ const Footer = () => {
             {/* Links section */}
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:flex md:w-1/2 md:justify-between md:gap-0">
               <div className="space-y-3">
-                <div className="text-sm font-semibold text-white">Solutions</div>
-                <nav className="grid gap-2 text-sm text-white/70" aria-label="Solutions">
-                  <Link to="/use-cases" className="hover:text-white">Business Use Cases</Link>
-                  <Link to="/careers" className="hover:text-white">Careers</Link>
-                  <Link to="/blog" className="hover:text-white">Blog</Link>
-                  <Link to="/team" className="hover:text-white">Our Team</Link>
-                </nav>
-              </div>
-
-              <div className="space-y-3">
                 <div className="text-sm font-semibold text-white">Company</div>
                 <nav className="grid gap-2 text-sm text-white/70" aria-label="Company">
                   <Link to="/contact" className="hover:text-white">Contact Us</Link>
@@ -90,6 +80,16 @@ const Footer = () => {
                   <Link to="/about" className="hover:text-white">About Us</Link>
                   <Link to="/faq" className="hover:text-white">FAQ</Link>
                   <Link to="/dashboard" className="hover:text-white">Dashboard</Link>
+                </nav>
+              </div>
+
+              <div className="space-y-3">
+                <div className="text-sm font-semibold text-white">Solutions</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Solutions">
+                  <Link to="/use-cases" className="hover:text-white">Business Use Cases</Link>
+                  <Link to="/careers" className="hover:text-white">Careers</Link>
+                  <Link to="/blog" className="hover:text-white">Blog</Link>
+                  <Link to="/team" className="hover:text-white">Our Team</Link>
                 </nav>
               </div>
 
