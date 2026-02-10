@@ -108,12 +108,13 @@ const Home = () => {
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
             </h2>
-            <div className="text-center text-sm text-[var(--zim-fg)]/70 md:block">
+            <div className="text-center text-sm text-[var(--zim-fg)] md:block">
               Explore more of our best projects.
             </div>
             <Link
               to="/portfolio"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              aria-label="View more projects in portfolio"
             >
               View more
             </Link>
@@ -174,12 +175,13 @@ const Home = () => {
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR SERVICES
             </h2>
-            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+            <div className="hidden text-center text-sm text-[var(--zim-fg)] md:block">
               This is part of our service that can give you satisfaction.
             </div>
             <Link
               to="/services"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              aria-label="View all our services"
             >
               View more
             </Link>
@@ -346,12 +348,13 @@ const Home = () => {
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               LATEST INSIGHT
             </h2>
-            <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
+            <div className="hidden text-center text-sm text-[var(--zim-fg)] md:block">
               Update the latest news from day to day.
             </div>
             <Link
               to="/blog"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              aria-label="View more blog articles"
             >
               View more
             </Link>
@@ -415,6 +418,7 @@ const Home = () => {
             <Link
               to="/team"
               className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-6 py-2 text-xs font-semibold text-[var(--zim-black)] hover:brightness-110"
+              aria-label="View all team members"
             >
               View all
             </Link>
