@@ -122,6 +122,7 @@ const Home = () => {
           <div className="mt-5 border-t border-[var(--zim-border)]" />
 
           <div className="mt-8 grid gap-12 md:grid-cols-3">
+            <Suspense fallback={<div className="grid gap-12 md:grid-cols-3">{bestProjects.map((p) => <div key={p.id} className="h-64 bg-gray-200 rounded-xl" />)}</div>}>
             {bestProjects.map((p, idx) => (
               <MotionDiv
                 key={p.id}
@@ -136,6 +137,8 @@ const Home = () => {
                     <img
                       src={bestProjectImages[idx] || (Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
+                      width="600"
+                      height="540"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -160,6 +163,7 @@ const Home = () => {
                 </div>
               </MotionDiv>
             ))}
+            </Suspense>
           </div>
         </div>
       </section>
