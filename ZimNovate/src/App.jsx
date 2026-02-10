@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import SiteLayout from './components/SiteLayout.jsx'
 import { usePageViews } from './hooks/usePageViews.js'
