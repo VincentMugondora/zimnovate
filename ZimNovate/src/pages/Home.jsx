@@ -190,6 +190,7 @@ const Home = () => {
           <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
             {/* Left Side - Horizontal Scroll Images */}
             <div className="relative">
+              <Suspense fallback={<div className="flex gap-4 overflow-x-auto pb-4 pt-2"><div className="h-[280px] w-[200px] bg-gray-200 rounded-[20px]" /><div className="h-[280px] w-[200px] bg-gray-200 rounded-[20px]" /></div>}>
               <MotionDiv
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -300,6 +301,7 @@ const Home = () => {
                   </div>
                 </div>
               </MotionDiv>
+              </Suspense>
 
               {/* Scroll indicator */}
               <div className="mt-2 flex items-center justify-center gap-1">
@@ -358,6 +360,7 @@ const Home = () => {
           <div className="mt-6 border-t border-[var(--zim-border)]" />
 
           <div className="mt-8 grid gap-10 md:grid-cols-3">
+            <Suspense fallback={<div className="grid gap-10 md:grid-cols-3">{insights.map((i) => <div key={i.id} className="h-48 bg-gray-200 rounded-xl" />)}</div>}>
             {insights.map((i, idx) => (
               <MotionDiv
                 key={i.id}
@@ -397,6 +400,7 @@ const Home = () => {
                 </div>
               </MotionDiv>
             ))}
+            </Suspense>
           </div>
         </div>
       </section>
