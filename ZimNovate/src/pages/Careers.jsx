@@ -47,7 +47,8 @@ const Careers = () => {
   return (
     <>
       <Helmet>
-        <title>Careers | ZimNovate</title>
+        <title>Careers at Zimnovate | Join Our Digital Innovation Team | Zimbabwe</title>
+        <meta name="description" content="Join Zimnovate's team of talented developers, designers, and marketers. Explore open positions in web development, UX/UI design, digital marketing, and project management." />
         <link rel="canonical" href="https://zimnovate.co.zw/careers" />
       </Helmet>
       <div>

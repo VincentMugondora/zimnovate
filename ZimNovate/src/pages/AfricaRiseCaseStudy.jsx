@@ -1,16 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const AfricaRiseCaseStudy = () => {
   return (
-    <div>
-      {/* Hero Section */}
-      <PageHero
-        title="AfricaRise"
-        subtitle="A Content-Driven Growth Campaign from 0 to 15,000 Monthly Users"
-        height="min-h-[50vh]"
-      />
+    <>
+      <Helmet>
+        <title>AfricaRise Digital Marketing Case Study | Growth Campaign Zimbabwe | Zimnovate</title>
+        <meta name="description" content="See how Zimnovate helped AfricaRise grow from 0 to 15,000 monthly users through strategic digital marketing, SEO, content creation, and targeted social media campaigns." />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio/africarise" />
+      </Helmet>
+      <div>
+        {/* Hero Section */}
+        <PageHero
+          title="AfricaRise Digital Marketing Case Study"
+          subtitle="A Content-Driven Growth Campaign from 0 to 15,000 Monthly Users"
+          height="min-h-[50vh]"
+        />
 
       {/* Project Overview */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
@@ -291,6 +298,7 @@ const AfricaRiseCaseStudy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

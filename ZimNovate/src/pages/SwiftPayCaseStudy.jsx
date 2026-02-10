@@ -1,16 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const SwiftPayCaseStudy = () => {
   return (
-    <div>
-      {/* Hero Section */}
-      <PageHero
-        title="SwiftPay"
-        subtitle="A Fast, Secure Mobile Wallet App for African Markets"
-        height="min-h-[50vh]"
-      />
+    <>
+      <Helmet>
+        <title>SwiftPay Mobile Wallet Case Study | Fintech App Development Zimbabwe | Zimnovate</title>
+        <meta name="description" content="See how Zimnovate developed SwiftPay, a fast and secure mobile wallet app for African markets with seamless payments, biometric security, and real-time transactions." />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio/swiftpay" />
+      </Helmet>
+      <div>
+        {/* Hero Section */}
+        <PageHero
+          title="SwiftPay Mobile Wallet Case Study"
+          subtitle="A Fast, Secure Mobile Wallet App for African Markets"
+          height="min-h-[50vh]"
+        />
 
       {/* Project Overview */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
@@ -295,6 +302,7 @@ const SwiftPayCaseStudy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

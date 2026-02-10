@@ -1,11 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const ZimFarmsCaseStudy = () => {
   return (
-    <div>
-      <PageHero title="ZimFarms" subtitle="Direct-to-Consumer Fresh Produce E-Commerce Platform" height="min-h-[50vh]" />
+    <>
+      <Helmet>
+        <title>ZimFarms AgriTech Case Study | Farm E-Commerce Platform Zimbabwe | Zimnovate</title>
+        <meta name="description" content="Learn how Zimnovate built a direct-to-consumer farm produce e-commerce platform for ZimFarms, connecting local farmers with customers and streamlining fresh food delivery across Zimbabwe." />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio/zimfarms" />
+      </Helmet>
+      <div>
+        <PageHero title="ZimFarms AgriTech Case Study" subtitle="Direct-to-Consumer Fresh Produce E-Commerce Platform" height="min-h-[50vh]" />
       
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -99,6 +106,7 @@ const ZimFarmsCaseStudy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

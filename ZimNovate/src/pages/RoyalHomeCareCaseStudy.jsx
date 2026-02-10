@@ -1,16 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const RoyalHomeCareCaseStudy = () => {
   return (
-    <div>
-      {/* Hero Section */}
-      <PageHero
-        title="Royal Home Care"
-        subtitle="A Fresh, Elegant Visual Identity for Healthcare Excellence"
-        height="min-h-[50vh]"
-      />
+    <>
+      <Helmet>
+        <title>Royal Home Care Branding Case Study | Healthcare Brand Identity Zimbabwe | Zimnovate</title>
+        <meta name="description" content="Explore how Zimnovate created a fresh, elegant visual identity for Royal Home Care, establishing trust and professionalism in Zimbabwe's healthcare sector." />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio/royal-home-care" />
+      </Helmet>
+      <div>
+        {/* Hero Section */}
+        <PageHero
+          title="Royal Home Care Branding Case Study"
+          subtitle="A Fresh, Elegant Visual Identity for Healthcare Excellence"
+          height="min-h-[50vh]"
+        />
 
       {/* Project Overview */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
@@ -325,6 +332,7 @@ const RoyalHomeCareCaseStudy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

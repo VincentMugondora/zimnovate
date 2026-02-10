@@ -57,7 +57,8 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Blog | ZimNovate</title>
+        <title>Digital Marketing & Web Design Blog | Expert Insights | Zimnovate Zimbabwe</title>
+        <meta name="description" content="Explore expert insights on web development, digital marketing, branding, and technology trends. Get actionable tips to grow your Zimbabwean business online." />
         <link rel="canonical" href="https://zimnovate.co.zw/blog" />
       </Helmet>
     <div>

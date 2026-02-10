@@ -59,7 +59,8 @@ const Testimonials = () => {
   return (
     <>
       <Helmet>
-        <title>Client Testimonials | ZimNovate</title>
+        <title>Client Success Stories & Testimonials | Zimbabwe Digital Agency | Zimnovate</title>
+        <meta name="description" content="Read success stories from Zimbabwean businesses we've helped grow. Discover how our web development, branding, and digital marketing services deliver real results." />
         <link rel="canonical" href="https://zimnovate.co.zw/testimonials" />
       </Helmet>
       <div>

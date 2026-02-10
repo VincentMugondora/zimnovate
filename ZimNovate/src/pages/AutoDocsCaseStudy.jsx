@@ -1,11 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const AutoDocsCaseStudy = () => {
   return (
-    <div>
-      <PageHero title="AutoDocs" subtitle="AI-Powered Document Processing & Automation System" height="min-h-[50vh]" />
+    <>
+      <Helmet>
+        <title>AutoDocs AI Automation Case Study | Document Processing Zimbabwe | Zimnovate</title>
+        <meta name="description" content="Discover how Zimnovate built an AI-powered document processing system for AutoDocs, automating data extraction, reducing manual work by 20 hours weekly, and streamlining document workflows." />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio/autodocs" />
+      </Helmet>
+      <div>
+        <PageHero title="AutoDocs AI Automation Case Study" subtitle="AI-Powered Document Processing & Automation System" height="min-h-[50vh]" />
       
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -99,6 +106,7 @@ const AutoDocsCaseStudy = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

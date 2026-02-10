@@ -6,7 +6,8 @@ const Terms = () => {
   return (
     <>
       <Helmet>
-        <title>Terms & Conditions | ZimNovate</title>
+        <title>Terms of Service & Conditions | Legal Information | Zimnovate Zimbabwe</title>
+        <meta name="description" content="Read Zimnovate's terms and conditions for web development, app development, and digital marketing services. Understand our payment terms, project timelines, and service agreements." />
         <link rel="canonical" href="https://zimnovate.co.zw/terms" />
       </Helmet>
     <div>

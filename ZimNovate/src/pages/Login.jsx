@@ -49,7 +49,8 @@ const Login = () => {
   return (
     <>
       <Helmet>
-        <title>Login | Zimnovate</title>
+        <title>Admin Dashboard Login | Secure Access | Zimnovate Zimbabwe</title>
+        <meta name="description" content="Secure login portal for Zimnovate administrators. Access the dashboard to manage website content, blog posts, team members, and view analytics." />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
