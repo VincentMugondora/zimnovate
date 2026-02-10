@@ -1,44 +1,55 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import SiteLayout from './components/SiteLayout.jsx'
+
+// Eager load critical pages (Home and common pages)
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
-import WebDevelopment from './pages/WebDevelopment.jsx'
-import MobileAppDevelopment from './pages/MobileAppDevelopment.jsx'
-import Branding from './pages/Branding.jsx'
-import DigitalStrategy from './pages/DigitalStrategy.jsx'
-import DigitalMarketing from './pages/DigitalMarketing.jsx'
-import AIAutomation from './pages/AIAutomation.jsx'
-import ECommerceSolutions from './pages/ECommerceSolutions.jsx'
 import Portfolio from './pages/Portfolio.jsx'
 import Contact from './pages/Contact.jsx'
-import ZimFreshCaseStudy from './pages/ZimFreshCaseStudy.jsx'
-import SwiftPayCaseStudy from './pages/SwiftPayCaseStudy.jsx'
-import RoyalHomeCareCaseStudy from './pages/RoyalHomeCareCaseStudy.jsx'
-import AfricaRiseCaseStudy from './pages/AfricaRiseCaseStudy.jsx'
-import AutoDocsCaseStudy from './pages/AutoDocsCaseStudy.jsx'
-import ZimFarmsCaseStudy from './pages/ZimFarmsCaseStudy.jsx'
-import NotFound from './pages/NotFound.jsx'
-import Careers from './pages/Careers.jsx'
-import Blog from './pages/Blog.jsx'
-import BlogDetail from './pages/BlogDetail.jsx'
-import Testimonials from './pages/Testimonials.jsx'
-import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
-import Terms from './pages/Terms.jsx'
-import CookiePolicy from './pages/CookiePolicy.jsx'
-import FAQ from './pages/FAQ.jsx'
-import UseCases from './pages/UseCases.jsx'
-import Events from './pages/Events.jsx'
-import Partners from './pages/Partners.jsx'
-import Resources from './pages/Resources.jsx'
-import Team from './pages/Team.jsx'
-import TeamProfile from './pages/TeamProfile.jsx'
-import GetStarted from './pages/GetStarted.jsx'
-import Dashboard from './pages/Dashboard.jsx'
-import Login from './pages/Login.jsx'
-import ProtectedRoute from './components/ProtectedRoute.jsx'
+
+// Lazy load all other pages to reduce initial bundle
+const WebDevelopment = lazy(() => import('./pages/WebDevelopment.jsx'))
+const MobileAppDevelopment = lazy(() => import('./pages/MobileAppDevelopment.jsx'))
+const Branding = lazy(() => import('./pages/Branding.jsx'))
+const DigitalStrategy = lazy(() => import('./pages/DigitalStrategy.jsx'))
+const DigitalMarketing = lazy(() => import('./pages/DigitalMarketing.jsx'))
+const AIAutomation = lazy(() => import('./pages/AIAutomation.jsx'))
+const ECommerceSolutions = lazy(() => import('./pages/ECommerceSolutions.jsx'))
+const ZimFreshCaseStudy = lazy(() => import('./pages/ZimFreshCaseStudy.jsx'))
+const SwiftPayCaseStudy = lazy(() => import('./pages/SwiftPayCaseStudy.jsx'))
+const RoyalHomeCareCaseStudy = lazy(() => import('./pages/RoyalHomeCareCaseStudy.jsx'))
+const AfricaRiseCaseStudy = lazy(() => import('./pages/AfricaRiseCaseStudy.jsx'))
+const AutoDocsCaseStudy = lazy(() => import('./pages/AutoDocsCaseStudy.jsx'))
+const ZimFarmsCaseStudy = lazy(() => import('./pages/ZimFarmsCaseStudy.jsx'))
+const NotFound = lazy(() => import('./pages/NotFound.jsx'))
+const Careers = lazy(() => import('./pages/Careers.jsx'))
+const Blog = lazy(() => import('./pages/Blog.jsx'))
+const BlogDetail = lazy(() => import('./pages/BlogDetail.jsx'))
+const Testimonials = lazy(() => import('./pages/Testimonials.jsx'))
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy.jsx'))
+const Terms = lazy(() => import('./pages/Terms.jsx'))
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy.jsx'))
+const FAQ = lazy(() => import('./pages/FAQ.jsx'))
+const UseCases = lazy(() => import('./pages/UseCases.jsx'))
+const Events = lazy(() => import('./pages/Events.jsx'))
+const Partners = lazy(() => import('./pages/Partners.jsx'))
+const Resources = lazy(() => import('./pages/Resources.jsx'))
+const Team = lazy(() => import('./pages/Team.jsx'))
+const TeamProfile = lazy(() => import('./pages/TeamProfile.jsx'))
+const GetStarted = lazy(() => import('./pages/GetStarted.jsx'))
+const Dashboard = lazy(() => import('./pages/Dashboard.jsx'))
+const Login = lazy(() => import('./pages/Login.jsx'))
+const ProtectedRoute = lazy(() => import('./components/ProtectedRoute.jsx'))
+
+// Loading fallback component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-[60vh]">
+    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--zim-green)]"></div>
+  </div>
+)
 
 const App = () => {
   return (
@@ -49,48 +60,52 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/web-development" element={<WebDevelopment />} />
-          <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
-          <Route path="/services/branding" element={<Branding />} />
-          <Route path="/services/digital-strategy" element={<DigitalStrategy />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-          <Route path="/services/ai-automation" element={<AIAutomation />} />
-          <Route path="/services/e-commerce" element={<ECommerceSolutions />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/get-started" element={<GetStarted />} />
-          <Route path="/portfolio/zimfresh" element={<ZimFreshCaseStudy />} />
-          <Route path="/portfolio/swiftpay" element={<SwiftPayCaseStudy />} />
-          <Route path="/portfolio/royal-home-care" element={<RoyalHomeCareCaseStudy />} />
-          <Route path="/portfolio/africarise" element={<AfricaRiseCaseStudy />} />
-          <Route path="/portfolio/autodocs" element={<AutoDocsCaseStudy />} />
-          <Route path="/portfolio/zimfarms" element={<ZimFarmsCaseStudy />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogDetail />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/cookies" element={<CookiePolicy />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/use-cases" element={<UseCases />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/resources" element={<Resources />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/team/:slug" element={<TeamProfile />} />
-          <Route path="*" element={<NotFound />} />
+          
+          {/* Lazy loaded routes */}
+          <Route path="/services/web-development" element={<Suspense fallback={<PageLoader />}><WebDevelopment /></Suspense>} />
+          <Route path="/services/mobile-app-development" element={<Suspense fallback={<PageLoader />}><MobileAppDevelopment /></Suspense>} />
+          <Route path="/services/branding" element={<Suspense fallback={<PageLoader />}><Branding /></Suspense>} />
+          <Route path="/services/digital-strategy" element={<Suspense fallback={<PageLoader />}><DigitalStrategy /></Suspense>} />
+          <Route path="/services/digital-marketing" element={<Suspense fallback={<PageLoader />}><DigitalMarketing /></Suspense>} />
+          <Route path="/services/ai-automation" element={<Suspense fallback={<PageLoader />}><AIAutomation /></Suspense>} />
+          <Route path="/services/e-commerce" element={<Suspense fallback={<PageLoader />}><ECommerceSolutions /></Suspense>} />
+          <Route path="/get-started" element={<Suspense fallback={<PageLoader />}><GetStarted /></Suspense>} />
+          <Route path="/portfolio/zimfresh" element={<Suspense fallback={<PageLoader />}><ZimFreshCaseStudy /></Suspense>} />
+          <Route path="/portfolio/swiftpay" element={<Suspense fallback={<PageLoader />}><SwiftPayCaseStudy /></Suspense>} />
+          <Route path="/portfolio/royal-home-care" element={<Suspense fallback={<PageLoader />}><RoyalHomeCareCaseStudy /></Suspense>} />
+          <Route path="/portfolio/africarise" element={<Suspense fallback={<PageLoader />}><AfricaRiseCaseStudy /></Suspense>} />
+          <Route path="/portfolio/autodocs" element={<Suspense fallback={<PageLoader />}><AutoDocsCaseStudy /></Suspense>} />
+          <Route path="/portfolio/zimfarms" element={<Suspense fallback={<PageLoader />}><ZimFarmsCaseStudy /></Suspense>} />
+          <Route path="/careers" element={<Suspense fallback={<PageLoader />}><Careers /></Suspense>} />
+          <Route path="/blog" element={<Suspense fallback={<PageLoader />}><Blog /></Suspense>} />
+          <Route path="/blog/:slug" element={<Suspense fallback={<PageLoader />}><BlogDetail /></Suspense>} />
+          <Route path="/testimonials" element={<Suspense fallback={<PageLoader />}><Testimonials /></Suspense>} />
+          <Route path="/privacy" element={<Suspense fallback={<PageLoader />}><PrivacyPolicy /></Suspense>} />
+          <Route path="/terms" element={<Suspense fallback={<PageLoader />}><Terms /></Suspense>} />
+          <Route path="/cookies" element={<Suspense fallback={<PageLoader />}><CookiePolicy /></Suspense>} />
+          <Route path="/faq" element={<Suspense fallback={<PageLoader />}><FAQ /></Suspense>} />
+          <Route path="/use-cases" element={<Suspense fallback={<PageLoader />}><UseCases /></Suspense>} />
+          <Route path="/events" element={<Suspense fallback={<PageLoader />}><Events /></Suspense>} />
+          <Route path="/partners" element={<Suspense fallback={<PageLoader />}><Partners /></Suspense>} />
+          <Route path="/resources" element={<Suspense fallback={<PageLoader />}><Resources /></Suspense>} />
+          <Route path="/team" element={<Suspense fallback={<PageLoader />}><Team /></Suspense>} />
+          <Route path="/team/:slug" element={<Suspense fallback={<PageLoader />}><TeamProfile /></Suspense>} />
+          <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFound /></Suspense>} />
         </Route>
 
         {/* Protected Dashboard - no SiteLayout */}
         <Route path="/dashboard" element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
+          <Suspense fallback={<PageLoader />}>
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          </Suspense>
         } />
 
         {/* Login - no SiteLayout */}
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Suspense fallback={<PageLoader />}><Login /></Suspense>} />
       </Routes>
     </HelmetProvider>
   )
