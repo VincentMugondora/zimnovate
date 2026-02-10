@@ -24,17 +24,17 @@ const About = () => {
   return (
     <>
       <Helmet>
-        <title>About Zimnovate – Zimbabwe's Modern Digital Agency</title>
-        <meta name="description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions for African businesses." />
-        <meta name="keywords" content="about zimnovate, zimbabwe digital agency, web development team zimbabwe, african tech company" />
+        <title>About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team</title>
+        <meta name="description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions for businesses in Harare and across Zimbabwe." />
+        <meta name="keywords" content="about zimnovate, digital agency Zimbabwe, web development team Zimbabwe, software company Harare, custom software development Zimbabwe, web design company Zimbabwe, app development team Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/about" />
-        <meta property="og:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
-        <meta property="og:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
+        <meta property="og:title" content="About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team" />
+        <meta property="og:description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/about" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
-        <meta name="twitter:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
+        <meta name="twitter:title" content="About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team" />
+        <meta name="twitter:description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>

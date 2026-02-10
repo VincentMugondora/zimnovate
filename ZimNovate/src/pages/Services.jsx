@@ -69,17 +69,17 @@ const Services = () => {
   return (
     <>
       <Helmet>
-        <title>Digital Services Zimbabwe – Web, Apps, Branding & Marketing</title>
-        <meta name="description" content="Explore Zimnovate's full-stack digital services: web design, app development, branding, SEO, digital marketing, e-commerce, and automation solutions." />
-        <meta name="keywords" content="digital services zimbabwe, web design harare, app development, branding agency, SEO services, digital marketing" />
+        <title>Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing</title>
+        <meta name="description" content="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses in Harare and beyond." />
+        <meta name="keywords" content="digital services Zimbabwe, web development Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe, e-commerce Zimbabwe, website design Harare, affordable website design Zimbabwe, custom software development Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/services" />
-        <meta property="og:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
-        <meta property="og:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
+        <meta property="og:title" content="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing" />
+        <meta property="og:description" content="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/services" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
-        <meta name="twitter:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
+        <meta name="twitter:title" content="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing" />
+        <meta name="twitter:description" content="Explore Zimnovate's professional digital services for Zimbabwean businesses." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
