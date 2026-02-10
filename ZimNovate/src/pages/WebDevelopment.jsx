@@ -70,31 +70,41 @@ const WebDevelopment = () => {
               {
                 title: 'Custom Websites',
                 description: 'Tailored websites that reflect your brand and engage your audience with unique design and functionality.',
-                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Responsive Design', 'Brand Integration', 'User Experience', 'Performance Optimization']
               },
               {
                 title: 'E-Commerce Development',
                 description: 'Online stores that convert visitors into customers with seamless shopping experiences.',
-                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Shopping Cart', 'Payment Integration', 'Inventory Management', 'Analytics']
               },
               {
                 title: 'Web Applications',
                 description: 'Scalable, interactive applications that solve complex business problems and streamline operations.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Custom Functionality', 'Database Integration', 'API Development', 'Cloud Hosting']
               },
               {
                 title: 'CMS Solutions',
                 description: 'Easy-to-manage websites using WordPress, Strapi, and other content management systems.',
-                image: 'https://images.unsplash.com/photo-1542435503-956c469947f6?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1542435503-956c469947f6?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Content Management', 'User Roles', 'Media Library', 'SEO Tools']
               },
               {
                 title: 'Website Maintenance & Support',
                 description: 'Keep your website secure, updated, and performing at its best with our maintenance plans.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Security Updates', 'Performance Monitoring', 'Backup Services', 'Technical Support']
               }
             ].map((service) => (
@@ -106,6 +116,9 @@ const WebDevelopment = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
@@ -146,28 +159,36 @@ const WebDevelopment = () => {
               step: '01',
               title: 'Discovery & Strategy',
               description: 'We dive deep to understand your business goals, target audience, and technical requirements through collaborative workshops and research.',
-              image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               position: 'left'
             },
             {
               step: '02',
               title: 'Design & Prototyping',
               description: 'Our designers create wireframes and high-fidelity mockups that bring your vision to life before a single line of code is written.',
-              image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               position: 'right'
             },
             {
               step: '03',
               title: 'Development & Testing',
               description: 'We build fast, responsive websites using modern frameworks and conduct rigorous testing to ensure flawless performance.',
-              image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               position: 'left'
             },
             {
               step: '04',
               title: 'Launch & Support',
               description: 'We deploy your website with precision and provide ongoing support to ensure continued success and growth.',
-              image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               position: 'right'
             }
           ].map((phase) => (
@@ -185,6 +206,9 @@ const WebDevelopment = () => {
                   <img 
                     src={phase.image} 
                     alt={phase.title}
+                    width={phase.width}
+                    height={phase.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/30 to-transparent" />
@@ -210,22 +234,30 @@ const WebDevelopment = () => {
               {
                 title: 'Custom Solutions',
                 description: 'We tailor every website to your specific needs and business goals.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 400,
+                height: 300
               },
               {
                 title: 'Responsive & Modern',
                 description: 'Works beautifully on any device with cutting-edge design and technology.',
-                image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 400,
+                height: 300
               },
               {
                 title: 'SEO-Friendly',
                 description: 'Optimized for search engines and built to rank higher in results.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 400,
+                height: 300
               },
               {
                 title: 'Ongoing Support',
                 description: 'We\'re with you even after launch with maintenance and updates.',
-                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop&crop=entropy&auto=format'
+                image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 400,
+                height: 300
               }
             ].map((reason) => (
               <div
@@ -236,6 +268,9 @@ const WebDevelopment = () => {
                   <img 
                     src={reason.image} 
                     alt={reason.title}
+                    width={reason.width}
+                    height={reason.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 to-transparent" />
@@ -267,37 +302,49 @@ const WebDevelopment = () => {
             {
               title: 'E-Commerce Platform',
               description: 'Modern online store with advanced filtering and seamless checkout experience.',
-              image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['E-Commerce', 'React', 'Node.js']
             },
             {
               title: 'Corporate Website',
               description: 'Professional corporate site with content management and blog functionality.',
-              image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['Corporate', 'WordPress', 'SEO']
             },
             {
               title: 'SaaS Dashboard',
               description: 'Interactive dashboard with real-time analytics and user management.',
-              image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['SaaS', 'Dashboard', 'Analytics']
             },
             {
               title: 'Restaurant Website',
               description: 'Elegant restaurant site with online reservations and menu management.',
-              image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['Hospitality', 'Booking', 'CMS']
             },
             {
               title: 'Educational Platform',
               description: 'Learning management system with video streaming and progress tracking.',
-              image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['Education', 'LMS', 'Video']
             },
             {
               title: 'Real Estate Portal',
               description: 'Property listing platform with advanced search and virtual tours.',
-              image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=entropy&auto=format',
+              image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+              width: 600,
+              height: 400,
               tags: ['Real Estate', 'Search', 'Maps']
             }
           ].map((project) => (
@@ -309,6 +356,9 @@ const WebDevelopment = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
+                  width={project.width}
+                  height={project.height}
+                  loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/80 via-[#0F172A]/20 to-transparent" />
@@ -368,8 +418,11 @@ const WebDevelopment = () => {
               
               <div className="relative overflow-hidden rounded-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format" 
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp" 
                   alt="Website development team"
+                  width={600}
+                  height={400}
+                  loading="lazy"
                   className="h-64 w-full object-cover lg:h-full"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#F4D47C]/20 to-transparent" />

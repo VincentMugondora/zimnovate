@@ -78,31 +78,41 @@ const MobileAppDevelopment = () => {
               {
                 title: 'Native App Development',
                 description: 'High-performance apps built with Swift for iOS and Kotlin for Android, delivering the best user experience.',
-                image: 'https://images.unsplash.com/photo-1512941937667-106a3100badb?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1512941937667-106a3100badb?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['iOS Development', 'Android Development', 'Native Performance', 'Platform Integration']
               },
               {
                 title: 'Cross-Platform Apps',
                 description: 'One codebase, both platforms. Cost-effective solutions using React Native and Flutter.',
-                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['React Native', 'Flutter', 'Code Reusability', 'Faster Development']
               },
               {
                 title: 'UI/UX App Design',
                 description: 'Beautiful, user-centered interfaces that delight users and drive engagement.',
-                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['User Research', 'Wireframing', 'Prototyping', 'Design Systems']
               },
               {
                 title: 'Backend & API Development',
                 description: 'Secure, scalable infrastructure that powers your mobile applications.',
-                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['REST APIs', 'GraphQL', 'Cloud Integration', 'Database Design']
               },
               {
                 title: 'App Maintenance & Updates',
                 description: 'Keep your app fast, secure, and up-to-date with our comprehensive maintenance plans.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format',
+                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format&fm=webp',
+                width: 600,
+                height: 400,
                 features: ['Bug Fixes', 'Performance Updates', 'Security Patches', 'Feature Enhancements']
               }
             ].map((service) => (
@@ -114,6 +124,9 @@ const MobileAppDevelopment = () => {
                   <img 
                     src={service.image} 
                     alt={service.title}
+                    width={service.width}
+                    height={service.height}
+                    loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/70 via-[#0F172A]/20 to-transparent" />
