@@ -426,7 +426,7 @@ const Hero = () => {
 
               <div className="mt-6 flex justify-center">
                 <a
-                  href="https://wa.me/263000000000"
+                  href="https://wa.me/263777530322"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/80 hover:text-white"

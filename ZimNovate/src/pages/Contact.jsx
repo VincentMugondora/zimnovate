@@ -106,7 +106,7 @@ const Contact = () => {
             </p>
             <div className="space-y-2 text-sm text-[#1A1A1A]/80">
               <p><strong>Email:</strong> hello@zimnovate.co.zw</p>
-              <p><strong>Phone:</strong> +263 ___</p>
+              <p><strong>Phone:</strong> +263 77 753 0322 / +263 78 901 6651</p>
               <p><strong>Location:</strong> Harare, Zimbabwe</p>
               <p><strong>Hours:</strong> Monday–Friday, 8am–5pm</p>
             </div>
@@ -297,8 +297,8 @@ const Contact = () => {
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F4D47C] mb-2">Phone</div>
                     <div className="space-y-1 text-sm text-[#1A1A1A]/80">
-                      <p>+263 78 000 0000</p>
-                      <p>+263 71 000 0000</p>
+                      <p>+263 77 753 0322</p>
+                      <p>+263 78 901 6651</p>
                     </div>
                   </div>
 
