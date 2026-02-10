@@ -30,7 +30,8 @@ const ResponsiveLogo = ({ className = '', loading = 'eager' }) => {
       {/* Desktop - full size */}
       <img
         src="/logo.png"
-        alt="Zimnovate"
+        alt="Zimnovate logo"
+        title="Zimnovate Digital Agency"
         width="180"
         height="80"
         className={`h-20 w-auto max-w-[180px] object-contain ${className}`}

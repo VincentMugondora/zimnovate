@@ -45,6 +45,7 @@ const Hero = () => {
         <img
           src="/imgs/agency.jpg"
           alt="Zimnovate digital agency workspace"
+          title="Our Digital Workspace"
           width="1200"
           height="800"
           fetchpriority="high"

@@ -138,7 +138,7 @@ const Home = () => {
                     <img
                       src={bestProjectImages[idx] || (Array.isArray(p.images) && p.images.length ? p.images[0] : '/imgs/agency.jpg')}
                       alt={p.title}
-                      width="600"
+                      title={`${p.title} - Zimnovate Portfolio Project`}
                       height="540"
                       className="h-full w-full object-cover"
                       loading="lazy"
@@ -206,7 +206,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="Brand Identity"
+                      alt="Brand identity design illustration"
+                      title="Brand Identity"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -223,7 +224,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="Web Development"
+                      alt="Web development coding interface"
+                      title="Web Development Services"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -240,7 +242,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="UI/UX Design"
+                      alt="UI and UX design wireframes"
+                      title="UI/UX Design"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -257,7 +260,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="Automation"
+                      alt="Business automation tools and workflow"
+                      title="Automation Services"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -274,7 +278,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="Strategy"
+                      alt="Digital strategy planning board"
+                      title="Digital Strategy"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -291,7 +296,8 @@ const Home = () => {
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
                       src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=70&fm=webp"
-                      alt="E-Commerce"
+                      alt="E-commerce website design layout"
+                      title="E-Commerce Solutions"
                       width="200"
                       height="280"
                       className="h-full w-full object-cover"
@@ -378,7 +384,7 @@ const Home = () => {
                     <img
                       src="/imgs/agency.jpg"
                       alt={i.title}
-                      width="600"
+                      title={`${i.title} - Zimnovate Blog`}
                       height="540"
                       className="h-full w-full object-cover"
                       loading="lazy"
@@ -433,8 +439,8 @@ const Home = () => {
                   <div className="aspect-[4/5] w-full">
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
-                      alt={d.name}
-                      width="400"
+                      alt={`${d.name}, ${d.role} at Zimnovate`}
+                      title={`${d.name} - Zimnovate Team`}
                       height="500"
                       className="h-full w-full object-cover"
                       loading="lazy"
