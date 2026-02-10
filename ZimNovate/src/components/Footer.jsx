@@ -79,7 +79,6 @@ const Footer = () => {
                   <Link to="/careers" className="hover:text-white">Careers</Link>
                   <Link to="/blog" className="hover:text-white">Blog</Link>
                   <Link to="/team" className="hover:text-white">Our Team</Link>
-                  <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
                 </nav>
               </div>
 
@@ -101,6 +100,14 @@ const Footer = () => {
                   <Link to="/partners" className="hover:text-white">Partnership</Link>
                   <Link to="/events" className="hover:text-white">Events</Link>
                   <Link to="/services/digital-marketing" className="hover:text-white">Data Analytics</Link>
+                </nav>
+              </div>
+
+              <div className="space-y-3">
+                <div className="text-sm font-semibold text-white">Legal</div>
+                <nav className="grid gap-2 text-sm text-white/70" aria-label="Legal">
+                  <Link to="/terms" className="hover:text-white">Terms of Service</Link>
+                  <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
                 </nav>
               </div>
             </div>

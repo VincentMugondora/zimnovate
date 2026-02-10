@@ -62,6 +62,8 @@ const Hero = () => {
               <img
                 src="/logo.png"
                 alt="Zimnovate"
+                width="180"
+                height="80"
                 className="h-20 w-auto max-w-[180px] object-contain"
                 loading="eager"
               />
