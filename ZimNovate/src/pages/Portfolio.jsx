@@ -73,17 +73,17 @@ const Portfolio = () => {
   return (
     <>
       <Helmet>
-        <title>Zimnovate Portfolio – Web, Branding & App Projects</title>
-        <meta name="description" content="See digital products we've built for businesses in Zimbabwe and across Africa: websites, apps, branding, marketing, and more." />
-        <meta name="keywords" content="zimnovate portfolio, web projects zimbabwe, app development portfolio, branding projects africa" />
+        <title>Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe</title>
+        <meta name="description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses. View our portfolio of e-commerce, mobile apps, and digital marketing case studies." />
+        <meta name="keywords" content="zimnovate portfolio, web development projects Zimbabwe, app development portfolio Zimbabwe, branding projects Zimbabwe, website design portfolio Harare, e-commerce website Zimbabwe, custom software projects Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/portfolio" />
-        <meta property="og:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
-        <meta property="og:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
+        <meta property="og:title" content="Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe" />
+        <meta property="og:description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses. View our portfolio of e-commerce, mobile apps, and digital marketing case studies." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/portfolio" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
-        <meta name="twitter:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
+        <meta name="twitter:title" content="Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe" />
+        <meta name="twitter:description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
