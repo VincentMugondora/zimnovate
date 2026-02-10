@@ -39,16 +39,22 @@ const Hero = () => {
 
   return (
     <section className="bg-white p-[10px]">
-      <div
-        className="relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/imgs/agency.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
+      <div className="relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]">
+        {/* LCP Hero Image - Using img tag for proper preload support */}
+        <img
+          src="/imgs/agency.jpg"
+          alt="Zimnovate digital agency workspace"
+          width="1200"
+          height="800"
+          fetchpriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ zIndex: 0 }}
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#111827]/85 to-[#111111]/85" style={{ zIndex: 1 }} />
+
+        <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" style={{ zIndex: 2 }} />
 
         <div className="relative z-10 w-full p-[10px]">
           <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
