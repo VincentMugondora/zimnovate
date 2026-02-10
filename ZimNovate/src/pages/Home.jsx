@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Helmet } from 'react-helmet-async'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import Hero from '../components/Hero.jsx'
@@ -8,15 +7,16 @@ import ClientLogos from '../components/ClientLogos.jsx'
 import { services } from '../data/services.js'
 import { portfolioProjects } from '../data/portfolio.js'
 
-const MotionDiv = motion.div
+// Lazy load framer-motion for below-fold animations
+const MotionDiv = lazy(() => import('../components/LazyMotion.jsx').then(m => ({ default: m.ScrollTriggeredMotion })))
 
 const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services
   const bestProjectImages = [
-    'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80',
+    'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=75&fm=webp',
+    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=75&fm=webp',
+    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=75&fm=webp',
   ]
   const bestProjectLinks = [
     '/portfolio/zimfresh',
@@ -198,8 +198,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Brand Identity"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -213,8 +215,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Web Development"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -228,8 +232,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="UI/UX Design"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -243,8 +249,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Automation"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -258,8 +266,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Strategy"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -273,8 +283,10 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=80"
+                      src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="E-Commerce"
+                      width="200"
+                      height="280"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -356,6 +368,8 @@ const Home = () => {
                     <img
                       src="/imgs/agency.jpg"
                       alt={i.title}
+                      width="600"
+                      height="540"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
@@ -408,6 +422,8 @@ const Home = () => {
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
                       alt={d.name}
+                      width="400"
+                      height="500"
                       className="h-full w-full object-cover"
                       loading="lazy"
                     />
