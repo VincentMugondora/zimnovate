@@ -7,8 +7,18 @@ const Branding = () => {
   return (
     <>
       <Helmet>
-        <title>Branding & Design Services | ZimNovate</title>
+        <title>Branding & Design Services Zimbabwe — Logo & Identity Design | Zimnovate</title>
+        <meta name="description" content="Professional branding and design services in Zimbabwe. Logo design, brand identity, visual design, and brand strategy for businesses in Harare and across Zimbabwe." />
+        <meta name="keywords" content="branding agency Zimbabwe, logo design Zimbabwe, brand identity Zimbabwe, graphic design Zimbabwe, visual design Harare, brand strategy Zimbabwe, corporate branding Zimbabwe, business logo design Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/services/branding" />
+        <meta property="og:title" content="Branding & Design Services Zimbabwe — Logo & Identity Design | Zimnovate" />
+        <meta property="og:description" content="Professional branding and design services in Zimbabwe. Logo design, brand identity, visual design, and brand strategy for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/branding" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Branding & Design Services Zimbabwe — Logo & Identity Design | Zimnovate" />
+        <meta name="twitter:description" content="Professional branding and design services in Zimbabwe. Logo design, brand identity, visual design, and brand strategy." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

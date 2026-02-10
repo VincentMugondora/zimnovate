@@ -70,17 +70,17 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Zimnovate – Start Your Digital Project Today</title>
-        <meta name="description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions tailored for Zimbabwean businesses." />
-        <meta name="keywords" content="contact zimnovate, digital agency zimbabwe, web design quote, hire developer zimbabwe" />
+        <title>Contact Zimnovate — Start Your Digital Project in Zimbabwe</title>
+        <meta name="description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe. Get a quote for your project in Harare or anywhere in Zimbabwe." />
+        <meta name="keywords" content="contact zimnovate, web development quote Zimbabwe, hire developer Zimbabwe, digital agency contact, website design quote Harare, app development Zimbabwe, custom software quote Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/contact" />
-        <meta property="og:title" content="Contact Zimnovate – Start Your Digital Project Today" />
-        <meta property="og:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
+        <meta property="og:title" content="Contact Zimnovate — Start Your Digital Project in Zimbabwe" />
+        <meta property="og:description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/contact" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Zimnovate – Start Your Digital Project Today" />
-        <meta name="twitter:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
+        <meta name="twitter:title" content="Contact Zimnovate — Start Your Digital Project in Zimbabwe" />
+        <meta name="twitter:description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>

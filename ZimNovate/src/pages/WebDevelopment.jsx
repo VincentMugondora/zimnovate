@@ -7,8 +7,18 @@ const WebDevelopment = () => {
   return (
     <>
       <Helmet>
-        <title>Web Development Services | ZimNovate</title>
+        <title>Web Development Zimbabwe — Professional Website Design Services | Zimnovate</title>
+        <meta name="description" content="Professional web development services in Zimbabwe. Custom website design, e-commerce solutions, and responsive web applications for businesses in Harare and across Zimbabwe." />
+        <meta name="keywords" content="web development Zimbabwe, website design Harare, custom website development, e-commerce website Zimbabwe, affordable website design Zimbabwe, responsive web design, web development services Zimbabwe, website developer Harare" />
         <link rel="canonical" href="https://zimnovate.co.zw/services/web-development" />
+        <meta property="og:title" content="Web Development Zimbabwe — Professional Website Design Services | Zimnovate" />
+        <meta property="og:description" content="Professional web development services in Zimbabwe. Custom website design, e-commerce solutions, and responsive web applications for businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/web-development" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Web Development Zimbabwe — Professional Website Design Services | Zimnovate" />
+        <meta name="twitter:description" content="Professional web development services in Zimbabwe. Custom website design and e-commerce solutions." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

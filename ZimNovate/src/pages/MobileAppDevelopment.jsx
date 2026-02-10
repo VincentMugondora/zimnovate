@@ -7,8 +7,18 @@ const MobileAppDevelopment = () => {
   return (
     <>
       <Helmet>
-        <title>Mobile App Development | ZimNovate</title>
+        <title>Mobile App Development Zimbabwe — iOS & Android App Services | Zimnovate</title>
+        <meta name="description" content="Expert mobile app development services in Zimbabwe. Custom iOS and Android app development for businesses in Harare and across Zimbabwe. Build your mobile app today." />
+        <meta name="keywords" content="mobile app development Zimbabwe, iOS app development Zimbabwe, Android app development Zimbabwe, app developer Harare, mobile app developer Zimbabwe, custom app development Zimbabwe, app design Zimbabwe" />
         <link rel="canonical" href="https://zimnovate.co.zw/services/mobile-app-development" />
+        <meta property="og:title" content="Mobile App Development Zimbabwe — iOS & Android App Services | Zimnovate" />
+        <meta property="og:description" content="Expert mobile app development services in Zimbabwe. Custom iOS and Android app development for businesses in Harare and across Zimbabwe." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services/mobile-app-development" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mobile App Development Zimbabwe — iOS & Android App Services | Zimnovate" />
+        <meta name="twitter:description" content="Expert mobile app development services in Zimbabwe. Custom iOS and Android app development for businesses." />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}
