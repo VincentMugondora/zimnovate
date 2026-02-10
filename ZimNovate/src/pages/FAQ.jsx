@@ -34,7 +34,7 @@ const FAQ = () => {
     },
     {
       question: 'How do I start a project with Zimnovate?',
-      answer: 'Simply reach out through our contact form or email us at hello@zimnovate.com. We will schedule a free consultation to discuss your project needs, timeline, and budget.'
+      answer: 'Simply reach out through our contact form or email us at hello@zimnovate.co.zw. We will schedule a free consultation to discuss your project needs, timeline, and budget.'
     }
   ]
 
@@ -44,15 +44,15 @@ const FAQ = () => {
         <title>FAQ – Zimnovate | Frequently Asked Questions</title>
         <meta name="description" content="Find answers to common questions about Zimnovate's web development, app development, branding, and digital marketing services." />
         <meta name="keywords" content="zimnovate faq, web development questions, digital agency zimbabwe, app development faq" />
-        <link rel="canonical" href="https://zimnovate.com/faq" />
+        <link rel="canonical" href="https://zimnovate.co.zw/faq" />
         <meta property="og:title" content="FAQ – Zimnovate | Frequently Asked Questions" />
         <meta property="og:description" content="Find answers to common questions about Zimnovate's digital services." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/faq" />
+        <meta property="og:url" content="https://zimnovate.co.zw/faq" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="FAQ – Zimnovate | Frequently Asked Questions" />
         <meta name="twitter:description" content="Find answers to common questions about Zimnovate's digital services." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero

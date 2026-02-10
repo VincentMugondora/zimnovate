@@ -61,15 +61,15 @@ const Events = () => {
         <title>Events – Zimnovate | Workshops & Conferences</title>
         <meta name="description" content="Join Zimnovate's workshops, bootcamps, and conferences on web development, digital marketing, and technology innovation." />
         <meta name="keywords" content="zimnovate events, tech workshops zimbabwe, web development bootcamp, digital events" />
-        <link rel="canonical" href="https://zimnovate.com/events" />
+        <link rel="canonical" href="https://zimnovate.co.zw/events" />
         <meta property="og:title" content="Events – Zimnovate | Workshops & Conferences" />
         <meta property="og:description" content="Join Zimnovate's workshops, bootcamps, and conferences on web development and digital innovation." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/events" />
+        <meta property="og:url" content="https://zimnovate.co.zw/events" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Events – Zimnovate | Workshops & Conferences" />
         <meta name="twitter:description" content="Join Zimnovate's workshops, bootcamps, and conferences on web development and digital innovation." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero

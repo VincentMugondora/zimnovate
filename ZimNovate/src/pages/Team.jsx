@@ -79,15 +79,15 @@ const Team = () => {
         <title>Meet the Team – Zimnovate | Our People</title>
         <meta name="description" content="Meet the passionate team behind Zimnovate. Our creators, developers, strategists and innovators build world-class digital experiences for Africa and beyond." />
         <meta name="keywords" content="zimnovate team, digital team zimbabwe, tech team africa, developers harare" />
-        <link rel="canonical" href="https://zimnovate.com/team" />
+        <link rel="canonical" href="https://zimnovate.co.zw/team" />
         <meta property="og:title" content="Meet the Team – Zimnovate | Our People" />
         <meta property="og:description" content="Meet the passionate team behind Zimnovate. Our creators, developers, strategists and innovators build world-class digital experiences for Africa and beyond." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/team" />
+        <meta property="og:url" content="https://zimnovate.co.zw/team" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Meet the Team – Zimnovate | Our People" />
         <meta name="twitter:description" content="Meet the passionate team behind Zimnovate. Our creators, developers, strategists and innovators build world-class digital experiences." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
 
       <div>

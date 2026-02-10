@@ -73,15 +73,15 @@ const Contact = () => {
         <title>Contact Zimnovate – Start Your Digital Project Today</title>
         <meta name="description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions tailored for Zimbabwean businesses." />
         <meta name="keywords" content="contact zimnovate, digital agency zimbabwe, web design quote, hire developer zimbabwe" />
-        <link rel="canonical" href="https://zimnovate.com/contact" />
+        <link rel="canonical" href="https://zimnovate.co.zw/contact" />
         <meta property="og:title" content="Contact Zimnovate – Start Your Digital Project Today" />
         <meta property="og:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/contact" />
+        <meta property="og:url" content="https://zimnovate.co.zw/contact" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Contact Zimnovate – Start Your Digital Project Today" />
         <meta name="twitter:description" content="Get in touch with Zimnovate for web design, development, branding, SEO, and digital solutions." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}
@@ -105,7 +105,7 @@ const Contact = () => {
               Zimnovate is a full-stack digital agency in Zimbabwe offering web design, app development, branding, digital marketing, and e-commerce solutions for African businesses. Fill out the form and we'll get back to you within 24 hours.
             </p>
             <div className="space-y-2 text-sm text-[#1A1A1A]/80">
-              <p><strong>Email:</strong> hello@zimnovate.com</p>
+              <p><strong>Email:</strong> hello@zimnovate.co.zw</p>
               <p><strong>Phone:</strong> +263 ___</p>
               <p><strong>Location:</strong> Harare, Zimbabwe</p>
               <p><strong>Hours:</strong> Monday–Friday, 8am–5pm</p>
@@ -305,11 +305,11 @@ const Contact = () => {
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F4D47C] mb-2">Email</div>
                     <div className="space-y-1 text-sm">
-                      <a href="mailto:hello@zimnovate.com" className="block text-[#0F172A] hover:text-[#F4D47C] transition-colors">
-                        hello@zimnovate.com
+                      <a href="mailto:hello@zimnovate.co.zw" className="block text-[#0F172A] hover:text-[#F4D47C] transition-colors">
+                        hello@zimnovate.co.zw
                       </a>
-                      <a href="mailto:support@zimnovate.com" className="block text-[#0F172A] hover:text-[#F4D47C] transition-colors">
-                        support@zimnovate.com
+                      <a href="mailto:support@zimnovate.co.zw" className="block text-[#0F172A] hover:text-[#F4D47C] transition-colors">
+                        support@zimnovate.co.zw
                       </a>
                     </div>
                   </div>
@@ -446,7 +446,7 @@ const Contact = () => {
             </div>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
-                href="mailto:hello@zimnovate.com"
+                href="mailto:hello@zimnovate.co.zw"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110 transition-colors"
               >
                 Start a Conversation

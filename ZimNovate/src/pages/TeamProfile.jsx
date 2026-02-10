@@ -88,15 +88,15 @@ const TeamProfile = () => {
         <title>{member.name} – {member.role} | Zimnovate Team</title>
         <meta name="description" content={`${member.tagline} ${member.name} is ${member.role} at Zimnovate. ${member.bio.substring(0, 150)}...`} />
         <meta name="keywords" content={`${member.name.toLowerCase()}, zimnovate team, ${member.role.toLowerCase()}, zimbabwe tech`} />
-        <link rel="canonical" href={`https://zimnovate.com/team/${member.id}`} />
+        <link rel="canonical" href={`https://zimnovate.co.zw/team/${member.id}`} />
         <meta property="og:title" content={`${member.name} – ${member.role} | Zimnovate Team`} />
         <meta property="og:description" content={member.tagline} />
         <meta property="og:type" content="profile" />
-        <meta property="og:url" content={`https://zimnovate.com/team/${member.id}`} />
+        <meta property="og:url" content={`https://zimnovate.co.zw/team/${member.id}`} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${member.name} – ${member.role} | Zimnovate Team`} />
         <meta name="twitter:description" content={member.tagline} />
-        <meta name="twitter:image" content={`https://zimnovate.com${member.image_url || member.image}`} />
+        <meta name="twitter:image" content={`https://zimnovate.co.zw${member.image_url || member.image}`} />
       </Helmet>
 
       <div className="min-h-screen bg-[#F9F5EF]">

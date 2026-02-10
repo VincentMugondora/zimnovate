@@ -145,15 +145,15 @@ const Partners = () => {
         <title>Get Partnered – Zimnovate | Strategic Partnerships</title>
         <meta name="description" content="Partner with Zimnovate to accelerate growth through innovation. We collaborate with startups, SMEs, and corporates to build world-class digital solutions." />
         <meta name="keywords" content="zimnovate partnership, business partnership, startup partnership, tech collaboration, white-label partnership" />
-        <link rel="canonical" href="https://zimnovate.com/partners" />
+        <link rel="canonical" href="https://zimnovate.co.zw/partners" />
         <meta property="og:title" content="Get Partnered – Zimnovate | Strategic Partnerships" />
         <meta property="og:description" content="Partner with Zimnovate to accelerate growth through innovation. We collaborate with startups, SMEs, and corporates to build world-class digital solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/partners" />
+        <meta property="og:url" content="https://zimnovate.co.zw/partners" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Get Partnered – Zimnovate | Strategic Partnerships" />
         <meta name="twitter:description" content="Partner with Zimnovate to accelerate growth through innovation. We collaborate with startups, SMEs, and corporates to build world-class digital solutions." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}

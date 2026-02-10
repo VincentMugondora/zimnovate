@@ -9,15 +9,15 @@ const CookiePolicy = () => {
         <title>Cookie Policy – Zimnovate | Cookies & Tracking</title>
         <meta name="description" content="Learn how Zimnovate uses cookies and tracking technologies to improve your browsing experience and deliver relevant content." />
         <meta name="keywords" content="cookie policy, cookies, tracking, privacy, zimnovate cookies" />
-        <link rel="canonical" href="https://zimnovate.com/cookies" />
+        <link rel="canonical" href="https://zimnovate.co.zw/cookies" />
         <meta property="og:title" content="Cookie Policy – Zimnovate | Cookies & Tracking" />
         <meta property="og:description" content="Learn how Zimnovate uses cookies and tracking technologies to improve your browsing experience." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/cookies" />
+        <meta property="og:url" content="https://zimnovate.co.zw/cookies" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Cookie Policy – Zimnovate | Cookies & Tracking" />
         <meta name="twitter:description" content="Learn how Zimnovate uses cookies and tracking technologies to improve your browsing experience." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero
@@ -181,8 +181,8 @@ const CookiePolicy = () => {
                 For questions about this Cookie Policy or your data:
               </p>
               <p className="text-sm text-[#1A1A1A]/80 mt-3">
-                <strong>Email:</strong> privacy@zimnovate.com<br />
-                <strong>Website:</strong> https://zimnovate.com<br />
+                <strong>Email:</strong> privacy@zimnovate.co.zw<br />
+                <strong>Website:</strong> https://zimnovate.co.zw<br />
                 <strong>Address:</strong> Harare, Zimbabwe
               </p>
             </section>

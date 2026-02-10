@@ -72,15 +72,15 @@ const Services = () => {
         <title>Digital Services Zimbabwe – Web, Apps, Branding & Marketing</title>
         <meta name="description" content="Explore Zimnovate's full-stack digital services: web design, app development, branding, SEO, digital marketing, e-commerce, and automation solutions." />
         <meta name="keywords" content="digital services zimbabwe, web design harare, app development, branding agency, SEO services, digital marketing" />
-        <link rel="canonical" href="https://zimnovate.com/services" />
+        <link rel="canonical" href="https://zimnovate.co.zw/services" />
         <meta property="og:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
         <meta property="og:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/services" />
+        <meta property="og:url" content="https://zimnovate.co.zw/services" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Digital Services Zimbabwe – Web, Apps, Branding & Marketing" />
         <meta name="twitter:description" content="Explore Zimnovate's full-stack digital services for African businesses." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero 

@@ -9,15 +9,15 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy – Zimnovate | Data Protection</title>
         <meta name="description" content="Learn how Zimnovate collects, uses, and protects your personal information. Our privacy policy ensures your data is safe and secure." />
         <meta name="keywords" content="privacy policy, data protection, zimnovate privacy, personal data security" />
-        <link rel="canonical" href="https://zimnovate.com/privacy" />
+        <link rel="canonical" href="https://zimnovate.co.zw/privacy" />
         <meta property="og:title" content="Privacy Policy – Zimnovate | Data Protection" />
         <meta property="og:description" content="Learn how Zimnovate collects, uses, and protects your personal information." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/privacy" />
+        <meta property="og:url" content="https://zimnovate.co.zw/privacy" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Privacy Policy – Zimnovate | Data Protection" />
         <meta name="twitter:description" content="Learn how Zimnovate collects, uses, and protects your personal information." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero
@@ -136,7 +136,7 @@ const PrivacyPolicy = () => {
                 <li>Withdraw consent</li>
               </ul>
               <p className="text-sm text-[#1A1A1A]/80 leading-relaxed mt-3">
-                To exercise your rights, contact: <strong>privacy@zimnovate.com</strong>
+                To exercise your rights, contact: <strong>privacy@zimnovate.co.zw</strong>
               </p>
             </section>
 
@@ -192,8 +192,8 @@ const PrivacyPolicy = () => {
                 If you have questions, concerns, or requests regarding this Privacy Policy, contact us:
               </p>
               <p className="text-sm text-[#1A1A1A]/80 mt-3">
-                <strong>Email:</strong> privacy@zimnovate.com<br />
-                <strong>Website:</strong> https://zimnovate.com<br />
+                <strong>Email:</strong> privacy@zimnovate.co.zw<br />
+                <strong>Website:</strong> https://zimnovate.co.zw<br />
                 <strong>Address:</strong> Harare, Zimbabwe
               </p>
             </section>

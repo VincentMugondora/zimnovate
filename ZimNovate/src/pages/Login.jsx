@@ -87,7 +87,7 @@ const Login = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     required
                     className="w-full rounded-xl border border-[var(--zim-border)] bg-white py-3 pl-12 pr-4 text-sm text-[var(--zim-black)] placeholder:text-[var(--zim-fg)]/50 focus:border-[var(--zim-green)] focus:outline-none"
-                    placeholder="admin@zimnovate.com"
+                    placeholder="admin@zimnovate.co.zw"
                   />
                 </div>
               </div>

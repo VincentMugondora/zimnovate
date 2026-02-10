@@ -27,15 +27,15 @@ const About = () => {
         <title>About Zimnovate – Zimbabwe's Modern Digital Agency</title>
         <meta name="description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions for African businesses." />
         <meta name="keywords" content="about zimnovate, zimbabwe digital agency, web development team zimbabwe, african tech company" />
-        <link rel="canonical" href="https://zimnovate.com/about" />
+        <link rel="canonical" href="https://zimnovate.co.zw/about" />
         <meta property="og:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
         <meta property="og:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/about" />
+        <meta property="og:url" content="https://zimnovate.co.zw/about" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Zimnovate – Zimbabwe's Modern Digital Agency" />
         <meta name="twitter:description" content="Learn about Zimnovate, a Zimbabwe-born digital agency creating innovative web, app, branding, and digital solutions." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero

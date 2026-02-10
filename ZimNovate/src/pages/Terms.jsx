@@ -91,7 +91,7 @@ const Terms = () => {
                 If you have any questions about these Terms, please contact us:
               </p>
               <p className="text-sm text-[#1A1A1A]/80 mt-3">
-                <strong>Email:</strong> legal@zimnovate.com<br />
+                <strong>Email:</strong> legal@zimnovate.co.zw<br />
                 <strong>Address:</strong> Harare, Zimbabwe
               </p>
             </section>

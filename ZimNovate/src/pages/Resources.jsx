@@ -78,15 +78,15 @@ const Resources = () => {
         <title>Resources – Zimnovate | Learning & Tools</title>
         <meta name="description" content="Access free learning modules, video tutorials, guides, and tools to help you master web development, design, and digital marketing." />
         <meta name="keywords" content="zimnovate resources, learning modules, web development tutorials, digital marketing guides" />
-        <link rel="canonical" href="https://zimnovate.com/resources" />
+        <link rel="canonical" href="https://zimnovate.co.zw/resources" />
         <meta property="og:title" content="Resources – Zimnovate | Learning & Tools" />
         <meta property="og:description" content="Access free learning modules, video tutorials, guides, and tools for digital skills." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/resources" />
+        <meta property="og:url" content="https://zimnovate.co.zw/resources" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Resources – Zimnovate | Learning & Tools" />
         <meta name="twitter:description" content="Access free learning modules, video tutorials, guides, and tools for digital skills." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero

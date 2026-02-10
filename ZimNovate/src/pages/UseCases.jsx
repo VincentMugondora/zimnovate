@@ -49,15 +49,15 @@ const UseCases = () => {
         <title>Business Use Cases – Zimnovate Digital Solutions</title>
         <meta name="description" content="See how Zimnovate helps businesses across industries with custom web development, apps, and digital solutions tailored for African markets." />
         <meta name="keywords" content="business use cases, digital solutions zimbabwe, industry solutions, web development use cases" />
-        <link rel="canonical" href="https://zimnovate.com/use-cases" />
+        <link rel="canonical" href="https://zimnovate.co.zw/use-cases" />
         <meta property="og:title" content="Business Use Cases – Zimnovate Digital Solutions" />
         <meta property="og:description" content="See how Zimnovate helps businesses across industries with custom digital solutions." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/use-cases" />
+        <meta property="og:url" content="https://zimnovate.co.zw/use-cases" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Business Use Cases – Zimnovate Digital Solutions" />
         <meta name="twitter:description" content="See how Zimnovate helps businesses across industries with custom digital solutions." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       <PageHero

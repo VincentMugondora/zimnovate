@@ -76,15 +76,15 @@ const Portfolio = () => {
         <title>Zimnovate Portfolio – Web, Branding & App Projects</title>
         <meta name="description" content="See digital products we've built for businesses in Zimbabwe and across Africa: websites, apps, branding, marketing, and more." />
         <meta name="keywords" content="zimnovate portfolio, web projects zimbabwe, app development portfolio, branding projects africa" />
-        <link rel="canonical" href="https://zimnovate.com/portfolio" />
+        <link rel="canonical" href="https://zimnovate.co.zw/portfolio" />
         <meta property="og:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
         <meta property="og:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.com/portfolio" />
+        <meta property="og:url" content="https://zimnovate.co.zw/portfolio" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zimnovate Portfolio – Web, Branding & App Projects" />
         <meta name="twitter:description" content="See digital products we've built for businesses in Zimbabwe and across Africa." />
-        <meta name="twitter:image" content="https://zimnovate.com/logo1.png" />
+        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
     <div>
       {/* Hero Section */}
