@@ -1,9 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import PageHero from '../components/PageHero.jsx'
 
 const AIAutomation = () => {
   return (
+    <>
+      <Helmet>
+        <title>AI & Automation Services | ZimNovate</title>
+        <link rel="canonical" href="https://zimnovate.co.zw/services/ai-automation" />
+      </Helmet>
     <div>
       {/* Hero Section */}
       <PageHero
@@ -411,6 +417,7 @@ const AIAutomation = () => {
         </div>
       </section>
     </div>
+    </>
   )
 }
 
