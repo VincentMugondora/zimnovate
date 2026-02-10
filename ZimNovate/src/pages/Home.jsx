@@ -105,9 +105,9 @@ const Home = () => {
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
-            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
-            </div>
+            </h2>
             <div className="text-center text-sm text-[var(--zim-fg)]/70 md:block">
               Explore more of our best projects.
             </div>
@@ -171,9 +171,9 @@ const Home = () => {
       <section className="bg-[var(--zim-gray)]/40">
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
-            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR SERVICES
-            </div>
+            </h2>
             <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
               This is part of our service that can give you satisfaction.
             </div>
@@ -343,9 +343,9 @@ const Home = () => {
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
-            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               LATEST INSIGHT
-            </div>
+            </h2>
             <div className="hidden text-center text-sm text-[var(--zim-fg)]/70 md:block">
               Update the latest news from day to day.
             </div>
@@ -408,9 +408,9 @@ const Home = () => {
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
-            <div className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
+            <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               MEET THE TEAM
-            </div>
+            </h2>
             <div className="hidden md:block" />
             <Link
               to="/team"

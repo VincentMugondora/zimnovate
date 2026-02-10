@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, ChevronDown } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import ResponsiveLogo from './ResponsiveLogo.jsx'
 
 const MotionDiv = motion.div
 
@@ -59,14 +60,7 @@ const Hero = () => {
         <div className="relative z-10 w-full p-[10px]">
           <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
-              <img
-                src="/logo.png"
-                alt="Zimnovate"
-                width="180"
-                height="80"
-                className="h-20 w-auto max-w-[180px] object-contain"
-                loading="eager"
-              />
+              <ResponsiveLogo loading="eager" />
             </Link>
 
             {/* Mobile hamburger button */}
