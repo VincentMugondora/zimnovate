@@ -348,6 +348,97 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Trusted By Strip */}
+      <section className="bg-white border-y border-[#F4D47C]/10">
+        <div className="mx-auto max-w-7xl px-12 py-10 md:px-16 md:py-12 lg:px-20">
+          <div className="text-center mb-8">
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-[#1A1A1A]/40">Trusted by</span>
+          </div>
+          
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+            {[
+              { name: 'Hustlr', service: 'Branding + Website' },
+              { name: 'Mugo Plumbing', service: 'Custom Website' },
+              { name: 'uncommon.org', service: 'Web App' },
+              { name: 'Econet', service: 'Digital Strategy' },
+              { name: 'NetOne', service: 'Web Development' },
+              { name: 'TelOne', service: 'UI/UX Design' }
+            ].map((client) => (
+              <div key={client.name} className="flex flex-col items-center gap-1">
+                <div className="h-8 flex items-center justify-center">
+                  <span className="text-lg font-bold text-[#1A1A1A]/80 tracking-tight">{client.name}</span>
+                </div>
+                <span className="text-[10px] text-[#1A1A1A]/50 uppercase tracking-wider">{client.service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Strip */}
+      <section className="bg-[#F9F5EF]">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-16 lg:px-20">
+          <div className="text-center space-y-4 mb-10">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Testimonials</div>
+            <h2 className="text-2xl font-bold tracking-tight text-[#0F172A] md:text-3xl">
+              What clients say
+            </h2>
+          </div>
+
+          {/* Mobile: Horizontal scroll / Desktop: Grid */}
+          <div className="flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            {[
+              {
+                name: 'Tendai M.',
+                role: 'Founder, Harare Eats',
+                quote: 'Zimnovate built our ordering platform in 3 weeks. We now process 2,000+ orders monthly.'
+              },
+              {
+                name: 'Sarah K.',
+                role: 'Director, Bulawayo Plumbing',
+                quote: 'Our new website increased lead conversions by 45% within the first month.'
+              },
+              {
+                name: 'James N.',
+                role: 'CEO, Joburg Fashion',
+                quote: 'The e-commerce store they built grew our online sales by 60% in 6 months.'
+              }
+            ].map((testimonial) => (
+              <div 
+                key={testimonial.name}
+                className="shrink-0 snap-center w-[280px] md:w-auto rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
+              >
+                <div className="flex items-center gap-1 mb-3">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <span key={star} className="text-[#F4D47C] text-sm">★</span>
+                  ))}
+                </div>
+                <p className="text-sm text-[#1A1A1A]/80 mb-4 leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-[#F4D47C]/20 flex items-center justify-center text-[#0F172A] font-bold text-sm">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold text-[#0F172A]">{testimonial.name}</div>
+                    <div className="text-xs text-[#1A1A1A]/60">{testimonial.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile scroll indicator */}
+          <div className="mt-4 flex items-center justify-center gap-1 md:hidden">
+            <div className="h-1 w-8 rounded-full bg-[#F4D47C]" />
+            <div className="h-1 w-1.5 rounded-full bg-[#1A1A1A]/20" />
+            <div className="h-1 w-1.5 rounded-full bg-[#1A1A1A]/20" />
+            <span className="ml-2 text-[10px] text-[#1A1A1A]/40">Scroll</span>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
