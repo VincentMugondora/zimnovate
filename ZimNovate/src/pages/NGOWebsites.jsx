@@ -23,7 +23,7 @@ const NGOWebsites = () => {
       <div>
         <PageHero
           title="Donor-ready websites for Zimbabwean NGOs"
-          subtitle="Tell your story, showcase impact, and simplify applications."
+          subtitle="Tell your story, showcase impact, and simplify grant applications with a professional website."
           height="min-h-[55vh]"
         />
 

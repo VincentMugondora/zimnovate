@@ -32,9 +32,9 @@ const Home = () => {
     consulting: '/services/digital-strategy',
   }
   const bestLocations = [
-    'Jakarta, Indonesia',
-    'Kuala Lumpur, Malaysia',
-    'Sydney, Australia',
+    'Harare Eats – Food delivery platform, +2,000 monthly orders.',
+    'Bulawayo Plumbing – Service booking site, +45% lead conversion.',
+    'Joburg Fashion – E-commerce store, +60% online sales.',
   ]
 
   const designers = [
