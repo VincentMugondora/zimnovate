@@ -113,6 +113,17 @@ const Footer = () => {
             </div>
           </div>
 
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a
+              href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-[#9cff5f] px-6 py-2.5 text-sm font-semibold text-[#0b0b0b] hover:brightness-110 transition-colors"
+            >
+              Get a Quote in 24 Hours
+            </a>
+          </div>
+
           <div className="mt-10 flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
             <div>Copyright © {new Date().getFullYear()} Zimnovate</div>
             <div className="text-white/50">All rights reserved.</div>
