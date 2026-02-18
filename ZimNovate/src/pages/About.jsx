@@ -47,16 +47,21 @@ const About = () => {
       {/* Intro CTA */}
       <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="inline-flex rounded-full bg-[#F4D47C]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0F172A]">
               Who We Are
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
-              Where vision meets smart technology
-            </h2>
-            <p className="text-sm leading-relaxed text-[#1A1A1A]/80 md:text-base">
-              We transform ideas into powerful digital experiences. From strategy to launch, our teams deliver web, mobile, and brand systems built for speed, reliability, and measurable growth.
-            </p>
+            <div className="space-y-4">
+              <p className="text-base leading-relaxed text-[#1A1A1A]/80 md:text-lg">
+                Zimnovate is a Zimbabwe-based, Africa-first digital agency helping startups, SMEs, and NGOs build practical digital solutions.
+              </p>
+              <p className="text-base leading-relaxed text-[#1A1A1A]/80 md:text-lg">
+                We specialise in modern websites, clean branding, custom web apps, mobile apps, and business automations — all optimised for speed, affordability, and real-world results.
+              </p>
+              <p className="text-base leading-relaxed text-[#1A1A1A]/80 md:text-lg">
+                Every solution is built with the African business environment in mind: budget-friendly, mobile-first, and focused on measurable outcomes.
+              </p>
+            </div>
             <div className="flex flex-wrap gap-3">
               <a
                 href="/contact"

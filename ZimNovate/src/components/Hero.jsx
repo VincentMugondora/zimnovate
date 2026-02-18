@@ -396,27 +396,27 @@ const Hero = () => {
               className="mx-auto max-w-4xl"
             >
               <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[1.1]">
-                Empowering African Businesses
-                <br />
-                With Smart Digital Solutions
+                The affordable, execution-focused digital partner for African startups, SMEs and NGOs.
               </h1>
 
               <p className="mx-auto mt-6 max-w-2xl text-sm text-white/80 md:text-base">
-                Zimnovate is a full-stack digital agency in Zimbabwe helping startups, SMEs, and brands grow through modern technology, clean design, and data-driven strategies.
+                Zimnovate helps African businesses launch and scale with clean design, fast websites, and affordable, measurable digital solutions.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Link
-                  to="/contact"
+                <a
+                  href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote%20for%20my%20project."
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
                 >
-                  Start Your Project
-                </Link>
+                  Get a Quote in 24 Hours
+                </a>
                 <Link
-                  to="/about"
+                  to="/portfolio"
                   className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
                 >
-                  Learn More
+                  View Our Work
                 </Link>
               </div>
 
