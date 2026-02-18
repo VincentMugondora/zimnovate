@@ -650,6 +650,71 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Resources Section */}
+      <section className="bg-[#F9F5EF]">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+          <div className="grid gap-10 md:grid-cols-2 items-start">
+            {/* Left - Resource Links */}
+            <div className="space-y-6">
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C] mb-3">Resources</div>
+                <h2 className="text-3xl font-bold tracking-tight text-[#0F172A]">
+                  Free tools for your business
+                </h2>
+              </div>
+              
+              <div className="grid gap-4">
+                {[
+                  { title: 'Website Launch Checklist', type: 'Checklist', desc: 'Everything you need before going live.' },
+                  { title: 'Brand Identity Guide', type: 'Guide', desc: 'Build a cohesive brand from scratch.' },
+                  { title: 'SEO Starter Template', type: 'Template', desc: 'Optimize your site for search engines.' },
+                ].map((resource) => (
+                  <div key={resource.title} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#F4D47C]/10 hover:border-[#F4D47C]/30 transition-colors">
+                    <div className="h-10 w-10 rounded-lg bg-[#F4D47C]/20 flex items-center justify-center text-[#0F172A] font-bold text-xs shrink-0">
+                      {resource.type.charAt(0)}
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-[#0F172A]">{resource.title}</div>
+                      <div className="text-xs text-[#1A1A1A]/60">{resource.desc}</div>
+                      <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-[#F4D47C] font-medium">{resource.type}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right - Email Capture */}
+            <div className="rounded-2xl bg-white p-6 md:p-8 border border-[#F4D47C]/20 shadow-sm">
+              <h3 className="text-lg font-bold text-[#0F172A] mb-2">
+                Download free resources
+              </h3>
+              <p className="text-sm text-[#1A1A1A]/70 mb-5">
+                Enter your email to get instant access to all our guides, checklists, and templates.
+              </p>
+              
+              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                <input
+                  type="email"
+                  placeholder="your@email.com"
+                  className="w-full rounded-lg border border-[#F4D47C]/20 bg-[#F9F5EF] px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#1A1A1A]/40 focus:border-[#F4D47C] focus:outline-none"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="w-full rounded-lg bg-[#0F172A] px-4 py-3 text-sm font-semibold text-white hover:brightness-110 transition-colors"
+                >
+                  Get Access
+                </button>
+              </form>
+              
+              <p className="mt-3 text-[10px] text-[#1A1A1A]/50">
+                No spam. Unsubscribe anytime.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-[#F4D47C]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
