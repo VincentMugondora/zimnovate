@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle, X, ChevronDown } from 'lucide-react'
+import { MessageCircle } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import ResponsiveLogo from './ResponsiveLogo.jsx'
 
@@ -398,42 +398,42 @@ const Hero = () => {
               className="mx-auto max-w-4xl"
             >
               <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[1.1]">
-                The affordable, execution-focused digital partner for African startups, SMEs and NGOs.
+                Websites, apps and automations for African startups, SMEs and NGOs.
               </h1>
 
-              <p className="mx-auto mt-6 max-w-2xl text-sm text-white/80 md:text-base">
-                Zimnovate helps African businesses launch and scale with clean design, fast websites, and affordable, measurable digital solutions.
+              <p className="mx-auto mt-6 max-w-2xl text-base text-white/90 md:text-lg">
+                Faster sites, more leads, less manual work.
               </p>
 
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <a
-                  href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote%20for%20my%20project."
+                  href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
                 >
-                  Get a Quote in 24 Hours
+                  Get a quote in 24 hours
                 </a>
                 <Link
                   to="/portfolio"
                   className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
                 >
-                  View Our Work
+                  View our work
                 </Link>
               </div>
 
-              {/* <p className="mx-auto mt-8 max-w-xl text-xs text-white/60 md:text-sm">
-                Built in Africa. Designed for the world. We create fast, secure, and scalable digital products — from websites and mobile apps to branding, e-commerce, and digital strategy.
-              </p> */}
+              <p className="mx-auto mt-8 max-w-xl text-xs text-white/70 md:text-sm">
+                In 3 weeks, we launched a new platform for a client and improved conversions.
+              </p>
 
-              <div className="mt-6 flex justify-center">
+              <div className="mt-4 flex justify-center">
                 <a
                   href="https://wa.me/263777530322"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-white/80 hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-white/70 hover:text-white"
                 >
-                  WhatsApp <MessageCircle size={18} />
+                  WhatsApp <MessageCircle size={16} />
                 </a>
               </div>
             </MotionDiv>
