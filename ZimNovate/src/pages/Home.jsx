@@ -67,18 +67,33 @@ const Home = () => {
   const insights = [
     {
       id: 'i1',
-      title: 'Why a website matters',
-      excerpt: 'A quick guide to credibility, trust, and conversions for modern brands.',
+      title: 'Why a website matters for Zimbabwean SMEs in 2026',
+      date: 'Feb 15, 2026',
+      excerpt: 'Discover how a professional online presence builds credibility and drives customer trust for local businesses.',
     },
     {
       id: 'i2',
-      title: 'UI/UX that converts',
-      excerpt: 'Simple design choices that improve clarity and user confidence.',
+      title: 'UI/UX that converts visitors into customers',
+      date: 'Feb 10, 2026',
+      excerpt: 'Simple design choices that improve clarity, reduce friction, and increase conversion rates.',
     },
     {
       id: 'i3',
-      title: 'Speed wins',
-      excerpt: 'Performance-first UI that feels premium on every device.',
+      title: 'Speed wins: how site speed affects your sales',
+      date: 'Feb 5, 2026',
+      excerpt: 'Performance-first design that keeps visitors engaged and reduces bounce rates on any device.',
+    },
+    {
+      id: 'i4',
+      title: 'Automation for small businesses: where to start',
+      date: 'Jan 28, 2026',
+      excerpt: 'Practical automation strategies that save 10+ hours per week without breaking the budget.',
+    },
+    {
+      id: 'i5',
+      title: 'Building trust through storytelling design',
+      date: 'Jan 20, 2026',
+      excerpt: 'How narrative-driven web design helps NGOs and social enterprises connect with donors.',
     },
   ]
 
@@ -573,6 +588,12 @@ const Home = () => {
                 <div className="mt-3">
                   <div className="text-base font-semibold text-[var(--zim-black)] md:text-lg">
                     {i.title}
+                  </div>
+                  <div className="mt-1 text-xs text-[var(--zim-fg)]/50">
+                    {i.date}
+                  </div>
+                  <div className="mt-2 text-sm text-[var(--zim-fg)]/70 line-clamp-2">
+                    {i.excerpt}
                   </div>
                 </div>
               </MotionDiv>
