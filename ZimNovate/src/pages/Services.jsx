@@ -148,21 +148,51 @@ const Services = () => {
                   </div>
                 ))}
               </div>
+              {g.category === 'Web Development' && (
+                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
+                  <p className="text-sm text-[#1A1A1A]/80">
+                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> 3–4 weeks. Starting from $XXX. SEO-ready, mobile-first, and optimised for conversions.
+                  </p>
+                </div>
+              )}
+              {g.category === 'Branding' && (
+                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
+                  <p className="text-sm text-[#1A1A1A]/80">
+                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> Logo + colour system delivered in 1 week. Includes social media kit.
+                  </p>
+                </div>
+              )}
+              {g.category === 'AI & Automation' && (
+                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
+                  <p className="text-sm text-[#1A1A1A]/80">
+                    <span className="font-semibold text-[#0F172A]">Typical outcome:</span> Save up to 10 hours weekly with automated forms, emails, and dashboards.
+                  </p>
+                </div>
+              )}
+              {g.category === 'Mobile Apps' && (
+                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
+                  <p className="text-sm text-[#1A1A1A]/80">
+                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> Fast prototyping for startups. MVPs delivered in 3–6 weeks depending on scope.
+                  </p>
+                </div>
+              )}
               <div className="flex gap-3">
                 {g.category === 'Web Development' ? (
                   <>
                     <Link
-                      to="/services/web-development"
+                      to="/contact"
                       className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                     >
-                      Explore Web Development
+                      Get a Quote in 24 Hours
                     </Link>
-                    <Link
-                      to="/contact"
+                    <a
+                      href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                      target="_blank"
+                      rel="noreferrer"
                       className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
                     >
-                      Request a Quote
-                    </Link>
+                      WhatsApp
+                    </a>
                   </>
                 ) : g.category === 'Mobile Apps' ? (
                   <>
@@ -255,12 +285,14 @@ const Services = () => {
                     </Link>
                   </>
                 ) : (
-                  <Link
-                    to="/contact"
-                    className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
+                  <a
+                    href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
                   >
-                    Request a Quote
-                  </Link>
+                    Get a Quote in 24 Hours
+                  </a>
                 )}
               </div>
             </div>

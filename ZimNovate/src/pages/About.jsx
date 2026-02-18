@@ -318,33 +318,30 @@ const About = () => {
       <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Process</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
-              How we bring your vision to life
+              What I offer and the process
             </h3>
+            <p className="text-sm text-[#1A1A1A]/70 max-w-2xl mx-auto">
+              From concept to delivery, I make sure each step is clear, purposeful, and designed to produce results.
+            </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                title: 'Discovery',
-                description: 'We dive deep to understand your goals, users, and challenges through research and collaboration.',
+                title: 'Strategy',
+                description: 'I start by understanding your goals, audience, and challenges. Then we define a clear direction and scope for the project.',
                 image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=entropy&auto=format'
               },
               {
-                title: 'Strategy & Design',
-                description: 'Creating intuitive interfaces and experiences that delight users and drive business results.',
+                title: 'Design',
+                description: 'With strategy in place, I create clean, functional designs that align with your brand and user needs.',
                 image: 'https://images.unsplash.com/photo-1559028006-44a35f2a8d03?w=600&h=400&fit=crop&crop=entropy&auto=format'
               },
               {
                 title: 'Development',
-                description: 'Building robust, scalable solutions with clean code and modern technologies.',
+                description: 'I bring designs to life with clean, maintainable code—building websites and apps that are fast, secure, and scalable.',
                 image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop&crop=entropy&auto=format'
-              },
-              {
-                title: 'Launch & Grow',
-                description: 'Deploying your solution and providing ongoing support to ensure continued success.',
-                image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format'
               }
             ].map((step, index) => (
               <div

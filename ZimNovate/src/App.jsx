@@ -47,6 +47,9 @@ const Resources = lazy(() => import('./pages/Resources.jsx'))
 const Team = lazy(() => import('./pages/Team.jsx'))
 const TeamProfile = lazy(() => import('./pages/TeamProfile.jsx'))
 const GetStarted = lazy(() => import('./pages/GetStarted.jsx'))
+const NGOWebsites = lazy(() => import('./pages/NGOWebsites.jsx'))
+const StartupMVP = lazy(() => import('./pages/StartupMVP.jsx'))
+const SMEDigitalMakeovers = lazy(() => import('./pages/SMEDigitalMakeovers.jsx'))
 const Dashboard = lazy(() => import('./pages/Dashboard.jsx'))
 const Login = lazy(() => import('./pages/Login.jsx'))
 const ProtectedRoute = lazy(() => import('./components/ProtectedRoute.jsx'))
@@ -100,6 +103,9 @@ const App = () => {
           <Route path="/resources" element={<Suspense fallback={<PageLoader />}><Resources /></Suspense>} />
           <Route path="/team" element={<Suspense fallback={<PageLoader />}><Team /></Suspense>} />
           <Route path="/team/:slug" element={<Suspense fallback={<PageLoader />}><TeamProfile /></Suspense>} />
+          <Route path="/ngo-websites" element={<Suspense fallback={<PageLoader />}><NGOWebsites /></Suspense>} />
+          <Route path="/startup-mvp" element={<Suspense fallback={<PageLoader />}><StartupMVP /></Suspense>} />
+          <Route path="/sme-digital-makeovers" element={<Suspense fallback={<PageLoader />}><SMEDigitalMakeovers /></Suspense>} />
           <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFound /></Suspense>} />
         </Route>
 
