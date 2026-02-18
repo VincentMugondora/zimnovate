@@ -183,19 +183,6 @@ const Hero = () => {
                 Contact
               </NavLink>
             </nav>
-
-            {/* Desktop CTA buttons */}
-            <div className="hidden items-center gap-3 md:flex">
-              <Link to="/contact" className="hidden text-sm font-semibold text-white/80 hover:text-white lg:inline-flex">
-                Sign In
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
-              >
-                Sign Up
-              </Link>
-            </div>
           </div>
 
           {/* Mobile menu drawer with Framer Motion */}

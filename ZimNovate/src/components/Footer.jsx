@@ -126,6 +126,7 @@ const Footer = () => {
 
           <div className="mt-10 flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
             <div>Copyright © {new Date().getFullYear()} Zimnovate</div>
+            <div className="text-white/40 italic">We're based in Harare, serving clients across Africa and beyond.</div>
             <div className="text-white/50">All rights reserved.</div>
           </div>
         </div>
