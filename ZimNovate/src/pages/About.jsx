@@ -414,10 +414,12 @@ const About = () => {
                 </div>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="/contact"
+                    href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
                   >
-                    Start Your Project
+                    Get a Quote in 24 Hours
                   </a>
                   <a
                     href="/contact"
