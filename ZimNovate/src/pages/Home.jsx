@@ -720,11 +720,13 @@ const Home = () => {
         <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-6">
             <h3 className="text-3xl font-bold text-[#0F172A] md:text-4xl">
-              Ready to grow your business?
+              Work with Zimnovate in 3 simple steps
             </h3>
-            <p className="text-sm text-[#0F172A]/80 max-w-lg mx-auto">
-              Get a professional website, branding, or digital solution tailored for your business.
-            </p>
+            <div className="text-sm text-[#0F172A]/80 max-w-lg mx-auto space-y-2">
+              <p>1) Tell us about your project</p>
+              <p>2) Get a proposal in 24 hours</p>
+              <p>3) Launch in 2–6 weeks</p>
+            </div>
             <div className="flex flex-wrap gap-3 justify-center">
               <a
                 href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
@@ -732,7 +734,7 @@ const Home = () => {
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
               >
-                Get a Quote in 24 Hours
+                Start on WhatsApp
               </a>
               <Link
                 to="/contact"

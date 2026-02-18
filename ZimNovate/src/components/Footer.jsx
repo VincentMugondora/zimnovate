@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowDown, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
+import { ArrowDown, CheckCircle, Facebook, Instagram, Linkedin, MapPin, Twitter, Users, Youtube } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -122,6 +122,22 @@ const Footer = () => {
             >
               Get a Quote in 24 Hours
             </a>
+          </div>
+
+          {/* Trust Badges */}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <div className="flex items-center gap-2 text-sm text-white/70">
+              <CheckCircle size={18} className="text-[#9cff5f]" />
+              <span>30+ projects delivered</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-white/70">
+              <Users size={18} className="text-[#9cff5f]" />
+              <span>Serving SMEs, startups & NGOs</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-white/70">
+              <MapPin size={18} className="text-[#9cff5f]" />
+              <span>Africa-first digital agency based in Harare</span>
+            </div>
           </div>
 
           <div className="mt-10 flex flex-col gap-2 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
