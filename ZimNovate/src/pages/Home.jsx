@@ -439,6 +439,83 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Get Started Section */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+          <div className="text-center space-y-4 mb-12">
+            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Pricing</div>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
+              Get Started
+            </h2>
+            <p className="text-sm text-[#1A1A1A]/70 max-w-lg mx-auto">
+              Choose a package that fits your needs. All include delivery timelines and clear deliverables.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: 'Starter Website',
+                features: ['3–6 pages', 'Mobile-first', 'Delivered in 2–4 weeks'],
+                price: 500,
+                link: '/packages'
+              },
+              {
+                title: 'Startup MVP',
+                features: ['Web app + landing page', '3–6 weeks delivery', 'Scalable foundation'],
+                price: 1500,
+                link: '/startup-mvp'
+              },
+              {
+                title: 'NGO Website',
+                features: ['Project pages + reports', 'Storytelling-focused', 'Donation integration'],
+                price: 600,
+                link: '/ngo-websites'
+              },
+              {
+                title: 'Automation Pack',
+                features: ['Forms + email + dashboards', 'Saves 10+ hours/week', 'Ongoing support'],
+                price: 800,
+                link: '/packages'
+              }
+            ].map((pkg) => (
+              <div 
+                key={pkg.title}
+                className="rounded-2xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h3 className="text-lg font-bold text-[#0F172A] mb-4">{pkg.title}</h3>
+                <ul className="space-y-2 mb-6">
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 text-sm text-[#1A1A1A]/80">
+                      <span className="text-[#F4D47C] mt-0.5">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex items-center justify-between mt-auto pt-4 border-t border-[#F4D47C]/10">
+                  <span className="text-sm font-semibold text-[#0F172A]">From ${pkg.price}</span>
+                  <Link 
+                    to={pkg.link}
+                    className="inline-flex items-center text-xs font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
+                  >
+                    Learn more →
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/packages"
+              className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
+            >
+              View All Packages
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
