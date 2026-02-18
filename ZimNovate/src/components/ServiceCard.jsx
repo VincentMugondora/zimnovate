@@ -80,9 +80,11 @@ const ServiceCard = ({ service, variant = 'full' }) => {
           </li>
         ))}
       </ul>
-      <div className="mt-4 inline-flex items-center rounded-full bg-[var(--zim-bg)] px-3 py-1.5 text-xs font-medium text-[var(--zim-fg)]/70 ring-1 ring-[var(--zim-border)]">
-        From $XXX
-      </div>
+      {service.startingPrice && (
+        <div className="mt-4 inline-flex items-center rounded-lg bg-[#F9F5EF] px-2.5 py-1 text-xs font-medium text-[#0F172A]/80 shadow-sm">
+          From ${service.startingPrice}
+        </div>
+      )}
     </MotionDiv>
   )
 }

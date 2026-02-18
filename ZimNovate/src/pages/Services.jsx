@@ -151,28 +151,28 @@ const Services = () => {
               {g.category === 'Web Development' && (
                 <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
                   <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> 3–4 weeks. Starting from $XXX. SEO-ready, mobile-first, and optimised for conversions.
+                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> 3–6 pages, mobile-first, basic SEO, delivered in 2–4 weeks.
                   </p>
                 </div>
               )}
               {g.category === 'Branding' && (
                 <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
                   <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> Logo + colour system delivered in 1 week. Includes social media kit.
+                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Logo, colour system, social kit, delivered in 1 week.
                   </p>
                 </div>
               )}
               {g.category === 'AI & Automation' && (
                 <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
                   <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Typical outcome:</span> Save up to 10 hours weekly with automated forms, emails, and dashboards.
+                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Forms, email workflows, dashboards — reduces manual work by 10+ hours per week.
                   </p>
                 </div>
               )}
-              {g.category === 'Mobile Apps' && (
+              {g.category === 'Full-Stack Solutions' && (
                 <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
                   <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Typical delivery:</span> Fast prototyping for startups. MVPs delivered in 3–6 weeks depending on scope.
+                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Admin dashboard, user roles, integrations with WhatsApp/SMS/payments.
                   </p>
                 </div>
               )}

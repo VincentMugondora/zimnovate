@@ -8,6 +8,7 @@ export const services = [
     highlights: ['Logo design', 'Brand guides', 'Social media kits'],
     icon: 'megaphone',
     accent: 'var(--zim-orange)',
+    startingPrice: 350,
   },
   {
     id: 'websites',
@@ -18,6 +19,7 @@ export const services = [
     highlights: ['Landing pages', 'Company websites', 'SEO-ready builds'],
     icon: 'monitor',
     accent: 'var(--zim-blue)',
+    startingPrice: 500,
   },
   {
     id: 'webapps',
@@ -28,6 +30,7 @@ export const services = [
     highlights: ['Dashboards', 'Portals', 'Integrations'],
     icon: 'layers',
     accent: 'var(--zim-green)',
+    startingPrice: 1500,
   },
   {
     id: 'automation',
@@ -38,6 +41,7 @@ export const services = [
     highlights: ['API integrations', 'Internal tooling', 'Operational workflows'],
     icon: 'workflow',
     accent: 'var(--zim-blue)',
+    startingPrice: 800,
   },
   {
     id: 'mobile',
@@ -48,6 +52,7 @@ export const services = [
     highlights: ['MVP apps', 'Internal apps', 'Customer apps'],
     icon: 'smartphone',
     accent: 'var(--zim-green)',
+    startingPrice: 2000,
   },
   {
     id: 'consulting',
@@ -58,6 +63,7 @@ export const services = [
     highlights: ['Discovery sessions', 'MVP planning', 'Transformation strategy'],
     icon: 'sparkles',
     accent: 'var(--zim-orange)',
+    startingPrice: 400,
   },
 ]
 
