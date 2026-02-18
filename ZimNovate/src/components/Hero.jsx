@@ -367,19 +367,21 @@ const Hero = () => {
                       transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
                       className="mt-6 border-t border-white/10 pt-6"
                     >
-                      <Link
-                        to="/contact"
+                      <a
+                        href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                        target="_blank"
+                        rel="noreferrer"
                         onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
-                        Sign Up
-                      </Link>
+                        Get a Quote in 24 Hours
+                      </a>
                       <Link
                         to="/contact"
                         onClick={() => setMobileMenuOpen(false)}
                         className="block w-full rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
                       >
-                        Sign In
+                        Contact Us
                       </Link>
                     </motion.div>
                   </nav>
