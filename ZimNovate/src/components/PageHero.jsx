@@ -377,7 +377,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-[32px] font-extrabold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl md:leading-[1] lg:text-6xl lg:leading-[0.95]">
+              <h1 className="text-2xl font-extrabold leading-[1.2] tracking-tight sm:text-3xl md:text-4xl md:leading-[1] lg:text-5xl lg:leading-[0.95]">
                 {title}
               </h1>
 
