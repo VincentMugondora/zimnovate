@@ -112,7 +112,7 @@ const Header = () => {
                   <X size={20} />
                 </motion.button>
               </div>
-              <nav className="flex flex-col p-4" aria-label="Mobile">
+              <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                 {[
                   { to: '/', label: 'Home', hasSubmenu: false },
                   { to: '/about', label: 'About', hasSubmenu: false },

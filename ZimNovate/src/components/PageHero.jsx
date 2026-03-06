@@ -234,7 +234,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                       <X size={20} />
                     </motion.button>
                   </div>
-                  <nav className="flex flex-col p-4" aria-label="Mobile">
+                  <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                     {[
                       { to: '/', label: 'Home', hasSubmenu: false },
                       { to: '/services', label: 'Services', hasSubmenu: true },
@@ -370,19 +370,19 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             )}
           </AnimatePresence>
 
-          <div className="px-6 py-10 sm:py-16 text-center text-white md:px-10 md:py-20">
+          <div className="px-4 py-12 text-center text-white sm:px-6 sm:py-16 md:px-10 md:py-20">
             <MotionDiv
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[0.95]">
+              <h1 className="text-[32px] font-extrabold leading-[1.2] tracking-tight sm:text-4xl md:text-5xl md:leading-[1] lg:text-6xl lg:leading-[0.95]">
                 {title}
               </h1>
 
               {subtitle && (
-                <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
+                <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
                   {subtitle}
                 </p>
               )}
