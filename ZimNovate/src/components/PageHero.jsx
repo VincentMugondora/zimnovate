@@ -178,12 +178,14 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
 
             {/* Desktop CTA */}
             <div className="hidden items-center gap-3 md:flex">
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
               >
-                Get a Quote
-              </Link>
+                Get a Free Quote
+              </a>
             </div>
           </div>
 
@@ -356,13 +358,15 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                       transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
                       className="mt-6 border-t border-white/10 pt-6"
                     >
-                      <Link
-                        to="/contact"
+                      <a
+                        href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
+                        target="_blank"
+                        rel="noreferrer"
                         onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
-                        Get a Quote
-                      </Link>
+                        Get a Free Quote
+                      </a>
                     </motion.div>
                   </nav>
                 </motion.div>
