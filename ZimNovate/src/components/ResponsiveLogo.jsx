@@ -12,33 +12,14 @@ import React from 'react';
  */
 const ResponsiveLogo = ({ className = '', loading = 'eager' }) => {
   return (
-    <picture>
-      {/* Mobile - smallest size */}
-      <source 
-        media="(max-width: 640px)" 
-        srcSet="/logo-mobile.png" 
-        width="120" 
-        height="53"
-      />
-      {/* Tablet - medium size */}
-      <source 
-        media="(max-width: 1024px)" 
-        srcSet="/logo-tablet.png" 
-        width="150" 
-        height="66"
-      />
-      {/* Desktop - full size */}
-      <img
-        src="/logo.png"
-        alt="Zimnovate logo"
-        title="Zimnovate Digital Agency"
-        width="180"
-        height="80"
-        className={`h-20 w-auto max-w-[180px] object-contain ${className}`}
-        loading={loading}
-        decoding="async"
-      />
-    </picture>
+    <img
+      src="/logo.png"
+      alt="Zimnovate logo"
+      title="Zimnovate Digital Agency"
+      className={`h-20 w-auto max-w-[180px] object-contain ${className}`}
+      loading={loading}
+      decoding="async"
+    />
   );
 };
 
