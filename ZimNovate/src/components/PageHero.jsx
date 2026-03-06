@@ -370,7 +370,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             )}
           </AnimatePresence>
 
-          <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
+          <div className="px-6 py-10 sm:py-16 text-center text-white md:px-10 md:py-20">
             <MotionDiv
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

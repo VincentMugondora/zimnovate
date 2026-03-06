@@ -103,7 +103,7 @@ const Home = () => {
       <ClientLogos />
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               BEST PROJECT
@@ -170,7 +170,7 @@ const Home = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR SERVICES
@@ -349,7 +349,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               LATEST INSIGHT
@@ -415,7 +415,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               MEET THE TEAM
@@ -435,7 +435,7 @@ const Home = () => {
           <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {designers.map((d) => (
               <Link key={d.id} to={`/team/${d.id}`} className="group block">
-                <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+                <div className="overflow-hidden rounded-[20px] sm:rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                   <div className="aspect-[4/5] w-full">
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
@@ -463,7 +463,7 @@ const Home = () => {
 
       {/* Quick Links Section for Internal Linking */}
       <section className="bg-[var(--zim-gray)]/30">
-        <div className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-12 md:px-16 md:py-16 lg:px-20">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</p>

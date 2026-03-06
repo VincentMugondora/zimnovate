@@ -45,7 +45,7 @@ const About = () => {
       />
 
       {/* Intro CTA */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div className="space-y-4">
             <div className="inline-flex rounded-full bg-[#F4D47C]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0F172A]">
@@ -88,7 +88,7 @@ const About = () => {
 
       {/* Our Mission */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <div className="space-y-4">
               <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Mission</div>
@@ -112,7 +112,7 @@ const About = () => {
       </section>
 
       {/* Our Story */}
-      <section id="our-story" className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section id="our-story" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Story</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
@@ -176,7 +176,7 @@ const About = () => {
       </section>
 
       {/* Meet the Team */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Team</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
@@ -261,7 +261,7 @@ const About = () => {
 
       {/* Core Values */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Core Values</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
@@ -311,7 +311,7 @@ const About = () => {
 
       {/* Process */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Process</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">
@@ -369,7 +369,7 @@ const About = () => {
 
       {/* Why Choose Us */}
       <section className="bg-[#0F172A] text-white">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Why Choose Us</div>
             <h3 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -394,7 +394,7 @@ const About = () => {
 
       {/* Final CTA */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F4D47C] p-10 text-[#0F172A] shadow-[0_28px_80px_rgba(0,0,0,0.15)]">
             <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
             <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/10 blur-3xl" />

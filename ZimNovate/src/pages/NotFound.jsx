@@ -10,7 +10,7 @@ const NotFound = () => {
         subtitle="The page you're looking for doesn't exist or may have moved."
         height="min-h-[40vh]"
       />
-      <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-24 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-24 lg:px-20">
         <div className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-10">
           <div className="text-xs font-semibold tracking-[0.25em] text-[var(--zim-orange)]">
             404

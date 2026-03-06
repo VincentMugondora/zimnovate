@@ -66,7 +66,7 @@ const UseCases = () => {
         height="min-h-[45vh]"
       />
 
-      <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {useCases.map((useCase, index) => (
             <div key={index} className="rounded-2xl border border-[var(--zim-border)] bg-[var(--zim-card)] p-8">
