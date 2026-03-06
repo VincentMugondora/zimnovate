@@ -44,7 +44,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
         className={`relative mx-auto w-full overflow-hidden rounded-[20px] sm:rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)] ${height}`}
         style={{
           backgroundImage:
-            'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/imgs/agency.jpg)',
+            'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

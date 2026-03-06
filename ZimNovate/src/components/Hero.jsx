@@ -43,7 +43,7 @@ const Hero = () => {
       <div className="relative mx-auto w-full overflow-hidden rounded-[20px] sm:rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]">
         {/* LCP Hero Image - Using img tag for proper preload support */}
         <img
-          src="/imgs/agency.jpg"
+          src="/hero.png"
           alt="Zimnovate digital agency workspace"
           title="Our Digital Workspace"
           width="1200"
