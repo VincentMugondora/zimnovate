@@ -399,7 +399,7 @@ const Hero = () => {
                   to="/contact"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
                 >
-                  Start Your Project
+                  Get a Quote
                 </Link>
                 <Link
                   to="/about"

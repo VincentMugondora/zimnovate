@@ -182,7 +182,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 to="/contact"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
               >
-                Start a Project
+                Get a Quote
               </Link>
             </div>
           </div>
@@ -361,7 +361,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                         onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
-                        Start a Project
+                        Get a Quote
                       </Link>
                     </motion.div>
                   </nav>
