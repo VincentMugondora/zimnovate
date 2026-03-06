@@ -5,8 +5,8 @@ import { ArrowDown, Facebook, Instagram, Linkedin, Twitter, Youtube } from 'luci
 const Footer = () => {
   return (
     <footer className="bg-white text-white">
-      <div className="w-full p-[10px]">
-        <div className="rounded-[32px] bg-[#0b0b0b] px-6 py-10 shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/5 md:px-10 md:py-12">
+      <div className="w-full p-2 sm:p-[10px]">
+        <div className="rounded-[20px] sm:rounded-[32px] bg-[#0b0b0b] px-4 py-8 sm:px-6 sm:py-10 shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/5 md:px-10 md:py-12">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div className="space-y-2">
               <h2 className="text-3xl font-extrabold uppercase leading-tight text-transparent bg-gradient-to-b from-[#dcdcdc] via-white to-[#c0c0c0] bg-clip-text md:text-4xl">

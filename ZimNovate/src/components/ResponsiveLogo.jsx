@@ -16,7 +16,7 @@ const ResponsiveLogo = ({ className = '', loading = 'eager' }) => {
       src="/logo.png"
       alt="Zimnovate logo"
       title="Zimnovate Digital Agency"
-      className={`h-20 w-auto max-w-[180px] object-contain ${className}`}
+      className={`h-12 w-auto max-w-[130px] sm:h-16 sm:max-w-[160px] md:h-20 md:max-w-[180px] object-contain ${className}`}
       loading={loading}
       decoding="async"
     />

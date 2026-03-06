@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <header className="relative bg-white shadow-md dark:bg-gray-900">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-12 py-4 md:px-16 lg:px-20">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-12 lg:px-20">
         <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
           <ResponsiveLogo loading="eager" />
         </Link>

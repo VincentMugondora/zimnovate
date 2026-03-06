@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { X, ChevronDown } from 'lucide-react'
+import ResponsiveLogo from './ResponsiveLogo.jsx'
 
 const MotionDiv = motion.div
 
@@ -38,9 +39,9 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
   ]
 
   return (
-    <section className="bg-white p-[10px]">
+    <section className="bg-white p-2 sm:p-[10px]">
       <div
-        className={`relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)] ${height}`}
+        className={`relative mx-auto w-full overflow-hidden rounded-[20px] sm:rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)] ${height}`}
         style={{
           backgroundImage:
             'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/imgs/agency.jpg)',
@@ -50,15 +51,10 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
       >
         <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
 
-        <div className="relative z-10 w-full p-[10px]">
-          <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
+        <div className="relative z-10 w-full p-2 sm:p-[10px]">
+          <div className="flex items-center justify-between gap-2 px-2 py-4 text-white sm:gap-4 sm:px-6 md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
-              <img
-                src="/logo.png"
-                alt="Zimnovate"
-                className="h-20 w-auto max-w-[180px] object-contain"
-                loading="eager"
-              />
+              <ResponsiveLogo loading="eager" />
             </Link>
 
             <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
@@ -157,7 +153,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
