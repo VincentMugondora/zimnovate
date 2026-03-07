@@ -184,6 +184,14 @@ const Hero = () => {
               >
                 Contact
               </NavLink>
+              <a
+                href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
+                target="_blank"
+                rel="noreferrer"
+                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110"
+              >
+                Get a Free Quote
+              </a>
             </nav>
           </div>
 
@@ -359,7 +367,7 @@ const Hero = () => {
                         onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
-                        Get a Quote in 24 Hours
+                        Get a Free Quote
                       </a>
                       <Link
                         to="/contact"

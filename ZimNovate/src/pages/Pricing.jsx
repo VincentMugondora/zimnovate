@@ -122,6 +122,20 @@ const FAQItem = ({ question, answer }) => {
 const Pricing = () => {
   const packages = [
     {
+      title: '🎨 Basic Branding',
+      price: '$100 – $200',
+      description: 'Perfect for new startups needing a professional visual foundation.',
+      features: [
+        'Professional Logo Design',
+        'Color Palette & Typography',
+        'Social Media Profile Kit',
+        'Business Card Design',
+        'Brand Usage Guidelines'
+      ],
+      timeline: '1 week',
+      ctaText: 'Get Started'
+    },
+    {
       title: '🌱 Starter Website',
       price: '$250 – $400',
       description: 'Best for small businesses and startups launching their first website.',
@@ -185,14 +199,14 @@ const Pricing = () => {
   ]
 
   const comparisonFeatures = [
-    { name: 'Number of pages', starter: '3–5', growth: '6–10', mvp: '1–2 (Landing)', custom: 'Unlimited' },
-    { name: 'Custom design', starter: 'Templates', growth: 'Custom UI', mvp: 'Custom UI', custom: 'Full Branding' },
-    { name: 'SEO setup', starter: '✓ (Basic)', growth: '✓ (Advanced)', mvp: '✓ (Basic)', custom: '✓ (Enterprise)' },
-    { name: 'CMS/blog', starter: '—', growth: '✓', mvp: '—', custom: '✓' },
-    { name: 'Web application features', starter: '—', growth: '—', mvp: '✓', custom: '✓' },
-    { name: 'Integrations', starter: 'WhatsApp', growth: 'Analytics + Forms', mvp: 'Full API Stack', custom: 'Enterprise Systems' },
-    { name: 'Delivery timeline', starter: '2 weeks', growth: '3–4 weeks', mvp: '4–6 weeks', custom: 'Project-based' },
-    { name: 'Support after launch', starter: '30 days', growth: '60 days', mvp: '90 days', custom: 'Ongoing' }
+    { name: 'Number of pages', branding: '—', starter: '3–5', growth: '6–10', mvp: '1–2 (Landing)', custom: 'Unlimited' },
+    { name: 'Custom design', branding: 'Logo & Colors', starter: 'Templates', growth: 'Custom UI', mvp: 'Custom UI', custom: 'Full Branding' },
+    { name: 'SEO setup', branding: '—', starter: '✓ (Basic)', growth: '✓ (Advanced)', mvp: '✓ (Basic)', custom: '✓ (Enterprise)' },
+    { name: 'CMS/blog', branding: '—', starter: '—', growth: '✓', mvp: '—', custom: '✓' },
+    { name: 'Web application features', branding: '—', starter: '—', growth: '—', mvp: '✓', custom: '✓' },
+    { name: 'Integrations', branding: 'Social Media', starter: 'WhatsApp', growth: 'Analytics + Forms', mvp: 'Full API Stack', custom: 'Enterprise Systems' },
+    { name: 'Delivery timeline', branding: '1 week', starter: '2 weeks', growth: '3–4 weeks', mvp: '4–6 weeks', custom: 'Project-based' },
+    { name: 'Support after launch', branding: '14 days', starter: '30 days', growth: '60 days', mvp: '90 days', custom: 'Ongoing' }
   ]
 
   return (
@@ -237,8 +251,8 @@ const Pricing = () => {
         </section>
 
         {/* Pricing Cards */}
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 md:px-16 md:py-14 lg:px-20">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <section className="mx-auto max-w-[1400px] px-4 sm:px-6 md:px-8 py-10 md:py-14">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {packages.map((pkg, i) => (
               <PricingCard key={i} {...pkg} delay={i * 0.1} />
             ))}
@@ -257,6 +271,7 @@ const Pricing = () => {
               <thead>
                 <tr className="bg-[#F9F5EF]">
                   <th className="p-6 text-sm font-bold text-[#0F172A]">Features</th>
+                  <th className="p-6 text-sm font-bold text-[#0F172A]">Branding</th>
                   <th className="p-6 text-sm font-bold text-[#0F172A]">Starter</th>
                   <th className="p-6 text-sm font-bold text-[#0F172A]">Business</th>
                   <th className="p-6 text-sm font-bold text-[#0F172A]">MVP</th>
@@ -267,6 +282,7 @@ const Pricing = () => {
                 {comparisonFeatures.map((feature, i) => (
                   <tr key={i} className="hover:bg-gray-50/50 transition-colors">
                     <td className="p-6 text-sm font-semibold text-[#0F172A]">{feature.name}</td>
+                    <td className="p-6 text-sm text-[#1A1A1A]/70">{feature.branding}</td>
                     <td className="p-6 text-sm text-[#1A1A1A]/70">{feature.starter}</td>
                     <td className="p-6 text-sm text-[#1A1A1A]/70">{feature.growth}</td>
                     <td className="p-6 text-sm text-[#1A1A1A]/70">{feature.mvp}</td>
