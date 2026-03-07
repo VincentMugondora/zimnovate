@@ -123,7 +123,7 @@ const Pricing = () => {
   const packages = [
     {
       title: '🌱 Starter Website',
-      price: '$350 – $500',
+      price: '$250 – $400',
       description: 'Best for small businesses and startups launching their first website.',
       features: [
         '3–5 pages',
@@ -138,7 +138,7 @@ const Pricing = () => {
     },
     {
       title: '🚀 Business Growth Website',
-      price: '$700 – $1,000',
+      price: '$500 – $900',
       description: 'Best for SMEs that want a professional online presence.',
       features: [
         '6–10 pages',
@@ -154,7 +154,7 @@ const Pricing = () => {
     },
     {
       title: '⚡ Startup MVP Build',
-      price: '$2,000 – $3,500',
+      price: '$1,200 – $2,500',
       description: 'For startups building their first product.',
       features: [
         'Landing page',
@@ -207,7 +207,7 @@ const Pricing = () => {
         {/* Pricing Hero */}
         <PageHero
           title="Affordable Digital Solutions for African Businesses"
-          subtitle="Transparent pricing for websites, apps, and digital solutions designed for startups, SMEs and NGOs."
+          subtitle="Transparent pricing for websites, apps, and branding. Strategies that work for startups, SMEs and NGOs—starting from $100."
           height="min-h-[50vh]"
         />
 

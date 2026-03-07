@@ -8,7 +8,7 @@ export const services = [
     highlights: ['Logo design', 'Brand guides', 'Social media kits'],
     icon: '🎨',
     accent: 'var(--zim-orange)',
-    startingPrice: 350,
+    startingPrice: 100,
     route: '/services/branding',
   },
   {
@@ -20,7 +20,7 @@ export const services = [
     highlights: ['Landing pages', 'Company websites', 'SEO-ready builds'],
     icon: '🌐',
     accent: 'var(--zim-blue)',
-    startingPrice: 500,
+    startingPrice: 250,
     route: '/services/web-development',
   },
   {
@@ -32,7 +32,7 @@ export const services = [
     highlights: ['Dashboards', 'Portals', 'Integrations'],
     icon: '⚙️',
     accent: 'var(--zim-green)',
-    startingPrice: 1500,
+    startingPrice: 800,
     route: '/services/web-development',
   },
   {
@@ -44,7 +44,7 @@ export const services = [
     highlights: ['API integrations', 'Internal tooling', 'Operational workflows'],
     icon: '🤖',
     accent: 'var(--zim-blue)',
-    startingPrice: 800,
+    startingPrice: 400,
     route: '/services/ai-automation',
   },
   {
@@ -56,7 +56,7 @@ export const services = [
     highlights: ['MVP apps', 'Internal apps', 'Customer apps'],
     icon: '📱',
     accent: 'var(--zim-green)',
-    startingPrice: 2000,
+    startingPrice: 1000,
     route: '/services/mobile-app-development',
   },
   {
@@ -68,7 +68,7 @@ export const services = [
     highlights: ['Discovery sessions', 'MVP planning', 'Transformation strategy'],
     icon: '🧭',
     accent: 'var(--zim-orange)',
-    startingPrice: 400,
+    startingPrice: 150,
     route: '/services/digital-strategy',
   },
   {
@@ -80,6 +80,7 @@ export const services = [
     highlights: ['Custom stores', 'Payment integration', 'E-Commerce SEO'],
     icon: '🛒',
     accent: 'var(--zim-blue)',
+    startingPrice: 600,
     route: '/services/e-commerce',
   },
   {
@@ -91,6 +92,7 @@ export const services = [
     highlights: ['Social media', 'SEO & content', 'Paid advertising'],
     icon: '📣',
     accent: 'var(--zim-orange)',
+    startingPrice: 200,
     route: '/services/digital-marketing',
   },
 ]
