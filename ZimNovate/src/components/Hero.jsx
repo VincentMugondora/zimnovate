@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { MessageCircle } from 'lucide-react'
+import { MessageCircle, X, ChevronDown } from 'lucide-react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import ResponsiveLogo from './ResponsiveLogo.jsx'
 
@@ -28,6 +28,7 @@ const Hero = () => {
       if (closeTimer.current) clearTimeout(closeTimer.current)
     }
   }, [])
+
   const serviceLinks = [
     { label: 'Web Development', to: '/services/web-development' },
     { label: 'Mobile Apps', to: '/services/mobile-app-development' },
@@ -269,15 +270,17 @@ const Hero = () => {
                             <button
                               type="button"
                               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                              className={`group relative flex w-full items-center justify-between overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${location.pathname.startsWith('/services') ? 'text-white' : 'text-white/80 hover:text-white'
-                                }`}
+                              className={`group relative flex w-full items-center justify-between overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                                location.pathname.startsWith('/services') ? 'text-white' : 'text-white/80 hover:text-white'
+                              }`}
                             >
                               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
                               <span className="relative flex items-center gap-3">
                                 <span className={
-                                  `h-1.5 w-1.5 rounded-full transition-all duration-300 ${location.pathname.startsWith('/services')
-                                    ? 'bg-[var(--zim-green)] scale-125'
-                                    : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                  `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                    location.pathname.startsWith('/services')
+                                      ? 'bg-[var(--zim-green)] scale-125'
+                                      : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
                                   }`
                                 } />
                                 {item.label}
@@ -301,7 +304,7 @@ const Hero = () => {
                                   }}
                                   className="overflow-hidden"
                                 >
-                                  <div className="ml-4 border-l border-white/20 pl-4 py-2 space-y-1">
+                                  <div className="ml-4 border-l border-white/10 pl-4 py-2 space-y-1">
                                     {serviceLinks.map((link, idx) => (
                                       <motion.div
                                         key={link.to}
@@ -318,7 +321,8 @@ const Hero = () => {
                                           to={link.to}
                                           onClick={() => setMobileMenuOpen(false)}
                                           className={({ isActive }) =>
-                                            `block rounded-lg px-3 py-2 text-sm transition-all duration-200 ${isActive ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
+                                            `block rounded-lg px-3 py-2 text-sm transition-all duration-200 ${
+                                              isActive ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
                                             }`
                                           }
                                         >
@@ -336,16 +340,18 @@ const Hero = () => {
                             to={item.to}
                             onClick={() => setMobileMenuOpen(false)}
                             className={({ isActive }) =>
-                              `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
+                              `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
+                                isActive ? 'text-white' : 'text-white/80 hover:text-white'
                               }`
                             }
                           >
                             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
                             <span className="relative flex items-center gap-3">
                               <span className={
-                                `h-1.5 w-1.5 rounded-full transition-all duration-300 ${location.pathname === item.to
-                                  ? 'bg-[var(--zim-green)] scale-125'
-                                  : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
+                                  location.pathname === item.to
+                                    ? 'bg-[var(--zim-green)] scale-125'
+                                    : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
                                 }`
                               } />
                               {item.label}
@@ -361,21 +367,13 @@ const Hero = () => {
                       className="mt-6 border-t border-white/10 pt-6"
                     >
                       <a
-                        href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                        href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                         target="_blank"
                         rel="noreferrer"
-                        onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
                         Get a Free Quote
                       </a>
-                      <Link
-                        to="/contact"
-                        onClick={() => setMobileMenuOpen(false)}
-                        className="block w-full rounded-full border border-white/30 px-4 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:scale-[1.02] hover:bg-white/10"
-                      >
-                        Contact Us
-                      </Link>
                     </motion.div>
                   </nav>
                 </motion.div>
@@ -405,13 +403,13 @@ const Hero = () => {
                   href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110 active:scale-95 transition-transform"
                 >
                   Get a Free Quote
                 </a>
                 <Link
                   to="/portfolio"
-                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-full border border-white/35 bg-white/5 px-8 py-3 text-sm font-semibold text-white hover:bg-white/10 active:scale-95 transition-transform"
                 >
                   View our work
                 </Link>
@@ -426,7 +424,7 @@ const Hero = () => {
                   href="https://wa.me/263777530322"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-white/70 hover:text-white"
+                  className="inline-flex items-center justify-center gap-2 text-xs font-semibold text-white/70 hover:text-white transition-colors"
                 >
                   WhatsApp <MessageCircle size={16} />
                 </a>

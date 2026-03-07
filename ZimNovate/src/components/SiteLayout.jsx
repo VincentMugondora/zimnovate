@@ -1,11 +1,9 @@
 import React, { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
-import Header from './Header.jsx'
 import Footer from './Footer.jsx'
 
 const SiteLayout = () => {
   const location = useLocation()
-  const isHome = location.pathname === '/'
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })

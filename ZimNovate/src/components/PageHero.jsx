@@ -28,6 +28,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
       if (closeTimer.current) clearTimeout(closeTimer.current)
     }
   }, [])
+
   const serviceLinks = [
     { label: 'Web Development', to: '/services/web-development' },
     { label: 'Mobile Apps', to: '/services/mobile-app-development' },
