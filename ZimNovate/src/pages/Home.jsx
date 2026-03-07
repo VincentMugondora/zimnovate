@@ -19,9 +19,9 @@ const Home = () => {
     '/projects/Screenshot 2026-03-07 140515.png',
   ]
   const bestProjectLinks = [
-    '/portfolio/zimfresh',
-    '/portfolio/swiftpay',
-    '/portfolio/royal-home-care',
+    'https://hustlr.chat',
+    'https://mugoplumbingsolutions.co.zw',
+    'https://www.greaterheightsacademy.co.zw',
   ]
   const serviceLinks = {
     branding: '/services/branding',
@@ -32,9 +32,9 @@ const Home = () => {
     consulting: '/services/digital-strategy',
   }
   const bestLocations = [
-    'Jakarta, Indonesia',
-    'Kuala Lumpur, Malaysia',
-    'Sydney, Australia',
+    'Harare, Zimbabwe',
+    'Harare, Zimbabwe',
+    'Harare, Zimbabwe',
   ]
 
   const designers = [
@@ -146,13 +146,15 @@ const Home = () => {
                   </div>
                 </div>
 
-                <Link
-                  to={bestProjectLinks[idx] || '/portfolio'}
+                <a
+                  href={bestProjectLinks[idx] || '/portfolio'}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute right-4 bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-[0_14px_30px_rgba(124,255,95,0.35)] transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5 md:right-5 md:bottom-5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
-                </Link>
+                </a>
 
                 <div className="mt-4">
                   <div className="text-xl font-semibold text-[var(--zim-black)] md:text-2xl">
@@ -205,7 +207,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Brand identity design illustration"
                       title="Brand Identity"
                       width="200"
@@ -223,7 +225,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Web development coding interface"
                       title="Web Development Services"
                       width="200"
@@ -241,7 +243,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="UI and UX design wireframes"
                       title="UI/UX Design"
                       width="200"
@@ -259,7 +261,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Business automation tools and workflow"
                       title="Automation Services"
                       width="200"
@@ -277,7 +279,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Digital strategy planning board"
                       title="Digital Strategy"
                       width="200"
@@ -295,7 +297,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="E-commerce website design layout"
                       title="E-Commerce Solutions"
                       width="200"
