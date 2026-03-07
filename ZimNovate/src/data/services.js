@@ -8,11 +8,8 @@ export const services = [
     highlights: ['Logo design', 'Brand guides', 'Social media kits'],
     icon: '🎨',
     accent: 'var(--zim-orange)',
-<<<<<<< HEAD
     startingPrice: 350,
-=======
     route: '/services/branding',
->>>>>>> chore/update-media-assets
   },
   {
     id: 'websites',
@@ -23,11 +20,8 @@ export const services = [
     highlights: ['Landing pages', 'Company websites', 'SEO-ready builds'],
     icon: '🌐',
     accent: 'var(--zim-blue)',
-<<<<<<< HEAD
     startingPrice: 500,
-=======
     route: '/services/web-development',
->>>>>>> chore/update-media-assets
   },
   {
     id: 'webapps',
@@ -38,11 +32,8 @@ export const services = [
     highlights: ['Dashboards', 'Portals', 'Integrations'],
     icon: '⚙️',
     accent: 'var(--zim-green)',
-<<<<<<< HEAD
     startingPrice: 1500,
-=======
     route: '/services/web-development',
->>>>>>> chore/update-media-assets
   },
   {
     id: 'automation',
@@ -53,26 +44,20 @@ export const services = [
     highlights: ['API integrations', 'Internal tooling', 'Operational workflows'],
     icon: '🤖',
     accent: 'var(--zim-blue)',
-<<<<<<< HEAD
     startingPrice: 800,
-=======
     route: '/services/ai-automation',
->>>>>>> chore/update-media-assets
   },
   {
     id: 'mobile',
     category: 'Mobile Development',
-    title: 'Cross-Platform Mobile Apps',
+    title: ' Cross-Platform Mobile Apps',
     description:
       'Mobile experiences that are clean, fast, and consistent across iOS and Android.',
     highlights: ['MVP apps', 'Internal apps', 'Customer apps'],
     icon: '📱',
     accent: 'var(--zim-green)',
-<<<<<<< HEAD
     startingPrice: 2000,
-=======
     route: '/services/mobile-app-development',
->>>>>>> chore/update-media-assets
   },
   {
     id: 'consulting',
@@ -83,9 +68,7 @@ export const services = [
     highlights: ['Discovery sessions', 'MVP planning', 'Transformation strategy'],
     icon: '🧭',
     accent: 'var(--zim-orange)',
-<<<<<<< HEAD
     startingPrice: 400,
-=======
     route: '/services/digital-strategy',
   },
   {
@@ -109,10 +92,8 @@ export const services = [
     icon: '📣',
     accent: 'var(--zim-orange)',
     route: '/services/digital-marketing',
->>>>>>> chore/update-media-assets
   },
 ]
-
 
 export const serviceCategories = Array.from(
   new Set(services.map((s) => s.category)),
