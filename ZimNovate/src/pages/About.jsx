@@ -107,7 +107,7 @@ const About = () => {
             </div>
             <div className="relative overflow-hidden rounded-2xl border border-[#f4d47c]/20">
               <img 
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&auto=format" 
+                src="/mission.png" 
                 alt="Our mission in action"
                 className="h-80 w-full object-cover"
               />
