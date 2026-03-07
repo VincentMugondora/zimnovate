@@ -36,7 +36,7 @@ const Portfolio = () => {
       title: 'Royal Home Care',
       subtitle: 'Branding & Identity',
       description: 'A fresh, elegant visual identity created for a healthcare provider.',
-      image: 'https://images.unsplash.com/photo-1587613991231-7b42a2a1341b?w=800&h=600&fit=crop&crop=entropy&auto=format',
+      image: 'https://images.unsplash.com/photo-1581578731521-2b8ff062886a?w=800&h=600&fit=crop&auto=format',
       highlights: ['Logo design', 'Color system', 'Typography', 'Brand guidelines'],
       tags: ['Branding', 'Design'],
       to: '/portfolio/royal-home-care',
@@ -63,7 +63,7 @@ const Portfolio = () => {
       title: 'ZimFarms',
       subtitle: 'E-Commerce & Inventory System',
       description: 'A product ordering platform with farm-to-door delivery tracking.',
-      image: 'https://images.unsplash.com/photo-1581092334643-8550c1b36f1f?w=800&h=600&fit=crop&crop=entropy&auto=format',
+      image: 'https://images.unsplash.com/photo-1605000797439-75a1500888c4?w=800&h=600&fit=crop&auto=format',
       highlights: ['Custom store', 'Delivery tracking', 'Order management', 'Supplier dashboards'],
       tags: ['E-Commerce'],
       to: '/portfolio/zimfarms',
@@ -112,7 +112,7 @@ const Portfolio = () => {
           <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-1">
             <div className="relative h-80 overflow-hidden rounded-3xl">
               <img
-                src="https://images.unsplash.com/photo-1559027615-f6f1b739d33c?w=900&h=700&fit=crop&crop=entropy&auto=format"
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&h=700&fit=crop&auto=format"
                 alt="Creative workspace"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
