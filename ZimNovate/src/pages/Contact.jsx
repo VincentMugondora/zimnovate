@@ -115,8 +115,8 @@ const Contact = () => {
           <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F9F5EF] p-1">
             <div className="relative h-80 overflow-hidden rounded-3xl">
               <img
-                src="https://images.unsplash.com/photo-1525182008055-f88b95ff7980?w=900&h=700&fit=crop&crop=entropy&auto=format"
-                alt="Team collaboration"
+                src="/contact.png"
+                alt="Start your project with Zimnovate"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/20 to-transparent" />
@@ -283,8 +283,8 @@ const Contact = () => {
               <div className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white p-1">
                 <div className="relative h-48 overflow-hidden rounded-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?w=700&h=500&fit=crop&crop=entropy&auto=format"
-                    alt="Contact"
+                    src="/contact.png"
+                    alt="Contact Zimnovate"
                     className="h-full w-full object-cover"
                   />
                 </div>
