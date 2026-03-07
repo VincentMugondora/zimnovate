@@ -14,9 +14,9 @@ const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services
   const bestProjectImages = [
-    'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=75&fm=webp',
-    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=75&fm=webp',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=75&fm=webp',
+    '/projects/Screenshot 2026-03-06 112925.png',
+    '/projects/Screenshot 2026-03-06 113059.png',
+    '/projects/Screenshot 2026-03-07 140515.png',
   ]
   const bestProjectLinks = [
     '/portfolio/zimfresh',
