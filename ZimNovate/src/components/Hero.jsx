@@ -366,7 +366,7 @@ const Hero = () => {
             )}
           </AnimatePresence>
 
-          <div className="px-4 py-12 text-center text-white sm:px-6 sm:py-16 md:px-10 md:py-20">
+          <div className="px-4 py-8 text-center text-white sm:px-6 sm:py-12 md:px-10 md:py-14">
             <MotionDiv
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -379,11 +379,11 @@ const Hero = () => {
                 With Smart Digital Solutions
               </h1>
 
-              <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
+              <p className="mx-auto mt-2 max-w-2xl text-sm text-white/80 sm:mt-4 sm:text-base">
                 Zimnovate is a full-stack digital agency in Zimbabwe helping startups, SMEs, and brands grow through modern technology, clean design, and data-driven strategies.
               </p>
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row">
+              <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:mt-6 sm:flex-row">
                 <a
                   href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                   target="_blank"
@@ -400,11 +400,11 @@ const Hero = () => {
                 </Link>
               </div>
 
-              <p className="mx-auto mt-8 max-w-xl text-xs text-white/70 md:text-sm">
+              <p className="mx-auto mt-4 max-w-xl text-[10px] text-white/70 md:text-xs">
                 In 3 weeks, we launched a new platform for a client and improved conversions.
               </p>
 
-              <div className="mt-4 flex justify-center">
+              <div className="mt-2 flex justify-center">
                 <a
                   href="https://wa.me/263777530322"
                   target="_blank"
