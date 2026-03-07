@@ -106,10 +106,10 @@ const Home = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
-              BEST PROJECT
+              LATEST PROJECTS
             </h2>
             <div className="text-center text-sm text-[var(--zim-fg)] md:block">
-              Explore more of our best projects.
+              Explore more of our latest projects.
             </div>
             <Link
               to="/portfolio"
