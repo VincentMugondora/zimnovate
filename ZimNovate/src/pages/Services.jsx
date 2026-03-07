@@ -1,80 +1,20 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import SectionHeading from '../components/SectionHeading.jsx'
-import ServiceCard from '../components/ServiceCard.jsx'
+import { ArrowUpRight } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
-import { serviceCategories, services } from '../data/services.js'
+import { services } from '../data/services.js'
 
 const Services = () => {
-  const grouped = useMemo(() => {
-    return serviceCategories.map((cat) => ({
-      category: cat,
-      items: services.filter((s) => s.category === cat),
-    }))
-  }, [])
-
-  const getServiceLink = (serviceTitle) => {
-    const serviceLinks = {
-      'Web Development': '/services/web-development',
-      'Custom Websites': '/services/web-development',
-      'E-Commerce Development': '/services/web-development',
-      'Web Applications': '/services/web-development',
-      'CMS Solutions': '/services/web-development',
-      'Website Maintenance': '/services/web-development',
-      'Mobile Apps': '/services/mobile-app-development',
-      'Native App Development': '/services/mobile-app-development',
-      'Cross-Platform Apps': '/services/mobile-app-development',
-      'UI/UX App Design': '/services/mobile-app-development',
-      'Backend & API Development': '/services/mobile-app-development',
-      'App Maintenance & Updates': '/services/mobile-app-development',
-      'Digital Strategy': '/services/digital-strategy',
-      'Digital Growth Strategy': '/services/digital-strategy',
-      'SEO & Content Strategy': '/services/digital-strategy',
-      'Social Media Strategy': '/services/digital-strategy',
-      'Brand Positioning': '/services/digital-strategy',
-      'Data & Analytics': '/services/digital-strategy',
-      'Consulting & Advisory': '/services/digital-strategy',
-      'AI & Automation': '/services/ai-automation',
-      'AI Chatbots': '/services/ai-automation',
-      'Business Process Automation': '/services/ai-automation',
-      'Predictive Analytics': '/services/ai-automation',
-      'Computer Vision': '/services/ai-automation',
-      'Document Automation': '/services/ai-automation',
-      'AI Consulting': '/services/ai-automation',
-      'E-commerce Solutions': '/services/e-commerce',
-      'Custom E-Commerce': '/services/e-commerce',
-      'Payment Integration': '/services/e-commerce',
-      'E-Commerce Automation': '/services/e-commerce',
-      'Marketplace Setup': '/services/e-commerce',
-      'Mobile Commerce': '/services/e-commerce',
-      'E-Commerce SEO': '/services/e-commerce',
-      'Digital Marketing': '/services/digital-marketing',
-      'Social Media Marketing': '/services/digital-marketing',
-      'SEO & Content Marketing': '/services/digital-marketing',
-      'Paid Advertising': '/services/digital-marketing',
-      'Content Marketing': '/services/digital-marketing',
-      'Email Marketing': '/services/digital-marketing',
-      'Branding': '/services/branding',
-      'Logo Design': '/services/branding',
-      'Brand Identity': '/services/branding',
-      'Graphic Design': '/services/branding',
-      'UI/UX Design': '/services/branding',
-      'Packaging Design': '/services/branding',
-      'Social Media Branding': '/services/branding',
-    }
-    return serviceLinks[serviceTitle] || '/contact'
-  }
-
   return (
     <>
       <Helmet>
         <title>Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing</title>
         <meta name="description" content="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses in Harare and beyond." />
-        <meta name="keywords" content="digital services Zimbabwe, web development Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe, e-commerce Zimbabwe, website design Harare, affordable website design Zimbabwe, custom software development Zimbabwe" />
+        <meta name="keywords" content="digital services Zimbabwe, web development Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe, e-commerce Zimbabwe, website design Harare" />
         <link rel="canonical" href="https://zimnovate.co.zw/services" />
         <meta property="og:title" content="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing" />
-        <meta property="og:description" content="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses." />
+        <meta property="og:description" content="Explore Zimnovate's professional digital services for Zimbabwean businesses." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://zimnovate.co.zw/services" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -82,224 +22,120 @@ const Services = () => {
         <meta name="twitter:description" content="Explore Zimnovate's professional digital services for Zimbabwean businesses." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
       </Helmet>
-    <div>
-      <PageHero 
-        title="Full-Stack Digital Services Designed to Help African Businesses Grow"
-        subtitle="Professional web design, mobile apps, branding, digital marketing, and e-commerce solutions tailored for Zimbabwean businesses."
-        height="min-h-[45vh]"
-      />
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <SectionHeading
-            eyebrow="Services"
-            title="Digital Solutions Built for African Markets"
-            subtitle="From web design and mobile apps to branding and digital marketing — we deliver modern, scalable solutions that drive growth."
-          />
-          <Link
-            to="/contact"
-            className="inline-flex w-fit rounded-md bg-[var(--zim-blue)] px-4 py-2 text-sm font-semibold text-white hover:brightness-110"
-          >
-            Request a Quote
-          </Link>
-        </div>
 
-        <div className="mt-10 space-y-12">
-          {grouped.map((g) => (
-            <div key={g.category} className="space-y-6">
-              <div className="flex items-center justify-between">
-                <div className="text-sm font-semibold text-[var(--zim-fg)]/80">
-                  {g.category}
-                </div>
-                {(g.category === 'Web Development' || g.category === 'Mobile Apps' || g.category === 'Digital Strategy' || g.category === 'AI & Automation' || g.category === 'E-commerce Solutions' || g.category === 'Digital Marketing' || g.category === 'Branding') && (
-                  <Link
-                    to={
-                      g.category === 'Web Development'
-                        ? '/services/web-development'
-                        : g.category === 'Mobile Apps'
-                        ? '/services/mobile-app-development'
-                        : g.category === 'Digital Strategy'
-                        ? '/services/digital-strategy'
-                        : g.category === 'AI & Automation'
-                        ? '/services/ai-automation'
-                        : g.category === 'E-commerce Solutions'
-                        ? '/services/e-commerce'
-                        : g.category === 'Digital Marketing'
-                        ? '/services/digital-marketing'
-                        : '/services/branding'
-                    }
-                    className="text-sm font-semibold text-[#F4D47C] hover:text-[#F4D47C]/80 transition-colors"
-                  >
-                    View Details →
-                  </Link>
-                )}
-              </div>
-              <div className="grid gap-4 md:grid-cols-3">
-                {g.items.map((s) => (
-                  <div key={s.id}>
-                    <ServiceCard service={s} />
-                    <div className="mt-3">
-                      <Link
-                        to={getServiceLink(s.title)}
-                        className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[#F4D47C] hover:bg-[#F4D47C]/5 transition-colors"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {g.category === 'Web Development' && (
-                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
-                  <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> 3–6 pages, mobile-first, basic SEO, delivered in 2–4 weeks.
-                  </p>
-                </div>
-              )}
-              {g.category === 'Branding' && (
-                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
-                  <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Logo, colour system, social kit, delivered in 1 week.
-                  </p>
-                </div>
-              )}
-              {g.category === 'AI & Automation' && (
-                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
-                  <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Forms, email workflows, dashboards — reduces manual work by 10+ hours per week.
-                  </p>
-                </div>
-              )}
-              {g.category === 'Full-Stack Solutions' && (
-                <div className="rounded-xl border border-[#F4D47C]/20 bg-[#F4D47C]/5 px-4 py-3">
-                  <p className="text-sm text-[#1A1A1A]/80">
-                    <span className="font-semibold text-[#0F172A]">Deliverables:</span> Admin dashboard, user roles, integrations with WhatsApp/SMS/payments.
-                  </p>
-                </div>
-              )}
-              <div className="flex gap-3">
-                {g.category === 'Web Development' ? (
-                  <>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Get a Quote in 24 Hours
-                    </Link>
-                    <a
-                      href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      WhatsApp
-                    </a>
-                  </>
-                ) : g.category === 'Mobile Apps' ? (
-                  <>
-                    <Link
-                      to="/services/mobile-app-development"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore Mobile Apps
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : g.category === 'Digital Strategy' ? (
-                  <>
-                    <Link
-                      to="/services/digital-strategy"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore Digital Strategy
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : g.category === 'AI & Automation' ? (
-                  <>
-                    <Link
-                      to="/services/ai-automation"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore AI & Automation
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : g.category === 'E-commerce Solutions' ? (
-                  <>
-                    <Link
-                      to="/services/e-commerce"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore E-Commerce
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : g.category === 'Digital Marketing' ? (
-                  <>
-                    <Link
-                      to="/services/digital-marketing"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore Digital Marketing
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : g.category === 'Branding' ? (
-                  <>
-                    <Link
-                      to="/services/branding"
-                      className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                    >
-                      Explore Branding
-                    </Link>
-                    <Link
-                      to="/contact"
-                      className="inline-flex rounded-md border border-[var(--zim-border)] bg-[var(--zim-card)] px-4 py-2 text-sm font-semibold text-[var(--zim-fg)] hover:border-[var(--zim-blue)] transition-colors"
-                    >
-                      Request a Quote
-                    </Link>
-                  </>
-                ) : (
-                  <a
-                    href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex rounded-md bg-[#F4D47C] px-4 py-2 text-sm font-semibold text-[#0F172A] hover:brightness-110 transition-colors"
-                  >
-                    Get a Quote in 24 Hours
-                  </a>
-                )}
-              </div>
+      <div className="bg-[var(--zim-bg)]">
+        <PageHero
+          title="Digital Services Built to Grow Your Business"
+          subtitle="From websites and mobile apps to branding, automation, and marketing — we deliver modern solutions for Zimbabwean businesses."
+          height="min-h-[42vh]"
+        />
+
+        {/* Services Grid */}
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-16 md:px-16 md:py-24 lg:px-20">
+
+          {/* Header */}
+          <div className="mb-14 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-[var(--zim-green)]">What we offer</p>
+              <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
+                Our Services
+              </h2>
+              <p className="mt-2 max-w-xl text-sm text-[var(--zim-fg)]/70">
+                Every service is built with performance, clarity, and African markets in mind.
+              </p>
             </div>
-          ))}
-        </div>
-      </section>
-    </div>
+            <Link
+              to="/contact"
+              className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--zim-green)] px-6 py-2.5 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110 transition-all"
+            >
+              Get a Free Quote <ArrowUpRight size={14} />
+            </Link>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {services.map((s, idx) => (
+              <Link
+                key={s.id}
+                to={s.route}
+                className="group relative flex flex-col rounded-[28px] bg-[var(--zim-card,#fff)] p-6 ring-1 ring-black/[0.07] shadow-[0_8px_32px_rgba(0,0,0,0.07)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_20px_48px_rgba(0,0,0,0.12)] hover:ring-[var(--zim-green)]/40"
+              >
+                {/* Icon */}
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl text-2xl"
+                  style={{ background: `color-mix(in srgb, ${s.accent} 15%, transparent)` }}>
+                  {s.icon}
+                </div>
+
+                {/* Category badge */}
+                <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-widest text-[var(--zim-fg)]/50">
+                  {s.category}
+                </p>
+
+                {/* Title */}
+                <h3 className="mb-2 text-base font-bold text-[var(--zim-black)] leading-snug group-hover:text-[var(--zim-black)]">
+                  {s.title}
+                </h3>
+
+                {/* Description */}
+                <p className="mb-5 flex-1 text-sm leading-relaxed text-[var(--zim-fg)]/65">
+                  {s.description}
+                </p>
+
+                {/* Highlights */}
+                <ul className="mb-6 space-y-1.5">
+                  {s.highlights.map((h) => (
+                    <li key={h} className="flex items-center gap-2 text-xs text-[var(--zim-fg)]/70">
+                      <span className="h-1.5 w-1.5 rounded-full flex-shrink-0" style={{ background: s.accent }} />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <div className="flex items-center justify-between border-t border-[var(--zim-border)] pt-4">
+                  <span className="text-xs font-semibold text-[var(--zim-fg)]/60 group-hover:text-[var(--zim-black)] transition-colors">
+                    Learn more
+                  </span>
+                  <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--zim-gray,#f4f4f4)] text-[var(--zim-black)] transition-all group-hover:bg-[var(--zim-green)] group-hover:shadow-[0_4px_16px_rgba(124,255,95,0.4)]">
+                    <ArrowUpRight size={14} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Banner */}
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-20 md:px-16 lg:px-20">
+          <div className="relative overflow-hidden rounded-[32px] bg-[var(--zim-black)] px-8 py-14 text-center md:py-20">
+            {/* subtle green glow */}
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+              <div className="h-64 w-64 rounded-full bg-[var(--zim-green)]/20 blur-[80px]" />
+            </div>
+            <p className="relative mb-2 text-xs font-semibold uppercase tracking-widest text-[var(--zim-green)]">Ready to start?</p>
+            <h2 className="relative mb-4 text-3xl font-extrabold text-white md:text-4xl">
+              Let's build something great together.
+            </h2>
+            <p className="relative mb-8 mx-auto max-w-lg text-sm text-white/60">
+              Tell us about your project and we'll help you choose the right services to hit your goals.
+            </p>
+            <div className="relative flex flex-wrap justify-center gap-3">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-bold text-[var(--zim-black)] hover:brightness-110 transition-all"
+              >
+                Start a Project <ArrowUpRight size={15} />
+              </Link>
+              <Link
+                to="/portfolio"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3 text-sm font-semibold text-white/80 hover:border-white/40 hover:text-white transition-all"
+              >
+                View Our Work
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   )
 }

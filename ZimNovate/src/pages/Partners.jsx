@@ -163,7 +163,7 @@ const Partners = () => {
         height="min-h-[60vh]"
       />
       
-      <section className="mx-auto max-w-7xl px-12 pb-8 md:px-16 md:pb-12 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-8 md:px-16 md:pb-12 lg:px-20">
         <div className="text-center max-w-3xl mx-auto -mt-8">
           <p className="text-lg text-[var(--zim-fg)] mb-8">
             We collaborate with startups, SMEs, agencies and corporate teams to build world-class digital solutions that are fast, reliable and built for scale.
@@ -187,7 +187,7 @@ const Partners = () => {
 
       {/* Why Partner With Zimnovate */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--zim-black)] mb-4">
               Better Technology. Faster Execution. Real Results.
@@ -212,7 +212,7 @@ const Partners = () => {
       </section>
 
       {/* Types of Partnerships */}
-      <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--zim-black)] mb-4">
             Partnership Models That Fit Your Business
@@ -244,7 +244,7 @@ const Partners = () => {
 
       {/* How Our Process Works */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--zim-black)] mb-4">
               How Our Partnership Process Works
@@ -272,7 +272,7 @@ const Partners = () => {
       </section>
 
       {/* Partnership Benefits */}
-      <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--zim-black)] mb-4">
             What You Get as a Zimnovate Partner
@@ -292,7 +292,7 @@ const Partners = () => {
 
       {/* Social Proof */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-12 md:px-16 md:py-16 lg:px-20">
           <p className="text-center text-sm text-[var(--zim-fg)] mb-6">
             Trusted by growth-focused startups and businesses across Zimbabwe & Africa
           </p>
@@ -307,7 +307,7 @@ const Partners = () => {
       </section>
 
       {/* Partnership Form */}
-      <section id="partnership-form" className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section id="partnership-form" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <div className="mx-auto max-w-2xl">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--zim-black)] mb-4">

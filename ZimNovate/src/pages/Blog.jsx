@@ -70,7 +70,7 @@ const Blog = () => {
 
       {/* Categories */}
       <section className="border-b border-[#F4D47C]/20">
-        <div className="mx-auto max-w-7xl px-12 py-6 md:px-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-6 md:px-16 lg:px-20">
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map((category) => (
               <button
@@ -90,7 +90,7 @@ const Blog = () => {
       </section>
 
       {/* Articles Grid */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         {loading ? (
           <div className="flex items-center justify-center py-20">
             <div className="flex items-center gap-3 text-[#1A1A1A]/60">
@@ -166,7 +166,7 @@ const Blog = () => {
 
       {/* Newsletter */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h3 className="text-2xl font-bold text-[#0F172A]">Subscribe to Our Newsletter</h3>
             <p className="text-sm text-[#1A1A1A]/70">

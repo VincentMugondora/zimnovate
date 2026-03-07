@@ -61,7 +61,7 @@ const FAQ = () => {
         height="min-h-[40vh]"
       />
 
-      <section className="mx-auto max-w-4xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-4xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <div className="space-y-8">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-[var(--zim-border)] pb-8">

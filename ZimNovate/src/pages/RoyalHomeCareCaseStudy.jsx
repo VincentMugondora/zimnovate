@@ -20,7 +20,7 @@ const RoyalHomeCareCaseStudy = () => {
         />
 
       {/* Project Overview */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
             <div className="inline-flex rounded-full bg-[#F4D47C]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] text-[#0F172A]">
@@ -58,7 +58,7 @@ const RoyalHomeCareCaseStudy = () => {
 
       {/* The Problem */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">The Challenge</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">The Problem</h3>
@@ -81,7 +81,7 @@ const RoyalHomeCareCaseStudy = () => {
       </section>
 
       {/* The Solution */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Our Approach</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">The Solution</h3>
@@ -121,7 +121,7 @@ const RoyalHomeCareCaseStudy = () => {
 
       {/* Features & Deliverables */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">What We Delivered</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Brand Deliverables</h3>
@@ -154,7 +154,7 @@ const RoyalHomeCareCaseStudy = () => {
       </section>
 
       {/* The Process */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">How We Did It</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">The Process</h3>
@@ -191,7 +191,7 @@ const RoyalHomeCareCaseStudy = () => {
 
       {/* Visual Gallery */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Visual Showcase</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Brand Gallery</h3>
@@ -225,7 +225,7 @@ const RoyalHomeCareCaseStudy = () => {
       </section>
 
       {/* Results */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Impact</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Results & Recognition</h3>
@@ -249,7 +249,7 @@ const RoyalHomeCareCaseStudy = () => {
 
       {/* Testimonial */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="max-w-3xl mx-auto text-center">
             <div className="mb-6 flex justify-center">
               <span className="text-6xl text-[#F4D47C]">"</span>
@@ -274,7 +274,7 @@ const RoyalHomeCareCaseStudy = () => {
       </section>
 
       {/* Project Links */}
-      <section className="mx-auto max-w-7xl px-12 py-10 md:px-16 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 md:px-16 lg:px-20">
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
             to="/portfolio"
@@ -287,7 +287,7 @@ const RoyalHomeCareCaseStudy = () => {
 
       {/* Navigation */}
       <section className="border-t border-[#F4D47C]/20">
-        <div className="mx-auto max-w-7xl px-12 py-8 md:px-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-8 md:px-16 lg:px-20">
           <div className="flex justify-between items-center">
             <Link
               to="/portfolio"
@@ -306,7 +306,7 @@ const RoyalHomeCareCaseStudy = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F4D47C] p-10 text-[#0F172A] shadow-[0_28px_80px_rgba(0,0,0,0.15)]">
           <div className="absolute -left-10 -top-10 h-48 w-48 rounded-full bg-white/20 blur-3xl" />
           <div className="absolute right-0 top-0 h-52 w-52 rounded-full bg-white/10 blur-3xl" />

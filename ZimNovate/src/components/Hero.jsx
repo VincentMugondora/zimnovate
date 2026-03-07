@@ -39,11 +39,11 @@ const Hero = () => {
   ]
 
   return (
-    <section className="bg-white p-[10px]">
-      <div className="relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]">
+    <section className="bg-white p-2 sm:p-[10px]">
+      <div className="relative mx-auto w-full overflow-hidden rounded-[20px] sm:rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]">
         {/* LCP Hero Image - Using img tag for proper preload support */}
         <img
-          src="/imgs/agency.jpg"
+          src="/hero.png"
           alt="Zimnovate digital agency workspace"
           title="Our Digital Workspace"
           width="1200"
@@ -58,8 +58,8 @@ const Hero = () => {
 
         <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" style={{ zIndex: 2 }} />
 
-        <div className="relative z-10 w-full p-[10px]">
-          <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
+        <div className="relative z-10 w-full p-2 sm:p-[10px]">
+          <div className="flex items-center justify-between gap-2 px-2 py-4 text-white sm:gap-4 sm:px-6 md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
               <ResponsiveLogo loading="eager" />
             </Link>
@@ -68,25 +68,22 @@ const Hero = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
               <div className="relative flex h-4 w-5 flex-col items-center justify-center">
                 <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
-                  }`}
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
+                    }`}
                 />
                 <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
-                  }`}
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                    }`}
                 />
                 <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
-                  }`}
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
+                    }`}
                 />
               </div>
             </button>
@@ -110,17 +107,15 @@ const Hero = () => {
                 <NavLink
                   to="/services"
                   className={({ isActive }) =>
-                    `flex items-center gap-1 hover:text-white ${
-                      isActive ? 'text-white' : 'text-white/80'
+                    `flex items-center gap-1 hover:text-white ${isActive ? 'text-white' : 'text-white/80'
                     }`
                   }
                 >
                   Services
                 </NavLink>
                 <div
-                  className={`absolute left-0 top-full mt-2 min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/90 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out ${
-                    servicesOpen ? 'block' : 'hidden'
-                  }`}
+                  className={`absolute left-0 top-full mt-2 min-w-[220px] rounded-xl border border-white/10 bg-[#0b0b0b]/90 p-3 text-sm shadow-2xl backdrop-blur-md transition duration-150 ease-out ${servicesOpen ? 'block' : 'hidden'
+                    }`}
                   onMouseEnter={openServices}
                   onMouseLeave={closeServicesDelayed}
                 >
@@ -130,8 +125,7 @@ const Hero = () => {
                         key={link.to}
                         to={link.to}
                         className={({ isActive }) =>
-                          `rounded-lg px-3 py-2 transition hover:bg-white/10 ${
-                            isActive ? 'text-white' : 'text-white/80'
+                          `rounded-lg px-3 py-2 transition hover:bg-white/10 ${isActive ? 'text-white' : 'text-white/80'
                           }`
                         }
                       >
@@ -203,16 +197,16 @@ const Hero = () => {
                   initial={{ x: '100%', opacity: 0.8 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: '100%', opacity: 0.8 }}
-                  transition={{ 
-                    type: 'spring', 
-                    damping: 25, 
+                  transition={{
+                    type: 'spring',
+                    damping: 25,
                     stiffness: 200,
                     opacity: { duration: 0.2 }
                   }}
                   className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl md:hidden"
                 >
                   <div className="flex items-center justify-between border-b border-white/10 p-4">
-                    <motion.span 
+                    <motion.span
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1, duration: 0.3 }}
@@ -232,7 +226,7 @@ const Hero = () => {
                       <X size={20} />
                     </motion.button>
                   </div>
-                  <nav className="flex flex-col p-4" aria-label="Mobile">
+                  <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                     {[
                       { to: '/', label: 'Home', hasSubmenu: false },
                       { to: '/services', label: 'Services', hasSubmenu: true },
@@ -246,7 +240,7 @@ const Hero = () => {
                         key={item.to}
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ 
+                        transition={{
                           delay: 0.1 + index * 0.08,
                           type: 'spring',
                           damping: 20,
@@ -258,17 +252,15 @@ const Hero = () => {
                             <button
                               type="button"
                               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                              className={`group relative flex w-full items-center justify-between overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
-                                location.pathname.startsWith('/services') ? 'text-white' : 'text-white/80 hover:text-white'
-                              }`}
+                              className={`group relative flex w-full items-center justify-between overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${location.pathname.startsWith('/services') ? 'text-white' : 'text-white/80 hover:text-white'
+                                }`}
                             >
                               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
                               <span className="relative flex items-center gap-3">
                                 <span className={
-                                  `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                                    location.pathname.startsWith('/services')
-                                      ? 'bg-[var(--zim-green)] scale-125'
-                                      : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                  `h-1.5 w-1.5 rounded-full transition-all duration-300 ${location.pathname.startsWith('/services')
+                                    ? 'bg-[var(--zim-green)] scale-125'
+                                    : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
                                   }`
                                 } />
                                 {item.label}
@@ -309,8 +301,7 @@ const Hero = () => {
                                           to={link.to}
                                           onClick={() => setMobileMenuOpen(false)}
                                           className={({ isActive }) =>
-                                            `block rounded-lg px-3 py-2 text-sm transition-all duration-200 ${
-                                              isActive ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
+                                            `block rounded-lg px-3 py-2 text-sm transition-all duration-200 ${isActive ? 'text-white bg-white/10' : 'text-white/70 hover:text-white hover:bg-white/5'
                                             }`
                                           }
                                         >
@@ -328,18 +319,16 @@ const Hero = () => {
                             to={item.to}
                             onClick={() => setMobileMenuOpen(false)}
                             className={({ isActive }) =>
-                              `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${
-                                isActive ? 'text-white' : 'text-white/80 hover:text-white'
+                              `group relative block overflow-hidden rounded-lg px-4 py-3 text-base font-semibold transition-all duration-300 ${isActive ? 'text-white' : 'text-white/80 hover:text-white'
                               }`
                             }
                           >
                             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--zim-green)]/20 to-transparent transition-transform duration-300 group-hover:translate-x-0" />
                             <span className="relative flex items-center gap-3">
                               <span className={
-                                `h-1.5 w-1.5 rounded-full transition-all duration-300 ${
-                                  location.pathname === item.to
-                                    ? 'bg-[var(--zim-green)] scale-125'
-                                    : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
+                                `h-1.5 w-1.5 rounded-full transition-all duration-300 ${location.pathname === item.to
+                                  ? 'bg-[var(--zim-green)] scale-125'
+                                  : 'bg-white/40 group-hover:bg-[var(--zim-green)]'
                                 }`
                               } />
                               {item.label}
@@ -348,7 +337,7 @@ const Hero = () => {
                         )}
                       </motion.div>
                     ))}
-                    <motion.div 
+                    <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
@@ -377,29 +366,31 @@ const Hero = () => {
             )}
           </AnimatePresence>
 
-          <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
+          <div className="px-4 py-12 text-center text-white sm:px-6 sm:py-16 md:px-10 md:py-20">
             <MotionDiv
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[1.1]">
-                Websites, apps and automations for African startups, SMEs and NGOs.
+              <h1 className="text-2xl font-extrabold leading-[1.2] tracking-tight sm:text-3xl sm:leading-tight md:text-4xl md:leading-[1.1] lg:text-5xl">
+                Empowering African Businesses
+                <br className="hidden sm:block" />
+                With Smart Digital Solutions
               </h1>
 
-              <p className="mx-auto mt-6 max-w-2xl text-base text-white/90 md:text-lg">
-                Faster sites, more leads, less manual work.
+              <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
+                Zimnovate is a full-stack digital agency in Zimbabwe helping startups, SMEs, and brands grow through modern technology, clean design, and data-driven strategies.
               </p>
 
-              <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row">
                 <a
-                  href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
+                  href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-8 py-3 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
                 >
-                  Get a quote in 24 hours
+                  Get a Free Quote
                 </a>
                 <Link
                   to="/portfolio"

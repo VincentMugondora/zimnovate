@@ -6,9 +6,13 @@ export const services = [
     description:
       'Logos, brand guidelines, and digital kits that feel modern, premium, and Africa-first.',
     highlights: ['Logo design', 'Brand guides', 'Social media kits'],
-    icon: 'megaphone',
+    icon: '🎨',
     accent: 'var(--zim-orange)',
+<<<<<<< HEAD
     startingPrice: 350,
+=======
+    route: '/services/branding',
+>>>>>>> chore/update-media-assets
   },
   {
     id: 'websites',
@@ -17,9 +21,13 @@ export const services = [
     description:
       'Fast, responsive websites built for conversions, SEO, and performance across devices.',
     highlights: ['Landing pages', 'Company websites', 'SEO-ready builds'],
-    icon: 'monitor',
+    icon: '🌐',
     accent: 'var(--zim-blue)',
+<<<<<<< HEAD
     startingPrice: 500,
+=======
+    route: '/services/web-development',
+>>>>>>> chore/update-media-assets
   },
   {
     id: 'webapps',
@@ -28,20 +36,28 @@ export const services = [
     description:
       'Secure full-stack systems that automate work, centralize data, and scale with you.',
     highlights: ['Dashboards', 'Portals', 'Integrations'],
-    icon: 'layers',
+    icon: '⚙️',
     accent: 'var(--zim-green)',
+<<<<<<< HEAD
     startingPrice: 1500,
+=======
+    route: '/services/web-development',
+>>>>>>> chore/update-media-assets
   },
   {
     id: 'automation',
-    category: 'Full-Stack Solutions',
+    category: 'AI & Automation',
     title: 'Automation & Integrations',
     description:
       'Connect tools, reduce manual work, and create reliable workflows that save time.',
     highlights: ['API integrations', 'Internal tooling', 'Operational workflows'],
-    icon: 'workflow',
+    icon: '🤖',
     accent: 'var(--zim-blue)',
+<<<<<<< HEAD
     startingPrice: 800,
+=======
+    route: '/services/ai-automation',
+>>>>>>> chore/update-media-assets
   },
   {
     id: 'mobile',
@@ -50,22 +66,53 @@ export const services = [
     description:
       'Mobile experiences that are clean, fast, and consistent across iOS and Android.',
     highlights: ['MVP apps', 'Internal apps', 'Customer apps'],
-    icon: 'smartphone',
+    icon: '📱',
     accent: 'var(--zim-green)',
+<<<<<<< HEAD
     startingPrice: 2000,
+=======
+    route: '/services/mobile-app-development',
+>>>>>>> chore/update-media-assets
   },
   {
     id: 'consulting',
-    category: 'Consulting',
+    category: 'Digital Strategy',
     title: 'Digital Strategy Consulting',
     description:
       'Clarity-first workshops to shape your product, brand, and digital roadmap.',
     highlights: ['Discovery sessions', 'MVP planning', 'Transformation strategy'],
-    icon: 'sparkles',
+    icon: '🧭',
     accent: 'var(--zim-orange)',
+<<<<<<< HEAD
     startingPrice: 400,
+=======
+    route: '/services/digital-strategy',
+  },
+  {
+    id: 'ecommerce',
+    category: 'E-Commerce',
+    title: 'E-Commerce Solutions',
+    description:
+      'End-to-end online stores with payments, inventory, and marketing built in.',
+    highlights: ['Custom stores', 'Payment integration', 'E-Commerce SEO'],
+    icon: '🛒',
+    accent: 'var(--zim-blue)',
+    route: '/services/e-commerce',
+  },
+  {
+    id: 'marketing',
+    category: 'Digital Marketing',
+    title: 'Digital Marketing',
+    description:
+      'Data-driven campaigns across social, search, and email that grow your audience.',
+    highlights: ['Social media', 'SEO & content', 'Paid advertising'],
+    icon: '📣',
+    accent: 'var(--zim-orange)',
+    route: '/services/digital-marketing',
+>>>>>>> chore/update-media-assets
   },
 ]
+
 
 export const serviceCategories = Array.from(
   new Set(services.map((s) => s.category)),

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { X, ChevronDown } from 'lucide-react'
+import ResponsiveLogo from './ResponsiveLogo.jsx'
 
 const MotionDiv = motion.div
 
@@ -38,27 +39,22 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
   ]
 
   return (
-    <section className="bg-white p-[10px]">
+    <section className="bg-white p-2 sm:p-[10px]">
       <div
-        className={`relative mx-auto w-full overflow-hidden rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)] ${height}`}
+        className={`relative mx-auto w-full overflow-hidden rounded-[20px] sm:rounded-[28px] border border-[var(--zim-border)] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)] ${height}`}
         style={{
           backgroundImage:
-            'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/imgs/agency.jpg)',
+            'linear-gradient(rgba(17,24,39,0.85), rgba(17,17,17,0.85)), url(/hero.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
         <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(17,17,17,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
 
-        <div className="relative z-10 w-full p-[10px]">
-          <div className="flex items-center justify-between gap-4 px-6 py-4 text-white md:px-10">
+        <div className="relative z-10 w-full p-2 sm:p-[10px]">
+          <div className="flex items-center justify-between gap-2 px-2 py-4 text-white sm:gap-4 sm:px-6 md:px-10">
             <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
-              <img
-                src="/logo.png"
-                alt="Zimnovate"
-                className="h-20 w-auto max-w-[180px] object-contain"
-                loading="eager"
-              />
+              <ResponsiveLogo loading="eager" />
             </Link>
 
             <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
@@ -157,7 +153,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -182,12 +178,14 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
 
             {/* Desktop CTA */}
             <div className="hidden items-center gap-3 md:flex">
-              <Link
-                to="/contact"
+              <a
+                href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
               >
-                Start a Project
-              </Link>
+                Get a Free Quote
+              </a>
             </div>
           </div>
 
@@ -238,7 +236,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                       <X size={20} />
                     </motion.button>
                   </div>
-                  <nav className="flex flex-col p-4" aria-label="Mobile">
+                  <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                     {[
                       { to: '/', label: 'Home', hasSubmenu: false },
                       { to: '/services', label: 'Services', hasSubmenu: true },
@@ -360,13 +358,15 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                       transition={{ delay: 0.6, duration: 0.4, type: 'spring' }}
                       className="mt-6 border-t border-white/10 pt-6"
                     >
-                      <Link
-                        to="/contact"
+                      <a
+                        href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
+                        target="_blank"
+                        rel="noreferrer"
                         onClick={() => setMobileMenuOpen(false)}
                         className="mb-3 block w-full rounded-full bg-[var(--zim-green)] px-4 py-3 text-center text-sm font-semibold text-[var(--zim-black)] transition-all duration-300 hover:scale-[1.02] hover:brightness-110"
                       >
-                        Start a Project
-                      </Link>
+                        Get a Free Quote
+                      </a>
                     </motion.div>
                   </nav>
                 </motion.div>
@@ -374,19 +374,19 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             )}
           </AnimatePresence>
 
-          <div className="px-6 py-16 text-center text-white md:px-10 md:py-20">
+          <div className="px-4 py-12 text-center text-white sm:px-6 sm:py-16 md:px-10 md:py-20">
             <MotionDiv
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="mx-auto max-w-4xl"
             >
-              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl md:leading-[0.95]">
+              <h1 className="text-2xl font-extrabold leading-[1.2] tracking-tight sm:text-3xl md:text-4xl md:leading-[1] lg:text-5xl lg:leading-[0.95]">
                 {title}
               </h1>
 
               {subtitle && (
-                <p className="mx-auto mt-6 max-w-2xl text-sm text-white/75 md:text-base">
+                <p className="mx-auto mt-4 max-w-2xl text-base text-white/80 sm:mt-6 sm:text-lg">
                   {subtitle}
                 </p>
               )}

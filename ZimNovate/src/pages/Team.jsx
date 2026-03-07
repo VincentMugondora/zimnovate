@@ -9,7 +9,7 @@ const TeamCard = ({ member }) => {
   return (
     <Link
       to={`/team/${member.slug}`}
-      className="group block rounded-[32px] bg-[#f3f3f3] p-4 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
+      className="group block rounded-[20px] sm:rounded-[32px] bg-[#f3f3f3] p-4 shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
     >
       <div className="overflow-hidden rounded-[24px]">
         <div className="aspect-[4/5] w-full">
@@ -98,7 +98,7 @@ const Team = () => {
           height="min-h-[50vh]"
         />
 
-        <section className="mx-auto max-w-7xl px-12 pb-8 md:px-16 md:pb-12 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-8 md:px-16 md:pb-12 lg:px-20">
           <div className="text-center max-w-3xl mx-auto">
             <p className="text-lg text-[#1A1A1A]/70 mb-8">
               A passionate group of creators, developers, strategists and innovators building world-class digital experiences for Africa and beyond.
@@ -107,7 +107,7 @@ const Team = () => {
         </section>
 
         {/* Team Grid */}
-        <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">
               The People Building Tomorrow
@@ -149,7 +149,7 @@ const Team = () => {
 
         {/* Company Culture */}
         <section className="bg-[#F9F5EF]">
-          <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-[#1A1A1A] mb-4">
                 We&apos;re Passionate About Innovation, Collaboration and Impact
@@ -174,8 +174,8 @@ const Team = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
-          <div className="rounded-3xl bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] px-8 py-16 text-center md:px-16 md:py-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
+          <div className="rounded-3xl bg-gradient-to-br from-[#1A1A1A] to-[#2A2A2A] px-8 py-10 sm:py-16 text-center md:px-16 md:py-20">
             <h2 className="mb-4 text-2xl md:text-3xl font-bold text-white">
               Want to Work With the Team Behind Zimnovate?
             </h2>

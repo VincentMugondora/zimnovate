@@ -78,7 +78,7 @@ const Events = () => {
         height="min-h-[45vh]"
       />
 
-      <section className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
         <h2 className="mb-12 text-2xl font-bold text-[var(--zim-black)]">
           Upcoming Events
         </h2>

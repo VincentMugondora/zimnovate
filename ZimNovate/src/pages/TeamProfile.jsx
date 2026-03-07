@@ -101,7 +101,7 @@ const TeamProfile = () => {
 
       <div className="min-h-screen bg-[#F9F5EF]">
         {/* Back Navigation */}
-        <div className="mx-auto max-w-7xl px-12 pt-8 md:px-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pt-8 md:px-16 lg:px-20">
           <Link
             to="/team"
             className="inline-flex items-center gap-2 text-sm font-medium text-[#1A1A1A]/70 hover:text-[#0A5C8B] transition-colors"
@@ -111,7 +111,7 @@ const TeamProfile = () => {
         </div>
 
         {/* Profile Hero */}
-        <section className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-12 md:px-16 md:py-16 lg:px-20">
           <div className="rounded-3xl bg-white p-8 md:p-12 shadow-sm">
             <div className="grid gap-8 md:grid-cols-[280px_1fr] items-start">
               {/* Profile Image */}
@@ -181,7 +181,7 @@ const TeamProfile = () => {
         </section>
 
         {/* Biography Section */}
-        <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
           <div className="rounded-3xl bg-white p-8 md:p-12 shadow-sm">
             <h2 className="mb-6 text-2xl font-bold text-[#1A1A1A]">
               About {member.name.split(' ')[0]}
@@ -193,7 +193,7 @@ const TeamProfile = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
           <div className="grid gap-6 md:grid-cols-2">
             {/* Technical Skills */}
             <div className="rounded-3xl bg-white p-8 shadow-sm">
@@ -232,7 +232,7 @@ const TeamProfile = () => {
         </section>
 
         {/* Projects Section */}
-        <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
           <div className="rounded-3xl bg-white p-8 md:p-12 shadow-sm">
             <h2 className="mb-8 text-2xl font-bold text-[#1A1A1A]">
               Projects {member.name.split(' ')[0]} Has Contributed To
@@ -267,7 +267,7 @@ const TeamProfile = () => {
 
         {/* Other Team Members */}
         {otherMembers.length > 0 && (
-          <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
+          <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
             <div className="rounded-3xl bg-white p-8 md:p-12 shadow-sm">
               <h2 className="mb-8 text-2xl font-bold text-[#1A1A1A]">
                 More Team Members
@@ -306,7 +306,7 @@ const TeamProfile = () => {
         )}
 
         {/* CTA Section */}
-        <section className="mx-auto max-w-7xl px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
+        <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 pb-16 md:px-16 md:pb-20 lg:px-20">
           <div className="rounded-3xl bg-[#0A5C8B] px-8 py-12 text-center">
             <h2 className="mb-4 text-2xl font-bold text-white">
               Want to Work With {member.name.split(' ')[0]} and the Zimnovate Team?

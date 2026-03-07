@@ -14,14 +14,14 @@ const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services
   const bestProjectImages = [
-    'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=800&q=75&fm=webp',
-    'https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&q=75&fm=webp',
-    'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=75&fm=webp',
+    '/projects/Screenshot%202026-03-06%20112925.png',
+    '/projects/Screenshot%202026-03-06%20113059.png',
+    '/projects/Screenshot%202026-03-07%20140515.png',
   ]
   const bestProjectLinks = [
-    '/portfolio/zimfresh',
-    '/portfolio/swiftpay',
-    '/portfolio/royal-home-care',
+    'https://hustlr.chat',
+    'https://mugoplumbingsolutions.co.zw',
+    'https://www.greaterheightsacademy.co.zw',
   ]
   const serviceLinks = {
     branding: '/services/branding',
@@ -32,9 +32,9 @@ const Home = () => {
     consulting: '/services/digital-strategy',
   }
   const bestLocations = [
-    'Harare Eats – Food delivery platform, +2,000 monthly orders.',
-    'Bulawayo Plumbing – Service booking site, +45% lead conversion.',
-    'Joburg Fashion – E-commerce store, +60% online sales.',
+    'Harare, Zimbabwe',
+    'Harare, Zimbabwe',
+    'Harare, Zimbabwe',
   ]
 
   const designers = [
@@ -67,33 +67,21 @@ const Home = () => {
   const insights = [
     {
       id: 'i1',
-      title: 'Why a website matters for Zimbabwean SMEs in 2026',
-      date: 'Feb 15, 2026',
-      excerpt: 'Discover how a professional online presence builds credibility and drives customer trust for local businesses.',
+      title: 'Why a website matters',
+      excerpt: 'A quick guide to credibility, trust, and conversions for modern brands.',
+      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
     {
       id: 'i2',
-      title: 'UI/UX that converts visitors into customers',
-      date: 'Feb 10, 2026',
-      excerpt: 'Simple design choices that improve clarity, reduce friction, and increase conversion rates.',
+      title: 'UI/UX that converts',
+      excerpt: 'Simple design choices that improve clarity and user confidence.',
+      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
     {
       id: 'i3',
-      title: 'Speed wins: how site speed affects your sales',
-      date: 'Feb 5, 2026',
-      excerpt: 'Performance-first design that keeps visitors engaged and reduces bounce rates on any device.',
-    },
-    {
-      id: 'i4',
-      title: 'Automation for small businesses: where to start',
-      date: 'Jan 28, 2026',
-      excerpt: 'Practical automation strategies that save 10+ hours per week without breaking the budget.',
-    },
-    {
-      id: 'i5',
-      title: 'Building trust through storytelling design',
-      date: 'Jan 20, 2026',
-      excerpt: 'How narrative-driven web design helps NGOs and social enterprises connect with donors.',
+      title: 'Speed wins',
+      excerpt: 'Performance-first UI that feels premium on every device.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
   ]
 
@@ -118,13 +106,13 @@ const Home = () => {
       <ClientLogos />
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20 overflow-x-hidden">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
-              BEST PROJECT
+              LATEST PROJECTS
             </h2>
             <div className="text-center text-sm text-[var(--zim-fg)] md:block">
-              Explore more of our best projects.
+              Explore more of our latest projects.
             </div>
             <Link
               to="/portfolio"
@@ -161,13 +149,15 @@ const Home = () => {
                   </div>
                 </div>
 
-                <Link
-                  to={bestProjectLinks[idx] || '/portfolio'}
+                <a
+                  href={bestProjectLinks[idx] || '/portfolio'}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="absolute right-4 bottom-4 grid h-12 w-12 place-items-center rounded-full bg-[var(--zim-green)] text-[var(--zim-black)] shadow-[0_14px_30px_rgba(124,255,95,0.35)] transition-transform duration-200 hover:brightness-110 group-hover:-translate-y-0.5 md:right-5 md:bottom-5"
                   aria-label={`Open ${p.title}`}
                 >
                   <ArrowUpRight size={18} />
-                </Link>
+                </a>
 
                 <div className="mt-4">
                   <div className="text-xl font-semibold text-[var(--zim-black)] md:text-2xl">
@@ -185,7 +175,7 @@ const Home = () => {
       </section>
 
       <section className="bg-[var(--zim-gray)]/40">
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               OUR SERVICES
@@ -220,7 +210,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1634942537034-2531766767d1?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Brand identity design illustration"
                       title="Brand Identity"
                       width="200"
@@ -238,7 +228,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Web development coding interface"
                       title="Web Development Services"
                       width="200"
@@ -256,7 +246,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d3?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="UI and UX design wireframes"
                       title="UI/UX Design"
                       width="200"
@@ -274,7 +264,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508385082359-f38ae991e8f2?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Business automation tools and workflow"
                       title="Automation Services"
                       width="200"
@@ -292,7 +282,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="Digital strategy planning board"
                       title="Digital Strategy"
                       width="200"
@@ -310,7 +300,7 @@ const Home = () => {
                 <div className="relative shrink-0 snap-center">
                   <div className="h-[280px] w-[200px] overflow-hidden rounded-[20px] shadow-[0_20px_40px_rgba(0,0,0,0.15)] ring-1 ring-black/5 transition-transform duration-300 hover:scale-105">
                     <img
-                      src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=400&q=70&fm=webp"
+                      src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=70&fm=webp"
                       alt="E-commerce website design layout"
                       title="E-Commerce Solutions"
                       width="200"
@@ -532,7 +522,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               LATEST INSIGHT
@@ -565,7 +555,7 @@ const Home = () => {
                 <div className="relative overflow-hidden rounded-[22px] ring-1 ring-black/5 shadow-[0_22px_40px_rgba(0,0,0,0.10)]">
                   <div className="aspect-[10/9] overflow-hidden">
                     <img
-                      src="/imgs/agency.jpg"
+                      src={i.image}
                       alt={i.title}
                       title={`${i.title} - Zimnovate Blog`}
                       height="540"
@@ -604,7 +594,7 @@ const Home = () => {
       </section>
 
       <section>
-        <div className="mx-auto max-w-7xl px-12 py-16 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 sm:py-16 md:px-16 md:py-20 lg:px-20">
           <div className="grid items-center gap-3 md:grid-cols-[auto_1fr_auto]">
             <h2 className="text-3xl font-extrabold tracking-tight text-[var(--zim-black)] md:text-4xl">
               MEET THE TEAM
@@ -624,7 +614,7 @@ const Home = () => {
           <div className="mt-10 grid gap-10 sm:grid-cols-2 md:grid-cols-4">
             {designers.map((d) => (
               <Link key={d.id} to={`/team/${d.id}`} className="group block">
-                <div className="overflow-hidden rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
+                <div className="overflow-hidden rounded-[20px] sm:rounded-[32px] bg-[#f3f3f3] shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]">
                   <div className="aspect-[4/5] w-full">
                     <img
                       src={d.photo || '/imgs/agency.jpg'}
@@ -646,139 +636,6 @@ const Home = () => {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <div className="grid gap-10 md:grid-cols-2 items-start">
-            {/* Left - Resource Links */}
-            <div className="space-y-6">
-              <div>
-                <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C] mb-3">Resources</div>
-                <h2 className="text-3xl font-bold tracking-tight text-[#0F172A]">
-                  Free tools for your business
-                </h2>
-              </div>
-              
-              <div className="grid gap-4">
-                {[
-                  { title: 'Website Launch Checklist', type: 'Checklist', desc: 'Everything you need before going live.' },
-                  { title: 'Brand Identity Guide', type: 'Guide', desc: 'Build a cohesive brand from scratch.' },
-                  { title: 'SEO Starter Template', type: 'Template', desc: 'Optimize your site for search engines.' },
-                ].map((resource) => (
-                  <div key={resource.title} className="flex items-start gap-3 p-3 rounded-xl bg-white border border-[#F4D47C]/10 hover:border-[#F4D47C]/30 transition-colors">
-                    <div className="h-10 w-10 rounded-lg bg-[#F4D47C]/20 flex items-center justify-center text-[#0F172A] font-bold text-xs shrink-0">
-                      {resource.type.charAt(0)}
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold text-[#0F172A]">{resource.title}</div>
-                      <div className="text-xs text-[#1A1A1A]/60">{resource.desc}</div>
-                      <span className="inline-block mt-1 text-[10px] uppercase tracking-wider text-[#F4D47C] font-medium">{resource.type}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right - Email Capture */}
-            <div className="rounded-2xl bg-white p-6 md:p-8 border border-[#F4D47C]/20 shadow-sm">
-              <h3 className="text-lg font-bold text-[#0F172A] mb-2">
-                Download free resources
-              </h3>
-              <p className="text-sm text-[#1A1A1A]/70 mb-5">
-                Enter your email to get instant access to all our guides, checklists, and templates.
-              </p>
-              
-              <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full rounded-lg border border-[#F4D47C]/20 bg-[#F9F5EF] px-4 py-3 text-sm text-[#0F172A] placeholder:text-[#1A1A1A]/40 focus:border-[#F4D47C] focus:outline-none"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-[#0F172A] px-4 py-3 text-sm font-semibold text-white hover:brightness-110 transition-colors"
-                >
-                  Get Access
-                </button>
-              </form>
-              
-              <p className="mt-3 text-[10px] text-[#1A1A1A]/50">
-                No spam. Unsubscribe anytime.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-[#F4D47C]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
-          <div className="text-center space-y-6">
-            <h3 className="text-3xl font-bold text-[#0F172A] md:text-4xl">
-              Work with Zimnovate in 3 simple steps
-            </h3>
-            <div className="text-sm text-[#0F172A]/80 max-w-lg mx-auto space-y-2">
-              <p>1) Tell us about your project</p>
-              <p>2) Get a proposal in 24 hours</p>
-              <p>3) Launch in 2–6 weeks</p>
-            </div>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <a
-                href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I'm%20interested%20in%20getting%20a%20quote."
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[#0F172A] px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
-              >
-                Start on WhatsApp
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center rounded-full border border-[#0F172A]/30 bg-white/10 px-6 py-3 text-sm font-semibold text-[#0F172A] hover:bg-white/20"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links Section for Internal Linking */}
-      <section className="bg-[var(--zim-gray)]/30">
-        <div className="mx-auto max-w-7xl px-12 py-12 md:px-16 md:py-16 lg:px-20">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</p>
-              <div className="space-y-2">
-                <Link to="/services/web-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Web Development</Link>
-                <Link to="/services/mobile-app-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Mobile Apps</Link>
-                <Link to="/services/branding" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Branding</Link>
-                <Link to="/services/digital-marketing" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Digital Marketing</Link>
-                <Link to="/services" className="block text-sm text-[#F4D47C] hover:text-[#F4D47C]/80">View All Services →</Link>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Company</p>
-              <div className="space-y-2">
-                <Link to="/about" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">About Us</Link>
-                <Link to="/team" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Our Team</Link>
-                <Link to="/careers" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Careers</Link>
-                <Link to="/blog" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Blog</Link>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Resources</p>
-              <div className="space-y-2">
-                <Link to="/portfolio" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Portfolio</Link>
-                <Link to="/testimonials" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Testimonials</Link>
-                <Link to="/get-started" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Get Started</Link>
-                <Link to="/contact" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Contact Us</Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -72,7 +72,7 @@ const Testimonials = () => {
 
         {/* Stats */}
         <section className="bg-[#F9F5EF]">
-          <div className="mx-auto max-w-7xl px-12 py-10 md:px-16 lg:px-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-10 md:px-16 lg:px-20">
             <div className="grid gap-8 md:grid-cols-4 text-center">
               {stats.map((stat) => (
                 <div key={stat.label}>
@@ -85,7 +85,7 @@ const Testimonials = () => {
         </section>
 
       {/* Testimonials Grid */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="text-center space-y-4 mb-12">
           <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">What Our Clients Say</div>
           <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Success Stories</h3>
@@ -117,7 +117,7 @@ const Testimonials = () => {
 
       {/* Video Testimonials Placeholder */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
             <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Video Stories</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Client Video Testimonials</h3>
@@ -151,7 +151,7 @@ const Testimonials = () => {
       </section>
 
       {/* CTA */}
-      <section className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-20 lg:px-20">
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
         <div className="relative overflow-hidden rounded-3xl border border-[#F4D47C]/20 bg-[#F4D47C] p-10 text-[#0F172A] shadow-[0_28px_80px_rgba(0,0,0,0.15)]">
           <div className="text-center space-y-6">
             <h3 className="text-3xl font-bold leading-tight md:text-4xl">

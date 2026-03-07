@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronDown } from "lucide-react";
+import ResponsiveLogo from "./ResponsiveLogo.jsx";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,8 +21,10 @@ const Header = () => {
 
   return (
     <header className="relative bg-white shadow-md dark:bg-gray-900">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-12 py-4 md:px-16 lg:px-20">
-        <h1 className="text-2xl font-bold text-blue-600">Zimnovate</h1>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-12 lg:px-20">
+        <Link to="/" className="flex items-center gap-2" aria-label="Go to homepage">
+          <ResponsiveLogo loading="eager" />
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-6 md:flex">
@@ -109,7 +112,7 @@ const Header = () => {
                   <X size={20} />
                 </motion.button>
               </div>
-              <nav className="flex flex-col p-4" aria-label="Mobile">
+              <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                 {[
                   { to: '/', label: 'Home', hasSubmenu: false },
                   { to: '/about', label: 'About', hasSubmenu: false },
