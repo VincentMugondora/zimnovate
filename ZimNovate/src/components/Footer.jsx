@@ -77,8 +77,9 @@ const Footer = () => {
                 <nav className="grid gap-2 text-sm text-white/70" aria-label="Company">
                   <Link to="/contact" className="hover:text-white">Contact Us</Link>
                   <Link to="/services" className="hover:text-white">Services</Link>
-                  <Link to="/about" className="hover:text-white">About Us</Link>
-                  <Link to="/faq" className="hover:text-white">FAQ</Link>
+                   <Link to="/about" className="hover:text-white">About Us</Link>
+                   <Link to="/pricing" className="hover:text-white">Pricing</Link>
+                   <Link to="/faq" className="hover:text-white">FAQ</Link>
                   <Link to="/dashboard" className="hover:text-white">Dashboard</Link>
                 </nav>
               </div>

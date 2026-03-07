@@ -145,6 +145,14 @@ const Hero = () => {
                 Portfolio
               </NavLink>
               <NavLink
+                to="/pricing"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Pricing
+              </NavLink>
+              <NavLink
                 to="/blog"
                 className={({ isActive }) =>
                   `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
@@ -229,6 +237,7 @@ const Hero = () => {
                   <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                     {[
                       { to: '/', label: 'Home', hasSubmenu: false },
+                      { to: '/pricing', label: 'Pricing', hasSubmenu: false },
                       { to: '/services', label: 'Services', hasSubmenu: true },
                       { to: '/portfolio', label: 'Portfolio', hasSubmenu: false },
                       { to: '/blog', label: 'Blog', hasSubmenu: false },

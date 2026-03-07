@@ -51,6 +51,7 @@ const NGOWebsites = lazy(() => import('./pages/NGOWebsites.jsx'))
 const StartupMVP = lazy(() => import('./pages/StartupMVP.jsx'))
 const SMEDigitalMakeovers = lazy(() => import('./pages/SMEDigitalMakeovers.jsx'))
 const Packages = lazy(() => import('./pages/Packages.jsx'))
+const Pricing = lazy(() => import('./pages/Pricing.jsx'))
 const Dashboard = lazy(() => import('./pages/Dashboard.jsx'))
 const Login = lazy(() => import('./pages/Login.jsx'))
 const ProtectedRoute = lazy(() => import('./components/ProtectedRoute.jsx'))
@@ -108,6 +109,7 @@ const App = () => {
           <Route path="/startup-mvp" element={<Suspense fallback={<PageLoader />}><StartupMVP /></Suspense>} />
           <Route path="/sme-digital-makeovers" element={<Suspense fallback={<PageLoader />}><SMEDigitalMakeovers /></Suspense>} />
           <Route path="/packages" element={<Suspense fallback={<PageLoader />}><Packages /></Suspense>} />
+          <Route path="/pricing" element={<Suspense fallback={<PageLoader />}><Pricing /></Suspense>} />
           <Route path="*" element={<Suspense fallback={<PageLoader />}><NotFound /></Suspense>} />
         </Route>
 
