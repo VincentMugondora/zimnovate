@@ -69,16 +69,19 @@ const Home = () => {
       id: 'i1',
       title: 'Why a website matters',
       excerpt: 'A quick guide to credibility, trust, and conversions for modern brands.',
+      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
     {
       id: 'i2',
       title: 'UI/UX that converts',
       excerpt: 'Simple design choices that improve clarity and user confidence.',
+      image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
     {
       id: 'i3',
       title: 'Speed wins',
       excerpt: 'Performance-first UI that feels premium on every device.',
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=75&fm=webp',
     },
   ]
 
@@ -384,7 +387,7 @@ const Home = () => {
                 <div className="relative overflow-hidden rounded-[22px] ring-1 ring-black/5 shadow-[0_22px_40px_rgba(0,0,0,0.10)]">
                   <div className="aspect-[10/9] overflow-hidden">
                     <img
-                      src="/imgs/agency.jpg"
+                      src={i.image}
                       alt={i.title}
                       title={`${i.title} - Zimnovate Blog`}
                       height="540"
@@ -459,42 +462,6 @@ const Home = () => {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links Section for Internal Linking */}
-      <section className="bg-[var(--zim-gray)]/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-12 md:px-16 md:py-16 lg:px-20">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Services</p>
-              <div className="space-y-2">
-                <Link to="/services/web-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Web Development</Link>
-                <Link to="/services/mobile-app-development" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Mobile Apps</Link>
-                <Link to="/services/branding" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Branding</Link>
-                <Link to="/services/digital-marketing" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Digital Marketing</Link>
-                <Link to="/services" className="block text-sm text-[#F4D47C] hover:text-[#F4D47C]/80">View All Services →</Link>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Company</p>
-              <div className="space-y-2">
-                <Link to="/about" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">About Us</Link>
-                <Link to="/team" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Our Team</Link>
-                <Link to="/careers" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Careers</Link>
-                <Link to="/blog" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Blog</Link>
-              </div>
-            </div>
-            <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-wider text-[var(--zim-fg)]/60">Resources</p>
-              <div className="space-y-2">
-                <Link to="/portfolio" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Portfolio</Link>
-                <Link to="/testimonials" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Testimonials</Link>
-                <Link to="/get-started" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Get Started</Link>
-                <Link to="/contact" className="block text-sm text-[var(--zim-fg)]/80 hover:text-[var(--zim-black)]">Contact Us</Link>
-              </div>
-            </div>
           </div>
         </div>
       </section>
