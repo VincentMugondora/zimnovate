@@ -14,9 +14,9 @@ const Home = () => {
   const bestProjects = portfolioProjects.slice(0, 3)
   const serviceList = services
   const bestProjectImages = [
-    '/projects/Screenshot 2026-03-06 112925.png',
-    '/projects/Screenshot 2026-03-06 113059.png',
-    '/projects/Screenshot 2026-03-07 140515.png',
+    '/projects/Screenshot%202026-03-06%20112925.png',
+    '/projects/Screenshot%202026-03-06%20113059.png',
+    '/projects/Screenshot%202026-03-07%20140515.png',
   ]
   const bestProjectLinks = [
     'https://hustlr.chat',
