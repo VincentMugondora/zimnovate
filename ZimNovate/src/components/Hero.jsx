@@ -69,7 +69,7 @@ const Hero = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
+              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none lg:hidden"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -206,7 +206,7 @@ const Hero = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden"
+                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden"
                   onClick={() => setMobileMenuOpen(false)}
                 />
                 {/* Drawer */}
@@ -220,7 +220,7 @@ const Hero = () => {
                     stiffness: 200,
                     opacity: { duration: 0.2 }
                   }}
-                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl md:hidden"
+                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl lg:hidden"
                 >
                   <div className="flex items-center justify-between border-b border-white/10 p-4">
                     <motion.span
@@ -414,10 +414,6 @@ const Hero = () => {
                   View our work
                 </Link>
               </div>
-
-              <p className="mx-auto mt-4 max-w-xl text-[10px] text-white/70 md:text-xs">
-                In 3 weeks, we launched a new platform for a client and improved conversions.
-              </p>
 
               <div className="mt-2 flex justify-center">
                 <a

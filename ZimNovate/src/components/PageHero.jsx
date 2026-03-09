@@ -58,7 +58,35 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <ResponsiveLogo loading="eager" />
             </Link>
 
-            <nav className="hidden items-center gap-8 text-sm font-semibold text-white/85 md:flex" aria-label="Hero">
+            {/* Mobile hamburger button */}
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none lg:hidden"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
+            >
+              <div className="relative flex h-4 w-5 flex-col items-center justify-center">
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                  }`}
+                />
+                <span
+                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
+                    mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
+                  }`}
+                />
+              </div>
+            </button>
+
+            {/* Desktop nav */}
+            <nav className="hidden items-center gap-6 text-sm font-semibold text-white/85 lg:flex" aria-label="Hero">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
@@ -117,6 +145,14 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 Portfolio
               </NavLink>
               <NavLink
+                to="/pricing"
+                className={({ isActive }) =>
+                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                }
+              >
+                Pricing
+              </NavLink>
+              <NavLink
                 to="/blog"
                 className={({ isActive }) =>
                   `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
@@ -148,46 +184,15 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               >
                 Contact
               </NavLink>
-            </nav>
-
-            {/* Mobile hamburger button */}
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none md:hidden"
-              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={mobileMenuOpen}
-            >
-              <div className="relative flex h-4 w-5 flex-col items-center justify-center">
-                <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? 'rotate-45' : '-translate-y-1.5'
-                  }`}
-                />
-                <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
-                  }`}
-                />
-                <span
-                  className={`absolute h-0.5 w-5 transform rounded-full bg-white transition-all duration-300 ease-out ${
-                    mobileMenuOpen ? '-rotate-45' : 'translate-y-1.5'
-                  }`}
-                />
-              </div>
-            </button>
-
-            {/* Desktop CTA */}
-            <div className="hidden items-center gap-3 md:flex">
               <a
                 href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-[var(--zim-green)] px-5 py-2 text-sm font-semibold text-[var(--zim-black)] hover:brightness-110"
+                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110"
               >
                 Get a Free Quote
               </a>
-            </div>
+            </nav>
           </div>
 
           {/* Mobile menu drawer with Framer Motion */}
@@ -200,7 +205,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden"
+                  className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm lg:hidden"
                   onClick={() => setMobileMenuOpen(false)}
                 />
                 {/* Drawer */}
@@ -214,7 +219,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                     stiffness: 200,
                     opacity: { duration: 0.2 }
                   }}
-                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl md:hidden"
+                  className="fixed right-0 top-0 z-50 h-full w-[280px] max-w-[85vw] bg-gradient-to-b from-[#0b0b0b] to-[#1a1a1a] shadow-2xl lg:hidden"
                 >
                   <div className="flex items-center justify-between border-b border-white/10 p-4">
                     <motion.span
@@ -240,6 +245,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                   <nav className="flex flex-col p-4 overflow-y-auto max-h-[calc(100vh-64px)] pb-10" aria-label="Mobile">
                     {[
                       { to: '/', label: 'Home', hasSubmenu: false },
+                      { to: '/pricing', label: 'Pricing', hasSubmenu: false },
                       { to: '/services', label: 'Services', hasSubmenu: true },
                       { to: '/portfolio', label: 'Portfolio', hasSubmenu: false },
                       { to: '/blog', label: 'Blog', hasSubmenu: false },
