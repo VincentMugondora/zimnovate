@@ -59,25 +59,10 @@ const PricingCard = ({
   </motion.div>
 )
 
-const TestimonialCard = ({ name, role, image, text }) => (
-  <div className="flex flex-col rounded-[24px] border border-[var(--zim-border)] bg-white p-6 text-left shadow-sm">
-    <div className="flex items-center gap-4 mb-4">
-      <div className="h-10 w-10 overflow-hidden rounded-full bg-[#9cff5f]/20">
-        <img src={image} alt={name} className="h-full w-full object-cover" />
-      </div>
-      <div>
-        <h4 className="text-sm font-bold text-[#0F172A]">{name}</h4>
-        <p className="text-xs text-[#1A1A1A]/50">{role}</p>
-      </div>
-    </div>
-    <p className="text-[13px] leading-relaxed text-[#1A1A1A]/70 italic">"{text}"</p>
-  </div>
-)
-
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="border border-[var(--zim-border)] bg-white rounded-[16px] mb-3 overflow-hidden shadow-sm">
+    <div className="border-b border-[var(--zim-border)]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between p-5 text-left focus:outline-none hover:bg-[#F9F5EF]/50 transition-colors"
@@ -156,38 +141,12 @@ const Pricing = () => {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Dale Mendoza',
-      role: 'Startup Founder',
-      text: 'I can\'t speak highly enough of Zimnovate. Their strategic approach to our MVP build and web presence has been instrumental in our early success...',
-      image: 'https://i.pravatar.cc/150?u=1'
-    },
-    {
-      name: 'Alice Maxwell',
-      role: 'Marketing Manager',
-      text: 'Working with Zimnovate has been a revelation for our company. Their dedication to understanding our brand and delivering a fast website has led to remarkable growth...',
-      image: 'https://i.pravatar.cc/150?u=2'
-    },
-    {
-      name: 'Archer Corbyn',
-      role: 'Director',
-      text: 'Zimnovate has been a game-changer for our business. Their expertise in custom web applications has helped us automate processes and scale effectively...',
-      image: 'https://i.pravatar.cc/150?u=3'
-    },
-    {
-      name: 'Chelsea West',
-      role: 'Operations Coordinator',
-      text: 'Choosing Zimnovate was one of the best decisions we made. Their innovative approach and dedication to our unique needs resulted in a tailored platform that exceeded expectations.',
-      image: 'https://i.pravatar.cc/150?u=4'
-    }
-  ]
-
   return (
     <>
       <Helmet>
         <title>Pricing — Web & App Development Plans | Zimnovate</title>
         <meta name="description" content="Transparent pricing for web development, app development, and design services." />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
       </Helmet>
 
       <div className="bg-[#fafafa]">
@@ -251,24 +210,13 @@ const Pricing = () => {
                 Read some reviews and success stories from our loyal customers who achieved their goals with our digital solutions.
               </p>
             </div>
-            <Link to="/contact" className="mt-6 md:mt-0 inline-flex items-center gap-2 rounded-full border border-[var(--zim-border)] bg-white px-6 py-3 text-xs font-bold text-[#0F172A] hover:bg-gray-50 transition-all shadow-sm">
-              All Reviews <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#9cff5f] text-[#0b0b0b] text-[10px] font-black leading-none">+</div>
-            </Link>
+            <a href="https://g.page/r/your-google-review-link" target="_blank" rel="noreferrer" className="mt-6 md:mt-0 inline-flex items-center gap-2 rounded-full border border-[var(--zim-border)] bg-white px-6 py-3 text-xs font-bold text-[#0F172A] hover:bg-gray-50 transition-all shadow-sm">
+              Review us on Google <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#9cff5f] text-[#0b0b0b] text-[10px] font-black leading-none">+</div>
+            </a>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {testimonials.map((t, i) => (
-              <TestimonialCard key={i} {...t} />
-            ))}
-          </div>
-
-          <div className="flex justify-center gap-3 mt-10">
-            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-105 shadow-sm">
-              <ChevronLeft size={18} />
-            </button>
-            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-105 shadow-sm">
-              <ChevronRight size={18} />
-            </button>
+          <div className="w-full">
+            <div className="elfsight-app-dfa78d1e-4f6b-4f6f-9549-af95cfd406f6" data-elfsight-app-lazy></div>
           </div>
         </section>
 
