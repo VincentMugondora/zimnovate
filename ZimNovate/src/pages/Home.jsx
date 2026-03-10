@@ -100,6 +100,7 @@ const Home = () => {
         <meta name="twitter:title" content="Zimnovate — Web Development & Digital Solutions in Zimbabwe" />
         <meta name="twitter:description" content="Zimnovate is a Zimbabwean digital agency specializing in website development, e-commerce, mobile apps, branding, and custom software solutions." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
       </Helmet>
       <div className="bg-[var(--zim-bg)] overflow-x-hidden">
       <Hero />
@@ -382,64 +383,16 @@ const Home = () => {
 
       {/* Testimonials Strip */}
       <section className="bg-[#F9F5EF]">
-        <div className="mx-auto max-w-7xl px-12 py-14 md:px-16 md:py-16 lg:px-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-16 lg:px-20">
           <div className="text-center space-y-4 mb-10">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Testimonials</div>
+            <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#9cff5f] shadow-sm">Testimonials</div>
             <h2 className="text-2xl font-bold tracking-tight text-[#0F172A] md:text-3xl">
               What clients say
             </h2>
           </div>
 
-          {/* Mobile: Horizontal scroll / Desktop: Grid */}
-          <div className="flex gap-4 overflow-x-auto pb-4 md:grid md:grid-cols-3 md:overflow-visible md:pb-0 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
-            {[
-              {
-                name: 'Tendai M.',
-                role: 'Founder, Harare Eats',
-                quote: 'Zimnovate built our ordering platform in 3 weeks. We now process 2,000+ orders monthly.'
-              },
-              {
-                name: 'Sarah K.',
-                role: 'Director, Bulawayo Plumbing',
-                quote: 'Our new website increased lead conversions by 45% within the first month.'
-              },
-              {
-                name: 'James N.',
-                role: 'CEO, Joburg Fashion',
-                quote: 'The e-commerce store they built grew our online sales by 60% in 6 months.'
-              }
-            ].map((testimonial) => (
-              <div 
-                key={testimonial.name}
-                className="shrink-0 snap-center w-[280px] md:w-auto rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
-              >
-                <div className="flex items-center gap-1 mb-3">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span key={star} className="text-[#F4D47C] text-sm">★</span>
-                  ))}
-                </div>
-                <p className="text-sm text-[#1A1A1A]/80 mb-4 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-[#F4D47C]/20 flex items-center justify-center text-[#0F172A] font-bold text-sm">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-[#0F172A]">{testimonial.name}</div>
-                    <div className="text-xs text-[#1A1A1A]/60">{testimonial.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Mobile scroll indicator */}
-          <div className="mt-4 flex items-center justify-center gap-1 md:hidden">
-            <div className="h-1 w-8 rounded-full bg-[#F4D47C]" />
-            <div className="h-1 w-1.5 rounded-full bg-[#1A1A1A]/20" />
-            <div className="h-1 w-1.5 rounded-full bg-[#1A1A1A]/20" />
-            <span className="ml-2 text-[10px] text-[#1A1A1A]/40">Scroll</span>
+          <div className="w-full">
+            <div className="elfsight-app-dfa78d1e-4f6b-4f6f-9549-af95cfd406f6" data-elfsight-app-lazy></div>
           </div>
         </div>
       </section>

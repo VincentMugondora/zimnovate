@@ -19,6 +19,7 @@ const AIAutomation = () => {
         <meta name="twitter:title" content="AI & Automation Zimbabwe — Business Automation & AI Solutions | Zimnovate" />
         <meta name="twitter:description" content="AI and automation solutions for Zimbabwean businesses. Chatbots, process automation, predictive analytics, and custom AI solutions." />
         <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
       </Helmet>
     <div>
       {/* Hero Section */}
@@ -384,54 +385,12 @@ const AIAutomation = () => {
       <section className="bg-[#F9F5EF]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 py-14 md:px-16 md:py-20 lg:px-20">
           <div className="text-center space-y-4 mb-12">
-            <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#F4D47C]">Testimonials</div>
+            <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#9cff5f] shadow-sm">Testimonials</div>
             <h3 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">What Clients Say</h3>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                name: 'David Chen',
-                role: 'Operations Manager, Logistics Co.',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face&auto=format',
-                testimonial: 'Zimnovate automated 60% of our repetitive tasks — allowing us to focus on growth. Incredible AI team!'
-              },
-              {
-                name: 'Sarah Kim',
-                role: 'CTO, FinTech Startup',
-                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face&auto=format',
-                testimonial: 'Their AI chatbot reduced our support tickets by 70% while improving customer satisfaction scores.'
-              },
-              {
-                name: 'Michael Torres',
-                role: 'Director, Healthcare Group',
-                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face&auto=format',
-                testimonial: 'The document automation solution saved us thousands of hours. ROI was visible within the first month.'
-              }
-            ].map((testimonial) => (
-              <div
-                key={testimonial.name}
-                className="relative overflow-hidden rounded-2xl border border-[#F4D47C]/20 bg-white p-6 shadow-sm"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="h-12 w-12 rounded-full object-cover"
-                  />
-                  <div>
-                    <h4 className="font-bold text-[#0F172A]">{testimonial.name}</h4>
-                    <p className="text-sm text-[#1A1A1A]/60">{testimonial.role}</p>
-                  </div>
-                </div>
-                <div className="flex gap-1 mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-[#F4D47C]">⭐</span>
-                  ))}
-                </div>
-                <p className="text-sm text-[#1A1A1A]/80 italic">"{testimonial.testimonial}"</p>
-              </div>
-            ))}
+          <div className="w-full">
+            <div className="elfsight-app-dfa78d1e-4f6b-4f6f-9549-af95cfd406f6" data-elfsight-app-lazy></div>
           </div>
         </div>
       </section>
