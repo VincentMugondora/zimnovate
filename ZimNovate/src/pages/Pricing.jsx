@@ -10,6 +10,12 @@ import {
 } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
 
+const FeatureIcon = ({ icon: Icon, className = "" }) => (
+  <div className={`flex h-6 w-6 items-center justify-center rounded-full bg-[#9cff5f]/10 text-[#9cff5f] ${className}`}>
+    <Icon size={14} />
+  </div>
+)
+
 const PricingCard = ({ 
   title, 
   price, 
@@ -25,23 +31,23 @@ const PricingCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    className={`relative flex flex-col rounded-[24px] border border-white/10 p-8 transition-all duration-300 bg-[#111822] hover:border-[#9cff5f]/30 hover:shadow-2xl`}
+    className={`relative flex flex-col rounded-[24px] border border-[var(--zim-border)] p-8 transition-all duration-300 bg-white hover:border-[#9cff5f]/50 hover:shadow-2xl shadow-sm`}
   >
     <div className="mb-6">
-      <div className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold text-white/80 mb-6 tracking-wide">
+      <div className="inline-block rounded-full border border-[var(--zim-border)] bg-[#F8FAFC] px-4 py-1.5 text-[11px] font-bold text-[#0F172A] mb-6 tracking-wide">
         {title}
       </div>
       <div className="mt-2 flex items-baseline gap-1">
-        <span className="text-4xl font-extrabold tracking-tight text-white">{price}</span>
-        {period && <span className="text-sm font-medium text-white/50">{period}</span>}
+        <span className="text-4xl font-extrabold tracking-tight text-[#0F172A]">{price}</span>
+        {period && <span className="text-sm font-medium text-[#1A1A1A]/50">{period}</span>}
       </div>
-      <p className="mt-4 text-[13px] leading-relaxed text-white/50">{description}</p>
+      <p className="mt-4 text-[13px] leading-relaxed text-[#1A1A1A]/60">{description}</p>
     </div>
 
     <div className="mb-8 flex-1 space-y-4">
       <ul className="space-y-3">
         {features.map((feature, i) => (
-          <li key={i} className="flex items-start gap-3 text-[13px] text-white/80 leading-relaxed">
+          <li key={i} className="flex items-start gap-3 text-[13px] text-[#1A1A1A]/80 leading-relaxed">
             <Check size={16} className="mt-0.5 shrink-0 text-[#9cff5f]" />
             <span>{feature}</span>
           </li>
@@ -51,7 +57,7 @@ const PricingCard = ({
 
     <Link
       to="/contact"
-      className="inline-flex w-max items-center gap-2 rounded-full bg-[#9cff5f] px-5 py-2.5 text-xs font-bold text-[#0F172A] transition-all hover:brightness-110 mt-auto"
+      className="inline-flex w-max items-center gap-2 rounded-full bg-[#9cff5f] px-5 py-2.5 text-xs font-bold text-[#0F172A] transition-all hover:brightness-105 mt-auto"
     >
       {ctaText} 
       <div className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[#0F172A] text-xs font-black leading-none">+</div>
@@ -60,32 +66,32 @@ const PricingCard = ({
 )
 
 const TestimonialCard = ({ name, role, image, text }) => (
-  <div className="flex flex-col rounded-[24px] border border-white/10 bg-[#111822] p-6 text-left">
+  <div className="flex flex-col rounded-[24px] border border-[var(--zim-border)] bg-white p-6 text-left shadow-sm">
     <div className="flex items-center gap-4 mb-4">
       <div className="h-10 w-10 overflow-hidden rounded-full bg-[#9cff5f]/20">
         <img src={image} alt={name} className="h-full w-full object-cover" />
       </div>
       <div>
-        <h4 className="text-sm font-bold text-white">{name}</h4>
-        <p className="text-xs text-white/50">{role}</p>
+        <h4 className="text-sm font-bold text-[#0F172A]">{name}</h4>
+        <p className="text-xs text-[#1A1A1A]/50">{role}</p>
       </div>
     </div>
-    <p className="text-[13px] leading-relaxed text-white/70 italic">"{text}"</p>
+    <p className="text-[13px] leading-relaxed text-[#1A1A1A]/70 italic">"{text}"</p>
   </div>
 )
 
 const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className="border border-white/10 bg-[#111822] rounded-[16px] mb-3 overflow-hidden">
+    <div className="border border-[var(--zim-border)] bg-white rounded-[16px] mb-3 overflow-hidden shadow-sm">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between p-5 text-left focus:outline-none"
+        className="flex w-full items-center justify-between p-5 text-left focus:outline-none hover:bg-[#F9F5EF]/50 transition-colors"
       >
-        <span className="text-[15px] font-semibold text-white">{question}</span>
+        <span className="text-[15px] font-semibold text-[#0F172A]">{question}</span>
         <ChevronDown 
           size={18} 
-          className={`text-white/40 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+          className={`text-[#1A1A1A]/40 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
         />
       </button>
       <AnimatePresence>
@@ -95,11 +101,11 @@ const FAQItem = ({ question, answer }) => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="overflow-hidden bg-[#111822]"
+            className="overflow-hidden bg-white"
           >
             <div className="px-5 pb-5 pt-0">
-              <div className="h-px w-full bg-white/5 mb-4" />
-              <p className="text-[14px] leading-relaxed text-white/60">{answer}</p>
+              <div className="h-px w-full bg-[var(--zim-border)] mb-4" />
+              <p className="text-[14px] leading-relaxed text-[#1A1A1A]/60">{answer}</p>
             </div>
           </motion.div>
         )}
@@ -189,7 +195,7 @@ const Pricing = () => {
         <meta name="description" content="Transparent pricing for digital marketing services." />
       </Helmet>
 
-      <div className="bg-[#0b0b0b]">
+      <div className="bg-[#fafafa]">
         {/* Preserve the Hero exactly as requested */}
         <div className="bg-white pb-10">
           <PageHero
@@ -223,12 +229,12 @@ const Pricing = () => {
           </section>
         </div>
 
-        {/* Dark Pricing Section */}
+        {/* Pricing Section */}
         <section className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <div className="text-center space-y-4 mb-16 px-4">
-            <div className="inline-block rounded-full border border-white/10 bg-white/5 px-6 py-1.5 text-xs font-semibold uppercase tracking-widest text-white/80">Pricing</div>
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">Profitable Pricing Plans</h2>
-            <p className="text-white/50 max-w-2xl mx-auto text-sm">
+            <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-6 py-1.5 text-[11px] font-bold uppercase tracking-widest text-[#0F172A] shadow-sm">Pricing</div>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-5xl">Profitable Pricing Plans</h2>
+            <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto text-sm">
               Below is an overview of our general pricing packages for our digital marketing agency. Costs vary depending on factors such as the services we offer.
             </p>
           </div>
@@ -244,14 +250,14 @@ const Pricing = () => {
         <section className="relative mx-auto max-w-7xl px-4 sm:px-6 py-16">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div className="space-y-4 max-w-lg">
-              <div className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#9cff5f]">Testimonials</div>
-              <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">What Clients Say About Us</h2>
-              <p className="text-white/50 text-sm">
+              <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#9cff5f] shadow-sm">Testimonials</div>
+              <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">What Clients Say About Us</h2>
+              <p className="text-[#1A1A1A]/60 text-sm">
                 Read some reviews and success stories from our loyal customers who achieved their goals with our Projects and services.
               </p>
             </div>
-            <Link to="/contact" className="mt-6 md:mt-0 inline-flex items-center gap-2 rounded-full bg-white/10 px-6 py-3 text-xs font-bold text-white hover:bg-white/20 transition-all">
-              All Reviews <div className="flex h-4 w-4 items-center justify-center rounded-full bg-white text-[#0b0b0b] text-[10px] font-black leading-none">+</div>
+            <Link to="/contact" className="mt-6 md:mt-0 inline-flex items-center gap-2 rounded-full border border-[var(--zim-border)] bg-white px-6 py-3 text-xs font-bold text-[#0F172A] hover:bg-gray-50 transition-all shadow-sm">
+              All Reviews <div className="flex h-4 w-4 items-center justify-center rounded-full bg-[#9cff5f] text-[#0b0b0b] text-[10px] font-black leading-none">+</div>
             </Link>
           </div>
 
@@ -262,21 +268,21 @@ const Pricing = () => {
           </div>
 
           <div className="flex justify-center gap-3 mt-10">
-            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-110">
+            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-105 shadow-sm">
               <ChevronLeft size={18} />
             </button>
-            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-110">
+            <button className="flex h-10 w-10 items-center justify-center rounded-full bg-[#9cff5f] text-[#0F172A] hover:brightness-105 shadow-sm">
               <ChevronRight size={18} />
             </button>
           </div>
         </section>
 
-        {/* Dark FAQ Section */}
+        {/* FAQ Section */}
         <section className="relative mx-auto max-w-3xl px-4 sm:px-6 py-20 mb-20">
           <div className="text-center space-y-4 mb-12">
-            <div className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-[#9cff5f]">FAQ</div>
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">Got Questions? We've Got Answers!</h2>
-            <p className="text-white/50 text-sm">
+            <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#9cff5f] shadow-sm">FAQ</div>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">Got Questions? We've Got Answers!</h2>
+            <p className="text-[#1A1A1A]/60 text-sm">
               Providing important details and answers to frequently asked questions, ensuring you have all the crucial information needed to make the right decision.
             </p>
           </div>
