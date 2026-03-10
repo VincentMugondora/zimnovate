@@ -10,12 +10,6 @@ import {
 } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
 
-const FeatureIcon = ({ icon: Icon, className = "" }) => (
-  <div className={`flex h-6 w-6 items-center justify-center rounded-full bg-[#9cff5f]/10 text-[#9cff5f] ${className}`}>
-    <Icon size={14} />
-  </div>
-)
-
 const PricingCard = ({ 
   title, 
   price, 
@@ -31,23 +25,23 @@ const PricingCard = ({
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay }}
-    className={`relative flex flex-col rounded-[24px] border border-[var(--zim-border)] p-8 transition-all duration-300 bg-white hover:border-[#9cff5f]/50 hover:shadow-2xl shadow-sm`}
+    className={`relative flex flex-col rounded-[24px] border border-[var(--zim-border)] p-8 transition-all duration-300 bg-[#0F172A] hover:border-[#9cff5f]/50 hover:shadow-2xl shadow-sm`}
   >
     <div className="mb-6">
-      <div className="inline-block rounded-full border border-[var(--zim-border)] bg-[#F8FAFC] px-4 py-1.5 text-[11px] font-bold text-[#0F172A] mb-6 tracking-wide">
+      <div className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-[11px] font-bold text-white mb-6 tracking-wide shadow-sm">
         {title}
       </div>
       <div className="mt-2 flex items-baseline gap-1">
-        <span className="text-4xl font-extrabold tracking-tight text-[#0F172A]">{price}</span>
-        {period && <span className="text-sm font-medium text-[#1A1A1A]/50">{period}</span>}
+        <span className="text-4xl font-extrabold tracking-tight text-white">{price}</span>
+        {period && <span className="text-sm font-medium text-white/50">{period}</span>}
       </div>
-      <p className="mt-4 text-[13px] leading-relaxed text-[#1A1A1A]/60">{description}</p>
+      <p className="mt-4 text-[13px] leading-relaxed text-white/60">{description}</p>
     </div>
 
     <div className="mb-8 flex-1 space-y-4">
       <ul className="space-y-3">
         {features.map((feature, i) => (
-          <li key={i} className="flex items-start gap-3 text-[13px] text-[#1A1A1A]/80 leading-relaxed">
+          <li key={i} className="flex items-start gap-3 text-[13px] text-white/80 leading-relaxed">
             <Check size={16} className="mt-0.5 shrink-0 text-[#9cff5f]" />
             <span>{feature}</span>
           </li>
@@ -117,73 +111,74 @@ const FAQItem = ({ question, answer }) => {
 const Pricing = () => {
   const packages = [
     {
-      title: 'Basic Package',
-      price: '$80',
-      period: '/ Month',
-      description: 'Consectetur dignissim a finibus potenti egestas odio; diam enim.',
+      title: 'Starter Website',
+      price: '$250',
+      period: '– $400',
+      description: 'Best for small businesses and startups launching their first website.',
       features: [
-        'Basic SEO Optimization',
-        '1-2 Social Media Platforms',
-        'Monthly Analytics Reports',
-        'Email Support'
+        '3–5 pages fully responsive design',
+        'Basic SEO setup',
+        'Contact form & WhatsApp integration',
+        'Fast loading performance'
       ],
-      ctaText: 'Select Plan'
+      ctaText: 'Start Project',
+      popular: false
     },
     {
-      title: 'Standard Package',
-      price: '$200',
-      period: '/ Month',
-      description: 'Consectetur dignissim a finibus potenti egestas odio; diam enim.',
+      title: 'Business Growth',
+      price: '$500',
+      period: '– $900',
+      description: 'Best for SMEs that want a professional online presence with a CMS.',
       features: [
-        'Comprehensive SEO Strategy',
-        '3-4 Social Media Platforms',
-        '5-8 Blog Posts or Content Pieces per Month',
-        'Monthly Strategy Calls and Reporting',
-        'Priority Email and Phone Support'
+        '6–10 pages custom UI design',
+        'Blog or CMS setup',
+        'Advanced SEO optimization',
+        'Google Analytics setup',
+        'Contact forms + integrations'
       ],
-      ctaText: 'Select Plan'
+      ctaText: 'Get a Quote',
+      popular: true
     },
     {
-      title: 'Premium Package',
-      price: '$400',
-      period: '/ Month',
-      description: 'Consectetur dignissim a finibus potenti egestas odio; diam enim.',
+      title: 'Startup MVP',
+      price: '$1,200',
+      period: '– $2,500',
+      description: 'For startups building their first core web application or product.',
       features: [
-        'Advanced SEO Optimization and Strategy',
-        '5-6 Social Media Platforms',
-        'Custom Content Strategy (10+ blog posts, videos, graphics)',
-        'Customized Marketing Campaigns',
-        'Dedicated Account Manager',
-        'Detailed Weekly & Monthly Reporting',
-        '24/7 Priority Support'
+        'Landing page & Core app features',
+        'User authentication',
+        'Admin dashboard',
+        'API integrations',
+        'Deployment support'
       ],
-      ctaText: 'Select Plan'
+      ctaText: 'Discuss Idea',
+      popular: false
     }
   ]
 
   const testimonials = [
     {
       name: 'Dale Mendoza',
-      role: 'Marketing Manager',
-      text: 'I can\'t speak highly enough of Zynex Marketing. Their strategic approach to SEO and digital marketing has been instrumental in our company\'s success...',
+      role: 'Startup Founder',
+      text: 'I can\'t speak highly enough of Zimnovate. Their strategic approach to our MVP build and web presence has been instrumental in our early success...',
       image: 'https://i.pravatar.cc/150?u=1'
     },
     {
       name: 'Alice Maxwell',
-      role: 'Brand Manager',
-      text: 'Working with Zynex Marketing has been a revelation for our company. Their dedication to understanding our industry and target audience has led to remarkable growth...',
+      role: 'Marketing Manager',
+      text: 'Working with Zimnovate has been a revelation for our company. Their dedication to understanding our brand and delivering a fast website has led to remarkable growth...',
       image: 'https://i.pravatar.cc/150?u=2'
     },
     {
       name: 'Archer Corbyn',
-      role: 'Marketing Director',
-      text: 'Zynex Marketing has been a game-changer for our business. Their expertise in SEO and digital marketing has helped us attract new clients and grow our business...',
+      role: 'Director',
+      text: 'Zimnovate has been a game-changer for our business. Their expertise in custom web applications has helped us automate processes and scale effectively...',
       image: 'https://i.pravatar.cc/150?u=3'
     },
     {
       name: 'Chelsea West',
-      role: 'Marketing Coordinator',
-      text: 'Choosing Zynex was one of the best decisions we made for our company. Their innovative approach and dedication to understanding our unique needs resulted in a tailored marketing strategy.',
+      role: 'Operations Coordinator',
+      text: 'Choosing Zimnovate was one of the best decisions we made. Their innovative approach and dedication to our unique needs resulted in a tailored platform that exceeded expectations.',
       image: 'https://i.pravatar.cc/150?u=4'
     }
   ]
@@ -191,8 +186,8 @@ const Pricing = () => {
   return (
     <>
       <Helmet>
-        <title>Pricing — Digital Marketing Plans | Zimnovate</title>
-        <meta name="description" content="Transparent pricing for digital marketing services." />
+        <title>Pricing — Web & App Development Plans | Zimnovate</title>
+        <meta name="description" content="Transparent pricing for web development, app development, and design services." />
       </Helmet>
 
       <div className="bg-[#fafafa]">
@@ -233,9 +228,9 @@ const Pricing = () => {
         <section className="relative mx-auto max-w-6xl px-4 sm:px-6 py-20">
           <div className="text-center space-y-4 mb-16 px-4">
             <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-6 py-1.5 text-[11px] font-bold uppercase tracking-widest text-[#0F172A] shadow-sm">Pricing</div>
-            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-5xl">Profitable Pricing Plans</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-5xl">Flexible Solutions for Every Stage</h2>
             <p className="text-[#1A1A1A]/60 max-w-2xl mx-auto text-sm">
-              Below is an overview of our general pricing packages for our digital marketing agency. Costs vary depending on factors such as the services we offer.
+              Whether you're just starting out or scaling up, we have a package to fit your needs. Get professional quality without the agency price tag.
             </p>
           </div>
           
@@ -253,7 +248,7 @@ const Pricing = () => {
               <div className="inline-block rounded-full border border-[var(--zim-border)] bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-[#9cff5f] shadow-sm">Testimonials</div>
               <h2 className="text-3xl font-bold tracking-tight text-[#0F172A] md:text-4xl">What Clients Say About Us</h2>
               <p className="text-[#1A1A1A]/60 text-sm">
-                Read some reviews and success stories from our loyal customers who achieved their goals with our Projects and services.
+                Read some reviews and success stories from our loyal customers who achieved their goals with our digital solutions.
               </p>
             </div>
             <Link to="/contact" className="mt-6 md:mt-0 inline-flex items-center gap-2 rounded-full border border-[var(--zim-border)] bg-white px-6 py-3 text-xs font-bold text-[#0F172A] hover:bg-gray-50 transition-all shadow-sm">
@@ -290,13 +285,13 @@ const Pricing = () => {
           <div className="space-y-1">
             {[
               { 
-                q: 'What Services Do You Offer?', 
-                a: 'Vel metus scelerisque ullamcorper sollicitudin auctor placerat maximus nec. Curabitur ligula metus varius velit tellus vulputate enim in tempor. Praesent sollicitudin ac efficitur primis urna.' 
+                q: 'How long does it take to build a website?', 
+                a: 'For a Starter Website, we typically deliver within 2 weeks. Larger Business Growth sites take 3–4 weeks, and complex Startup MVPs can take 4–6 weeks depending on features.' 
               },
-              { q: 'How Do You Determine The Right Strategy For My Business?', a: 'Every business is unique. We conduct a thorough analysis of your market, competitors, and current digital footprint.' },
-              { q: 'What Makes Your Agency Different From Others?', a: 'We focus on data-driven results and transparent reporting. Our team is dedicated to providing tailored solutions.' },
-              { q: 'How Long Will It Take To See Results?', a: 'Results often vary depending on the strategy, but you can typically expect to see initial improvements within 3-6 months.' },
-              { q: 'Do You Have Experience In My Industry?', a: 'We have worked across a wide range of industries including ecommerce, health, education, and professional services.' }
+              { q: 'Do you offer payment plans?', a: 'Yes! We typically structure payments as 50% upfront to start the project and 50% upon completion/launch. For larger projects, we can discuss a 3-part Milestone-based payment plan.' },
+              { q: 'Can you redesign my existing website?', a: 'Absolutely. We specialize in taking dated or slow websites and transforming them into modern, high-converting platforms with improved UI/UX and performance.' },
+              { q: 'Do you work with clients outside Zimbabwe?', a: 'Yes, we provide digital solutions worldwide. While we are based in Harare, our team is equipped to work remotely with clients across Africa, Europe, and North America.' },
+              { q: 'Do you provide maintenance after launch?', a: 'Every package includes a post-launch support period (30–90 days). We also offer monthly maintenance subscriptions to keep your site updated, secure, and performing at its best.' }
             ].map((faq, i) => (
               <FAQItem key={i} question={faq.q} answer={faq.a} />
             ))}
