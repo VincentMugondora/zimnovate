@@ -5,10 +5,10 @@
 
 /* global clients */
 
-const CACHE_NAME = 'zimnovate-v1';
-const STATIC_CACHE = 'zimnovate-static-v1';
-const IMAGE_CACHE = 'zimnovate-images-v1';
-const API_CACHE = 'zimnovate-api-v1';
+const CACHE_NAME = 'zimnovate-v2';
+const STATIC_CACHE = 'zimnovate-static-v2';
+const IMAGE_CACHE = 'zimnovate-images-v2';
+const API_CACHE = 'zimnovate-api-v2';
 
 // Assets to cache on install
 const STATIC_ASSETS = [
@@ -70,15 +70,29 @@ self.addEventListener('activate', (event) => {
 // Fetch event - serve from cache or network
 self.addEventListener('fetch', (event) => {
   const { request } = event;
-  const url = new URL(request.url);
-  
+
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
-  
+
+  let url;
+  try {
+    url = new URL(request.url);
+  } catch (e) {
+    // Invalid URL, skip
+    return;
+  }
+
   // Skip chrome-extension and other non-http schemes
   if (!url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // Skip different origins (external resources)
+  if (url.origin !== location.origin &&
+      !url.hostname.includes('unsplash.com') &&
+      !url.hostname.includes('fonts.')) {
     return;
   }
   
@@ -107,13 +121,22 @@ self.addEventListener('fetch', (event) => {
   }
   
   // Strategy for JS/CSS - Stale while revalidate
-  if (request.destination === 'script' || request.destination === 'style') {
+  if (request.destination === 'script' || request.destination === 'style' || url.pathname.endsWith('.js') || url.pathname.endsWith('.css')) {
     event.respondWith(
       staleWhileRevalidateStrategy(request, STATIC_CACHE)
     );
     return;
   }
-  
+
+  // For HTML pages and SPA routes - network first with fallback to index.html
+  if (request.destination === 'document' || request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
   // Default strategy - Network with cache fallback
   event.respondWith(
     networkWithCacheFallback(request)
