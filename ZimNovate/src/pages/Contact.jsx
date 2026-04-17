@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead.jsx'
 import PageHero from '../components/PageHero.jsx'
 import { submitContactForm } from '../services/database.js'
 
@@ -67,22 +67,40 @@ const Contact = () => {
     'E-Commerce Solutions'
   ]
 
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Zimnovate",
+    "description": "Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe.",
+    "url": "https://zimnovate.co.zw/contact",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zimnovate.co.zw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://zimnovate.co.zw/contact"
+        }
+      ]
+    }
+  }
+
   return (
     <>
-      <Helmet>
-        <title>Contact Zimnovate — Start Your Digital Project in Zimbabwe</title>
-        <meta name="description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe. Get a quote for your project in Harare or anywhere in Zimbabwe." />
-        <meta name="keywords" content="contact zimnovate, web development quote Zimbabwe, hire developer Zimbabwe, digital agency contact, website design quote Harare, app development Zimbabwe, custom software quote Zimbabwe" />
-        <link rel="canonical" href="https://zimnovate.co.zw/contact" />
-        <meta property="og:title" content="Contact Zimnovate — Start Your Digital Project in Zimbabwe" />
-        <meta property="og:description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.co.zw/contact" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Zimnovate — Start Your Digital Project in Zimbabwe" />
-        <meta name="twitter:description" content="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe." />
-        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
-      </Helmet>
+      <SEOHead
+        title="Contact Zimnovate — Start Your Digital Project in Zimbabwe"
+        description="Contact Zimnovate for web development, mobile apps, branding, and digital marketing services in Zimbabwe. Get a quote for your project in Harare or anywhere in Zimbabwe."
+        keywords="contact zimnovate, web development quote Zimbabwe, hire developer Zimbabwe, digital agency contact, website design quote Harare, app development Zimbabwe, custom software quote Zimbabwe"
+        canonical="https://zimnovate.co.zw/contact"
+        schema={contactSchema}
+      />
     <div>
       {/* Hero Section */}
       <PageHero

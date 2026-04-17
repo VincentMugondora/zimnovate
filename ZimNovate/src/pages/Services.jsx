@@ -1,27 +1,49 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
+import SEOHead from '../components/SEOHead.jsx'
 import PageHero from '../components/PageHero.jsx'
 import { services } from '../data/services.js'
 
 const Services = () => {
+  const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Digital Services Zimbabwe",
+    "description": "Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses.",
+    "url": "https://zimnovate.co.zw/services",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zimnovate.co.zw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://zimnovate.co.zw/services"
+        }
+      ]
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Zimnovate"
+    }
+  }
+
   return (
     <>
-      <Helmet>
-        <title>Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing</title>
-        <meta name="description" content="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses in Harare and beyond." />
-        <meta name="keywords" content="digital services Zimbabwe, web development Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe, e-commerce Zimbabwe, website design Harare" />
-        <link rel="canonical" href="https://zimnovate.co.zw/services" />
-        <meta property="og:title" content="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing" />
-        <meta property="og:description" content="Explore Zimnovate's professional digital services for Zimbabwean businesses." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.co.zw/services" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing" />
-        <meta name="twitter:description" content="Explore Zimnovate's professional digital services for Zimbabwean businesses." />
-        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
-      </Helmet>
+      <SEOHead
+        title="Digital Services Zimbabwe — Web Development, Apps, Branding & Marketing"
+        description="Explore Zimnovate's professional digital services: website development, mobile app development, branding, SEO, digital marketing, and e-commerce solutions for Zimbabwean businesses in Harare and beyond."
+        keywords="digital services Zimbabwe, web development Zimbabwe, mobile app development Zimbabwe, branding agency Zimbabwe, SEO Zimbabwe, digital marketing Zimbabwe, e-commerce Zimbabwe, website design Harare"
+        canonical="https://zimnovate.co.zw/services"
+        schema={servicesSchema}
+      />
 
       <div className="bg-[var(--zim-bg)]">
         <PageHero

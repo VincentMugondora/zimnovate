@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead.jsx'
 import PageHero from '../components/PageHero.jsx'
 import { portfolioProjects } from '../data/portfolio.js'
 
@@ -14,22 +14,40 @@ const Portfolio = () => {
     { name: 'E-Commerce Solutions', to: '/services/e-commerce' },
   ]
 
+  const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Zimnovate Portfolio",
+    "description": "See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses.",
+    "url": "https://zimnovate.co.zw/portfolio",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zimnovate.co.zw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Portfolio",
+          "item": "https://zimnovate.co.zw/portfolio"
+        }
+      ]
+    }
+  }
+
   return (
     <>
-      <Helmet>
-        <title>Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe</title>
-        <meta name="description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses. View our portfolio of e-commerce, mobile apps, and digital marketing case studies." />
-        <meta name="keywords" content="zimnovate portfolio, web development projects Zimbabwe, app development portfolio Zimbabwe, branding projects Zimbabwe, website design portfolio Harare, e-commerce website Zimbabwe, custom software projects Zimbabwe" />
-        <link rel="canonical" href="https://zimnovate.co.zw/portfolio" />
-        <meta property="og:title" content="Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe" />
-        <meta property="og:description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.co.zw/portfolio" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe" />
-        <meta name="twitter:description" content="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses." />
-        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
-      </Helmet>
+      <SEOHead
+        title="Zimnovate Portfolio — Web Development, Branding & App Projects in Zimbabwe"
+        description="See real web development projects, branding work, and app solutions we've built for Zimbabwean businesses. View our portfolio of e-commerce, mobile apps, and digital marketing case studies."
+        keywords="zimnovate portfolio, web development projects Zimbabwe, app development portfolio Zimbabwe, branding projects Zimbabwe, website design portfolio Harare, e-commerce website Zimbabwe, custom software projects Zimbabwe"
+        canonical="https://zimnovate.co.zw/portfolio"
+        schema={portfolioSchema}
+      />
       <div>
         {/* Hero Section */}
         <PageHero

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -8,6 +7,7 @@ import {
   Gem,
   ArrowRight
 } from 'lucide-react'
+import SEOHead from '../components/SEOHead.jsx'
 import SectionHeading from '../components/SectionHeading.jsx'
 import PageHero from '../components/PageHero.jsx'
 import { getTeamMembers } from '../services/database.js'
@@ -33,23 +33,41 @@ const About = () => {
     fetchMembers()
   }, [])
 
+  const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Zimnovate",
+    "description": "Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions for businesses in Harare and across Zimbabwe.",
+    "url": "https://zimnovate.co.zw/about",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zimnovate.co.zw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://zimnovate.co.zw/about"
+        }
+      ]
+    }
+  }
+
   return (
     <>
-      <Helmet>
-        <title>About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team</title>
-        <meta name="description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions for businesses in Harare and across Zimbabwe." />
-        <meta name="keywords" content="about zimnovate, digital agency Zimbabwe, web development team Zimbabwe, software company Harare, custom software development Zimbabwe, web design company Zimbabwe, app development team Zimbabwe" />
-        <link rel="canonical" href="https://zimnovate.co.zw/about" />
-        <meta property="og:title" content="About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team" />
-        <meta property="og:description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://zimnovate.co.zw/about" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team" />
-        <meta name="twitter:description" content="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions." />
-        <meta name="twitter:image" content="https://zimnovate.co.zw/logo1.png" />
-      </Helmet>
-    <div className="bg-[var(--zim-bg)]">
+      <SEOHead
+        title="About Zimnovate — Zimbabwe's Leading Digital Agency & Web Development Team"
+        description="Learn about Zimnovate, Zimbabwe's premier digital agency specializing in web development, mobile apps, branding, and custom software solutions for businesses in Harare and across Zimbabwe."
+        keywords="about zimnovate, digital agency Zimbabwe, web development team Zimbabwe, software company Harare, custom software development Zimbabwe, web design company Zimbabwe, app development team Zimbabwe"
+        canonical="https://zimnovate.co.zw/about"
+        schema={aboutSchema}
+      />
+      <div className="bg-[var(--zim-bg)]">
       <PageHero
         title="A Zimbabwe-Born Agency Shaping the Future of Business"
         subtitle="Innovation, creativity, and powerful technology for African businesses."

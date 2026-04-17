@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { 
-  Check, 
-  ChevronDown, 
+import {
+  Check,
+  ChevronDown,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
+import SEOHead from '../components/SEOHead.jsx'
 import PageHero from '../components/PageHero.jsx'
 
 const PricingCard = ({ 
@@ -141,13 +141,40 @@ const Pricing = () => {
     }
   ]
 
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Pricing — Web & App Development Plans",
+    "description": "Transparent pricing for web development, mobile app development, branding, and digital marketing services in Zimbabwe. Affordable packages starting from $250.",
+    "url": "https://zimnovate.co.zw/pricing",
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zimnovate.co.zw/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pricing",
+          "item": "https://zimnovate.co.zw/pricing"
+        }
+      ]
+    }
+  }
+
   return (
     <>
-      <Helmet>
-        <title>Pricing — Web & App Development Plans | Zimnovate</title>
-        <meta name="description" content="Transparent pricing for web development, app development, and design services." />
-        <script src="https://elfsightcdn.com/platform.js" async></script>
-      </Helmet>
+      <SEOHead
+        title="Pricing — Web & App Development Plans | Zimnovate"
+        description="Transparent pricing for web development, mobile app development, branding, and digital marketing services in Zimbabwe. Affordable packages starting from $250."
+        keywords="web development pricing Zimbabwe, website cost Zimbabwe, app development pricing Zimbabwe, digital agency pricing Harare, affordable website Zimbabwe, web design packages Zimbabwe"
+        canonical="https://zimnovate.co.zw/pricing"
+        schema={pricingSchema}
+      />
 
       <div className="bg-[#fafafa]">
         {/* Preserve the Hero exactly as requested */}

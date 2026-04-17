@@ -1,3 +1,20 @@
+# Robots.txt for Zimnovate
+# Allow all crawlers to access all content
+
 User-agent: *
 Allow: /
+
+# Disallow admin and authentication pages
+Disallow: /dashboard
+Disallow: /login
+Disallow: /api/
+
+# Sitemap location
 Sitemap: https://zimnovate.co.zw/sitemap.xml
+
+# Crawl-delay for aggressive bots (optional)
+User-agent: Googlebot
+Crawl-delay: 0
+
+User-agent: Bingbot
+Crawl-delay: 0

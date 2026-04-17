@@ -65,11 +65,11 @@ const Hero = () => {
               <ResponsiveLogo loading="eager" />
             </Link>
 
-            {/* Mobile hamburger button */}
+            {/* Mobile hamburger button - touch optimized */}
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-9 w-9 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 focus:outline-none lg:hidden"
+              className="group relative inline-flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 lg:hidden touch-target"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -189,7 +189,7 @@ const Hero = () => {
                 href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                 target="_blank"
                 rel="noreferrer"
-                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110"
+                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2.5 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110 active:scale-95 touch-target"
               >
                 Get a Free Quote
               </a>
