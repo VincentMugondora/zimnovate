@@ -86,11 +86,11 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
             </button>
 
             {/* Desktop nav */}
-            <nav className="hidden items-center gap-6 text-sm font-semibold text-white/85 lg:flex" aria-label="Hero">
+            <nav className="hidden items-center gap-3 xl:gap-6 text-sm font-semibold text-white/85 lg:flex whitespace-nowrap" aria-label="Hero">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Home
@@ -139,7 +139,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/portfolio"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Portfolio
@@ -147,7 +147,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/pricing"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Pricing
@@ -155,7 +155,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Blog
@@ -163,7 +163,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/careers"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Careers
@@ -171,7 +171,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 About
@@ -179,7 +179,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Contact
@@ -188,7 +188,7 @@ const PageHero = ({ title, subtitle, height = 'min-h-[40vh]' }) => {
                 href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                 target="_blank"
                 rel="noreferrer"
-                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110"
+                className="ml-2 xl:ml-4 inline-flex items-center justify-center rounded-full bg-[#9cff5f] px-5 py-2 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110"
               >
                 Get a Free Quote
               </a>

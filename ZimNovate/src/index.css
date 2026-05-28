@@ -158,14 +158,8 @@
     padding-right: env(safe-area-inset-right);
   }
 
-  /* Touch-friendly utilities */
-  .touch-target {
-    min-height: 44px;
-    min-width: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+  /* Touch-friendly utilities removed because they interfere with Tailwind's display modifiers like lg:hidden.
+     Base min-height and min-width are already handled globally for interactive elements. */
 
   /* Mobile container with proper padding */
   .mobile-container {

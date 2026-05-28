@@ -69,7 +69,7 @@ const Hero = () => {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="group relative inline-flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 lg:hidden touch-target"
+              className="group relative inline-flex h-11 w-11 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition-all duration-300 hover:bg-white/20 active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/50 lg:hidden"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileMenuOpen}
             >
@@ -90,11 +90,11 @@ const Hero = () => {
             </button>
 
             {/* Desktop nav */}
-            <nav className="hidden items-center gap-6 text-sm font-semibold text-white/85 lg:flex" aria-label="Hero">
+            <nav className="hidden items-center gap-3 xl:gap-6 text-sm font-semibold text-white/85 lg:flex whitespace-nowrap" aria-label="Hero">
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Home
@@ -140,7 +140,7 @@ const Hero = () => {
               <NavLink
                 to="/portfolio"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Portfolio
@@ -148,7 +148,7 @@ const Hero = () => {
               <NavLink
                 to="/pricing"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Pricing
@@ -156,7 +156,7 @@ const Hero = () => {
               <NavLink
                 to="/blog"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Blog
@@ -164,7 +164,7 @@ const Hero = () => {
               <NavLink
                 to="/careers"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Careers
@@ -172,7 +172,7 @@ const Hero = () => {
               <NavLink
                 to="/about"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 About
@@ -180,7 +180,7 @@ const Hero = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  `hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
+                  `flex items-center hover:text-white ${isActive ? 'text-white' : 'text-white/80'}`
                 }
               >
                 Contact
@@ -189,7 +189,7 @@ const Hero = () => {
                 href="https://wa.me/263777530322?text=Hi%20Zimnovate!%20I%20would%20like%20to%20get%20a%20free%20quote%20for%20my%20project."
                 target="_blank"
                 rel="noreferrer"
-                className="ml-4 rounded-full bg-[#9cff5f] px-5 py-2.5 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110 active:scale-95 touch-target"
+                className="ml-2 xl:ml-4 inline-flex items-center justify-center rounded-full bg-[#9cff5f] px-5 py-2.5 text-sm font-bold text-[#0b0b0b] transition hover:brightness-110 active:scale-95"
               >
                 Get a Free Quote
               </a>
